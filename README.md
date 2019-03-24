@@ -16,3 +16,12 @@ var playerTag = "[player tag]";
 var coc = new ClashOfClans(token);
 var player = await coc.Players.GetAsync(playerTag);
 ```
+
+# Unit Tests
+You can run unit tests by following next steps:
+1. Build the `ClashOfClans.Tests` project
+2. Open build output folder (at the moment `.\ClashOfClans.Tests\bin\Debug\netcoreapp2.2`) in File Explorer
+3. Open `appsettings.test.json` file, add your own token and player tag and save the changes
+4. Run unit tests
+
+All unit tests should pass if you provided a valid token and player tag.
