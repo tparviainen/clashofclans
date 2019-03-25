@@ -1,11 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>ClashOfClans Game API</PackageTags>
+    <PackageProjectUrl>https://github.com/tparviainen/clashofclans</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tparviainen/clashofclans</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/tparviainen/clashofclans/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <Authors>Tomi Parviainen</Authors>
+    <Company />
+    <Description>This package contains a .NET Standard library for accessing the services of Clash of Clans API.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageId>ClashOfClansApi</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
