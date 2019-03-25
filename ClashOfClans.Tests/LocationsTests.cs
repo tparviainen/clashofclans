@@ -7,6 +7,8 @@ namespace ClashOfClans.Tests
     [TestClass]
     public class LocationsTests : TestsBase
     {
+        private int ItemLimit = 10;
+
         [TestMethod]
         public async Task ListLocations()
         {
@@ -39,10 +41,10 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var locations = new Locations(Token);
-            var location = GetRandom(_locations);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
-                Limit = 10
+                Limit = ItemLimit
             };
 
             // Act
@@ -50,6 +52,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(clanRankingList);
+            Assert.AreEqual(ItemLimit, clanRankingList.Items.Length);
         }
 
         [TestMethod]
@@ -57,10 +60,10 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var locations = new Locations(Token);
-            var location = GetRandom(_locations);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
-                Limit = 10
+                Limit = ItemLimit
             };
 
             // Act
@@ -68,6 +71,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(playerRankingList);
+            Assert.AreEqual(ItemLimit, playerRankingList.Items.Length);
         }
 
         [TestMethod]
@@ -75,10 +79,10 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var locations = new Locations(Token);
-            var location = GetRandom(_locations);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
-                Limit = 10
+                Limit = ItemLimit
             };
 
             // Act
@@ -86,6 +90,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(clanRankingList);
+            Assert.AreEqual(ItemLimit, clanRankingList.Items.Length);
         }
 
         [TestMethod]
@@ -93,17 +98,18 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var locations = new Locations(Token);
-            var locationId = GetRandom(_locations).Id;
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
-                Limit = 10
+                Limit = ItemLimit
             };
 
             // Act
-            var playerVersusRankingList = await locations.GetRankingsPlayersVersusAsync(locationId, query);
+            var playerVersusRankingList = await locations.GetRankingsPlayersVersusAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerVersusRankingList);
+            Assert.AreEqual(ItemLimit, playerVersusRankingList.Items.Length);
         }
     }
 }
