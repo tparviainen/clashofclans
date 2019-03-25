@@ -68,7 +68,7 @@ namespace ClashOfClans.Tests
                         .AddJsonFile("appsettings.test.json")
                         .Build();
 
-                    var coc = new ClashOfClans(Token);
+                    var coc = new ClashOfClansApi(Token);
                     var query = new QueryClans
                     {
                         MinMembers = 40,

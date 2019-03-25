@@ -2,9 +2,9 @@
 
 namespace ClashOfClans
 {
-    public class ClashOfClans
+    public class ClashOfClansApi
     {
-        public ClashOfClans(string token)
+        public ClashOfClansApi(string token)
         {
             Clans = new Clans(token);
             Locations = new Locations(token);

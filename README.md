@@ -13,7 +13,7 @@ After executing the steps you get the information about the player whose tag was
 var token = "[your own unique API key]";
 var playerTag = "[player tag]";
 
-var coc = new ClashOfClans(token);
+var coc = new ClashOfClansApi(token);
 var player = await coc.Players.GetAsync(playerTag);
 ```
 
