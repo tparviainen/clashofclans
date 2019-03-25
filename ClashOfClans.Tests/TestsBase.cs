@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Tests
@@ -16,18 +17,21 @@ namespace ClashOfClans.Tests
         private Random _random = new Random();
 
         /// <summary>
-        /// Returns a random element from the given array
+        /// Returns a random element from the given list
         /// </summary>
-        protected T GetRandom<T>(IList<T> array) where T : class
+        protected T GetRandom<T>(IList<T> list, Func<T, bool> predicate = null) where T : class
         {
-            if (array == null)
+            if (list == null)
             {
-                throw new ArgumentNullException(nameof(array));
+                throw new ArgumentNullException(nameof(list));
             }
 
-            var index = _random.Next(array.Count);
+            if (predicate != null)
+            {
+                list = list.Where(predicate).ToList();
+            }
 
-            return array[index];
+            return list[_random.Next(list.Count)];
         }
 
         public string Token
