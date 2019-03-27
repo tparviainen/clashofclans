@@ -13,7 +13,7 @@ namespace ClashOfClans.Tests
         public async Task ListLocations()
         {
             // Arrange
-            var locations = new Locations(Token);
+            var locations = _coc.Locations;
 
             // Act
             var locationList = await locations.GetAsync();
@@ -26,7 +26,7 @@ namespace ClashOfClans.Tests
         public async Task GetLocationInformation()
         {
             // Arrange
-            var locations = new Locations(Token);
+            var locations = _coc.Locations;
             var locationId = GetRandom(_locations).Id;
 
             // Act
@@ -40,7 +40,7 @@ namespace ClashOfClans.Tests
         public async Task GetClanRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = new Locations(Token);
+            var locations = _coc.Locations;
             var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
@@ -59,7 +59,7 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = new Locations(Token);
+            var locations = _coc.Locations;
             var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
@@ -78,7 +78,7 @@ namespace ClashOfClans.Tests
         public async Task GetClanVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = new Locations(Token);
+            var locations = _coc.Locations;
             var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
@@ -97,7 +97,7 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = new Locations(Token);
+            var locations = _coc.Locations;
             var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {

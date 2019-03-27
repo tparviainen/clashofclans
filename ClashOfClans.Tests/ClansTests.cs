@@ -13,7 +13,7 @@ namespace ClashOfClans.Tests
         public async Task SearchClans()
         {
             // Arrange
-            var clans = new Clans(Token);
+            var clans = _coc.Clans;
             var query = new QueryClans
             {
                 Name = "Phoenix",
@@ -31,7 +31,7 @@ namespace ClashOfClans.Tests
         public async Task GetClanInformation()
         {
             // Arrange
-            var clans = new Clans(Token);
+            var clans = _coc.Clans;
 
             // Act
             var clanTag = GetRandom(_clans).Tag;
@@ -46,7 +46,7 @@ namespace ClashOfClans.Tests
         public async Task ListClanMembers()
         {
             // Arrange
-            var clans = new Clans(Token);
+            var clans = _coc.Clans;
             var clanTag = GetRandom(_clans).Tag;
 
             // Act
@@ -60,7 +60,7 @@ namespace ClashOfClans.Tests
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var clans = new Clans(Token);
+            var clans = _coc.Clans;
 
             // Act
             var clan = GetRandom(_clans.Where(c => c.IsWarLogPublic == true).ToList());
@@ -84,7 +84,7 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             // Arrange
-            var clans = new Clans(Token);
+            var clans = _coc.Clans;
 
             // Act
             var clan = GetRandom(_clans.Where(c => c.IsWarLogPublic == true).ToList());
@@ -104,7 +104,7 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroupAndWar()
         {
             // Arrange
-            var clans = new Clans(Token);
+            var clans = _coc.Clans;
 
             // Act
             foreach (var clan in _clans)

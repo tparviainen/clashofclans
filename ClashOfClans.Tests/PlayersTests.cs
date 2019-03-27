@@ -1,5 +1,4 @@
-﻿using ClashOfClans.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Tests
@@ -11,7 +10,7 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerInformation()
         {
             // Arrange
-            var players = new Players(Token);
+            var players = _coc.Players;
 
             // Act
             var player = await players.GetAsync(PlayerTag);

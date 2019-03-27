@@ -34,14 +34,6 @@ namespace ClashOfClans.Tests
             return list[_random.Next(list.Count)];
         }
 
-        public string Token
-        {
-            get
-            {
-                return _config["api:token"];
-            }
-        }
-
         public string PlayerTag
         {
             get
@@ -56,6 +48,7 @@ namespace ClashOfClans.Tests
         protected static Location[] _locations;
         protected static League[] _leagues;
         protected static IConfigurationRoot _config;
+        protected static ClashOfClansApi _coc;
 
         [TestInitialize]
         public async Task TestInitialize()
@@ -68,7 +61,7 @@ namespace ClashOfClans.Tests
                         .AddJsonFile("appsettings.test.json")
                         .Build();
 
-                    var coc = new ClashOfClansApi(Token);
+                    _coc = new ClashOfClansApi(_config["api:token"]);
                     var query = new QueryClans
                     {
                         MinMembers = 40,
@@ -76,13 +69,13 @@ namespace ClashOfClans.Tests
                         Limit = 50
                     };
 
-                    var searchResult = await coc.Clans.GetAsync(query);
+                    var searchResult = await _coc.Clans.GetAsync(query);
                     _clans = searchResult.Items;
 
-                    var locationList = await coc.Locations.GetAsync();
+                    var locationList = await _coc.Locations.GetAsync();
                     _locations = locationList.Items;
 
-                    var leagueList = await coc.Leagues.GetAsync();
+                    var leagueList = await _coc.Leagues.GetAsync();
                     _leagues = leagueList.Items;
 
                     _initialized = true;

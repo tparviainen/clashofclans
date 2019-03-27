@@ -12,7 +12,7 @@ namespace ClashOfClans.Tests
         public async Task ListLeagues()
         {
             // Arrange
-            var leagues = new Leagues(Token);
+            var leagues = _coc.Leagues;
 
             // Act
             var leagueList = await leagues.GetAsync();
@@ -25,7 +25,7 @@ namespace ClashOfClans.Tests
         public async Task GetLeagueInformation()
         {
             // Arrange
-            var leagues = new Leagues(Token);
+            var leagues = _coc.Leagues;
             var leagueId = GetRandom(_leagues).Id;
 
             // Act
@@ -39,7 +39,7 @@ namespace ClashOfClans.Tests
         public async Task GetLeagueSeasons()
         {
             // Arrange
-            var leagues = new Leagues(Token);
+            var leagues = _coc.Leagues;
             var leagueId = _leagues.Where(l => l.Name == LegendLeague).Single().Id;
 
             // Act
@@ -53,7 +53,7 @@ namespace ClashOfClans.Tests
         public async Task GetLeagueSeasonRankings()
         {
             // Arrange
-            var leagues = new Leagues(Token);
+            var leagues = _coc.Leagues;
             var leagueId = _leagues.Where(l => l.Name == LegendLeague).Single().Id;
             var leagueSeasonList = await leagues.GetSeasonsAsync(leagueId);
             var seasonId = GetRandom(leagueSeasonList.Items).Id;
