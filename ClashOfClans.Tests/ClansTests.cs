@@ -13,18 +13,20 @@ namespace ClashOfClans.Tests
         public async Task SearchClans()
         {
             // Arrange
+            var limit = 10;
             var clans = _coc.Clans;
             var query = new QueryClans
             {
                 Name = "Phoenix",
-                Limit = 10
+                Limit = limit
             };
 
             // Act
-            var clan = await clans.GetAsync(query);
+            var searchResult = await clans.GetAsync(query);
 
             // Assert
-            Assert.IsNotNull(clan);
+            Assert.IsNotNull(searchResult);
+            Assert.AreEqual(limit, searchResult.Items.Count());
         }
 
         [TestMethod]
