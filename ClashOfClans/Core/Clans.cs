@@ -5,7 +5,7 @@ namespace ClashOfClans.Core
 {
     public class Clans : ClashOfClansBase, IClans
     {
-        public Clans(string token) : base(token)
+        public Clans(string token, IThrottleRequests throttleRequests) : base(token, throttleRequests)
         {
         }
 

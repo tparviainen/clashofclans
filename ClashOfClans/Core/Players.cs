@@ -6,7 +6,7 @@ namespace ClashOfClans.Core
 {
     public class Players : ClashOfClansBase, IPlayers
     {
-        public Players(string token) : base(token)
+        public Players(string token, IThrottleRequests throttleRequests) : base(token, throttleRequests)
         {
         }
 

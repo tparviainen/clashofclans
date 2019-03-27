@@ -5,7 +5,7 @@ namespace ClashOfClans.Core
 {
     public class Locations : ClashOfClansBase, ILocations
     {
-        public Locations(string token) : base(token)
+        public Locations(string token, IThrottleRequests throttleRequests) : base(token, throttleRequests)
         {
         }
 

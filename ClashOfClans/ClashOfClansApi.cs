@@ -4,12 +4,14 @@ namespace ClashOfClans
 {
     public class ClashOfClansApi
     {
-        public ClashOfClansApi(string token)
+        public ClashOfClansApi(string token, int maxRequestsPerSecond = 10)
         {
-            Clans = new Clans(token);
-            Locations = new Locations(token);
-            Leagues = new Leagues(token);
-            Players = new Players(token);
+            var throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
+
+            Clans = new Clans(token, throttleRequests);
+            Locations = new Locations(token, throttleRequests);
+            Leagues = new Leagues(token, throttleRequests);
+            Players = new Players(token, throttleRequests);
         }
 
         public IClans Clans { get; }
