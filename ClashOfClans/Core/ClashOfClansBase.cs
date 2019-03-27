@@ -15,34 +15,17 @@ namespace ClashOfClans.Core
     public class ClashOfClansBase
     {
         private readonly string _token;
-        private DateTime _allowedCallTime;
+        private readonly IThrottleRequests _throttleRequests;
 
-        public ClashOfClansBase(string token)
+        public ClashOfClansBase(string token, IThrottleRequests throttleRequests)
         {
             _token = token;
-            _allowedCallTime = DateTime.Now;
-        }
-
-        /// <summary>
-        /// Delay between API calls to prevent API throttling
-        /// </summary>
-        /// <param name="minimumDelay">Minimum delay (in milliseconds) between API calls</param>
-        private async Task WaitUntilApiCallAllowed(int minimumDelay)
-        {
-            var now = DateTime.Now;
-
-            if (now < _allowedCallTime)
-            {
-                var millisecondsDelay = (int)(_allowedCallTime - now).TotalMilliseconds;
-                await Task.Delay(millisecondsDelay);
-            }
-
-            _allowedCallTime = now.AddMilliseconds(minimumDelay);
+            _throttleRequests = throttleRequests;
         }
 
         private async Task<HttpResponseMessage> GetMessageAsync(string requestUri)
         {
-            await WaitUntilApiCallAllowed(100);
+            await _throttleRequests.WaitAsync();
 
             using (var client = new HttpClient())
             {
