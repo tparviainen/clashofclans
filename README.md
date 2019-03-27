@@ -3,18 +3,52 @@
 
 # Info
 This is an API wrapper library for official Clash of Clans API, see https://developer.clashofclans.com/.
-In order to use this library you need an API key (token) that can be created in Clash of Clans developer web site.
+In order to use the functionality provided by this library you need an API key (token) that can be created in Clash of Clans developer web site.
 
 # Usage
-Below is a simple example about how to use the API.
-After executing the steps you get the information about the player whose tag was provided in the request.
-
+Below are examples about how to use the API to get the data from Supercell's Clash of Clans API.
+The precondition for each API request is that you have a valid token defined in the scope of the request!
 ```csharp
 var token = "[your own unique API key]";
-var playerTag = "[player tag]";
+```
 
+## Get Player Information
+```csharp
+var playerTag = "[player tag]";
 var coc = new ClashOfClansApi(token);
 var player = await coc.Players.GetAsync(playerTag);
+```
+
+## Get Clan Information
+```csharp
+var clanTag = "[clan tag]";
+var coc = new ClashOfClansApi(token);
+var clan = await coc.Clans.GetAsync(clanTag);
+```
+
+## Search Clans
+This example shows how to use `query` object to limit the amount of clans received.
+```csharp
+var coc = new ClashOfClansApi(token);
+var query = new QueryClans
+{
+    Name = "Phoenix",
+    Limit = 10
+};
+
+var searchResult = await coc.Clans.GetAsync(query);
+```
+
+## List Leagues
+```csharp
+var coc = new ClashOfClansApi(token);
+var leagueList = await coc.Leagues.GetAsync();
+```
+
+## List Locations
+```csharp
+var coc = new ClashOfClansApi(token);
+var locationList = await coc.Locations.GetAsync();
 ```
 
 # Unit Tests
