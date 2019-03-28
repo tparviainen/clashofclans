@@ -6,7 +6,7 @@ namespace ClashOfClans.Core
     public class ThrottleRequestsPerSecond : IThrottleRequests
     {
         private DateTime _nextAllowedApiCallTime;
-        private int _delayBetweenApiCalls;
+        private readonly int _delayBetweenApiCalls;
 
         public ThrottleRequestsPerSecond(int maxRequestsPerSecond)
         {
