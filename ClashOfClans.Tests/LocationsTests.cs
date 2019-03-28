@@ -109,7 +109,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(playerVersusRankingList);
-            Assert.AreEqual(ItemLimit, playerVersusRankingList.Items.Length);
+            Assert.AreEqual(ItemLimit, playerVersusRankingList.Items.Length, $"Id {location.Id}");
         }
     }
 }
