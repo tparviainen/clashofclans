@@ -15,5 +15,10 @@
         public string CompletionInfo;
 
         public string Village;
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
