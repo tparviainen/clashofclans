@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
-    public class Leagues : ClashOfClansBase, ILeagues
+    internal class Leagues : ClashOfClansBase, ILeagues
     {
         public Leagues(string token, IThrottleRequests throttleRequests) :
             base(token, throttleRequests)

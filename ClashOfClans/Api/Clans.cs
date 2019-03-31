@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
-    public class Clans : ClashOfClansBase, IClans
+    internal class Clans : ClashOfClansBase, IClans
     {
         public Clans(string token, IThrottleRequests throttleRequests) :
             base(token, throttleRequests)
