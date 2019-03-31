@@ -12,7 +12,7 @@ namespace ClashOfClans.Core
     /// <summary>
     /// A base class for accessing Clash of Clans API
     /// </summary>
-    public class ClashOfClansBase
+    internal class ClashOfClansBase
     {
         private readonly string _token;
         private readonly IThrottleRequests _throttleRequests;

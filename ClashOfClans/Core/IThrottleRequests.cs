@@ -2,7 +2,7 @@
 
 namespace ClashOfClans.Core
 {
-    public interface IThrottleRequests
+    internal interface IThrottleRequests
     {
         /// <summary>
         /// Blocks the execution of the current thread if throttling limit reached

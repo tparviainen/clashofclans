@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Core
 {
-    public class ThrottleRequestsPerSecond : IThrottleRequests
+    internal class ThrottleRequestsPerSecond : IThrottleRequests
     {
         private DateTime _nextAllowedApiCallTime;
         private readonly int _delayBetweenApiCalls;
