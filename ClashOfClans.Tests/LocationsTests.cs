@@ -52,7 +52,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Items.Length);
+            Assert.AreEqual(ItemLimit, clanRankingList.Items.Length, $"Id {location.Id}");
         }
 
         [TestMethod]
@@ -71,7 +71,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(playerRankingList);
-            Assert.AreEqual(ItemLimit, playerRankingList.Items.Length);
+            Assert.AreEqual(ItemLimit, playerRankingList.Items.Length, $"Id {location.Id}");
         }
 
         [TestMethod]
@@ -90,7 +90,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Items.Length);
+            Assert.AreEqual(ItemLimit, clanRankingList.Items.Length, $"Id {location.Id}");
         }
 
         [TestMethod]
