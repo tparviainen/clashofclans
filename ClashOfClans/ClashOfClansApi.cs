@@ -7,6 +7,12 @@ namespace ClashOfClans
 {
     public class ClashOfClansApi
     {
+        /// <summary>
+        /// Clash of Clans API that provides access to information about
+        /// clans, locations, leagues and players.
+        /// </summary>
+        /// <param name="token">Your personal API key</param>
+        /// <param name="maxRequestsPerSecond">Throttling limit for API requests</param>
         public ClashOfClansApi(string token, int maxRequestsPerSecond = 10)
         {
             var throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
@@ -17,9 +23,24 @@ namespace ClashOfClans
             Players = new Players(token, throttleRequests);
         }
 
+        /// <summary>
+        /// Interface for clans
+        /// </summary>
         public IClans Clans { get; }
+
+        /// <summary>
+        /// Interface for locations
+        /// </summary>
         public ILocations Locations { get; }
+
+        /// <summary>
+        /// Interface for leagues
+        /// </summary>
         public ILeagues Leagues { get; }
+
+        /// <summary>
+        /// Interface for players
+        /// </summary>
         public IPlayers Players { get; }
     }
 }
