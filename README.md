@@ -5,6 +5,12 @@
 This is an API wrapper library for official Clash of Clans API, see https://developer.clashofclans.com/.
 In order to use the functionality provided by this library you need an API key (token) that can be created in Clash of Clans developer web site.
 
+# Installation
+Clash of Clans API library is provided as a [NuGet package](https://www.nuget.org/packages/ClashOfClans/). You can install the NuGet package for example via Visual Studio Package Manager Console window by giving next command:
+```
+Install-Package ClashOfClans
+```
+
 # Usage
 Below are examples about how to use the API to get the data from Supercell's Clash of Clans API.
 The precondition for each API request is that you have a valid token defined in the scope of the request!
