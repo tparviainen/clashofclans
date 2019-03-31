@@ -1,60 +1,39 @@
 # Clash of Clans
 .NET Standard library for Clash of Clans API
 
+[![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
+
 # Info
-This is an API wrapper library for official Clash of Clans API, see https://developer.clashofclans.com/.
-In order to use the functionality provided by this library you need an API key (token) that can be created in Clash of Clans developer web site.
+This is a C# library for official Clash of Clans API, see https://developer.clashofclans.com/.
+In order to use the functionality provided by this library you need an API key (token) that can be created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
 
 # Installation
-Clash of Clans API library is provided as a [NuGet package](https://www.nuget.org/packages/ClashOfClans/). You can install the NuGet package for example via Visual Studio Package Manager Console window by giving next command:
+You can install the [NuGet package](https://www.nuget.org/packages/ClashOfClans/) for example via Visual Studio Package Manager Console window by giving the next command:
 ```
 Install-Package ClashOfClans
 ```
 
 # Usage
-Below are examples about how to use the API to get the data from Supercell's Clash of Clans API.
-The precondition for each API request is that you have a valid token defined in the scope of the request!
-```csharp
-var token = "[your own unique API key]";
-```
+Below are few examples about how to use the API to get data from Supercell's Clash of Clans API.
 
-## Get Player Information
-```csharp
-var playerTag = "[player tag]";
-var coc = new ClashOfClansApi(token);
-var player = await coc.Players.GetAsync(playerTag);
-```
-
-## Get Clan Information
 ```csharp
 var clanTag = "[clan tag]";
-var coc = new ClashOfClansApi(token);
-var clan = await coc.Clans.GetAsync(clanTag);
-```
+var playerTag = "[player tag]";
+var token = "[your own unique API key]";
 
-## Search Clans
-This example shows how to use `query` object to limit the amount of clans received.
-```csharp
-var coc = new ClashOfClansApi(token);
 var query = new QueryClans
 {
     Name = "Phoenix",
     Limit = 10
 };
 
-var searchResult = await coc.Clans.GetAsync(query);
-```
-
-## List Leagues
-```csharp
 var coc = new ClashOfClansApi(token);
-var leagueList = await coc.Leagues.GetAsync();
-```
 
-## List Locations
-```csharp
-var coc = new ClashOfClansApi(token);
-var locationList = await coc.Locations.GetAsync();
+var clan = await coc.Clans.GetAsync(clanTag);       // Get Clan Information
+var player = await coc.Players.GetAsync(playerTag); // Get Player Information
+var leagueList = await coc.Leagues.GetAsync();      // List Leagues
+var locationList = await coc.Locations.GetAsync();  // List Locations
+var searchResult = await coc.Clans.GetAsync(query); // Search Clans
 ```
 
 # Unit Tests
