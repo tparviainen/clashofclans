@@ -6,13 +6,13 @@
     <PackageTags>ClashOfClans Game API</PackageTags>
     <PackageProjectUrl>https://github.com/tparviainen/clashofclans</PackageProjectUrl>
     <RepositoryUrl>https://github.com/tparviainen/clashofclans</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/tparviainen/clashofclans/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <Authors>Tomi Parviainen</Authors>
     <Company />
     <Description>This package contains a .NET Standard library for accessing the services of Clash of Clans API.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageId>ClashOfClansApi</PackageId>
+    <PackageId>ClashOfClans</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
