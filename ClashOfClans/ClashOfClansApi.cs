@@ -1,6 +1,8 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("ClashOfClans.Tests")]
 namespace ClashOfClans
 {
     public class ClashOfClansApi
