@@ -1,4 +1,5 @@
-﻿using ClashOfClans.Core;
+﻿using ClashOfClans.Api;
+using ClashOfClans.Core;
 
 namespace ClashOfClans
 {

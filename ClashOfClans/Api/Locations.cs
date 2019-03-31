@@ -1,11 +1,13 @@
-﻿using ClashOfClans.Models;
+﻿using ClashOfClans.Core;
+using ClashOfClans.Models;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.Core
+namespace ClashOfClans.Api
 {
     public class Locations : ClashOfClansBase, ILocations
     {
-        public Locations(string token, IThrottleRequests throttleRequests) : base(token, throttleRequests)
+        public Locations(string token, IThrottleRequests throttleRequests) :
+            base(token, throttleRequests)
         {
         }
 
