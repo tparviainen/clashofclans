@@ -1,6 +1,4 @@
-﻿using ClashOfClans.Converters;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 
 namespace ClashOfClans.Models
 {
@@ -8,7 +6,6 @@ namespace ClashOfClans.Models
     {
         public string Result;
 
-        [JsonConverter(typeof(DateTimeConverter))]
         public DateTime EndTime;
 
         public int? TeamSize;

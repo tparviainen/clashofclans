@@ -65,10 +65,13 @@ namespace ClashOfClans.Core
             {
                 using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(data)))
                 {
-                    var serializer = new JsonSerializer();
+                    var serializer = new JsonSerializer
+                    {
 #if DEBUG
-                    serializer.MissingMemberHandling = MissingMemberHandling.Error;
+                        MissingMemberHandling = MissingMemberHandling.Error,
 #endif
+                        DateFormatString = "yyyyMMddTHHmmss.fffK"
+                    };
 
                     using (var stream = new StreamReader(ms))
                     {
