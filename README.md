@@ -2,6 +2,7 @@
 .NET Standard library for Clash of Clans API
 
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
+[![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
 
 # Info
 This is a C# library for official Clash of Clans API, see https://developer.clashofclans.com/.
