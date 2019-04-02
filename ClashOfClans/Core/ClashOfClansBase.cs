@@ -55,8 +55,23 @@ namespace ClashOfClans.Core
                 return content;
             }
 
-            var error = Deserialize<Error>(content);
-            throw new ClashOfClansException(error);
+            try
+            {
+                var error = Deserialize<Error>(content);
+                throw new ClashOfClansException(error);
+            }
+            catch (Exception ex) when (ex.GetType() != typeof(ClashOfClansException))
+            {
+                // In case of unknown exception, catch the content that caused the issue
+                // to the Reason attribute and provide information to caller.
+                var error = new Error
+                {
+                    Message = ex.Message,
+                    Reason = content
+                };
+
+                throw new ClashOfClansException(error);
+            }
         }
 
         private T Deserialize<T>(string data) where T : class
