@@ -118,7 +118,8 @@ namespace ClashOfClans.Tests
                     var leaguegroup = await clans.GetCurrentWarLeagueGroupAsync(clan.Tag);
                     Console.WriteLine(leaguegroup);
 
-                    var round = GetRandom(leaguegroup.Rounds);
+                    // WarTag="#0" round not started
+                    var round = GetRandom(leaguegroup.Rounds, r => !r.WarTags.Contains("#0"));
                     var warTag = GetRandom(round.WarTags);
                     var clanwarleagues = await clans.GetClanWarLeaguesWarsAsync(warTag);
 
@@ -127,8 +128,9 @@ namespace ClashOfClans.Tests
                     Assert.IsNotNull(clanwarleagues);
                     break;
                 }
-                catch (ClashOfClansException)
+                catch (ClashOfClansException ex)
                 {
+                    Console.WriteLine(ex.Error);
                 }
             }
         }
