@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
@@ -62,6 +63,11 @@ namespace ClashOfClans.Api
         // GET /clanwarleagues/wars/{warTag}
         public async Task<ClanWarLeagueWar> GetClanWarLeaguesWarsAsync(string warTag)
         {
+            if (string.IsNullOrWhiteSpace(warTag) || warTag == "#0")
+            {
+                throw new ArgumentException(nameof(warTag));
+            }
+
             var uri = $"clanwarleagues/wars/{warTag}";
 
             return await RequestAsync<ClanWarLeagueWar>(uri);
