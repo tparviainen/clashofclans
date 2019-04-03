@@ -71,7 +71,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(playerRankingList);
-            Assert.AreEqual(ItemLimit, playerRankingList.Items.Length, $"Id {location.Id}");
+            Assert.IsTrue(playerRankingList.Items.Length <= ItemLimit, $"Id {location.Id}");
         }
 
         [TestMethod]
