@@ -2,14 +2,14 @@
 {
     public class ClanWarAttack
     {
-        public string AttackerTag;
+        public string AttackerTag { get; set; }
 
-        public string DefenderTag;
+        public string DefenderTag { get; set; }
 
-        public int? Stars;
+        public int? Stars { get; set; }
 
-        public int? DestructionPercentage;
+        public int? DestructionPercentage { get; set; }
 
-        public int? Order;
+        public int? Order { get; set; }
     }
 }

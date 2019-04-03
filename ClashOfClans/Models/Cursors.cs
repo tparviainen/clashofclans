@@ -2,8 +2,8 @@
 {
     public class Cursors
     {
-        public string After;
+        public string After { get; set; }
 
-        public string Before;
+        public string Before { get; set; }
     }
 }

@@ -2,6 +2,6 @@
 {
     public class WarLog : Queryable
     {
-        public WarLogEntry[] Items;
+        public WarLogEntry[] Items { get; set; }
     }
 }

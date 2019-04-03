@@ -2,50 +2,50 @@
 {
     public class PlayerDetail : Identity
     {
-        public int? TownHallLevel;
+        public int? TownHallLevel { get; set; }
 
-        public int? TownHallWeaponLevel;
+        public int? TownHallWeaponLevel { get; set; }
 
-        public int? ExpLevel;
+        public int? ExpLevel { get; set; }
 
-        public int? Trophies;
+        public int? Trophies { get; set; }
 
-        public int? BestTrophies;
+        public int? BestTrophies { get; set; }
 
-        public int? WarStars;
+        public int? WarStars { get; set; }
 
-        public int? AttackWins;
+        public int? AttackWins { get; set; }
 
-        public int? DefenseWins;
+        public int? DefenseWins { get; set; }
 
-        public int? BuilderHallLevel;
+        public int? BuilderHallLevel { get; set; }
 
-        public int? VersusTrophies;
+        public int? VersusTrophies { get; set; }
 
-        public int? BestVersusTrophies;
+        public int? BestVersusTrophies { get; set; }
 
-        public int? VersusBattleWins;
+        public int? VersusBattleWins { get; set; }
 
-        public string Role;
+        public string Role { get; set; }
 
-        public int? Donations;
+        public int? Donations { get; set; }
 
-        public int? DonationsReceived;
+        public int? DonationsReceived { get; set; }
 
-        public InlineModel1 Clan;
+        public InlineModel1 Clan { get; set; }
 
-        public League League;
+        public League League { get; set; }
 
-        public InlineModel2 LegendStatistics;
+        public InlineModel2 LegendStatistics { get; set; }
 
-        public AchievementList[] Achievements;
+        public AchievementList[] Achievements { get; set; }
 
-        public int? VersusBattleWinCount;
+        public int? VersusBattleWinCount { get; set; }
 
-        public PlayerItemLevelList[] Troops;
+        public PlayerItemLevelList[] Troops { get; set; }
 
-        public PlayerItemLevelList[] Heroes;
+        public PlayerItemLevelList[] Heroes { get; set; }
 
-        public PlayerItemLevelList[] Spells;
+        public PlayerItemLevelList[] Spells { get; set; }
     }
 }

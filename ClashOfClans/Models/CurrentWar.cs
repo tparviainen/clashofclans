@@ -4,19 +4,19 @@ namespace ClashOfClans.Models
 {
     public class CurrentWar
     {
-        public string State;
+        public string State { get; set; }
 
-        public int? TeamSize;
+        public int? TeamSize { get; set; }
 
-        public DateTime PreparationStartTime;
+        public DateTime PreparationStartTime { get; set; }
 
-        public DateTime StartTime;
+        public DateTime StartTime { get; set; }
 
-        public DateTime EndTime;
+        public DateTime EndTime { get; set; }
 
-        public WarClan Clan;
+        public WarClan Clan { get; set; }
 
-        public WarClan Opponent;
+        public WarClan Opponent { get; set; }
 
         public override string ToString()
         {

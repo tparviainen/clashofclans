@@ -2,6 +2,6 @@
 {
     public class ClanMemberList : Queryable
     {
-        public ClanMember[] Items;
+        public ClanMember[] Items { get; set; }
     }
 }

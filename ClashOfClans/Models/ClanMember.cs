@@ -2,22 +2,22 @@
 {
     public class ClanMember : Identity
     {
-        public string Role;
+        public string Role { get; set; }
 
-        public int? ExpLevel;
+        public int? ExpLevel { get; set; }
 
-        public League League;
+        public League League { get; set; }
 
-        public int? Trophies;
+        public int? Trophies { get; set; }
 
-        public int? VersusTrophies;
+        public int? VersusTrophies { get; set; }
 
-        public int? ClanRank;
+        public int? ClanRank { get; set; }
 
-        public int? PreviousClanRank;
+        public int? PreviousClanRank { get; set; }
 
-        public int? Donations;
+        public int? Donations { get; set; }
 
-        public int? DonationsReceived;
+        public int? DonationsReceived { get; set; }
     }
 }

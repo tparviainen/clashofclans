@@ -2,16 +2,16 @@
 {
     public class SeasonPlayerRanking : Identity
     {
-        public int? ExpLevel;
+        public int? ExpLevel { get; set; }
 
-        public int? Trophies;
+        public int? Trophies { get; set; }
 
-        public int? AttackWins;
+        public int? AttackWins { get; set; }
 
-        public int? DefenseWins;
+        public int? DefenseWins { get; set; }
 
-        public int? Rank;
+        public int? Rank { get; set; }
 
-        public InlineModel1 Clan;
+        public InlineModel1 Clan { get; set; }
     }
 }

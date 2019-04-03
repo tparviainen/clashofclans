@@ -2,6 +2,6 @@
 {
     public class Queryable
     {
-        public Paging Paging;
+        public Paging Paging { get; set; }
     }
 }

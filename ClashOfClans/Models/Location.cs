@@ -2,13 +2,13 @@
 {
     public class Location
     {
-        public int? Id;
+        public int? Id { get; set; }
 
-        public string Name;
+        public string Name { get; set; }
 
-        public bool? IsCountry;
+        public bool? IsCountry { get; set; }
 
-        public string CountryCode;
+        public string CountryCode { get; set; }
 
         public override string ToString()
         {

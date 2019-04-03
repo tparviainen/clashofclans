@@ -2,6 +2,6 @@
 {
     public class LeagueSeasonList : Queryable
     {
-        public LeagueSeason[] Items;
+        public LeagueSeason[] Items { get; set; }
     }
 }

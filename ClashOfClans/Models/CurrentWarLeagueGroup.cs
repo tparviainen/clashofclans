@@ -2,13 +2,13 @@
 {
     public class CurrentWarLeagueGroup
     {
-        public string State;
+        public string State { get; set; }
 
-        public string Season;
+        public string Season { get; set; }
 
-        public InlineModel[] Clans;
+        public InlineModel[] Clans { get; set; }
 
-        public InlineModel0[] Rounds;
+        public InlineModel0[] Rounds { get; set; }
 
         public override string ToString()
         {

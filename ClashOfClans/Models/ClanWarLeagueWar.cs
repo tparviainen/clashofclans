@@ -4,20 +4,20 @@ namespace ClashOfClans.Models
 {
     public class ClanWarLeagueWar
     {
-        public string State;
+        public string State { get; set; }
 
-        public int? TeamSize;
+        public int? TeamSize { get; set; }
 
-        public DateTime PreparationStartTime;
+        public DateTime PreparationStartTime { get; set; }
 
-        public DateTime StartTime;
+        public DateTime StartTime { get; set; }
 
-        public DateTime EndTime;
+        public DateTime EndTime { get; set; }
 
-        public ClanWarLeagueWarClan Clan;
+        public ClanWarLeagueWarClan Clan { get; set; }
 
-        public ClanWarLeagueWarClan Opponent;
+        public ClanWarLeagueWarClan Opponent { get; set; }
 
-        public DateTime WarStartTime;
+        public DateTime WarStartTime { get; set; }
     }
 }

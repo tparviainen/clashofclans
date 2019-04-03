@@ -2,11 +2,11 @@
 {
     public class League
     {
-        public int? Id;
+        public int? Id { get; set; }
 
-        public string Name;
+        public string Name { get; set; }
 
-        public UrlContainer IconUrls;
+        public UrlContainer IconUrls { get; set; }
 
         public override string ToString()
         {

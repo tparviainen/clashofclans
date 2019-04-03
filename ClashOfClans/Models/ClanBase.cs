@@ -2,33 +2,33 @@
 {
     public class ClanBase : Identity
     {
-        public string Type;
+        public string Type { get; set; }
 
-        public Location Location;
+        public Location Location { get; set; }
 
-        public UrlContainer BadgeUrls;
+        public UrlContainer BadgeUrls { get; set; }
 
-        public int? ClanLevel;
+        public int? ClanLevel { get; set; }
 
-        public int? ClanPoints;
+        public int? ClanPoints { get; set; }
 
-        public int? ClanVersusPoints;
+        public int? ClanVersusPoints { get; set; }
 
-        public int? RequiredTrophies;
+        public int? RequiredTrophies { get; set; }
 
-        public string WarFrequency;
+        public string WarFrequency { get; set; }
 
-        public int? WarWinStreak;
+        public int? WarWinStreak { get; set; }
 
-        public int? WarWins;
+        public int? WarWins { get; set; }
 
-        public bool? IsWarLogPublic;
+        public bool? IsWarLogPublic { get; set; }
 
-        public int? Members;
+        public int? Members { get; set; }
 
-        public int? WarTies;
+        public int? WarTies { get; set; }
 
-        public int? WarLosses;
+        public int? WarLosses { get; set; }
 
         public override string ToString()
         {

@@ -4,12 +4,12 @@ namespace ClashOfClans.Models
 {
     public class UrlContainer
     {
-        public Uri Small;
+        public Uri Small { get; set; }
 
-        public Uri Large;
+        public Uri Large { get; set; }
 
-        public Uri Medium;
+        public Uri Medium { get; set; }
 
-        public Uri Tiny;
+        public Uri Tiny { get; set; }
     }
 }

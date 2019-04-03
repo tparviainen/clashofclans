@@ -2,13 +2,13 @@
 {
     public class PlayerItemLevelList
     {
-        public string Name;
+        public string Name { get; set; }
 
-        public int? Level;
+        public int? Level { get; set; }
 
-        public int? MaxLevel;
+        public int? MaxLevel { get; set; }
 
-        public string Village;
+        public string Village { get; set; }
 
         public override string ToString()
         {

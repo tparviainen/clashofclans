@@ -2,19 +2,19 @@
 {
     public class AchievementList
     {
-        public string Name;
+        public string Name { get; set; }
 
-        public int? Stars;
+        public int? Stars { get; set; }
 
-        public int? Value;
+        public int? Value { get; set; }
 
-        public int? Target;
+        public int? Target { get; set; }
 
-        public string Info;
+        public string Info { get; set; }
 
-        public string CompletionInfo;
+        public string CompletionInfo { get; set; }
 
-        public string Village;
+        public string Village { get; set; }
 
         public override string ToString()
         {

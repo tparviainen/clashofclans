@@ -2,6 +2,6 @@
 {
     public class SearchResult : Queryable
     {
-        public ClanBase[] Items;
+        public ClanBase[] Items { get; set; }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class Clan : ClanBase
     {
-        public string Description;
+        public string Description { get; set; }
 
-        public ClanMember[] MemberList;
+        public ClanMember[] MemberList { get; set; }
     }
 }

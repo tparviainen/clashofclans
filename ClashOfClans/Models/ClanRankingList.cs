@@ -2,6 +2,6 @@
 {
     public class ClanRankingList : Queryable
     {
-        public ClanRanking[] Items;
+        public ClanRanking[] Items { get; set; }
     }
 }

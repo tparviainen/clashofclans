@@ -2,6 +2,6 @@
 {
     public class SeasonPlayerRankingList : Queryable
     {
-        public SeasonPlayerRanking[] Items;
+        public SeasonPlayerRanking[] Items { get; set; }
     }
 }

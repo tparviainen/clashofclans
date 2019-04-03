@@ -2,6 +2,6 @@
 {
     public class InlineModel0
     {
-        public string[] WarTags;
+        public string[] WarTags { get; set; }
     }
 }

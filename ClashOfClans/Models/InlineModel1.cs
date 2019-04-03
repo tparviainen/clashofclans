@@ -2,10 +2,10 @@
 {
     public class InlineModel1 : Identity
     {
-        public int? ClanLevel;
+        public int? ClanLevel { get; set; }
 
-        public UrlContainer BadgeUrls;
+        public UrlContainer BadgeUrls { get; set; }
 
-        public int? TownHallLevel;
+        public int? TownHallLevel { get; set; }
     }
 }

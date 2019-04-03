@@ -2,6 +2,6 @@
 {
     public class LocationList : Queryable
     {
-        public Location[] Items;
+        public Location[] Items { get; set; }
     }
 }

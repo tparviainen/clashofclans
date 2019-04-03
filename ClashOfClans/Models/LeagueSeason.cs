@@ -2,7 +2,7 @@
 {
     public class LeagueSeason
     {
-        public string Id;
+        public string Id { get; set; }
 
         public override string ToString()
         {

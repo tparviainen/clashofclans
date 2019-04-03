@@ -2,20 +2,20 @@
 {
     public class ClanRanking : Identity
     {
-        public Location Location;
+        public Location Location { get; set; }
 
-        public UrlContainer BadgeUrls;
+        public UrlContainer BadgeUrls { get; set; }
 
-        public int? ClanLevel;
+        public int? ClanLevel { get; set; }
 
-        public int? Members;
+        public int? Members { get; set; }
 
-        public int? ClanPoints;
+        public int? ClanPoints { get; set; }
 
-        public int? Rank;
+        public int? Rank { get; set; }
 
-        public int? PreviousRank;
+        public int? PreviousRank { get; set; }
 
-        public int? ClanVersusPoints;
+        public int? ClanVersusPoints { get; set; }
     }
 }

@@ -2,9 +2,9 @@
 {
     public class Error
     {
-        public string Reason;
+        public string Reason { get; set; }
 
-        public string Message;
+        public string Message { get; set; }
 
         public override string ToString()
         {

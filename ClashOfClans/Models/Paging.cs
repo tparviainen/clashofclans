@@ -2,6 +2,6 @@
 {
     public class Paging
     {
-        public Cursors Cursors;
+        public Cursors Cursors { get; set; }
     }
 }

@@ -2,6 +2,6 @@
 {
     public class LeagueList : Queryable
     {
-        public League[] Items;
+        public League[] Items { get; set; }
     }
 }

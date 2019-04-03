@@ -2,12 +2,12 @@
 {
     public class InlineModel2
     {
-        public int? LegendTrophies;
+        public int? LegendTrophies { get; set; }
 
-        public LegendLeagueTournamentSeasonResult BestSeason;
+        public LegendLeagueTournamentSeasonResult BestSeason { get; set; }
 
-        public LegendLeagueTournamentSeasonResult CurrentSeason;
+        public LegendLeagueTournamentSeasonResult CurrentSeason { get; set; }
 
-        public LegendLeagueTournamentSeasonResult PreviousSeason;
+        public LegendLeagueTournamentSeasonResult PreviousSeason { get; set; }
     }
 }

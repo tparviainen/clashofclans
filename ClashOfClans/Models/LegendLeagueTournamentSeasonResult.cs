@@ -2,10 +2,10 @@
 {
     public class LegendLeagueTournamentSeasonResult
     {
-        public string Id;
+        public string Id { get; set; }
 
-        public int? Rank;
+        public int? Rank { get; set; }
 
-        public int? Trophies;
+        public int? Trophies { get; set; }
     }
 }
