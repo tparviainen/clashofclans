@@ -8,37 +8,37 @@
         /// is interpreted as wild card search, so it may appear anywhere in
         /// the clan name.
         /// </summary>
-        public string Name;
+        public string Name { get; set; }
 
         /// <summary>
         /// Filter by clan war frequency.
         /// </summary>
-        public string WarFrequency;
+        public string WarFrequency { get; set; }
 
         /// <summary>
         /// Filter by clan location identifier. For list of available locations,
         /// refer to getLocations operation.
         /// </summary>
-        public int? LocationId;
+        public int? LocationId { get; set; }
 
         /// <summary>
         /// Filter by minimum amount of clan members.
         /// </summary>
-        public int? MinMembers;
+        public int? MinMembers { get; set; }
 
         /// <summary>
         /// Filter by maximum amount of clan members.
         /// </summary>
-        public int? MaxMembers;
+        public int? MaxMembers { get; set; }
 
         /// <summary>
         /// Filter by minimum amount of clan points.
         /// </summary>
-        public int? MinClanPoints;
+        public int? MinClanPoints { get; set; }
 
         /// <summary>
         /// Filter by minimum clan level.
         /// </summary>
-        public int? MinClanLevel;
+        public int? MinClanLevel { get; set; }
     }
 }
