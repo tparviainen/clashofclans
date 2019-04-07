@@ -14,7 +14,7 @@
 
         public string CompletionInfo { get; set; }
 
-        public string Village { get; set; }
+        public Village Village { get; set; }
 
         public override string ToString()
         {
