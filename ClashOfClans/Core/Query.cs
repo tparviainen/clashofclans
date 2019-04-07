@@ -1,4 +1,7 @@
-﻿namespace ClashOfClans.Core
+﻿using ClashOfClans.Models;
+using System;
+
+namespace ClashOfClans.Core
 {
     public class Query
     {
@@ -9,21 +12,21 @@
 
         /// <summary>
         /// Return only items that occur after this marker. After marker can
-        /// be found from the response, inside the 'paging' property. Note
-        /// that only after or before can be specified for a request, not both.
+        /// be found from the response, inside the <see cref="Paging"/> property. Note that
+        /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
         /// </summary>
         public string After { get; set; }
 
         /// <summary>
         /// Return only items that occur before this marker. Before marker can
-        /// be found from the response, inside the 'paging' property. Note that
-        /// only after or before can be specified for a request, not both.
+        /// be found from the response, inside the <see cref="Paging"/> property. Note that
+        /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
         /// </summary>
         public string Before { get; set; }
 
         public override string ToString()
         {
-            var query = string.Empty;
+            var queryString = string.Empty;
 
             var properties = GetType().GetProperties();
 
@@ -32,13 +35,21 @@
                 var value = property.GetValue(this);
                 if (value != null)
                 {
-                    query += $"&{property.Name.ToLower()}={property.GetValue(this)}";
+                    var queryValue = $"{property.GetValue(this)}";
+
+                    // Enumerations need to start with a lowercase character
+                    if (Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
+                    {
+                        queryValue = $"{char.ToLowerInvariant(queryValue[0])}{queryValue.Substring(1)}";
+                    }
+
+                    queryString += $"&{property.Name.ToLower()}={queryValue}";
                 }
             }
 
-            if (query.Length != 0)
+            if (queryString.Length != 0)
             {
-                return $"?{query.Substring(1)}";
+                return $"?{queryString.Substring(1)}";
             }
 
             return null;
