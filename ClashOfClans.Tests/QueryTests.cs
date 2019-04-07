@@ -1,4 +1,5 @@
 ﻿using ClashOfClans.Core;
+using ClashOfClans.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ClashOfClans.Tests
@@ -76,6 +77,22 @@ namespace ClashOfClans.Tests
             Assert.IsTrue(queryString.Contains("&"));
             Assert.IsTrue(queryString.Contains("locationid=42"));
             Assert.IsTrue(queryString.Contains("limit=10"));
+        }
+
+        [TestMethod]
+        public void QueryClansWithWarFrequency()
+        {
+            // Arrange
+            var query = new QueryClans
+            {
+                WarFrequency = WarFrequency.LessThanOncePerWeek
+            };
+
+            // Act
+            var queryString = query.ToString();
+
+            // Assert
+            Assert.AreEqual("?warfrequency=lessThanOncePerWeek", queryString);
         }
     }
 }
