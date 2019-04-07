@@ -1,4 +1,6 @@
-﻿namespace ClashOfClans.Core
+﻿using ClashOfClans.Models;
+
+namespace ClashOfClans.Core
 {
     public class QueryClans : Query
     {
@@ -13,11 +15,11 @@
         /// <summary>
         /// Filter by clan war frequency.
         /// </summary>
-        public string WarFrequency { get; set; }
+        public WarFrequency? WarFrequency { get; set; }
 
         /// <summary>
         /// Filter by clan location identifier. For list of available locations,
-        /// refer to getLocations operation.
+        /// refer to <see cref="ILocations.GetAsync(Query)" /> operation.
         /// </summary>
         public int? LocationId { get; set; }
 
