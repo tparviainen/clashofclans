@@ -1,4 +1,6 @@
 # Clash of Clans
+<img align="right" width="100px" src="https://github.com/tparviainen/clashofclans/raw/master/icon.png" />
+
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
 
