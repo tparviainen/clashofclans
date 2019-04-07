@@ -4,7 +4,7 @@ namespace ClashOfClans.Models
 {
     public class WarLogEntry
     {
-        public string Result { get; set; }
+        public Result? Result { get; set; }
 
         public DateTime EndTime { get; set; }
 
