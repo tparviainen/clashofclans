@@ -1,4 +1,5 @@
 ﻿using ClashOfClans.Core;
+using ClashOfClans.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
@@ -18,7 +19,8 @@ namespace ClashOfClans.Tests
             var query = new QueryClans
             {
                 Name = "Phoenix",
-                Limit = limit
+                Limit = limit,
+                WarFrequency = WarFrequency.Never
             };
 
             // Act
