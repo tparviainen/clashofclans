@@ -1,5 +1,6 @@
 ﻿using ClashOfClans;
 using ClashOfClans.Core;
+using ClashOfClans.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -16,7 +17,8 @@ namespace ClashOfClans.App
             var query = new QueryClans
             {
                 Name = "Phoenix",
-                Limit = 10
+                Limit = 10,
+                WarFrequency = WarFrequency.Never
             };
 
             try
