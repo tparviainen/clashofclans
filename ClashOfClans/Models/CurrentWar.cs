@@ -4,7 +4,7 @@ namespace ClashOfClans.Models
 {
     public class CurrentWar
     {
-        public string State { get; set; }
+        public State State { get; set; }
 
         public int? TeamSize { get; set; }
 
