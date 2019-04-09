@@ -15,6 +15,11 @@ namespace ClashOfClans.Api
         // GET /clans
         public async Task<SearchResult> GetAsync(QueryClans query)
         {
+            if (!string.IsNullOrWhiteSpace(query.Name) && query.Name.Length < 3)
+            {
+                throw new ArgumentException("Name needs to be at least three characters long", nameof(query));
+            }
+
             var uri = $"clans{query}";
 
             return await RequestAsync<SearchResult>(uri);
