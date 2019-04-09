@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
+using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;

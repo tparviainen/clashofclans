@@ -1,5 +1,5 @@
-﻿using ClashOfClans.Core;
-using ClashOfClans.Models;
+﻿using ClashOfClans.Models;
+using ClashOfClans.Search;
 using System.Threading.Tasks;
 
 namespace ClashOfClans

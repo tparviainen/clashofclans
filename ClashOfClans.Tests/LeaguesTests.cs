@@ -1,4 +1,4 @@
-﻿using ClashOfClans.Core;
+﻿using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Threading.Tasks;
