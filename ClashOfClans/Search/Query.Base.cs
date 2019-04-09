@@ -1,29 +1,13 @@
-﻿using ClashOfClans.Models;
-using System;
+﻿using System;
 
-namespace ClashOfClans.Core
+namespace ClashOfClans.Search
 {
-    public class Query
+    public partial class Query
     {
         /// <summary>
-        /// Limit the number of items returned in the response
+        /// Returns the query string for the Clash of Clans API.
         /// </summary>
-        public int? Limit { get; set; }
-
-        /// <summary>
-        /// Return only items that occur after this marker. After marker can
-        /// be found from the response, inside the <see cref="Paging"/> property. Note that
-        /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
-        /// </summary>
-        public string After { get; set; }
-
-        /// <summary>
-        /// Return only items that occur before this marker. Before marker can
-        /// be found from the response, inside the <see cref="Paging"/> property. Note that
-        /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
-        /// </summary>
-        public string Before { get; set; }
-
+        /// <returns>Query string</returns>
         public override string ToString()
         {
             var queryString = string.Empty;

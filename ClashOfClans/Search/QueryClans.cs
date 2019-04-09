@@ -1,6 +1,6 @@
 ﻿using ClashOfClans.Models;
 
-namespace ClashOfClans.Core
+namespace ClashOfClans.Search
 {
     public class QueryClans : Query
     {
