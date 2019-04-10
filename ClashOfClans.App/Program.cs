@@ -1,6 +1,7 @@
 ﻿using ClashOfClans;
 using ClashOfClans.Core;
 using ClashOfClans.Models;
+using ClashOfClans.Search;
 using System;
 using System.Threading.Tasks;
 
