@@ -17,6 +17,46 @@ namespace ClashOfClans.Tests
 
         private Random _random = new Random();
 
+        protected static ClanBase[] _clans;
+        protected static Location[] _locations;
+        protected static League[] _leagues;
+        protected static IConfigurationRoot _config;
+        protected static ClashOfClansApi _coc;
+
+        public string PlayerTag { get => _config["playerTag"]; }
+
+        [AssemblyInitialize]
+        public static async Task AssemblyInitialize(TestContext context)
+        {
+            try
+            {
+                _config = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.test.json")
+                    .Build();
+
+                _coc = new ClashOfClansApi(_config["api:token"]);
+                var query = new QueryClans
+                {
+                    MinMembers = 40,
+                    MaxMembers = 40,
+                    Limit = 50
+                };
+
+                var searchResult = await _coc.Clans.GetAsync(query);
+                _clans = searchResult.Items;
+
+                var locationList = await _coc.Locations.GetAsync();
+                _locations = locationList.Items;
+
+                var leagueList = await _coc.Leagues.GetAsync();
+                _leagues = leagueList.Items;
+            }
+            catch (ClashOfClansException ex)
+            {
+                Assert.Fail($"{ex.Error}");
+            }
+        }
+
         /// <summary>
         /// Returns a random element from the given list
         /// </summary>
@@ -33,60 +73,6 @@ namespace ClashOfClans.Tests
             }
 
             return list[_random.Next(list.Count)];
-        }
-
-        public string PlayerTag
-        {
-            get
-            {
-                return _config["playerTag"];
-            }
-        }
-
-        protected static bool _initialized;
-
-        protected static ClanBase[] _clans;
-        protected static Location[] _locations;
-        protected static League[] _leagues;
-        protected static IConfigurationRoot _config;
-        protected static ClashOfClansApi _coc;
-
-        [TestInitialize]
-        public async Task TestInitialize()
-        {
-            if (_initialized == false)
-            {
-                try
-                {
-                    _config = new ConfigurationBuilder()
-                        .AddJsonFile("appsettings.test.json")
-                        .Build();
-
-                    _coc = new ClashOfClansApi(_config["api:token"]);
-                    var query = new QueryClans
-                    {
-                        MinMembers = 40,
-                        MaxMembers = 40,
-                        Limit = 50
-                    };
-
-                    var searchResult = await _coc.Clans.GetAsync(query);
-                    _clans = searchResult.Items;
-
-                    var locationList = await _coc.Locations.GetAsync();
-                    _locations = locationList.Items;
-
-                    var leagueList = await _coc.Leagues.GetAsync();
-                    _leagues = leagueList.Items;
-
-                    _initialized = true;
-
-                }
-                catch (ClashOfClansException ex)
-                {
-                    Assert.Fail($"{ex.Error}");
-                }
-            }
         }
     }
 }
