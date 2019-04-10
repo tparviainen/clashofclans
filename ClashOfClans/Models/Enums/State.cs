@@ -5,6 +5,7 @@
         WarEnded,
         NotInWar,
         Preparation,
-        InWar
+        InWar,
+        Ended
     }
 }
