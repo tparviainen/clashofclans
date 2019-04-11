@@ -4,6 +4,9 @@ namespace ClashOfClans.Models
 {
     public partial class LocationList
     {
-        public Location this[string name] => Items?.SingleOrDefault(l => l.Name == name);
+        public Location this[string name]
+        {
+            get => Items?.SingleOrDefault(l => l.Name == name);
+        }
     }
 }
