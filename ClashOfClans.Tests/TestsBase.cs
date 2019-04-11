@@ -15,7 +15,7 @@ namespace ClashOfClans.Tests
     {
         private Random _random = new Random();
 
-        protected static ClanBase[] _clans;
+        protected static SearchResult _clanList;
         protected static LocationList _locationList;
         protected static LeagueList _leagueList;
         protected static IConfigurationRoot _config;
@@ -40,9 +40,7 @@ namespace ClashOfClans.Tests
                     Limit = 50
                 };
 
-                var searchResult = await _coc.Clans.GetAsync(query);
-                _clans = searchResult.Items;
-
+                _clanList = await _coc.Clans.GetAsync(query);
                 _locationList = await _coc.Locations.GetAsync();
                 _leagueList = await _coc.Leagues.GetAsync();
             }

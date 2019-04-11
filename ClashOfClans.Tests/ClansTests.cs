@@ -16,7 +16,6 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var limit = 10;
-            var clans = _coc.Clans;
             var query = new QueryClans
             {
                 Name = "Phoenix",
@@ -25,7 +24,7 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var searchResult = await clans.GetAsync(query);
+            var searchResult = await _coc.Clans.GetAsync(query);
 
             // Assert
             Assert.IsNotNull(searchResult);
@@ -36,11 +35,10 @@ namespace ClashOfClans.Tests
         public async Task GetClanInformation()
         {
             // Arrange
-            var clans = _coc.Clans;
+            var clanTag = GetRandom(_clanList.Items).Tag;
 
             // Act
-            var clanTag = GetRandom(_clans).Tag;
-            var clan = await clans.GetAsync(clanTag);
+            var clan = await _coc.Clans.GetAsync(clanTag);
             Console.WriteLine(clan);
 
             // Assert
@@ -51,11 +49,10 @@ namespace ClashOfClans.Tests
         public async Task ListClanMembers()
         {
             // Arrange
-            var clans = _coc.Clans;
-            var clanTag = GetRandom(_clans).Tag;
+            var clanTag = GetRandom(_clanList.Items).Tag;
 
             // Act
-            var clansMembers = await clans.GetMembersAsync(clanTag);
+            var clansMembers = await _coc.Clans.GetMembersAsync(clanTag);
 
             // Assert
             Assert.IsNotNull(clansMembers);
@@ -65,15 +62,14 @@ namespace ClashOfClans.Tests
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var clans = _coc.Clans;
+            var clan = GetRandom(_clanList.Items.Where(c => c.IsWarLogPublic == true).ToList());
 
             // Act
-            var clan = GetRandom(_clans.Where(c => c.IsWarLogPublic == true).ToList());
             if (clan != null)
             {
                 Console.WriteLine(clan);
 
-                var clanWarLog = await clans.GetWarLogAsync(clan.Tag);
+                var clanWarLog = await _coc.Clans.GetWarLogAsync(clan.Tag);
                 Console.WriteLine(clanWarLog);
 
                 // Assert
@@ -89,15 +85,14 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             // Arrange
-            var clans = _coc.Clans;
+            var clan = GetRandom(_clanList.Items.Where(c => c.IsWarLogPublic == true).ToList());
 
             // Act
-            var clan = GetRandom(_clans.Where(c => c.IsWarLogPublic == true).ToList());
             if (clan != null)
             {
                 Console.WriteLine(clan);
 
-                var currentWar = await clans.GetCurrentWarAsync(clan.Tag);
+                var currentWar = await _coc.Clans.GetCurrentWarAsync(clan.Tag);
                 Console.WriteLine(currentWar);
 
                 // Assert
@@ -109,22 +104,21 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroupAndWar()
         {
             // Arrange
-            var clans = _coc.Clans;
 
             // Act
-            foreach (var clan in _clans)
+            foreach (var clan in _clanList.Items)
             {
                 Console.WriteLine(clan);
 
                 try
                 {
-                    var leaguegroup = await clans.GetCurrentWarLeagueGroupAsync(clan.Tag);
+                    var leaguegroup = await _coc.Clans.GetCurrentWarLeagueGroupAsync(clan.Tag);
                     Console.WriteLine(leaguegroup);
 
                     // WarTag="#0" round not started
                     var round = GetRandom(leaguegroup.Rounds, r => !r.WarTags.Contains("#0"));
                     var warTag = GetRandom(round.WarTags);
-                    var clanwarleagues = await clans.GetClanWarLeaguesWarsAsync(warTag);
+                    var clanwarleagues = await _coc.Clans.GetClanWarLeaguesWarsAsync(warTag);
 
                     // Assert
                     Assert.IsNotNull(leaguegroup);
