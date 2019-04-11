@@ -13,13 +13,11 @@ namespace ClashOfClans.Tests
     [TestClass]
     public class TestsBase
     {
-        public readonly string LegendLeague = "Legend League";
-
         private Random _random = new Random();
 
         protected static ClanBase[] _clans;
         protected static LocationList _locationList;
-        protected static League[] _leagues;
+        protected static LeagueList _leagueList;
         protected static IConfigurationRoot _config;
         protected static ClashOfClansApi _coc;
 
@@ -46,9 +44,7 @@ namespace ClashOfClans.Tests
                 _clans = searchResult.Items;
 
                 _locationList = await _coc.Locations.GetAsync();
-
-                var leagueList = await _coc.Leagues.GetAsync();
-                _leagues = leagueList.Items;
+                _leagueList = await _coc.Leagues.GetAsync();
             }
             catch (ClashOfClansException ex)
             {

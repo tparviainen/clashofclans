@@ -1,6 +1,5 @@
 ﻿using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Tests
@@ -26,7 +25,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var leagues = _coc.Leagues;
-            var leagueId = GetRandom(_leagues).Id;
+            var leagueId = GetRandom(_leagueList.Items).Id;
 
             // Act
             var league = await leagues.GetAsync(leagueId);
@@ -39,11 +38,10 @@ namespace ClashOfClans.Tests
         public async Task GetLeagueSeasons()
         {
             // Arrange
-            var leagues = _coc.Leagues;
-            var leagueId = _leagues.Where(l => l.Name == LegendLeague).Single().Id;
+            var league = _leagueList["Legend League"];
 
             // Act
-            var leagueSeasonList = await leagues.GetSeasonsAsync(leagueId);
+            var leagueSeasonList = await _coc.Leagues.GetSeasonsAsync(league.Id);
 
             // Assert
             Assert.IsNotNull(leagueSeasonList);
@@ -53,17 +51,16 @@ namespace ClashOfClans.Tests
         public async Task GetLeagueSeasonRankings()
         {
             // Arrange
-            var leagues = _coc.Leagues;
-            var leagueId = _leagues.Where(l => l.Name == LegendLeague).Single().Id;
-            var leagueSeasonList = await leagues.GetSeasonsAsync(leagueId);
-            var seasonId = GetRandom(leagueSeasonList.Items).Id;
+            var league = _leagueList["Legend League"];
+            var leagueSeasonList = await _coc.Leagues.GetSeasonsAsync(league.Id);
+            var season = GetRandom(leagueSeasonList.Items);
             var query = new Query
             {
                 Limit = 5
             };
 
             // Act
-            var seasonPlayerRankingList = await leagues.GetSeasonsAsync(leagueId, seasonId, query);
+            var seasonPlayerRankingList = await _coc.Leagues.GetSeasonsAsync(league.Id, season.Id, query);
 
             // Assert
             Assert.IsNotNull(seasonPlayerRankingList);
