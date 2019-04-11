@@ -23,6 +23,34 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
+        public async Task LocationFinlandExists()
+        {
+            // Arrange
+            var locations = _coc.Locations;
+            var locationList = await locations.GetAsync();
+
+            // Act
+            var finland = locationList["Finland"];
+
+            // Assert
+            Assert.IsNotNull(finland);
+        }
+
+        [TestMethod]
+        public async Task LocationRepublicOfFinlandDoesNotExist()
+        {
+            // Arrange
+            var locations = _coc.Locations;
+            var locationList = await locations.GetAsync();
+
+            // Act
+            var republicOfFinland = locationList["Republic of Finland"];
+
+            // Assert
+            Assert.IsNull(republicOfFinland);
+        }
+
+        [TestMethod]
         public async Task GetLocationInformation()
         {
             // Arrange
