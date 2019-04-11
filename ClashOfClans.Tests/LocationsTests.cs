@@ -23,28 +23,24 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
-        public async Task LocationFinlandExists()
+        public void LocationFinlandExists()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var locationList = await locations.GetAsync();
 
             // Act
-            var finland = locationList["Finland"];
+            var finland = _locationList["Finland"];
 
             // Assert
             Assert.IsNotNull(finland);
         }
 
         [TestMethod]
-        public async Task LocationRepublicOfFinlandDoesNotExist()
+        public void LocationRepublicOfFinlandDoesNotExist()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var locationList = await locations.GetAsync();
 
             // Act
-            var republicOfFinland = locationList["Republic of Finland"];
+            var republicOfFinland = _locationList["Republic of Finland"];
 
             // Assert
             Assert.IsNull(republicOfFinland);
@@ -54,11 +50,10 @@ namespace ClashOfClans.Tests
         public async Task GetLocationInformation()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var locationId = GetRandom(_locations).Id;
+            var locationId = GetRandom(_locationList.Items).Id;
 
             // Act
-            var location = await locations.GetAsync(locationId);
+            var location = await _coc.Locations.GetAsync(locationId);
 
             // Assert
             Assert.IsNotNull(location);
@@ -68,15 +63,14 @@ namespace ClashOfClans.Tests
         public async Task GetClanRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locationList.Items, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var clanRankingList = await locations.GetRankingsClansAsync(location.Id, query);
+            var clanRankingList = await _coc.Locations.GetRankingsClansAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(clanRankingList);
@@ -87,15 +81,14 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locationList.Items, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var playerRankingList = await locations.GetRankingsPlayersAsync(location.Id, query);
+            var playerRankingList = await _coc.Locations.GetRankingsPlayersAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerRankingList);
@@ -106,15 +99,14 @@ namespace ClashOfClans.Tests
         public async Task GetClanVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locationList.Items, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var clanRankingList = await locations.GetRankingsClansVersusAsync(location.Id, query);
+            var clanRankingList = await _coc.Locations.GetRankingsClansVersusAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(clanRankingList);
@@ -125,15 +117,14 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var locations = _coc.Locations;
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locationList.Items, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var playerVersusRankingList = await locations.GetRankingsPlayersVersusAsync(location.Id, query);
+            var playerVersusRankingList = await _coc.Locations.GetRankingsPlayersVersusAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerVersusRankingList);
