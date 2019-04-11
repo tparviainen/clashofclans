@@ -33,7 +33,9 @@ namespace ClashOfClans.App
                 var locationList = await coc.Locations.GetAsync();      // List Locations
                 var searchResult = await coc.Clans.GetAsync(query);     // Search Clans
 
-                // ...
+                // Usage ...
+                Console.WriteLine($"Player '{player.Name}' is in clan '{player.Clan?.Name}'");
+                Console.WriteLine($"Clan '{clan.Name}' has {clan.Members} members");
             }
             catch (ClashOfClansException ex)
             {
