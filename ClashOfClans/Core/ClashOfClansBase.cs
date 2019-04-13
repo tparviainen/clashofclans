@@ -94,7 +94,6 @@ namespace ClashOfClans.Core
                         return serializer.Deserialize<T>(reader);
                     }
                 }
-
             }
 
             return null;
