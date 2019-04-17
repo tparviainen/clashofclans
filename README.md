@@ -1,9 +1,10 @@
 # Clash of Clans
 <img align="right" width="100px" src="https://github.com/tparviainen/clashofclans/raw/master/icon.png" />
 
+[![Build status](https://programmingwithtomi.visualstudio.com/GitHub/_apis/build/status/clashofclans)](https://programmingwithtomi.visualstudio.com/GitHub/_build/latest?definitionId=3)
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
-[![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
 ![Downloads](https://img.shields.io/nuget/dt/ClashOfClans.svg)
+[![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
 
 .NET Standard library for Clash of Clans API
 
