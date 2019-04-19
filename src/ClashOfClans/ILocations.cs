@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
+    /// <summary>
+    /// Interface for locations and clan/player ranking in a location
+    /// </summary>
     public interface ILocations
     {
         /// <summary>

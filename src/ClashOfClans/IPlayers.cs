@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
+    /// <summary>
+    /// Interface for player related data
+    /// </summary>
     public interface IPlayers
     {
         /// <summary>

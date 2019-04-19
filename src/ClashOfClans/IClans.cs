@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
+    /// <summary>
+    /// Interface for clans, clan members and warlog
+    /// </summary>
     public interface IClans
     {
         /// <summary>
