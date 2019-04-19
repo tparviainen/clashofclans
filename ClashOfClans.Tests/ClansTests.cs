@@ -40,7 +40,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var count = 0;
-            var location = _locationList[locationName];
+            var location = _locations[locationName];
             var query = new QueryClans
             {
                 Limit = 200,
@@ -65,7 +65,7 @@ namespace ClashOfClans.Tests
         public async Task GetClanInformation()
         {
             // Arrange
-            var clanTag = GetRandom(_clanList.Items).Tag;
+            var clanTag = GetRandom(_clans.Items).Tag;
 
             // Act
             var clan = await _coc.Clans.GetAsync(clanTag);
@@ -79,7 +79,7 @@ namespace ClashOfClans.Tests
         public async Task ListClanMembers()
         {
             // Arrange
-            var clanTag = GetRandom(_clanList.Items).Tag;
+            var clanTag = GetRandom(_clans.Items).Tag;
 
             // Act
             var clansMembers = await _coc.Clans.GetMembersAsync(clanTag);
@@ -92,7 +92,7 @@ namespace ClashOfClans.Tests
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var clan = GetRandom(_clanList.Items.Where(c => c.IsWarLogPublic == true).ToList());
+            var clan = GetRandom(_clans.Items.Where(c => c.IsWarLogPublic == true).ToList());
 
             // Act
             if (clan != null)
@@ -115,7 +115,7 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             // Arrange
-            var clan = GetRandom(_clanList.Items.Where(c => c.IsWarLogPublic == true).ToList());
+            var clan = GetRandom(_clans.Items.Where(c => c.IsWarLogPublic == true).ToList());
 
             // Act
             if (clan != null)
@@ -136,7 +136,7 @@ namespace ClashOfClans.Tests
             // Arrange
 
             // Act
-            foreach (var clan in _clanList.Items)
+            foreach (var clan in _clans.Items)
             {
                 Console.WriteLine(clan);
 

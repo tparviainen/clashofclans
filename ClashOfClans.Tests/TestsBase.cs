@@ -15,9 +15,9 @@ namespace ClashOfClans.Tests
     {
         private Random _random = new Random();
 
-        protected static SearchResult _clanList;
-        protected static LocationList _locationList;
-        protected static LeagueList _leagueList;
+        protected static SearchResult _clans;
+        protected static LocationList _locations;
+        protected static LeagueList _leagues;
         protected static IConfigurationRoot _config;
         protected static ClashOfClansApi _coc;
 
@@ -40,9 +40,9 @@ namespace ClashOfClans.Tests
                     Limit = 50
                 };
 
-                _clanList = await _coc.Clans.GetAsync(query);
-                _locationList = await _coc.Locations.GetAsync();
-                _leagueList = await _coc.Leagues.GetAsync();
+                _clans = await _coc.Clans.GetAsync(query);
+                _locations = await _coc.Locations.GetAsync();
+                _leagues = await _coc.Leagues.GetAsync();
             }
             catch (ClashOfClansException ex)
             {
