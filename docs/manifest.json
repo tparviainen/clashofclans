@@ -1,0 +1,876 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Development/clashofclans",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "yx8/rC0gQDD2YiFqmK7a6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.ClashOfClansApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.ClashOfClansApi.html",
+          "hash": "mf2U7KE6A/undzrB/esmkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Core.ClashOfClansException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Core.ClashOfClansException.html",
+          "hash": "uccnYjAG31cKTjmYRjkMig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Core.html",
+          "hash": "TM1jb8pAAL6SNh93yzGpWw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.IClans.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.IClans.html",
+          "hash": "d1GNDJceJEWzxAu56xpFQg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.ILeagues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.ILeagues.html",
+          "hash": "rmSM4YpTxs/kKmVlarsNQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.ILocations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.ILocations.html",
+          "hash": "Uq4LXnCJAjek0ekTgjPXEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.IPlayers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.IPlayers.html",
+          "hash": "STQhlCsxqkb0+xDOMJLOww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.AchievementList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.AchievementList.html",
+          "hash": "bChl+WN3IQXsilb13S3RDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Clan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Clan.html",
+          "hash": "RsmVJeKlAmHC7h6uwxNd7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanBase.html",
+          "hash": "iThh9QWJzLgxMiWG2HoIFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanMember.html",
+          "hash": "0j0NOBzC9idazE685zQAxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanMemberList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanMemberList.html",
+          "hash": "kbDRxBg3NWzi2abSZusD4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanRanking.html",
+          "hash": "mw6NCCp9jvoP0s+kL7ruKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanRankingList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanRankingList.html",
+          "hash": "GFuFAtFYaToLrsQuVh57KA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanWarAttack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanWarAttack.html",
+          "hash": "3ATf6wvi6K4OIoZGo+ay3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanWarLeagueWar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanWarLeagueWar.html",
+          "hash": "5DnLBAgFQyhuTQSY9X8tCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanWarLeagueWarClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanWarLeagueWarClan.html",
+          "hash": "gpMoH5437xW+GXWLlKPh+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanWarMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanWarMember.html",
+          "hash": "CJ0NjwHxOR8fDGVkR72iEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.CurrentWar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.CurrentWar.html",
+          "hash": "uv9jof+46yJXjUv+o1+cNw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.CurrentWarLeagueGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.CurrentWarLeagueGroup.html",
+          "hash": "iBqyCKuqzGzaE7N6x3rH4g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Cursors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Cursors.html",
+          "hash": "voF1uSAK7PFOYhW/sLKCXQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Error.html",
+          "hash": "13iEHT6XqInefH8MaPnrEQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Identity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Identity.html",
+          "hash": "55p13j7PORs9S7gKSPeBTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.InlineModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.InlineModel.html",
+          "hash": "4kGikW9kq3dQ50ebKKV7+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.InlineModel0.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.InlineModel0.html",
+          "hash": "vx7oudF7GosQlv23vANtAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.InlineModel1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.InlineModel1.html",
+          "hash": "GHIjr0eLp3gUUewR5fXrKQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.InlineModel2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.InlineModel2.html",
+          "hash": "2kAhlh7qsdT2lIANczZAJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.League.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.League.html",
+          "hash": "5/8syHNpOEl8pF1UncvG4g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.LeagueList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.LeagueList.html",
+          "hash": "Oxbt2m1q8+TPOXSEI9/RbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.LeagueSeason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.LeagueSeason.html",
+          "hash": "PNHh2+Ce3YKW18V1daMugw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.LeagueSeasonList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.LeagueSeasonList.html",
+          "hash": "cMsPJ4QvlEEgZkA742VChQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.LegendLeagueTournamentSeasonResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.LegendLeagueTournamentSeasonResult.html",
+          "hash": "HbV2w6CD5xgQ0yynmPRwTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Location.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Location.html",
+          "hash": "oNUaJUx4sHE/5l7NSEFw8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.LocationList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.LocationList.html",
+          "hash": "QiXNRKMk3fHMY01NWSM/yA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Paging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Paging.html",
+          "hash": "1Q652Uhcm9A30EVA/0zxUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.PlayerDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.PlayerDetail.html",
+          "hash": "XHbaemXJpJeRSMM2ZV8RMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.PlayerItemLevelList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.PlayerItemLevelList.html",
+          "hash": "I6tOcaHNbNb3LHSJ1GS60g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.PlayerRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.PlayerRanking.html",
+          "hash": "ULfQUTFoMJEVGdjqGxpAfQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.PlayerRankingList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.PlayerRankingList.html",
+          "hash": "xJupiMGnVduu4fo+bDIssg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.PlayerVersusRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.PlayerVersusRanking.html",
+          "hash": "HmTixoXo9+0oyfTs4s/iqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.PlayerVersusRankingList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.PlayerVersusRankingList.html",
+          "hash": "uFNWUoMy0XMTYl0gVpi2ig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Queryable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Queryable.html",
+          "hash": "2b2ALB97V4h7MgpsMPYbWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Result.html",
+          "hash": "FMZuqGA8ihP+km3gWYwgTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Role.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Role.html",
+          "hash": "R2tFMJaVLU1tNGF6NyxXsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.SearchResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.SearchResult.html",
+          "hash": "/itM9XgrKuf40kvC/PXSgg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.SeasonPlayerRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.SeasonPlayerRanking.html",
+          "hash": "K4i2k+u0n7rHKynQvUETVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.SeasonPlayerRankingList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.SeasonPlayerRankingList.html",
+          "hash": "XXVJgmxblpV5+nHF52zGFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.State.html",
+          "hash": "hQvdUsSHZjREwPF637C69A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Type.html",
+          "hash": "fkGFW1GuyxrSE/W+MbPuMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.UrlContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.UrlContainer.html",
+          "hash": "g8VmLQMQgvb/TouSm8UtLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Village.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Village.html",
+          "hash": "rXHGRDpn7xDVgS/J0ytxuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarClan.html",
+          "hash": "nUmZnsdQdm5qO8z6dZBBKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarFrequency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarFrequency.html",
+          "hash": "ENSZtrTvLe5ngyyFPwymBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarLog.html",
+          "hash": "m4u7x0dVoDpOgzTWZYUPow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarLogEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarLogEntry.html",
+          "hash": "r7akw6tnnFm5Ct+0/PHClQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.html",
+          "hash": "yNQ7JaPXMjmf5OhdKuFigA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Search.Query.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Search.Query.html",
+          "hash": "uYzHgjnFnf5JfAH5iMe4KA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Search.QueryClans.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Search.QueryClans.html",
+          "hash": "52ufd0Vdx63lv26cK7V8AQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Search.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Search.html",
+          "hash": "B/KsedPSANn4s2GVZi9AOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.html",
+          "hash": "mY0xQ7EHdSswyVnih/v2ig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "7siMa6Dl/w3UfhL81Y4rUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "/VFFSl/KSpaFNhgwmnOp5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "e9g9rAiXxlYOFll0/LqP1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Wb8UNf7/BOdfpGos0yKiyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 4
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
+          "skipped_file_count": 60
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
