@@ -32,6 +32,36 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
+        [DataRow("China")]
+        [DataRow("Finland")]
+        [DataRow("Lesotho")]
+        [DataRow("United States")]
+        public async Task LoopClansFromSpecificLocation(string locationName)
+        {
+            // Arrange
+            var count = 0;
+            var location = _locationList[locationName];
+            var query = new QueryClans
+            {
+                Limit = 200,
+                LocationId = location.Id
+            };
+
+            // Act
+            do
+            {
+                var searchResult = await _coc.Clans.GetAsync(query);
+                searchResult.Items.ToList().ForEach(clan => Console.WriteLine(clan));
+                query.After = searchResult.Paging.Cursors.After;
+                count += searchResult.Items.Count();
+            } while (query.After != null);
+
+            // Assert
+            Console.WriteLine($"{locationName}: {count}");
+            Assert.IsTrue(count != 0);
+        }
+
+        [TestMethod]
         public async Task GetClanInformation()
         {
             // Arrange
