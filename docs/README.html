@@ -74,58 +74,13 @@
 In order to use the functionality provided by this library you need an API key (token) that can be
 created in Clash of Clans <a href="https://developer.clashofclans.com/">developer web site</a>.</p>
 <h1 id="getting-started">Getting Started</h1>
-<p>Install the latest <a href="https://www.nuget.org/packages/ClashOfClans/">NuGet package</a> for example via Visual Studio Package Manager Console window by giving the next command:</p>
-<pre><code>Install-Package ClashOfClans
-</code></pre>
-<p>After NuGet package installation start to use the API:</p>
-<pre><code class="lang-csharp">using ClashOfClans;
-using ClashOfClans.Core;
-using ClashOfClans.Models;
-using ClashOfClans.Search;
-using System;
-using System.Threading.Tasks;
-
-namespace ClashOfClans.App
-{
-    class Program
-    {
-        static async Task Main(string[] args)
-        {
-            var clanTag = &quot;[clan tag]&quot;;
-            var playerTag = &quot;[player tag]&quot;;
-            var token = &quot;[your own unique API key]&quot;;
-
-            var query = new QueryClans
-            {
-                Name = &quot;Phoenix&quot;,
-                Limit = 10,
-                WarFrequency = WarFrequency.Never
-            };
-
-            try
-            {
-                var coc = new ClashOfClansApi(token);
-
-                var clan = await coc.Clans.GetAsync(clanTag);           // Get Clan Information
-                var warLog = await coc.Clans.GetWarLogAsync(clanTag);   // Retrieve Clans Clan War Log
-                var player = await coc.Players.GetAsync(playerTag);     // Get Player Information
-                var leagueList = await coc.Leagues.GetAsync();          // List Leagues
-                var locationList = await coc.Locations.GetAsync();      // List Locations
-                var searchResult = await coc.Clans.GetAsync(query);     // Search Clans
-
-                // Usage ...
-                Console.WriteLine($&quot;Player '{player.Name}' is in clan '{player.Clan?.Name}'&quot;);
-                Console.WriteLine($&quot;Clan '{clan.Name}' has {clan.Members} members&quot;);
-            }
-            catch (ClashOfClansException ex)
-            {
-                Console.WriteLine(ex.Error);
-            }
-        }
-    }
-}
-</code></pre>
-<p>The above code example is from the ClashOfClans.App project that is included to this repository.</p>
+<ul>
+<li><a href="https://tparviainen.github.io/clashofclans/">Homepage</a></li>
+<li><a href="https://tparviainen.github.io/clashofclans/api/">API Documentation</a></li>
+<li><a href="https://www.nuget.org/packages/ClashOfClans">NuGet Package</a></li>
+<li><a href="https://github.com/tparviainen/clashofclans/releases">Release Notes</a></li>
+<li><a href="https://github.com/tparviainen/clashofclans/blob/master/LICENSE">License</a></li>
+</ul>
 </article>
           </div>
           
