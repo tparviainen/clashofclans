@@ -2,6 +2,7 @@
 using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,9 +13,7 @@ namespace ClashOfClans.App
     {
         static async Task Main(string[] args)
         {
-            var clanTag = "[clan tag]";
-            var playerTag = "[player tag]";
-            var token = "[your own unique API key]";
+            AddConfigurationValues(out string clanTag, out string playerTag, out string token);
 
             try
             {
@@ -49,6 +48,7 @@ namespace ClashOfClans.App
                     Limit = 1,
                     WarFrequency = WarFrequency.Always
                 };
+
                 var clans = await coc.Clans.GetAsync(query);
                 var warClan = clans.Items.First();
                 Console.WriteLine($"Clan '{warClan.Name}' has {warClan.WarWins} wins, {warClan.WarLosses} losses and {warClan.WarTies} draws");
@@ -57,6 +57,20 @@ namespace ClashOfClans.App
             {
                 Console.WriteLine(ex.Error);
             }
+        }
+
+        /// <summary>
+        /// Reads the configuration values from the JSON file
+        /// </summary>
+        private static void AddConfigurationValues(out string clanTag, out string playerTag, out string token)
+        {
+            var config = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json")
+                    .Build();
+
+            token = config["api:token"];
+            clanTag = config["clanTag"];
+            playerTag = config["playerTag"];
         }
     }
 }
