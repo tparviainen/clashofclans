@@ -10,7 +10,7 @@
     <meta name="title" content="Clash of Clans ">
     <meta name="generator" content="docfx 2.42.0.0">
     
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
     <link rel="stylesheet" href="styles/docfx.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="logo.svg" alt="">
+                <img id="logo" class="svg" src="images/icon.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -62,61 +62,46 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="clash-of-clans"><strong>Clash of Clans</strong></h1>
 
-<p>This is a homepage for .NET Standard library for Clash of Clans API. The source of the library is available on GitHub
+<p>This is the homepage for .NET Standard library for Clash of Clans API. The source code for the library is available on GitHub
 at <a href="https://github.com/tparviainen/clashofclans">https://github.com/tparviainen/clashofclans</a></p>
 <h1 id="getting-started">Getting Started</h1>
-<p>Install the latest <a href="https://www.nuget.org/packages/ClashOfClans/">NuGet package</a> for example via Visual Studio Package Manager Console window by giving the next command:</p>
+<ol>
+<li><p>Create an API key (<em>token</em>) in Clash of Clans <a href="https://developer.clashofclans.com/">developer web site</a>.</p>
+</li>
+<li><p>Create a .NET Core project and install the latest <a href="https://www.nuget.org/packages/ClashOfClans/">NuGet package</a> for example via Visual Studio Package Manager Console window by giving the next command.</p>
+</li>
+</ol>
 <pre><code>Install-Package ClashOfClans
 </code></pre>
-<p>After NuGet package installation start to use the API:</p>
-<pre><code class="lang-csharp">using ClashOfClans;
-using ClashOfClans.Core;
-using ClashOfClans.Models;
-using ClashOfClans.Search;
-using System;
-using System.Threading.Tasks;
-
-namespace ClashOfClans.App
-{
-    class Program
-    {
-        static async Task Main(string[] args)
-        {
-            var clanTag = &quot;[clan tag]&quot;;
-            var playerTag = &quot;[player tag]&quot;;
-            var token = &quot;[your own unique API key]&quot;;
-
-            var query = new QueryClans
-            {
-                Name = &quot;Phoenix&quot;,
-                Limit = 10,
-                WarFrequency = WarFrequency.Never
-            };
-
-            try
-            {
-                var coc = new ClashOfClansApi(token);
-
-                var clan = await coc.Clans.GetAsync(clanTag);           // Get Clan Information
-                var warLog = await coc.Clans.GetWarLogAsync(clanTag);   // Retrieve Clans Clan War Log
-                var player = await coc.Players.GetAsync(playerTag);     // Get Player Information
-                var leagueList = await coc.Leagues.GetAsync();          // List Leagues
-                var locationList = await coc.Locations.GetAsync();      // List Locations
-                var searchResult = await coc.Clans.GetAsync(query);     // Search Clans
-
-                // Usage ...
-                Console.WriteLine($&quot;Player '{player.Name}' is in clan '{player.Clan?.Name}'&quot;);
-                Console.WriteLine($&quot;Clan '{clan.Name}' has {clan.Members} members&quot;);
-            }
-            catch (ClashOfClansException ex)
-            {
-                Console.WriteLine(ex.Error);
-            }
-        }
-    }
-}
+<ol start="3">
+<li>After NuGet package installation create an instance of the API with the token you created in <em>step 1</em>.</li>
+</ol>
+<pre><code class="lang-csharp">var token = &quot;[your own unique API key]&quot;;
+var coc = new ClashOfClansApi(token);
 </code></pre>
-<p>The above code example is from the <a href="https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App">ClashOfClans.App</a> project that is included to this repository.</p>
+<ol start="4">
+<li>The functionality provided by the Clash of Clans API is available via <code>ClashOfClansApi</code> instance. Below are few examples of how to use the API.</li>
+</ol>
+<ul>
+<li>Get player information</li>
+</ul>
+<pre><code class="lang-csharp">var playerTag = &quot;[player tag]&quot;;
+var player = await coc.Players.GetAsync(playerTag);
+Console.WriteLine($&quot;Player '{player.Name}' is in clan '{player.Clan?.Name}'&quot;);
+</code></pre>
+<ul>
+<li>Get Clan Information</li>
+</ul>
+<pre><code class="lang-csharp">var clanTag = &quot;[clan tag]&quot;;
+var clan = await coc.Clans.GetAsync(clanTag);
+Console.WriteLine($&quot;Clan '{clan.Name}' has {clan.Members} members&quot;);
+</code></pre>
+<h1 id="example-project">Example project</h1>
+<p>Clash of Clans <a href="https://github.com/tparviainen/clashofclans">repository</a> contains .NET Core console application that uses the Clash of Clans API.
+The source code for the project is available at <a href="https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App">ClashOfClans.App</a>.</p>
+<p>Clash of Clans API is fully asynchronous and if you want to use the API directly from the console application's Main method you need
+to use C# 7.1 features. More information about how to enable C# 7.1 features see
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version">Select the C# language version</a>.</p>
 </article>
           </div>
           
