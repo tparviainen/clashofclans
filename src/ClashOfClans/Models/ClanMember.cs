@@ -2,7 +2,7 @@
 {
     public class ClanMember : Identity
     {
-        public Role Role { get; set; }
+        public Role? Role { get; set; }
 
         public int? ExpLevel { get; set; }
 

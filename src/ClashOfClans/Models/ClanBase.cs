@@ -2,7 +2,7 @@
 {
     public class ClanBase : Identity
     {
-        public Type Type { get; set; }
+        public Type? Type { get; set; }
 
         public Location Location { get; set; }
 
@@ -16,7 +16,7 @@
 
         public int? RequiredTrophies { get; set; }
 
-        public WarFrequency WarFrequency { get; set; }
+        public WarFrequency? WarFrequency { get; set; }
 
         public int? WarWinStreak { get; set; }
 

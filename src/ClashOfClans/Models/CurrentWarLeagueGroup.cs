@@ -2,7 +2,7 @@
 {
     public class CurrentWarLeagueGroup
     {
-        public State State { get; set; }
+        public State? State { get; set; }
 
         public string Season { get; set; }
 
