@@ -26,7 +26,7 @@ var clan = await coc.Clans.GetAsync(clanTag);
 Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
 ```
 
-* Retrieve Clans Clan War Log
+* Retrieve Clan's Clan War Log
 ```csharp
 var clanTag = "[clan tag]";
 var warLog = await coc.Clans.GetWarLogAsync(clanTag);
