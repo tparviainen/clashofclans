@@ -33,7 +33,7 @@ var clan = await coc.Clans.GetAsync(clanTag);
 Console.WriteLine($"Clan '{clan.Name}' has {clan.Members} members");
 ```
 
-# Example project
+# Example Project
 Clash of Clans [repository](https://github.com/tparviainen/clashofclans) contains .NET Core console application that uses the Clash of Clans API. 
 The source code for the project is available at [ClashOfClans.App](https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App).
 
