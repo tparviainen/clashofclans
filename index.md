@@ -17,7 +17,7 @@ var token = "[your own unique API key]";
 var coc = new ClashOfClansApi(token);
 ```
 
-4. The functionality provided by the Clash of Clans API is available via ClashOfClansApi instance. Below are few examples of how to use the API.
+4. The functionality provided by the Clash of Clans API is available via `ClashOfClansApi` instance. Below are few examples of how to use the API.
 
 * Get player information
 ```csharp

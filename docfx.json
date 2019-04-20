@@ -50,6 +50,10 @@
     ],
     "dest": "docs",
     "globalMetadataFiles": [],
+    "globalMetadata": {
+      "_appLogoPath": "images/icon.svg",
+      "_appFaviconPath": "images/favicon.ico"
+    },
     "fileMetadataFiles": [],
     "template": [
       "default"
