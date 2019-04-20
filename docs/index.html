@@ -83,20 +83,54 @@ var coc = new ClashOfClansApi(token);
 <li>The functionality provided by the Clash of Clans API is available via <code>ClashOfClansApi</code> instance. Below are few examples of how to use the API.</li>
 </ol>
 <ul>
-<li>Get player information</li>
+<li>Get Clan Information</li>
+</ul>
+<pre><code class="lang-csharp">var clanTag = &quot;[clan tag]&quot;;
+var clan = await coc.Clans.GetAsync(clanTag);
+Console.WriteLine($&quot;Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members&quot;);
+</code></pre>
+<ul>
+<li>Retrieve Clans Clan War Log</li>
+</ul>
+<pre><code class="lang-csharp">var clanTag = &quot;[clan tag]&quot;;
+var warLog = await coc.Clans.GetWarLogAsync(clanTag);
+var latest = warLog.Items.First();
+Console.WriteLine($&quot;Clan '{latest.Clan.Name}' had a war against '{latest.Opponent.Name}' that ended {latest.EndTime} UTC&quot;);
+</code></pre>
+<ul>
+<li>Get Player Information</li>
 </ul>
 <pre><code class="lang-csharp">var playerTag = &quot;[player tag]&quot;;
 var player = await coc.Players.GetAsync(playerTag);
 Console.WriteLine($&quot;Player '{player.Name}' is in clan '{player.Clan?.Name}'&quot;);
 </code></pre>
 <ul>
-<li>Get Clan Information</li>
+<li>Get League Information</li>
 </ul>
-<pre><code class="lang-csharp">var clanTag = &quot;[clan tag]&quot;;
-var clan = await coc.Clans.GetAsync(clanTag);
-Console.WriteLine($&quot;Clan '{clan.Name}' has {clan.Members} members&quot;);
+<pre><code class="lang-csharp">var leagues = await coc.Leagues.GetAsync();
+var league = leagues[&quot;Legend League&quot;];
+Console.WriteLine($&quot;'{league.Name}' has an ID {league.Id}&quot;);
 </code></pre>
-<h1 id="example-project">Example project</h1>
+<ul>
+<li>Get Location Information</li>
+</ul>
+<pre><code class="lang-csharp">var locations = await coc.Locations.GetAsync();
+var location = locations[&quot;Finland&quot;];
+Console.WriteLine($&quot;'{location.Name}' has an ID {location.Id} and country code '{location.CountryCode}'&quot;);
+</code></pre>
+<ul>
+<li>Search Clans</li>
+</ul>
+<pre><code class="lang-csharp">var query = new QueryClans
+{
+    Limit = 1,
+    WarFrequency = WarFrequency.Always
+};
+var clans = await coc.Clans.GetAsync(query);
+var warClan = clans.Items.First();
+Console.WriteLine($&quot;Clan '{warClan.Name}' has {warClan.WarWins} wins, {warClan.WarLosses} losses and {warClan.WarTies} draws&quot;);
+</code></pre>
+<h1 id="example-project">Example Project</h1>
 <p>Clash of Clans <a href="https://github.com/tparviainen/clashofclans">repository</a> contains .NET Core console application that uses the Clash of Clans API.
 The source code for the project is available at <a href="https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App">ClashOfClans.App</a>.</p>
 <p>Clash of Clans API is fully asynchronous and if you want to use the API directly from the console application's Main method you need
