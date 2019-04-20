@@ -5,11 +5,14 @@ using System.Runtime.CompilerServices;
 [assembly: InternalsVisibleTo("ClashOfClans.Tests")]
 namespace ClashOfClans
 {
+    /// <summary>
+    /// Clash of Clans API that provides access to information about
+    /// clans, locations, leagues and players.
+    /// </summary>
     public class ClashOfClansApi
     {
         /// <summary>
-        /// Clash of Clans API that provides access to information about
-        /// clans, locations, leagues and players.
+        /// Initializes a new instance of the Clash of Clans API
         /// </summary>
         /// <param name="token">Your personal API key</param>
         /// <param name="maxRequestsPerSecond">Throttling limit for API requests</param>
