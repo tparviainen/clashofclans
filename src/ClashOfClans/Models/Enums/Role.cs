@@ -3,6 +3,9 @@
     public enum Role
     {
         CoLeader,
+        /// <summary>
+        /// Elder
+        /// </summary>
         Admin,
         Leader,
         Member
