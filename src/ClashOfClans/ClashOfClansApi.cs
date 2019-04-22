@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
+using ClashOfClans.Validation;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("ClashOfClans.Tests")]
@@ -18,12 +19,13 @@ namespace ClashOfClans
         /// <param name="maxRequestsPerSecond">Throttling limit for API requests</param>
         public ClashOfClansApi(string token, int maxRequestsPerSecond = 10)
         {
+            var validator = new Validator();
             var throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
 
-            Clans = new Clans(token, throttleRequests);
-            Locations = new Locations(token, throttleRequests);
-            Leagues = new Leagues(token, throttleRequests);
-            Players = new Players(token, throttleRequests);
+            Clans = new Clans(token, throttleRequests, validator);
+            Locations = new Locations(token, throttleRequests, validator);
+            Leagues = new Leagues(token, throttleRequests, validator);
+            Players = new Players(token, throttleRequests, validator);
         }
 
         /// <summary>
