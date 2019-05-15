@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "mE810lJD8M23pvvzN+sAXg=="
+          "hash": "f8w5Dk8R3zSwO8mhD+fa2A=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LeagueList.html",
-          "hash": "CdJ6MHyEE4L4K5felEUelg=="
+          "hash": "1EgLTBJSVAiuFHAbzYHWWw=="
         }
       },
       "is_incremental": false,
@@ -865,17 +865,17 @@
           "total_file_count": 4,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 60,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
           "skipped_file_count": 0
         }
       }
