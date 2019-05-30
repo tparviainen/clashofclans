@@ -10,26 +10,47 @@
 
         public int? Trophies { get; set; }
 
+        /// <summary>
+        /// All time best
+        /// </summary>
         public int? BestTrophies { get; set; }
 
+        /// <summary>
+        /// War stars won
+        /// </summary>
         public int? WarStars { get; set; }
 
+        /// <summary>
+        /// Attacks won
+        /// </summary>
         public int? AttackWins { get; set; }
 
+        /// <summary>
+        /// Defenses won
+        /// </summary>
         public int? DefenseWins { get; set; }
 
         public int? BuilderHallLevel { get; set; }
 
         public int? VersusTrophies { get; set; }
 
+        /// <summary>
+        /// All time best
+        /// </summary>
         public int? BestVersusTrophies { get; set; }
 
         public int? VersusBattleWins { get; set; }
 
         public Role? Role { get; set; }
 
+        /// <summary>
+        /// Troops donated
+        /// </summary>
         public int? Donations { get; set; }
 
+        /// <summary>
+        /// Troops received
+        /// </summary>
         public int? DonationsReceived { get; set; }
 
         public InlineModel1 Clan { get; set; }

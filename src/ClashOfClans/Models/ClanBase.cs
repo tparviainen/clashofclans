@@ -14,6 +14,9 @@
 
         public int? ClanVersusPoints { get; set; }
 
+        /// <summary>
+        /// Minimum trophies to join
+        /// </summary>
         public int? RequiredTrophies { get; set; }
 
         public WarFrequency? WarFrequency { get; set; }
