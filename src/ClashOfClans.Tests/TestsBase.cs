@@ -22,6 +22,7 @@ namespace ClashOfClans.Tests
         protected static ClashOfClansApi _coc;
 
         public string PlayerTag { get => _config["playerTag"]; }
+        public string ClanTag { get => _config["clanTag"]; }
 
         [AssemblyInitialize]
         public static async Task AssemblyInitialize(TestContext context)
