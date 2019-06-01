@@ -148,11 +148,11 @@ namespace ClashOfClans.Tests
                     // WarTag="#0" round not started
                     var round = GetRandom(leaguegroup.Rounds, r => !r.WarTags.Contains("#0"));
                     var warTag = GetRandom(round.WarTags);
-                    var clanwarleagues = await _coc.Clans.GetClanWarLeaguesWarsAsync(warTag);
+                    var clanWarLeagueWar = await _coc.Clans.GetClanWarLeaguesWarsAsync(warTag);
 
                     // Assert
                     Assert.IsNotNull(leaguegroup);
-                    Assert.IsNotNull(clanwarleagues);
+                    Assert.IsNotNull(clanWarLeagueWar);
                     break;
                 }
                 catch (ClashOfClansException ex)
