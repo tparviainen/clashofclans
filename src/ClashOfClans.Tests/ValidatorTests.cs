@@ -17,7 +17,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateClanTag("");
+                validator.ValidateClanTag(null);
 
                 // Assert
                 Assert.Fail();
@@ -218,6 +218,26 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
+        public void TokenMustNotBeEmpty()
+        {
+            // Arrange
+            var validator = new Validator();
+
+            try
+            {
+                // Act
+                validator.ValidateToken(null);
+
+                // Assert
+                Assert.Fail();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        [TestMethod]
         public void WarTagMustNotBeEmpty()
         {
             // Arrange
@@ -226,7 +246,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateWarTag("");
+                validator.ValidateWarTag(null);
 
                 // Assert
                 Assert.Fail();
