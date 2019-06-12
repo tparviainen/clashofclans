@@ -12,6 +12,9 @@ namespace ClashOfClans
     /// </summary>
     public class ClashOfClansApi
     {
+        private readonly Validator _validator = new Validator();
+        private readonly IThrottleRequests _throttleRequests;
+
         /// <summary>
         /// Initializes a new instance of the Clash of Clans API
         /// </summary>
@@ -19,13 +22,13 @@ namespace ClashOfClans
         /// <param name="maxRequestsPerSecond">Throttling limit for API requests</param>
         public ClashOfClansApi(string token, int maxRequestsPerSecond = 10)
         {
-            var validator = new Validator();
-            var throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
+            _validator.ValidateToken(token);
+            _throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
 
-            Clans = new Clans(token, throttleRequests, validator);
-            Locations = new Locations(token, throttleRequests, validator);
-            Leagues = new Leagues(token, throttleRequests, validator);
-            Players = new Players(token, throttleRequests, validator);
+            Clans = new Clans(token, _throttleRequests, _validator);
+            Locations = new Locations(token, _throttleRequests, _validator);
+            Leagues = new Leagues(token, _throttleRequests, _validator);
+            Players = new Players(token, _throttleRequests, _validator);
         }
 
         /// <summary>
