@@ -1,4 +1,4 @@
-$packageVersion = "3.0.2"
+$packageVersion = "3.0.3"
 $project = "..\src\ClashOfClans\ClashOfClans.csproj"
 
 dotnet build --configuration Release $project
