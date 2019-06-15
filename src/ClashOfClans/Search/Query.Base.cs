@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace ClashOfClans.Search
 {
@@ -10,33 +11,32 @@ namespace ClashOfClans.Search
         /// <returns>Query string</returns>
         public override string ToString()
         {
-            var queryString = string.Empty;
-
+            var sb = new StringBuilder();
             var properties = GetType().GetProperties();
 
             foreach (var property in properties)
             {
-                var value = property.GetValue(this);
-                if (value != null)
+                var pValue = property.GetValue(this);
+                if (pValue != null)
                 {
-                    var queryValue = $"{property.GetValue(this)}";
+                    var qValue = pValue.ToString();
 
                     // Enumerations need to start with a lowercase character
                     if (Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
                     {
-                        queryValue = $"{char.ToLowerInvariant(queryValue[0])}{queryValue.Substring(1)}";
+                        qValue = $"{char.ToLowerInvariant(qValue[0])}{qValue.Substring(1)}";
                     }
 
-                    queryString += $"&{property.Name.ToLower()}={queryValue}";
+                    sb.Append($"&{property.Name.ToLower()}={qValue}");
                 }
             }
 
-            if (queryString.Length != 0)
+            if (sb.Length != 0)
             {
-                return $"?{queryString.Substring(1)}";
+                return $"?{sb.ToString(1, sb.Length - 1)}";
             }
 
-            return null;
+            return string.Empty;
         }
     }
 }
