@@ -7,7 +7,7 @@ namespace ClashOfClans.Tests
     [TestClass]
     public class LocationsTests : TestsBase
     {
-        private int ItemLimit = 10;
+        private readonly int ItemLimit = 10;
 
         [TestMethod]
         public async Task ListLocations()
