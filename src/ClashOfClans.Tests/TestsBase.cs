@@ -13,7 +13,7 @@ namespace ClashOfClans.Tests
     [TestClass]
     public class TestsBase
     {
-        private Random _random = new Random();
+        private readonly Random _random = new Random();
 
         protected static SearchResult _clans;
         protected static LocationList _locations;
