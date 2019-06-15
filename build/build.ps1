@@ -1,5 +1,7 @@
 $packageVersion = "3.0.3"
 $project = "..\src\ClashOfClans\ClashOfClans.csproj"
+$configuration = "Release"
 
-dotnet build --configuration Release $project
-dotnet pack -p:PackageVersion=$packageVersion --configuration Release $project
+dotnet clean -c $configuration $project
+dotnet build -c $configuration $project
+dotnet pack -p:PackageVersion=$packageVersion -c $configuration $project
