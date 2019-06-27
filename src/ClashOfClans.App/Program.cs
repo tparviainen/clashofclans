@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.App
 {
-    class Program
+    static class Program
     {
         static async Task Main(string[] args)
         {
