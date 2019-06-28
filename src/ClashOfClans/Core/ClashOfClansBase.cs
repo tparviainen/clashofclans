@@ -12,7 +12,7 @@ namespace ClashOfClans.Core
     /// <summary>
     /// A base class for accessing Clash of Clans API
     /// </summary>
-    internal class ClashOfClansBase
+    internal partial class ClashOfClansBase
     {
         private readonly string _token;
         private readonly IThrottleRequests _throttleRequests;
@@ -49,6 +49,8 @@ namespace ClashOfClans.Core
         {
             var response = await GetMessageAsync(requestUri);
             var content = await response.Content.ReadAsStringAsync();
+
+            LogResponse(requestUri, response.ToString(), content);
 
             if (response.IsSuccessStatusCode)
             {
