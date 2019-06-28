@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -30,8 +32,10 @@ namespace ClashOfClans.Tests
             try
             {
                 _config = new ConfigurationBuilder()
-                    .AddJsonFile("appsettings.test.json")
+                    .AddJsonFile("AppSettings.test.json")
                     .Build();
+
+                AddTraceListener(_config["logFile"]);
 
                 _coc = new ClashOfClansApi(_config["api:token"]);
                 var query = new QueryClans
@@ -49,6 +53,21 @@ namespace ClashOfClans.Tests
             {
                 Assert.Fail($"{ex.Error}");
             }
+        }
+
+        private static void AddTraceListener(string logFile)
+        {
+            if (string.IsNullOrWhiteSpace(logFile))
+            {
+                throw new ArgumentNullException(nameof(logFile));
+            }
+
+            // Creates/overwrites existing file
+            var stream = File.Create(logFile);
+            var listener = new TextWriterTraceListener(stream);
+
+            Trace.Listeners.Add(listener);
+            Trace.AutoFlush = true;
         }
 
         /// <summary>
