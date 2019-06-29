@@ -2,6 +2,7 @@
 using ClashOfClans.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics;
 
 namespace ClashOfClans.Tests
 {
@@ -24,7 +25,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -44,7 +45,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -64,7 +65,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -84,7 +85,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -104,7 +105,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -124,7 +125,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -144,7 +145,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -168,7 +169,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -193,7 +194,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -213,7 +214,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -233,7 +234,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -253,7 +254,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
 
@@ -273,7 +274,7 @@ namespace ClashOfClans.Tests
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Trace.WriteLine(ex);
             }
         }
     }

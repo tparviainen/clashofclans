@@ -3,6 +3,7 @@ using ClashOfClans.Models;
 using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -51,13 +52,13 @@ namespace ClashOfClans.Tests
             do
             {
                 var searchResult = await _coc.Clans.GetAsync(query);
-                searchResult.Items.ToList().ForEach(clan => Console.WriteLine(clan));
+                searchResult.Items.ToList().ForEach(clan => Trace.WriteLine(clan));
                 query.After = searchResult.Paging.Cursors.After;
                 count += searchResult.Items.Count();
             } while (query.After != null);
 
             // Assert
-            Console.WriteLine($"{locationName}: {count}");
+            Trace.WriteLine($"{locationName}: {count}");
             Assert.IsTrue(count != 0);
         }
 
@@ -69,7 +70,7 @@ namespace ClashOfClans.Tests
 
             // Act
             var clan = await _coc.Clans.GetAsync(clanTag);
-            Console.WriteLine(clan);
+            Trace.WriteLine(clan);
 
             // Assert
             Assert.IsNotNull(clan);
@@ -97,10 +98,10 @@ namespace ClashOfClans.Tests
             // Act
             if (clan != null)
             {
-                Console.WriteLine(clan);
+                Trace.WriteLine(clan);
 
                 var clanWarLog = await _coc.Clans.GetWarLogAsync(clan.Tag);
-                Console.WriteLine(clanWarLog);
+                Trace.WriteLine(clanWarLog);
 
                 // Assert
                 Assert.IsNotNull(clanWarLog);
@@ -120,10 +121,10 @@ namespace ClashOfClans.Tests
             // Act
             if (clan != null)
             {
-                Console.WriteLine(clan);
+                Trace.WriteLine(clan);
 
                 var currentWar = await _coc.Clans.GetCurrentWarAsync(clan.Tag);
-                Console.WriteLine(currentWar);
+                Trace.WriteLine(currentWar);
 
                 // Assert
                 Assert.IsNotNull(currentWar);
@@ -138,12 +139,12 @@ namespace ClashOfClans.Tests
             // Act
             foreach (var clan in _clans.Items)
             {
-                Console.WriteLine(clan);
+                Trace.WriteLine(clan);
 
                 try
                 {
                     var leaguegroup = await _coc.Clans.GetCurrentWarLeagueGroupAsync(clan.Tag);
-                    Console.WriteLine(leaguegroup);
+                    Trace.WriteLine(leaguegroup);
 
                     // WarTag="#0" round not started
                     var round = GetRandom(leaguegroup.Rounds, r => !r.WarTags.Contains("#0"));
@@ -157,7 +158,7 @@ namespace ClashOfClans.Tests
                 }
                 catch (ClashOfClansException ex)
                 {
-                    Console.WriteLine(ex.Error);
+                    Trace.WriteLine(ex.Error);
                 }
             }
         }
