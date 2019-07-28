@@ -40,7 +40,8 @@ namespace ClashOfClans.Core
 
         protected async Task<T> RequestAsync<T>(string uri) where T : class
         {
-            var data = await GetDataAsync(uri);
+            // Hash character '#' needs to be URL-encoded properly to work in URL
+            var data = await GetDataAsync(uri.Replace("#", "%23"));
 
             return Deserialize<T>(data);
         }
