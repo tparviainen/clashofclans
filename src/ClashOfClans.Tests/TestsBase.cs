@@ -35,7 +35,7 @@ namespace ClashOfClans.Tests
                     .AddJsonFile("AppSettings.test.json")
                     .Build();
 
-                AddTraceListener(_config["logFile"]);
+                AddTraceListener(_config["logPath"]);
 
                 _coc = new ClashOfClansApi(_config["api:token"]);
                 var query = new QueryClans
@@ -55,12 +55,16 @@ namespace ClashOfClans.Tests
             }
         }
 
-        private static void AddTraceListener(string logFile)
+        private static void AddTraceListener(string logPath)
         {
-            if (string.IsNullOrWhiteSpace(logFile))
+            if (string.IsNullOrWhiteSpace(logPath))
             {
-                throw new ArgumentNullException(nameof(logFile));
+                throw new ArgumentNullException(nameof(logPath));
             }
+
+            Directory.CreateDirectory(logPath);
+            var today = DateTime.Now.ToString("yyyyMMdd");
+            var logFile = Path.Combine(logPath, $"{today}-CoC.log");
 
             // Creates/overwrites existing file
             var stream = File.Create(logFile);
