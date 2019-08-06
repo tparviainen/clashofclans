@@ -1099,19 +1099,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanWarLeagueWar.Clan
   nameWithType: ClanWarLeagueWar.Clan
-- uid: ClashOfClans.Models.ClanWarLeagueWar.EndTime
-  name: EndTime
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_EndTime
-  commentId: P:ClashOfClans.Models.ClanWarLeagueWar.EndTime
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.EndTime
-  nameWithType: ClanWarLeagueWar.EndTime
-- uid: ClashOfClans.Models.ClanWarLeagueWar.EndTime*
-  name: EndTime
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_EndTime_
-  commentId: Overload:ClashOfClans.Models.ClanWarLeagueWar.EndTime
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.EndTime
-  nameWithType: ClanWarLeagueWar.EndTime
 - uid: ClashOfClans.Models.ClanWarLeagueWar.Opponent
   name: Opponent
   href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_Opponent
@@ -1125,58 +1112,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanWarLeagueWar.Opponent
   nameWithType: ClanWarLeagueWar.Opponent
-- uid: ClashOfClans.Models.ClanWarLeagueWar.PreparationStartTime
-  name: PreparationStartTime
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_PreparationStartTime
-  commentId: P:ClashOfClans.Models.ClanWarLeagueWar.PreparationStartTime
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.PreparationStartTime
-  nameWithType: ClanWarLeagueWar.PreparationStartTime
-- uid: ClashOfClans.Models.ClanWarLeagueWar.PreparationStartTime*
-  name: PreparationStartTime
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_PreparationStartTime_
-  commentId: Overload:ClashOfClans.Models.ClanWarLeagueWar.PreparationStartTime
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.PreparationStartTime
-  nameWithType: ClanWarLeagueWar.PreparationStartTime
-- uid: ClashOfClans.Models.ClanWarLeagueWar.StartTime
-  name: StartTime
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_StartTime
-  commentId: P:ClashOfClans.Models.ClanWarLeagueWar.StartTime
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.StartTime
-  nameWithType: ClanWarLeagueWar.StartTime
-- uid: ClashOfClans.Models.ClanWarLeagueWar.StartTime*
-  name: StartTime
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_StartTime_
-  commentId: Overload:ClashOfClans.Models.ClanWarLeagueWar.StartTime
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.StartTime
-  nameWithType: ClanWarLeagueWar.StartTime
-- uid: ClashOfClans.Models.ClanWarLeagueWar.State
-  name: State
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_State
-  commentId: P:ClashOfClans.Models.ClanWarLeagueWar.State
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.State
-  nameWithType: ClanWarLeagueWar.State
-- uid: ClashOfClans.Models.ClanWarLeagueWar.State*
-  name: State
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_State_
-  commentId: Overload:ClashOfClans.Models.ClanWarLeagueWar.State
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.State
-  nameWithType: ClanWarLeagueWar.State
-- uid: ClashOfClans.Models.ClanWarLeagueWar.TeamSize
-  name: TeamSize
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_TeamSize
-  commentId: P:ClashOfClans.Models.ClanWarLeagueWar.TeamSize
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.TeamSize
-  nameWithType: ClanWarLeagueWar.TeamSize
-- uid: ClashOfClans.Models.ClanWarLeagueWar.TeamSize*
-  name: TeamSize
-  href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_TeamSize_
-  commentId: Overload:ClashOfClans.Models.ClanWarLeagueWar.TeamSize
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanWarLeagueWar.TeamSize
-  nameWithType: ClanWarLeagueWar.TeamSize
 - uid: ClashOfClans.Models.ClanWarLeagueWar.WarStartTime
   name: WarStartTime
   href: api/ClashOfClans.Models.ClanWarLeagueWar.html#ClashOfClans_Models_ClanWarLeagueWar_WarStartTime
@@ -1364,19 +1299,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.CurrentWar.Clan
   nameWithType: CurrentWar.Clan
-- uid: ClashOfClans.Models.CurrentWar.EndTime
-  name: EndTime
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_EndTime
-  commentId: P:ClashOfClans.Models.CurrentWar.EndTime
-  fullName: ClashOfClans.Models.CurrentWar.EndTime
-  nameWithType: CurrentWar.EndTime
-- uid: ClashOfClans.Models.CurrentWar.EndTime*
-  name: EndTime
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_EndTime_
-  commentId: Overload:ClashOfClans.Models.CurrentWar.EndTime
-  isSpec: "True"
-  fullName: ClashOfClans.Models.CurrentWar.EndTime
-  nameWithType: CurrentWar.EndTime
 - uid: ClashOfClans.Models.CurrentWar.Opponent
   name: Opponent
   href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_Opponent
@@ -1390,58 +1312,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.CurrentWar.Opponent
   nameWithType: CurrentWar.Opponent
-- uid: ClashOfClans.Models.CurrentWar.PreparationStartTime
-  name: PreparationStartTime
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_PreparationStartTime
-  commentId: P:ClashOfClans.Models.CurrentWar.PreparationStartTime
-  fullName: ClashOfClans.Models.CurrentWar.PreparationStartTime
-  nameWithType: CurrentWar.PreparationStartTime
-- uid: ClashOfClans.Models.CurrentWar.PreparationStartTime*
-  name: PreparationStartTime
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_PreparationStartTime_
-  commentId: Overload:ClashOfClans.Models.CurrentWar.PreparationStartTime
-  isSpec: "True"
-  fullName: ClashOfClans.Models.CurrentWar.PreparationStartTime
-  nameWithType: CurrentWar.PreparationStartTime
-- uid: ClashOfClans.Models.CurrentWar.StartTime
-  name: StartTime
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_StartTime
-  commentId: P:ClashOfClans.Models.CurrentWar.StartTime
-  fullName: ClashOfClans.Models.CurrentWar.StartTime
-  nameWithType: CurrentWar.StartTime
-- uid: ClashOfClans.Models.CurrentWar.StartTime*
-  name: StartTime
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_StartTime_
-  commentId: Overload:ClashOfClans.Models.CurrentWar.StartTime
-  isSpec: "True"
-  fullName: ClashOfClans.Models.CurrentWar.StartTime
-  nameWithType: CurrentWar.StartTime
-- uid: ClashOfClans.Models.CurrentWar.State
-  name: State
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_State
-  commentId: P:ClashOfClans.Models.CurrentWar.State
-  fullName: ClashOfClans.Models.CurrentWar.State
-  nameWithType: CurrentWar.State
-- uid: ClashOfClans.Models.CurrentWar.State*
-  name: State
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_State_
-  commentId: Overload:ClashOfClans.Models.CurrentWar.State
-  isSpec: "True"
-  fullName: ClashOfClans.Models.CurrentWar.State
-  nameWithType: CurrentWar.State
-- uid: ClashOfClans.Models.CurrentWar.TeamSize
-  name: TeamSize
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_TeamSize
-  commentId: P:ClashOfClans.Models.CurrentWar.TeamSize
-  fullName: ClashOfClans.Models.CurrentWar.TeamSize
-  nameWithType: CurrentWar.TeamSize
-- uid: ClashOfClans.Models.CurrentWar.TeamSize*
-  name: TeamSize
-  href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_TeamSize_
-  commentId: Overload:ClashOfClans.Models.CurrentWar.TeamSize
-  isSpec: "True"
-  fullName: ClashOfClans.Models.CurrentWar.TeamSize
-  nameWithType: CurrentWar.TeamSize
 - uid: ClashOfClans.Models.CurrentWar.ToString
   name: ToString()
   href: api/ClashOfClans.Models.CurrentWar.html#ClashOfClans_Models_CurrentWar_ToString
@@ -3068,6 +2938,77 @@ references:
   commentId: F:ClashOfClans.Models.Village.Home
   fullName: ClashOfClans.Models.Village.Home
   nameWithType: Village.Home
+- uid: ClashOfClans.Models.WarBase
+  name: WarBase
+  href: api/ClashOfClans.Models.WarBase.html
+  commentId: T:ClashOfClans.Models.WarBase
+  fullName: ClashOfClans.Models.WarBase
+  nameWithType: WarBase
+- uid: ClashOfClans.Models.WarBase.EndTime
+  name: EndTime
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_EndTime
+  commentId: P:ClashOfClans.Models.WarBase.EndTime
+  fullName: ClashOfClans.Models.WarBase.EndTime
+  nameWithType: WarBase.EndTime
+- uid: ClashOfClans.Models.WarBase.EndTime*
+  name: EndTime
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_EndTime_
+  commentId: Overload:ClashOfClans.Models.WarBase.EndTime
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarBase.EndTime
+  nameWithType: WarBase.EndTime
+- uid: ClashOfClans.Models.WarBase.PreparationStartTime
+  name: PreparationStartTime
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_PreparationStartTime
+  commentId: P:ClashOfClans.Models.WarBase.PreparationStartTime
+  fullName: ClashOfClans.Models.WarBase.PreparationStartTime
+  nameWithType: WarBase.PreparationStartTime
+- uid: ClashOfClans.Models.WarBase.PreparationStartTime*
+  name: PreparationStartTime
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_PreparationStartTime_
+  commentId: Overload:ClashOfClans.Models.WarBase.PreparationStartTime
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarBase.PreparationStartTime
+  nameWithType: WarBase.PreparationStartTime
+- uid: ClashOfClans.Models.WarBase.StartTime
+  name: StartTime
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_StartTime
+  commentId: P:ClashOfClans.Models.WarBase.StartTime
+  fullName: ClashOfClans.Models.WarBase.StartTime
+  nameWithType: WarBase.StartTime
+- uid: ClashOfClans.Models.WarBase.StartTime*
+  name: StartTime
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_StartTime_
+  commentId: Overload:ClashOfClans.Models.WarBase.StartTime
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarBase.StartTime
+  nameWithType: WarBase.StartTime
+- uid: ClashOfClans.Models.WarBase.State
+  name: State
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_State
+  commentId: P:ClashOfClans.Models.WarBase.State
+  fullName: ClashOfClans.Models.WarBase.State
+  nameWithType: WarBase.State
+- uid: ClashOfClans.Models.WarBase.State*
+  name: State
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_State_
+  commentId: Overload:ClashOfClans.Models.WarBase.State
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarBase.State
+  nameWithType: WarBase.State
+- uid: ClashOfClans.Models.WarBase.TeamSize
+  name: TeamSize
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_TeamSize
+  commentId: P:ClashOfClans.Models.WarBase.TeamSize
+  fullName: ClashOfClans.Models.WarBase.TeamSize
+  nameWithType: WarBase.TeamSize
+- uid: ClashOfClans.Models.WarBase.TeamSize*
+  name: TeamSize
+  href: api/ClashOfClans.Models.WarBase.html#ClashOfClans_Models_WarBase_TeamSize_
+  commentId: Overload:ClashOfClans.Models.WarBase.TeamSize
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarBase.TeamSize
+  nameWithType: WarBase.TeamSize
 - uid: ClashOfClans.Models.WarClan
   name: WarClan
   href: api/ClashOfClans.Models.WarClan.html

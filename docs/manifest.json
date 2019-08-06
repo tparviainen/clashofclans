@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueWar.html",
-          "hash": "OLNki/GHgy/SryVyVUNTDA=="
+          "hash": "/V/Mm4Sq8kXuUKuwNkqs1g=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.CurrentWar.html",
-          "hash": "qb9dGM0t197L4TVkD4+xtQ=="
+          "hash": "lILFEjv/AKPIK7L4Rxvd0w=="
         }
       },
       "is_incremental": false,
@@ -629,6 +629,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarBase.html",
+          "hash": "Vplal/6HYZYQyC8iXJ9FqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ClashOfClans.Models.WarClan.yml",
       "output": {
         ".html": {
@@ -681,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.html",
-          "hash": "Lz+Z8M9jMZxu6TZz2IDHKg=="
+          "hash": "sd3gHP9NafjygSLGORq55w=="
         }
       },
       "is_incremental": false,
@@ -753,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eq+tb2tSUs7xl0++YyHv/w=="
+          "hash": "ogMwgmeXZNxM1tqdnOloGw=="
         }
       },
       "is_incremental": false,
@@ -852,28 +864,28 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 60,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 4,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 61,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
