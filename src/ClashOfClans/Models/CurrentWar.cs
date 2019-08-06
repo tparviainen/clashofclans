@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ClashOfClans.Models
+﻿namespace ClashOfClans.Models
 {
     public class CurrentWar : WarBase
     {
