@@ -2,18 +2,8 @@
 
 namespace ClashOfClans.Models
 {
-    public class CurrentWar
+    public class CurrentWar : WarBase
     {
-        public State? State { get; set; }
-
-        public int? TeamSize { get; set; }
-
-        public DateTime PreparationStartTime { get; set; }
-
-        public DateTime StartTime { get; set; }
-
-        public DateTime EndTime { get; set; }
-
         public WarClan Clan { get; set; }
 
         public WarClan Opponent { get; set; }
