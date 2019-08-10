@@ -4,15 +4,15 @@ namespace ClashOfClans.Core
 {
     internal class ClashOfClansOptionsInternal : ClashOfClansOptions
     {
-        internal IThrottleRequests _throttleRequests;
-        internal readonly Validator _validator;
+        public IThrottleRequests ThrottleRequests;
+        public readonly Validator Validator;
 
         public ClashOfClansOptionsInternal(string token) : base(token)
         {
-            _validator = new Validator();
-            _throttleRequests = new ThrottleRequestsPerSecond(MaxRequestsPerSecond);
+            Validator = new Validator();
+            ThrottleRequests = new ThrottleRequestsPerSecond(MaxRequestsPerSecond);
 
-            _validator.ValidateToken(token);
+            Validator.ValidateToken(token);
         }
     }
 }

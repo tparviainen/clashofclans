@@ -19,7 +19,7 @@ namespace ClashOfClans.Core
         private readonly string _token;
         protected readonly Validator _validator;
         private readonly ClashOfClansOptionsInternal _options;
-        private IThrottleRequests _throttleRequests => _options._throttleRequests;
+        private IThrottleRequests _throttleRequests => _options.ThrottleRequests;
 
         /// <summary>
         /// Logging method for diagnostics messages
@@ -30,7 +30,7 @@ namespace ClashOfClans.Core
         {
             _options = options;
             _token = options.Token;
-            _validator = options._validator;
+            _validator = options.Validator;
         }
 
         private async Task<HttpResponseMessage> GetMessageAsync(string requestUri)
