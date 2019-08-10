@@ -1,18 +1,13 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
-using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
     internal class Players : ClashOfClansBase, IPlayers
     {
-        private readonly Validator _validator;
-
-        public Players(string token, IThrottleRequests throttleRequests, Validator validator) :
-            base(token, throttleRequests)
+        public Players(ClashOfClansOptionsInternal options) : base(options)
         {
-            _validator = validator;
         }
 
         // GET /players/{playerTag}

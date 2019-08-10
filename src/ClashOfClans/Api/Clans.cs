@@ -1,19 +1,14 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
-using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
     internal class Clans : ClashOfClansBase, IClans
     {
-        private readonly Validator _validator;
-
-        public Clans(string token, IThrottleRequests throttleRequests, Validator validator) :
-            base(token, throttleRequests)
+        public Clans(ClashOfClansOptionsInternal options) : base(options)
         {
-            _validator = validator;
         }
 
         // GET /clans

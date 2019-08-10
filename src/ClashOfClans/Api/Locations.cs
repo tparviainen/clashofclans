@@ -1,19 +1,14 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
-using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
     internal class Locations : ClashOfClansBase, ILocations
     {
-        private readonly Validator _validator;
-
-        public Locations(string token, IThrottleRequests throttleRequests, Validator validator) :
-            base(token, throttleRequests)
+        public Locations(ClashOfClansOptionsInternal options) : base(options)
         {
-            _validator = validator;
         }
 
         // GET /locations

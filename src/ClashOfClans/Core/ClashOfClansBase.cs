@@ -1,6 +1,8 @@
 ﻿using ClashOfClans.Models;
+using ClashOfClans.Validation;
 using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -12,15 +14,23 @@ namespace ClashOfClans.Core
     /// <summary>
     /// A base class for accessing Clash of Clans API
     /// </summary>
-    internal partial class ClashOfClansBase
+    internal class ClashOfClansBase
     {
         private readonly string _token;
-        private readonly IThrottleRequests _throttleRequests;
+        protected readonly Validator _validator;
+        private readonly ClashOfClansOptionsInternal _options;
+        private IThrottleRequests _throttleRequests => _options._throttleRequests;
 
-        public ClashOfClansBase(string token, IThrottleRequests throttleRequests)
+        /// <summary>
+        /// Logging method for diagnostics messages
+        /// </summary>
+        protected void Log(string message) => _options.Logger?.Log(message);
+
+        public ClashOfClansBase(ClashOfClansOptionsInternal options)
         {
-            _token = token;
-            _throttleRequests = throttleRequests;
+            _options = options;
+            _token = options.Token;
+            _validator = options._validator;
         }
 
         private async Task<HttpResponseMessage> GetMessageAsync(string requestUri)
@@ -32,7 +42,7 @@ namespace ClashOfClans.Core
                 client.BaseAddress = new Uri("https://api.clashofclans.com/v1/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"Bearer {_token}");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
 
                 return await client.GetAsync(requestUri);
             }
@@ -48,10 +58,14 @@ namespace ClashOfClans.Core
 
         private async Task<string> GetDataAsync(string requestUri)
         {
-            var response = await GetMessageAsync(requestUri);
-            var content = await response.Content.ReadAsStringAsync();
+            Log($"API: {GetType().Name}, Uri: /{requestUri}");
 
-            LogResponse(requestUri, response.ToString(), content);
+            var watch = Stopwatch.StartNew();
+            var response = await GetMessageAsync(requestUri);
+            Log($"{response}, completed in {watch.ElapsedMilliseconds} ms");
+
+            var content = await response.Content.ReadAsStringAsync();
+            Log($"Content: {content}");
 
             if (response.IsSuccessStatusCode)
             {
