@@ -1,6 +1,6 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
-using ClashOfClans.Validation;
+using System;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("ClashOfClans.Tests")]
@@ -12,23 +12,36 @@ namespace ClashOfClans
     /// </summary>
     public class ClashOfClansApi
     {
-        private readonly Validator _validator = new Validator();
-        private readonly IThrottleRequests _throttleRequests;
+        private readonly ClashOfClansOptionsInternal _options;
 
         /// <summary>
         /// Initializes a new instance of the Clash of Clans API
         /// </summary>
         /// <param name="token">Your personal API key</param>
-        /// <param name="maxRequestsPerSecond">Throttling limit for API requests</param>
-        public ClashOfClansApi(string token, int maxRequestsPerSecond = 10)
+        public ClashOfClansApi(string token)
         {
-            _validator.ValidateToken(token);
-            _throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
+            _options = new ClashOfClansOptionsInternal(token);
 
-            Clans = new Clans(token, _throttleRequests, _validator);
-            Locations = new Locations(token, _throttleRequests, _validator);
-            Leagues = new Leagues(token, _throttleRequests, _validator);
-            Players = new Players(token, _throttleRequests, _validator);
+            Clans = new Clans(_options);
+            Locations = new Locations(_options);
+            Leagues = new Leagues(_options);
+            Players = new Players(_options);
+        }
+
+        /// <summary>
+        /// Registers an action used to configure particular type of options
+        /// </summary>
+        /// <param name="configure">An action delegate to configure the provided options</param>
+        public void Configure(Action<ClashOfClansOptions> configure)
+        {
+            var maxRequestsPerSecond = _options.MaxRequestsPerSecond;
+
+            configure(_options);
+
+            if (_options.MaxRequestsPerSecond != maxRequestsPerSecond)
+            {
+                _options.ThrottleRequests = new ThrottleRequestsPerSecond(_options.MaxRequestsPerSecond);
+            }
         }
 
         /// <summary>
