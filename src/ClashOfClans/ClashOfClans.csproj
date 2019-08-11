@@ -14,6 +14,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>ClashOfClans</PackageId>
     <PackageIconUrl>https://github.com/tparviainen/clashofclans/raw/master/images/icon.png</PackageIconUrl>
+    <PackageReleaseNotes>https://github.com/tparviainen/clashofclans/releases</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
