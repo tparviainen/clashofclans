@@ -13,12 +13,12 @@ references:
   commentId: T:ClashOfClans.ClashOfClansApi
   fullName: ClashOfClans.ClashOfClansApi
   nameWithType: ClashOfClansApi
-- uid: ClashOfClans.ClashOfClansApi.#ctor(System.String,System.Int32)
-  name: ClashOfClansApi(String, Int32)
-  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi__ctor_System_String_System_Int32_
-  commentId: M:ClashOfClans.ClashOfClansApi.#ctor(System.String,System.Int32)
-  fullName: ClashOfClans.ClashOfClansApi.ClashOfClansApi(System.String, System.Int32)
-  nameWithType: ClashOfClansApi.ClashOfClansApi(String, Int32)
+- uid: ClashOfClans.ClashOfClansApi.#ctor(System.String)
+  name: ClashOfClansApi(String)
+  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi__ctor_System_String_
+  commentId: M:ClashOfClans.ClashOfClansApi.#ctor(System.String)
+  fullName: ClashOfClans.ClashOfClansApi.ClashOfClansApi(System.String)
+  nameWithType: ClashOfClansApi.ClashOfClansApi(String)
 - uid: ClashOfClans.ClashOfClansApi.#ctor*
   name: ClashOfClansApi
   href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi__ctor_
@@ -39,6 +39,22 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.ClashOfClansApi.Clans
   nameWithType: ClashOfClansApi.Clans
+- uid: ClashOfClans.ClashOfClansApi.Configure(System.Action{ClashOfClans.Core.ClashOfClansOptions})
+  name: Configure(Action<ClashOfClansOptions>)
+  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi_Configure_System_Action_ClashOfClans_Core_ClashOfClansOptions__
+  commentId: M:ClashOfClans.ClashOfClansApi.Configure(System.Action{ClashOfClans.Core.ClashOfClansOptions})
+  name.vb: Configure(Action(Of ClashOfClansOptions))
+  fullName: ClashOfClans.ClashOfClansApi.Configure(System.Action<ClashOfClans.Core.ClashOfClansOptions>)
+  fullName.vb: ClashOfClans.ClashOfClansApi.Configure(System.Action(Of ClashOfClans.Core.ClashOfClansOptions))
+  nameWithType: ClashOfClansApi.Configure(Action<ClashOfClansOptions>)
+  nameWithType.vb: ClashOfClansApi.Configure(Action(Of ClashOfClansOptions))
+- uid: ClashOfClans.ClashOfClansApi.Configure*
+  name: Configure
+  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi_Configure_
+  commentId: Overload:ClashOfClans.ClashOfClansApi.Configure
+  isSpec: "True"
+  fullName: ClashOfClans.ClashOfClansApi.Configure
+  nameWithType: ClashOfClansApi.Configure
 - uid: ClashOfClans.ClashOfClansApi.Leagues
   name: Leagues
   href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi_Leagues
@@ -135,6 +151,83 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansException.GetObjectData
   nameWithType: ClashOfClansException.GetObjectData
+- uid: ClashOfClans.Core.ClashOfClansOptions
+  name: ClashOfClansOptions
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html
+  commentId: T:ClashOfClans.Core.ClashOfClansOptions
+  fullName: ClashOfClans.Core.ClashOfClansOptions
+  nameWithType: ClashOfClansOptions
+- uid: ClashOfClans.Core.ClashOfClansOptions.#ctor(System.String)
+  name: ClashOfClansOptions(String)
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions__ctor_System_String_
+  commentId: M:ClashOfClans.Core.ClashOfClansOptions.#ctor(System.String)
+  fullName: ClashOfClans.Core.ClashOfClansOptions.ClashOfClansOptions(System.String)
+  nameWithType: ClashOfClansOptions.ClashOfClansOptions(String)
+- uid: ClashOfClans.Core.ClashOfClansOptions.#ctor*
+  name: ClashOfClansOptions
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions__ctor_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptions.#ctor
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptions.ClashOfClansOptions
+  nameWithType: ClashOfClansOptions.ClashOfClansOptions
+- uid: ClashOfClans.Core.ClashOfClansOptions.Logger
+  name: Logger
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Logger
+  commentId: P:ClashOfClans.Core.ClashOfClansOptions.Logger
+  fullName: ClashOfClans.Core.ClashOfClansOptions.Logger
+  nameWithType: ClashOfClansOptions.Logger
+- uid: ClashOfClans.Core.ClashOfClansOptions.Logger*
+  name: Logger
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Logger_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptions.Logger
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptions.Logger
+  nameWithType: ClashOfClansOptions.Logger
+- uid: ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond
+  name: MaxRequestsPerSecond
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_MaxRequestsPerSecond
+  commentId: P:ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond
+  fullName: ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond
+  nameWithType: ClashOfClansOptions.MaxRequestsPerSecond
+- uid: ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond*
+  name: MaxRequestsPerSecond
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_MaxRequestsPerSecond_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond
+  nameWithType: ClashOfClansOptions.MaxRequestsPerSecond
+- uid: ClashOfClans.Core.ClashOfClansOptions.Token
+  name: Token
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Token
+  commentId: P:ClashOfClans.Core.ClashOfClansOptions.Token
+  fullName: ClashOfClans.Core.ClashOfClansOptions.Token
+  nameWithType: ClashOfClansOptions.Token
+- uid: ClashOfClans.Core.ClashOfClansOptions.Token*
+  name: Token
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Token_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptions.Token
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptions.Token
+  nameWithType: ClashOfClansOptions.Token
+- uid: ClashOfClans.Core.IClashOfClansLogger
+  name: IClashOfClansLogger
+  href: api/ClashOfClans.Core.IClashOfClansLogger.html
+  commentId: T:ClashOfClans.Core.IClashOfClansLogger
+  fullName: ClashOfClans.Core.IClashOfClansLogger
+  nameWithType: IClashOfClansLogger
+- uid: ClashOfClans.Core.IClashOfClansLogger.Log(System.String)
+  name: Log(String)
+  href: api/ClashOfClans.Core.IClashOfClansLogger.html#ClashOfClans_Core_IClashOfClansLogger_Log_System_String_
+  commentId: M:ClashOfClans.Core.IClashOfClansLogger.Log(System.String)
+  fullName: ClashOfClans.Core.IClashOfClansLogger.Log(System.String)
+  nameWithType: IClashOfClansLogger.Log(String)
+- uid: ClashOfClans.Core.IClashOfClansLogger.Log*
+  name: Log
+  href: api/ClashOfClans.Core.IClashOfClansLogger.html#ClashOfClans_Core_IClashOfClansLogger_Log_
+  commentId: Overload:ClashOfClans.Core.IClashOfClansLogger.Log
+  isSpec: "True"
+  fullName: ClashOfClans.Core.IClashOfClansLogger.Log
+  nameWithType: IClashOfClansLogger.Log
 - uid: ClashOfClans.IClans
   name: IClans
   href: api/ClashOfClans.IClans.html
