@@ -24,12 +24,12 @@ namespace ClashOfClans.Search
         public int? LocationId { get; set; }
 
         /// <summary>
-        /// Filter by minimum amount of clan members.
+        /// Filter by minimum number of clan members.
         /// </summary>
         public int? MinMembers { get; set; }
 
         /// <summary>
-        /// Filter by maximum amount of clan members.
+        /// Filter by maximum number of clan members.
         /// </summary>
         public int? MaxMembers { get; set; }
 
