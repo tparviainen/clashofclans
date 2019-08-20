@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace ClashOfClans
 {
     /// <summary>
-    /// Interface for leagues
+    /// Access league information
     /// </summary>
     public interface ILeagues
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace ClashOfClans
 {
     /// <summary>
-    /// Interface for locations and clan/player ranking in a location
+    /// Access global and local rankings
     /// </summary>
     public interface ILocations
     {

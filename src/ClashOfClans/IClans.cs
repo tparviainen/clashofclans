@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace ClashOfClans
 {
     /// <summary>
-    /// Interface for clans, clan members and warlog
+    /// Access clan specific information
     /// </summary>
     public interface IClans
     {
@@ -66,7 +66,7 @@ namespace ClashOfClans
         Task<CurrentWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag);
 
         /// <summary>
-        /// Retrieve information about a clan war league war
+        /// Retrieve information about individual clan war league war
         /// </summary>
         /// <param name="warTag">Tag of the war whose information to retrieve</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>

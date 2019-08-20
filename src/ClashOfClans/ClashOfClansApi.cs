@@ -45,22 +45,22 @@ namespace ClashOfClans
         }
 
         /// <summary>
-        /// Interface for clans
+        /// Access clan specific information
         /// </summary>
         public IClans Clans { get; }
 
         /// <summary>
-        /// Interface for locations
+        /// Access global and local rankings
         /// </summary>
         public ILocations Locations { get; }
 
         /// <summary>
-        /// Interface for leagues
+        /// Access league information
         /// </summary>
         public ILeagues Leagues { get; }
 
         /// <summary>
-        /// Interface for players
+        /// Access player specific information
         /// </summary>
         public IPlayers Players { get; }
     }
