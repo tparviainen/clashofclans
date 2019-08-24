@@ -6,7 +6,7 @@ namespace ClashOfClans.Models
     /// Error message from the endpoint
     /// </summary>
     [Serializable]
-    public class Error
+    public class ClientError
     {
         public string Reason { get; set; }
 

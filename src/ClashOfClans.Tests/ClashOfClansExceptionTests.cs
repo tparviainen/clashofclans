@@ -15,7 +15,7 @@ namespace ClashOfClans.Tests
         public void CanThrowException()
         {
             // Arrange
-            var error = new Error();
+            var error = new ClientError();
 
             // Act
             throw new ClashOfClansException(error);
@@ -27,7 +27,7 @@ namespace ClashOfClans.Tests
         public void BinaryFormatterSerializationAndDeserialization()
         {
             // Arrange
-            var error = new Error
+            var error = new ClientError
             {
                 Message = "message",
                 Reason = "reason"
@@ -54,7 +54,7 @@ namespace ClashOfClans.Tests
         public void NewtonsoftJsonSerializationAndDeserialization()
         {
             // Arrange
-            var error = new Error
+            var error = new ClientError
             {
                 Message = "message",
                 Reason = "reason"
