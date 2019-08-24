@@ -14,6 +14,6 @@
 
         public int? ExpEarned { get; set; }
 
-        public ClanWarMember[] Members { get; set; }
+        public ClanWarMemberList[] Members { get; set; }
     }
 }

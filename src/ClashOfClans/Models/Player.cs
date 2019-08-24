@@ -53,20 +53,20 @@
         /// </summary>
         public int? DonationsReceived { get; set; }
 
-        public InlineModel1 Clan { get; set; }
+        public PlayerClan Clan { get; set; }
 
         public League League { get; set; }
 
-        public InlineModel2 LegendStatistics { get; set; }
+        public PlayerLegendStatistics LegendStatistics { get; set; }
 
-        public AchievementList[] Achievements { get; set; }
+        public PlayerAchievementProgressList Achievements { get; set; }
 
         public int? VersusBattleWinCount { get; set; }
 
-        public PlayerItemLevelList[] Troops { get; set; }
+        public PlayerItemLevelList Troops { get; set; }
 
-        public PlayerItemLevelList[] Heroes { get; set; }
+        public PlayerItemLevelList Heroes { get; set; }
 
-        public PlayerItemLevelList[] Spells { get; set; }
+        public PlayerItemLevelList Spells { get; set; }
     }
 }

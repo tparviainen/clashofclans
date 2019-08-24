@@ -2,7 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public class WarLogEntry
+    public class ClanWarLogEntry
     {
         public Result? Result { get; set; }
 

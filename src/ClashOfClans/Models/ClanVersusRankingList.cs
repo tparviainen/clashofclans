@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ClashOfClans.Models
+﻿namespace ClashOfClans.Models
 {
     public class ClanVersusRankingList : Queryable
     {

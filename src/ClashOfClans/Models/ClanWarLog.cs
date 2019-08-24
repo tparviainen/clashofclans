@@ -2,6 +2,6 @@
 {
     public class ClanWarLog : Queryable
     {
-        public WarLogEntry[] Items { get; set; }
+        public ClanWarLogEntry[] Items { get; set; }
     }
 }

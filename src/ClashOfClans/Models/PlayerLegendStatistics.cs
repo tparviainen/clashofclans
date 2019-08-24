@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class InlineModel2
+    public class PlayerLegendStatistics
     {
         public int? LegendTrophies { get; set; }
 

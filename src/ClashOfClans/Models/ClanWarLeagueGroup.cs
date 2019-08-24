@@ -6,9 +6,9 @@
 
         public string Season { get; set; }
 
-        public InlineModel[] Clans { get; set; }
+        public ClanWarLeagueClanList Clans { get; set; }
 
-        public InlineModel0[] Rounds { get; set; }
+        public ClanWarLeagueRoundList Rounds { get; set; }
 
         public override string ToString()
         {

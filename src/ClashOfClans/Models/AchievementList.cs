@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class AchievementList
+    public class PlayerAchievementProgress
     {
         public string Name { get; set; }
 

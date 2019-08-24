@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class InlineModel1 : Identity
+    public class PlayerClan : Identity
     {
         public int? ClanLevel { get; set; }
 
