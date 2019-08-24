@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class WarLog : Queryable
+    public class ClanWarLog : Queryable
     {
         public WarLogEntry[] Items { get; set; }
     }

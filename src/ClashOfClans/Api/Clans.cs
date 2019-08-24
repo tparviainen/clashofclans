@@ -44,7 +44,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/warlog
-        public async Task<WarLog> GetWarLogAsync(string clanTag, Query query = null)
+        public async Task<ClanWarLog> GetWarLogAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -52,7 +52,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/warlog{query}";
 
-            return await RequestAsync<WarLog>(uri);
+            return await RequestAsync<ClanWarLog>(uri);
         }
 
         // GET /clans/{clanTag}/currentwar
