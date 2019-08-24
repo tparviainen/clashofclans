@@ -8,13 +8,16 @@ namespace ClashOfClans.Tests
 {
     public class ModelTestsBase
     {
-        protected IEnumerable<string> _apiModels;
+        protected IEnumerable<string> _apiModelNames;
         protected IEnumerable<Type> _assemblyModels;
+        private string _models;
 
         public ModelTestsBase()
         {
-            _apiModels = GetModelsFromFiles().OrderBy(n => n);
+            _apiModelNames = GetModelsFromFiles().OrderBy(n => n);
             _assemblyModels = GetModelsFromAssembly("ClashOfClans.Models").OrderBy(t => t.Name);
+
+            _models = _models.Replace("\r\n", " ");
         }
 
         private ICollection<string> GetModelsFromFiles()
@@ -33,6 +36,8 @@ namespace ClashOfClans.Tests
         private IEnumerable<string> GetModelsFromText(string path)
         {
             var content = File.ReadAllText(path);
+            _models += content;
+
             var lists = Regex.Matches(content, @"\b([A-Z]\w+)\b");
             var models = new List<string>();
 
@@ -51,6 +56,36 @@ namespace ClashOfClans.Tests
                 .Where(t => t.IsClass && t.IsPublic && t.Namespace == ns);
 
             return types.ToList();
+        }
+
+        protected Dictionary<string, string> GetModelProperties(string modelName)
+        {
+            var pattern = $@"\b{modelName}\b ";
+            pattern += "{(.+?)}";
+
+            var models = Regex.Matches(_models, pattern);
+            var values = new Dictionary<string, string>();
+
+            foreach (Match match in models)
+            {
+                ParseModel(match.Groups[1].Value, values);
+            }
+
+            return values;
+        }
+
+        private void ParseModel(string input, Dictionary<string, string> values)
+        {
+            var pattern = @"(\w+) \((\w+), \w+\)";
+            var properties = Regex.Matches(input, pattern);
+
+            foreach (Match property in properties)
+            {
+                var propKey = property.Groups[1].Value.Trim().ToLower();
+                var propVal = property.Groups[2].Value.Trim();
+
+                values.TryAdd(propKey, propVal);
+            }
         }
     }
 }

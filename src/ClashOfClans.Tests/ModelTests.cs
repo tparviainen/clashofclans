@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Diagnostics;
 using System.Linq;
 
@@ -14,7 +15,7 @@ namespace ClashOfClans.Tests
             var count = 0;
 
             // Act
-            foreach (var modelName in _apiModels)
+            foreach (var modelName in _apiModelNames)
             {
                 if (!_assemblyModels.Any(m => m.Name == modelName))
                 {
@@ -37,7 +38,7 @@ namespace ClashOfClans.Tests
             foreach (var assemblyModel in _assemblyModels)
             {
                 var modelName = assemblyModel.Name;
-                if (!_apiModels.Contains(modelName))
+                if (!_apiModelNames.Contains(modelName))
                 {
                     Trace.WriteLine($"Extra: {modelName}");
                     count++;
@@ -46,6 +47,32 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.AreEqual(0, count);
+        }
+
+        [TestMethod]
+        public void CheckModelProperties()
+        {
+            // Arrange
+
+            // Act
+            foreach (var modelName in _apiModelNames)
+            {
+                var properties = GetModelProperties(modelName);
+                var assemblyModel = _assemblyModels.SingleOrDefault(t => t.Name.Equals(modelName, StringComparison.InvariantCultureIgnoreCase));
+                if (assemblyModel != null)
+                {
+                    foreach (var property in assemblyModel.GetProperties())
+                    {
+                        if (!properties.ContainsKey(property.Name.ToLower()))
+                        {
+                            Trace.WriteLine($"Extra: {assemblyModel.Name} = {property.Name}");
+                        }
+                    }
+
+                }
+            }
+
+            // Assert
         }
     }
 }

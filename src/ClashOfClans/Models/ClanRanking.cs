@@ -15,7 +15,5 @@
         public int? Rank { get; set; }
 
         public int? PreviousRank { get; set; }
-
-        public int? ClanVersusPoints { get; set; }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace ClashOfClans.Models
+﻿using System.Collections.Generic;
+
+namespace ClashOfClans.Models
 {
-    public class ClanWarMemberList : ClanWarMember
+    public class ClanWarMemberList : List<ClanWarMember>
     {
     }
 }
