@@ -55,7 +55,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan ranking list</returns>
-        Task<ClanRankingList> GetRankingsClansVersusAsync(int? locationId, Query query = null);
+        Task<ClanVersusRankingList> GetRankingsClansVersusAsync(int? locationId, Query query = null);
 
         /// <summary>
         /// Get player versus rankings for a specific location

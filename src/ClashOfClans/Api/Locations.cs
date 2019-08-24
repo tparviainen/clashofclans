@@ -56,7 +56,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /locations/{locationId}/rankings/clans-versus
-        public async Task<ClanRankingList> GetRankingsClansVersusAsync(int? locationId, Query query = null)
+        public async Task<ClanVersusRankingList> GetRankingsClansVersusAsync(int? locationId, Query query = null)
         {
             _validator
                 .ValidateLocationId(locationId)
@@ -64,7 +64,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}/rankings/clans-versus{query}";
 
-            return await RequestAsync<ClanRankingList>(uri);
+            return await RequestAsync<ClanVersusRankingList>(uri);
         }
 
         // GET /locations/{locationId}/rankings/players-versus
