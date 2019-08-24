@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class PlayerDetail : Identity
+    public class Player : Identity
     {
         public int? TownHallLevel { get; set; }
 
