@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class CurrentWar : WarBase
+    public class ClanWar : WarBase
     {
         public WarClan Clan { get; set; }
 
@@ -8,7 +8,7 @@
 
         public override string ToString()
         {
-            return $"CurrentWar: State '{State}', {Clan.Tag} vs {Opponent.Tag}";
+            return $"ClanWar: State '{State}', {Clan.Tag} vs {Opponent.Tag}";
         }
     }
 }
