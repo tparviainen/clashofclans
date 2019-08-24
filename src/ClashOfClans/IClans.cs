@@ -16,7 +16,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan(s) that match the query criteria</returns>
-        Task<SearchResult> GetAsync(QueryClans query);
+        Task<ClanList> GetAsync(QueryClans query);
 
         /// <summary>
         /// Get clan information

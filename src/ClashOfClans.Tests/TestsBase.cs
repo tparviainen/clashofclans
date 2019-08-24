@@ -15,7 +15,7 @@ namespace ClashOfClans.Tests
     {
         private readonly Random _random = new Random();
 
-        protected static SearchResult _clans;
+        protected static ClanList _clans;
         protected static LocationList _locations;
         protected static LeagueList _leagues;
         protected static IConfigurationRoot _config;

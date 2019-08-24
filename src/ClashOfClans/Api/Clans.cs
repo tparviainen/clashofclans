@@ -12,13 +12,13 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans
-        public async Task<SearchResult> GetAsync(QueryClans query)
+        public async Task<ClanList> GetAsync(QueryClans query)
         {
             _validator.ValidateQueryClans(query);
 
             var uri = $"clans{query}";
 
-            return await RequestAsync<SearchResult>(uri);
+            return await RequestAsync<ClanList>(uri);
         }
 
         // GET /clans/{clanTag}
