@@ -1,0 +1,6 @@
+﻿ClientError {
+reason (string, optional),
+message (string, optional),
+type (string, optional),
+detail (object, optional)
+}
