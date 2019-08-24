@@ -63,7 +63,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan's current clan war league group</returns>
-        Task<CurrentWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag);
+        Task<ClanWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag);
 
         /// <summary>
         /// Retrieve information about individual clan war league war

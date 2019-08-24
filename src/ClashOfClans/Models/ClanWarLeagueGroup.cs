@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class CurrentWarLeagueGroup
+    public class ClanWarLeagueGroup
     {
         public State? State { get; set; }
 
@@ -12,7 +12,7 @@
 
         public override string ToString()
         {
-            return $"CurrentWarLeagueGroup: State '{State}', Season '{Season}'";
+            return $"ClanWarLeagueGroup: State '{State}', Season '{Season}'";
         }
     }
 }

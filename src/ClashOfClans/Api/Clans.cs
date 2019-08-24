@@ -66,13 +66,13 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/currentwar/leaguegroup
-        public async Task<CurrentWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag)
+        public async Task<ClanWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag)
         {
             _validator.ValidateClanTag(clanTag);
 
             var uri = $"clans/{clanTag}/currentwar/leaguegroup";
 
-            return await RequestAsync<CurrentWarLeagueGroup>(uri);
+            return await RequestAsync<ClanWarLeagueGroup>(uri);
         }
 
         // GET /clanwarleagues/wars/{warTag}
