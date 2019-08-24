@@ -24,7 +24,7 @@ namespace ClashOfClans.Tests
             }
 
             // Assert
-            Assert.IsTrue(count == 0);
+            Assert.AreEqual(0, count);
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace ClashOfClans.Tests
             }
 
             // Assert
-            Assert.IsTrue(count == 0);
+            Assert.AreEqual(0, count);
         }
     }
 }
