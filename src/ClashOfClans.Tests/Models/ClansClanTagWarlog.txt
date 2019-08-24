@@ -1,0 +1,44 @@
+﻿ClanWarLog [
+ClanWarLogEntry
+]
+ClanWarLogEntry {
+clan (WarClan, optional),
+opponent (WarClan, optional),
+teamSize (integer, optional),
+endTime (string, optional),
+result (string, optional)
+}
+WarClan {
+destructionPercentage (Float, optional),
+tag (string, optional),
+name (string, optional),
+badgeUrls (object, optional),
+clanLevel (integer, optional),
+attacks (integer, optional),
+stars (integer, optional),
+expEarned (integer, optional),
+members (ClanWarMemberList, optional)
+}
+Float {}
+ClanWarMemberList [
+ClanWarMember
+]
+ClanWarMember {
+tag (string, optional),
+name (string, optional),
+mapPosition (integer, optional),
+townhallLevel (integer, optional),
+opponentAttacks (integer, optional),
+bestOpponentAttack (ClanWarAttack, optional),
+attacks (ClanWarAttackList, optional)
+}
+ClanWarAttack {
+order (integer, optional),
+attackerTag (string, optional),
+defenderTag (string, optional),
+stars (integer, optional),
+destructionPercentage (integer, optional)
+}
+ClanWarAttackList [
+ClanWarAttack
+]

@@ -1,0 +1,21 @@
+﻿ClanRankingList [
+ClanRanking
+]
+ClanRanking {
+clanLevel (integer, optional),
+clanPoints (integer, optional),
+location (Location, optional),
+members (integer, optional),
+tag (string, optional),
+name (string, optional),
+rank (integer, optional),
+previousRank (integer, optional),
+badgeUrls (object, optional)
+}
+Location {
+localizedName (string, optional),
+id (integer, optional),
+name (string, optional),
+isCountry (boolean, optional),
+countryCode (string, optional)
+}

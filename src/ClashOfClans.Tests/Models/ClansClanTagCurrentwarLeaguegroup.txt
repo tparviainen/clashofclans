@@ -1,0 +1,34 @@
+﻿ClanWarLeagueGroup {
+tag (string, optional),
+state (string, optional),
+season (string, optional),
+clans (ClanWarLeagueClanList, optional),
+rounds (ClanWarLeagueRoundList, optional)
+}
+ClanWarLeagueClanList [
+ClanWarLeagueClan
+]
+ClanWarLeagueRoundList [
+ClanWarLeagueRound
+]
+ClanWarLeagueClan {
+tag (string, optional),
+clanLevel (integer, optional),
+name (string, optional),
+members (ClanWarLeagueClanMemberList, optional),
+badgeUrls (object, optional)
+}
+ClanWarLeagueRound {
+warTags (StringList, optional)
+}
+ClanWarLeagueClanMemberList [
+ClanWarLeagueClanMember
+]
+StringList [
+string
+]
+ClanWarLeagueClanMember {
+tag (string, optional),
+townHallLevel (integer, optional),
+name (string, optional)
+}

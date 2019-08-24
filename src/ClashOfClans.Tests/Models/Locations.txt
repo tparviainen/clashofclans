@@ -1,0 +1,10 @@
+﻿LocationList [
+Location
+]
+Location {
+localizedName (string, optional),
+id (integer, optional),
+name (string, optional),
+isCountry (boolean, optional),
+countryCode (string, optional)
+}

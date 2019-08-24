@@ -1,0 +1,23 @@
+﻿ClanMemberList [
+ClanMember
+]
+ClanMember {
+league (League, optional),
+tag (string, optional),
+name (string, optional),
+role (string, optional),
+expLevel (integer, optional),
+clanRank (integer, optional),
+previousClanRank (integer, optional),
+donations (integer, optional),
+donationsReceived (integer, optional),
+trophies (integer, optional),
+versusTrophies (integer, optional)
+}
+League {
+localizedShortName (string, optional),
+localizedName (string, optional),
+name (string, optional),
+id (integer, optional),
+iconUrls (object, optional)
+}
