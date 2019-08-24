@@ -44,7 +44,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /leagues/{leagueId}/seasons/{seasonId}
-        public async Task<SeasonPlayerRankingList> GetSeasonsAsync(int? leagueId, string seasonId, Query query = null)
+        public async Task<PlayerRankingList> GetSeasonsAsync(int? leagueId, string seasonId, Query query = null)
         {
             _validator
                 .ValidateLeagueId(leagueId)
@@ -53,7 +53,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons/{seasonId}{query}";
 
-            return await RequestAsync<SeasonPlayerRankingList>(uri);
+            return await RequestAsync<PlayerRankingList>(uri);
         }
     }
 }

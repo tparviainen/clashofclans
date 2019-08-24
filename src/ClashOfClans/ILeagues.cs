@@ -46,6 +46,6 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Season player ranking list</returns>
-        Task<SeasonPlayerRankingList> GetSeasonsAsync(int? leagueId, string seasonId, Query query = null);
+        Task<PlayerRankingList> GetSeasonsAsync(int? leagueId, string seasonId, Query query = null);
     }
 }
