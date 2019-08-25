@@ -53,6 +53,7 @@ namespace ClashOfClans.Tests
         public void CheckModelProperties()
         {
             // Arrange
+            var count = 0;
 
             // Act
             foreach (var modelName in _apiModelNames)
@@ -63,16 +64,21 @@ namespace ClashOfClans.Tests
                 {
                     foreach (var property in assemblyModel.GetProperties())
                     {
-                        if (!properties.ContainsKey(property.Name.ToLower()))
+                        if (!properties.ContainsKey(property.Name))
                         {
                             Trace.WriteLine($"Extra: {assemblyModel.Name} = {property.Name}");
+                            count++;
                         }
                     }
-
+                }
+                else
+                {
+                    Trace.WriteLine($"Missing: {modelName}");
                 }
             }
 
             // Assert
+            Assert.AreEqual(0, count);
         }
     }
 }

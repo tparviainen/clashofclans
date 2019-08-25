@@ -61,7 +61,7 @@ namespace ClashOfClans.Tests
         protected Dictionary<string, string> GetModelProperties(string modelName)
         {
             var pattern = $@"\b{modelName}\b ";
-            pattern += "{(.+?)}";
+            pattern += "{(.*?)}";
 
             var models = Regex.Matches(_models, pattern);
             var values = new Dictionary<string, string>();
@@ -70,6 +70,8 @@ namespace ClashOfClans.Tests
             {
                 ParseModel(match.Groups[1].Value, values);
             }
+
+            AddProperties(modelName, values);
 
             return values;
         }
@@ -81,10 +83,23 @@ namespace ClashOfClans.Tests
 
             foreach (Match property in properties)
             {
-                var propKey = property.Groups[1].Value.Trim().ToLower();
+                var propKey = property.Groups[1].Value.Trim();
                 var propVal = property.Groups[2].Value.Trim();
+                values.TryAdd(propKey.ToUpperFirst(), propVal);
+            }
+        }
 
-                values.TryAdd(propKey, propVal);
+        private void AddProperties(string modelName, Dictionary<string, string> values)
+        {
+            // List models have special properties either because the model is inherited
+            // from List<T> or is a root element in the response.
+            if (modelName.EndsWith("List"))
+            {
+                values.TryAdd("Items", null);
+                values.TryAdd("Paging", null);
+                values.TryAdd("Capacity", null);
+                values.TryAdd("Count", null);
+                values.TryAdd("Item", null);
             }
         }
     }
