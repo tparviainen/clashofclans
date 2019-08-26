@@ -1,6 +1,7 @@
 ﻿Player {
 clan (PlayerClan, optional),
 league (League, optional),
+role (string, optional),
 attackWins (integer, optional),
 defenseWins (integer, optional),
 townHallLevel (integer, optional),
@@ -10,7 +11,6 @@ legendStatistics (PlayerLegendStatistics, optional),
 troops (PlayerItemLevelList, optional),
 heroes (PlayerItemLevelList, optional),
 spells (PlayerItemLevelList, optional),
-role (string, optional),
 tag (string, optional),
 name (string, optional),
 expLevel (integer, optional),
@@ -40,11 +40,11 @@ iconUrls (object, optional)
 }
 PlayerLegendStatistics {
 previousSeason (LegendLeagueTournamentSeasonResult, optional),
-previousVersusSeason (LegendLeagueTournamentSeasonResult, optional),
-bestVersusSeason (LegendLeagueTournamentSeasonResult, optional),
 legendTrophies (integer, optional),
 currentSeason (LegendLeagueTournamentSeasonResult, optional),
-bestSeason (LegendLeagueTournamentSeasonResult, optional)
+bestSeason (LegendLeagueTournamentSeasonResult, optional),
+previousVersusSeason (LegendLeagueTournamentSeasonResult, optional),
+bestVersusSeason (LegendLeagueTournamentSeasonResult, optional)
 }
 PlayerItemLevelList [
 PlayerItemLevel

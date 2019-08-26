@@ -1,7 +1,7 @@
 ﻿ClanWar {
 clan (WarClan, optional),
-opponent (WarClan, optional),
 teamSize (integer, optional),
+opponent (WarClan, optional),
 startTime (string, optional),
 state (string, optional),
 endTime (string, optional),

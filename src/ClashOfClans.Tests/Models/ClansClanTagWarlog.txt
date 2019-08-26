@@ -3,8 +3,8 @@ ClanWarLogEntry
 ]
 ClanWarLogEntry {
 clan (WarClan, optional),
-opponent (WarClan, optional),
 teamSize (integer, optional),
+opponent (WarClan, optional),
 endTime (string, optional),
 result (string, optional)
 }
