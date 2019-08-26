@@ -2,7 +2,6 @@
 using System;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 
 namespace ClashOfClans.Tests
 {
@@ -85,34 +84,6 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.AreEqual(0, count);
-        }
-
-        /// <summary>
-        /// Skips specific properties that are in the C# model but do not exist
-        /// in the SC API model.
-        /// </summary>
-        private bool SkipProperty(PropertyInfo propertyInfo)
-        {
-            // Skip properties that are not declared in CoC assembly. This means
-            // properties that come via List<T> inheritance.
-            if (propertyInfo.Module.Assembly != typeof(ClashOfClansApi).Assembly)
-            {
-                return true;
-            }
-
-            // Indexer has "Item" property that is read only and should be skipped
-            if (!propertyInfo.CanWrite)
-            {
-                return true;
-            }
-
-            // Properties declared for searching functionality should be skipped
-            if (propertyInfo.DeclaringType == typeof(Models.Queryable))
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }
