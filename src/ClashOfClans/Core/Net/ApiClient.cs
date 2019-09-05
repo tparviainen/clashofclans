@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Core.Net
 {
+    /// <summary>
+    /// A base class for accessing Clash of Clans client API
+    /// </summary>
     internal class ApiClient
     {
         private readonly AuthenticationHeaderValue _authorization;

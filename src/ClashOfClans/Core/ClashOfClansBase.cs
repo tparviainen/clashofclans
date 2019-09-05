@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Core
 {
-    /// <summary>
-    /// A base class for accessing Clash of Clans API
-    /// </summary>
     internal abstract class ClashOfClansBase
     {
         private readonly ApiClient _client;
