@@ -1,14 +1,18 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
+using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
     internal class Leagues : ClashOfClansBase, ILeagues
     {
+        private readonly Validator _validator;
+
         public Leagues(ClashOfClansOptionsInternal options) : base(options)
         {
+            _validator = options.Validator;
         }
 
         // GET /leagues
