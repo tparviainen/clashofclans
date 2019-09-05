@@ -39,12 +39,12 @@ id (integer, optional),
 iconUrls (object, optional)
 }
 PlayerLegendStatistics {
-previousSeason (LegendLeagueTournamentSeasonResult, optional),
-legendTrophies (integer, optional),
-currentSeason (LegendLeagueTournamentSeasonResult, optional),
-bestSeason (LegendLeagueTournamentSeasonResult, optional),
+bestVersusSeason (LegendLeagueTournamentSeasonResult, optional),
 previousVersusSeason (LegendLeagueTournamentSeasonResult, optional),
-bestVersusSeason (LegendLeagueTournamentSeasonResult, optional)
+currentSeason (LegendLeagueTournamentSeasonResult, optional),
+previousSeason (LegendLeagueTournamentSeasonResult, optional),
+bestSeason (LegendLeagueTournamentSeasonResult, optional),
+legendTrophies (integer, optional)
 }
 PlayerItemLevelList [
 PlayerItemLevel
