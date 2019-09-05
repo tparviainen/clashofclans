@@ -10,7 +10,7 @@ namespace ClashOfClans.Core
     /// <summary>
     /// A base class for accessing Clash of Clans API
     /// </summary>
-    internal class ClashOfClansBase
+    internal abstract class ClashOfClansBase
     {
         private readonly ApiClient _client;
         private readonly MessageSerializer _serializer;
@@ -22,7 +22,7 @@ namespace ClashOfClans.Core
         /// </summary>
         protected void Log(string message) => _options.Logger?.Log(message);
 
-        public ClashOfClansBase(ClashOfClansOptionsInternal options)
+        protected ClashOfClansBase(ClashOfClansOptionsInternal options)
         {
             _options = options;
             _client = new ApiClient(options.Token);
