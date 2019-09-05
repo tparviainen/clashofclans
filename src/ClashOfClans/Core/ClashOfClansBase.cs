@@ -1,12 +1,8 @@
-﻿using ClashOfClans.Models;
-using ClashOfClans.Validation;
-using Newtonsoft.Json;
+﻿using ClashOfClans.Core.Net;
+using ClashOfClans.Core.Serialization;
+using ClashOfClans.Models;
 using System;
 using System.Diagnostics;
-using System.IO;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Core
@@ -16,8 +12,8 @@ namespace ClashOfClans.Core
     /// </summary>
     internal class ClashOfClansBase
     {
-        private readonly string _token;
-        protected readonly Validator _validator;
+        private readonly ApiClient _client;
+        private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
         private IThrottleRequests _throttleRequests => _options.ThrottleRequests;
 
@@ -29,23 +25,8 @@ namespace ClashOfClans.Core
         public ClashOfClansBase(ClashOfClansOptionsInternal options)
         {
             _options = options;
-            _token = options.Token;
-            _validator = options.Validator;
-        }
-
-        private async Task<HttpResponseMessage> GetMessageAsync(string requestUri)
-        {
-            await _throttleRequests.WaitAsync();
-
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("https://api.clashofclans.com/v1/");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
-
-                return await client.GetAsync(requestUri);
-            }
+            _client = new ApiClient(options.Token);
+            _serializer = new MessageSerializer();
         }
 
         protected async Task<T> RequestAsync<T>(string uri) where T : class
@@ -53,7 +34,7 @@ namespace ClashOfClans.Core
             // Hash character '#' needs to be URL-encoded properly to work in URL
             var data = await GetDataAsync(uri.Replace("#", "%23"));
 
-            return Deserialize<T>(data);
+            return _serializer.Deserialize<T>(data);
         }
 
         private async Task<string> GetDataAsync(string requestUri)
@@ -61,7 +42,8 @@ namespace ClashOfClans.Core
             Log($"API: {GetType().Name}, Uri: /{requestUri}");
 
             var watch = Stopwatch.StartNew();
-            var response = await GetMessageAsync(requestUri);
+            await _throttleRequests.WaitAsync();
+            var response = await _client.GetMessageAsync(requestUri);
             Log($"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
             var content = await response.Content.ReadAsStringAsync();
@@ -74,7 +56,7 @@ namespace ClashOfClans.Core
 
             try
             {
-                var error = Deserialize<Error>(content);
+                var error = _serializer.Deserialize<Error>(content);
                 throw new ClashOfClansException(error);
             }
             catch (Exception ex) when (ex.GetType() != typeof(ClashOfClansException))
@@ -89,31 +71,6 @@ namespace ClashOfClans.Core
 
                 throw new ClashOfClansException(error);
             }
-        }
-
-        private T Deserialize<T>(string data) where T : class
-        {
-            if (data != null)
-            {
-                using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(data)))
-                {
-                    var serializer = new JsonSerializer
-                    {
-#if DEBUG
-                        MissingMemberHandling = MissingMemberHandling.Error,
-#endif
-                        DateFormatString = "yyyyMMddTHHmmss.fffK"
-                    };
-
-                    using (var stream = new StreamReader(ms))
-                    {
-                        var reader = new JsonTextReader(stream);
-                        return serializer.Deserialize<T>(reader);
-                    }
-                }
-            }
-
-            return null;
         }
     }
 }
