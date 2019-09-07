@@ -38,7 +38,7 @@ namespace ClashOfClans
 
             configure(_options);
 
-            if (_options.MaxRequestsPerSecond != maxRequestsPerSecond)
+            if (maxRequestsPerSecond != _options.MaxRequestsPerSecond)
             {
                 _options.ThrottleRequests = new ThrottleRequestsPerSecond(_options.MaxRequestsPerSecond);
             }
