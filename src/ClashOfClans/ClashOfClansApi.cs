@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
+using ClashOfClans.Validation;
 using System;
 using System.Runtime.CompilerServices;
 
@@ -20,12 +21,16 @@ namespace ClashOfClans
         /// <param name="token">Your personal API key</param>
         public ClashOfClansApi(string token)
         {
-            _options = new ClashOfClansOptionsInternal(token);
+            var validator = new Validator();
+            validator.ValidateToken(token);
 
-            Clans = new Clans(_options);
-            Locations = new Locations(_options);
-            Leagues = new Leagues(_options);
-            Players = new Players(_options);
+            _options = new ClashOfClansOptionsInternal(token);
+            var endpoint = new ClashOfClansEndpoint(_options);
+
+            Clans = new Clans(endpoint, validator);
+            Locations = new Locations(endpoint, validator);
+            Leagues = new Leagues(endpoint, validator);
+            Players = new Players(endpoint, validator);
         }
 
         /// <summary>

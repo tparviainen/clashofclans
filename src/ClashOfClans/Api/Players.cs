@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
-    internal class Players : ClashOfClansBase, IPlayers
+    internal class Players : IPlayers
     {
+        private readonly IApiEndpoint _endpoint;
         private readonly Validator _validator;
 
-        public Players(ClashOfClansOptionsInternal options) : base(options)
+        public Players(IApiEndpoint endpoint, Validator validator)
         {
-            _validator = options.Validator;
+            _endpoint = endpoint;
+            _validator = validator;
         }
 
         // GET /players/{playerTag}
@@ -21,7 +23,7 @@ namespace ClashOfClans.Api
 
             var uri = $"players/{playerTag}";
 
-            return await RequestAsync<PlayerDetail>(uri);
+            return await _endpoint.RequestAsync<PlayerDetail>(uri);
         }
     }
 }

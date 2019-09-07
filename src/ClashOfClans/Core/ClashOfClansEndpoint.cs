@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Core
 {
-    internal abstract class ClashOfClansBase
+    internal class ClashOfClansEndpoint : IApiEndpoint
     {
         private readonly ApiClient _client;
         private readonly MessageSerializer _serializer;
@@ -19,14 +19,14 @@ namespace ClashOfClans.Core
         /// </summary>
         protected void Log(string message) => _options.Logger?.Log(message);
 
-        protected ClashOfClansBase(ClashOfClansOptionsInternal options)
+        public ClashOfClansEndpoint(ClashOfClansOptionsInternal options)
         {
             _options = options;
             _client = new ApiClient(options.Token);
             _serializer = new MessageSerializer();
         }
 
-        protected async Task<T> RequestAsync<T>(string uri) where T : class
+        public async Task<T> RequestAsync<T>(string uri) where T : class
         {
             // Hash character '#' needs to be URL-encoded properly to work in URL
             var data = await GetDataAsync(uri.Replace("#", "%23"));
