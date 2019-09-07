@@ -2,9 +2,7 @@
 using ClashOfClans.Core;
 using ClashOfClans.Validation;
 using System;
-using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("ClashOfClans.Tests")]
 namespace ClashOfClans
 {
     /// <summary>
