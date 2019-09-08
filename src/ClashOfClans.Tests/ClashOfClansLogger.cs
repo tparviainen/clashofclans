@@ -6,6 +6,7 @@ namespace ClashOfClans.Tests
 {
     class ClashOfClansLogger : IClashOfClansLogger
     {
+        private readonly object _fileLock = new object();
         private readonly string _logFile;
 
         public ClashOfClansLogger(string logPath)
@@ -21,7 +22,10 @@ namespace ClashOfClans.Tests
 
         public void Log(string message)
         {
-            File.AppendAllText(_logFile, message + Environment.NewLine);
+            lock (_fileLock)
+            {
+                File.AppendAllText(_logFile, message + Environment.NewLine);
+            }
         }
     }
 }
