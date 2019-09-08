@@ -69,16 +69,21 @@ namespace ClashOfClans.Tests
                             continue;
                         }
 
-                        if (!properties.ContainsKey(property.Name))
+                        if (properties.ContainsKey(property.Name))
                         {
-                            Trace.WriteLine($"Extra: {assemblyModel.Name} = {property.Name}");
+                            properties.Remove(property.Name);
+                        }
+                        else
+                        {
+                            Trace.WriteLine($"Extra: {assemblyModel.Name} = '{property.PropertyType.Name} {property.Name}'");
                             count++;
                         }
                     }
-                }
-                else
-                {
-                    Trace.WriteLine($"Missing: {modelName}");
+
+                    foreach (var property in properties)
+                    {
+                        Trace.WriteLine($"Missing: {modelName} = '{property.Value} {property.Key}'");
+                    }
                 }
             }
 
