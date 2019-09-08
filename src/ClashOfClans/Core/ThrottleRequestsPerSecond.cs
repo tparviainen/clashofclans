@@ -7,6 +7,7 @@ namespace ClashOfClans.Core
     {
         private DateTime _nextAllowedApiCallTime;
         private readonly int _delayBetweenApiCalls;
+        private readonly object throttlingLock = new object();
 
         public ThrottleRequestsPerSecond(int maxRequestsPerSecond)
         {
@@ -21,15 +22,35 @@ namespace ClashOfClans.Core
 
         public async Task WaitAsync()
         {
-            var now = DateTime.Now;
+            var continuationTime = ContinuationTime();
+            var millisecondsDelay = (int)(continuationTime - DateTime.Now).TotalMilliseconds;
 
-            if (now < _nextAllowedApiCallTime)
+            if (millisecondsDelay > 0)
             {
-                var millisecondsDelay = (int)(_nextAllowedApiCallTime - now).TotalMilliseconds;
                 await Task.Delay(millisecondsDelay);
             }
+        }
 
-            _nextAllowedApiCallTime = DateTime.Now.AddMilliseconds(_delayBetweenApiCalls);
+        /// <summary>
+        /// Returns the continuation time when the task can continue execution
+        /// </summary>
+        /// <returns></returns>
+        private DateTime ContinuationTime()
+        {
+            lock (throttlingLock)
+            {
+                var now = DateTime.Now;
+                var continuationTime = _nextAllowedApiCallTime;
+
+                if (continuationTime < now)
+                {
+                    continuationTime = now;
+                }
+
+                _nextAllowedApiCallTime = continuationTime.AddMilliseconds(_delayBetweenApiCalls);
+
+                return continuationTime;
+            }
         }
     }
 }

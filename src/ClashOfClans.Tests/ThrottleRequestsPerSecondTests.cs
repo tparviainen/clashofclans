@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -10,10 +11,10 @@ namespace ClashOfClans.Tests
     public class ThrottleRequestsPerSecondTests
     {
         [TestMethod]
-        public async Task EnsureRequestsAreThrottled()
+        public async Task WaitedCallsAreThrottled()
         {
             // Arrange
-            var maxRequestsPerSecond = 10;
+            var maxRequestsPerSecond = 20;
             var throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
             var totalTime = new TimeSpan(0, 0, 1);
             var loopCount = 0;
@@ -36,6 +37,30 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsTrue(loopCount <= maxRequestsPerSecond, $"Loopcount: {loopCount}");
+        }
+
+        [TestMethod]
+        public async Task NonWaitedCallsAreThrottled()
+        {
+            // Arrange
+            var rounds = 3;
+            var maxRequestsPerSecond = 50;
+            var throttleRequests = new ThrottleRequestsPerSecond(maxRequestsPerSecond);
+            var tasks = new List<Task>();
+
+            // Act
+            var stopWatch = Stopwatch.StartNew();
+            for (int i = 0; i < rounds * maxRequestsPerSecond; i++)
+            {
+                tasks.Add(throttleRequests.WaitAsync());
+            }
+
+            await Task.WhenAll(tasks);
+            var elapsed = stopWatch.ElapsedMilliseconds;
+
+            // Assert
+            var delayForTwoRequests = 1000 / maxRequestsPerSecond * 2;
+            Assert.IsTrue(elapsed > (rounds * 1000 - delayForTwoRequests), $"Elapsed: {elapsed}");
         }
     }
 }
