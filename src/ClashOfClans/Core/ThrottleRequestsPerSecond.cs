@@ -7,7 +7,7 @@ namespace ClashOfClans.Core
     {
         private DateTime _nextAllowedApiCallTime;
         private readonly int _delayBetweenApiCalls;
-        private readonly object throttlingLock = new object();
+        private readonly object _throttlingLock = new object();
 
         public ThrottleRequestsPerSecond(int maxRequestsPerSecond)
         {
@@ -37,7 +37,7 @@ namespace ClashOfClans.Core
         /// <returns></returns>
         private DateTime ContinuationTime()
         {
-            lock (throttlingLock)
+            lock (_throttlingLock)
             {
                 var now = DateTime.Now;
                 var continuationTime = _nextAllowedApiCallTime;
