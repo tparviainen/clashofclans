@@ -75,7 +75,7 @@ namespace ClashOfClans.Tests
                         }
                         else
                         {
-                            Trace.WriteLine($"Extra: {assemblyModel.Name} = '{property.PropertyType.Name} {property.Name}'");
+                            Trace.WriteLine($"Extra: {assemblyModel.Name} = '{property}'");
                             count++;
                         }
                     }
