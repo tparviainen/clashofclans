@@ -8,12 +8,12 @@ namespace ClashOfClans.Api
 {
     internal class Locations : ILocations
     {
-        private readonly IApiEndpoint _endpoint;
+        private readonly IGameData _gameData;
         private readonly Validator _validator;
 
-        public Locations(IApiEndpoint endpoint, Validator validator)
+        public Locations(IGameData gameData, Validator validator)
         {
-            _endpoint = endpoint;
+            _gameData = gameData;
             _validator = validator;
         }
 
@@ -24,7 +24,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations{query}";
 
-            return await _endpoint.RequestAsync<LocationList>(uri);
+            return await _gameData.RequestAsync<LocationList>(uri);
         }
 
         // GET /locations/{locationId}
@@ -34,7 +34,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}";
 
-            return await _endpoint.RequestAsync<Location>(uri);
+            return await _gameData.RequestAsync<Location>(uri);
         }
 
         // GET /locations/{locationId}/rankings/clans
@@ -46,7 +46,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}/rankings/clans{query}";
 
-            return await _endpoint.RequestAsync<ClanRankingList>(uri);
+            return await _gameData.RequestAsync<ClanRankingList>(uri);
         }
 
         // GET /locations/{locationId}/rankings/players
@@ -58,7 +58,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}/rankings/players{query}";
 
-            return await _endpoint.RequestAsync<PlayerRankingList>(uri);
+            return await _gameData.RequestAsync<PlayerRankingList>(uri);
         }
 
         // GET /locations/{locationId}/rankings/clans-versus
@@ -70,7 +70,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}/rankings/clans-versus{query}";
 
-            return await _endpoint.RequestAsync<ClanRankingList>(uri);
+            return await _gameData.RequestAsync<ClanRankingList>(uri);
         }
 
         // GET /locations/{locationId}/rankings/players-versus
@@ -82,7 +82,7 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}/rankings/players-versus{query}";
 
-            return await _endpoint.RequestAsync<PlayerVersusRankingList>(uri);
+            return await _gameData.RequestAsync<PlayerVersusRankingList>(uri);
         }
     }
 }

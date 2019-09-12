@@ -7,12 +7,12 @@ namespace ClashOfClans.Api
 {
     internal class Players : IPlayers
     {
-        private readonly IApiEndpoint _endpoint;
+        private readonly IGameData _gameData;
         private readonly Validator _validator;
 
-        public Players(IApiEndpoint endpoint, Validator validator)
+        public Players(IGameData gameData, Validator validator)
         {
-            _endpoint = endpoint;
+            _gameData = gameData;
             _validator = validator;
         }
 
@@ -23,7 +23,7 @@ namespace ClashOfClans.Api
 
             var uri = $"players/{playerTag}";
 
-            return await _endpoint.RequestAsync<PlayerDetail>(uri);
+            return await _gameData.RequestAsync<PlayerDetail>(uri);
         }
     }
 }

@@ -8,12 +8,12 @@ namespace ClashOfClans.Core.Net
     /// <summary>
     /// A base class for accessing Clash of Clans game data through REST API
     /// </summary>
-    internal class GameDataClient
+    internal class ApiEndpoint
     {
         private readonly AuthenticationHeaderValue _authorization;
         private readonly Uri _baseAddress = new Uri("https://api.clashofclans.com/v1/");
 
-        public GameDataClient(string token)
+        public ApiEndpoint(string token)
         {
             _authorization = new AuthenticationHeaderValue("Bearer", token);
         }

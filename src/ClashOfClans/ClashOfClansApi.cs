@@ -23,12 +23,12 @@ namespace ClashOfClans
             validator.ValidateToken(token);
 
             _options = new ClashOfClansOptionsInternal(token);
-            var endpoint = new ClashOfClansEndpoint(_options);
+            var gameData = new GameData(_options);
 
-            Clans = new Clans(endpoint, validator);
-            Locations = new Locations(endpoint, validator);
-            Leagues = new Leagues(endpoint, validator);
-            Players = new Players(endpoint, validator);
+            Clans = new Clans(gameData, validator);
+            Locations = new Locations(gameData, validator);
+            Leagues = new Leagues(gameData, validator);
+            Players = new Players(gameData, validator);
         }
 
         /// <summary>

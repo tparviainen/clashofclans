@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.Core
 {
-    internal class ClashOfClansEndpoint : IApiEndpoint
+    /// <summary>
+    /// Provides a functionality to access game data.
+    /// </summary>
+    internal class GameData : IGameData
     {
-        private readonly GameDataClient _client;
+        private readonly ApiEndpoint _endpoint;
         private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
         private IThrottleRequests _throttleRequests => _options.ThrottleRequests;
@@ -19,10 +22,10 @@ namespace ClashOfClans.Core
         /// </summary>
         protected void Log(string message) => _options.Logger?.Log(message);
 
-        public ClashOfClansEndpoint(ClashOfClansOptionsInternal options)
+        public GameData(ClashOfClansOptionsInternal options)
         {
             _options = options;
-            _client = new GameDataClient(options.Token);
+            _endpoint = new ApiEndpoint(options.Token);
             _serializer = new MessageSerializer();
         }
 
@@ -40,7 +43,7 @@ namespace ClashOfClans.Core
 
             var watch = Stopwatch.StartNew();
             await _throttleRequests.WaitAsync();
-            var response = await _client.GetMessageAsync(requestUri);
+            var response = await _endpoint.GetMessageAsync(requestUri);
             Log($"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
             var content = await response.Content.ReadAsStringAsync();

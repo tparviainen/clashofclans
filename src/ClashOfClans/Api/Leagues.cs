@@ -8,12 +8,12 @@ namespace ClashOfClans.Api
 {
     internal class Leagues : ILeagues
     {
-        private readonly IApiEndpoint _endpoint;
+        private readonly IGameData _gameData;
         private readonly Validator _validator;
 
-        public Leagues(IApiEndpoint endpoint, Validator validator)
+        public Leagues(IGameData gameData, Validator validator)
         {
-            _endpoint = endpoint;
+            _gameData = gameData;
             _validator = validator;
         }
 
@@ -24,7 +24,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues{query}";
 
-            return await _endpoint.RequestAsync<LeagueList>(uri);
+            return await _gameData.RequestAsync<LeagueList>(uri);
         }
 
         // GET /leagues/{leagueId}
@@ -34,7 +34,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}";
 
-            return await _endpoint.RequestAsync<League>(uri);
+            return await _gameData.RequestAsync<League>(uri);
         }
 
         // GET /leagues/{leagueId}/seasons
@@ -46,7 +46,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons{query}";
 
-            return await _endpoint.RequestAsync<LeagueSeasonList>(uri);
+            return await _gameData.RequestAsync<LeagueSeasonList>(uri);
         }
 
         // GET /leagues/{leagueId}/seasons/{seasonId}
@@ -59,7 +59,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons/{seasonId}{query}";
 
-            return await _endpoint.RequestAsync<SeasonPlayerRankingList>(uri);
+            return await _gameData.RequestAsync<SeasonPlayerRankingList>(uri);
         }
     }
 }
