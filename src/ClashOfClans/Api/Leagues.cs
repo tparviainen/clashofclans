@@ -1,14 +1,20 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
+using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
-    internal class Leagues : ClashOfClansBase, ILeagues
+    internal class Leagues : ILeagues
     {
-        public Leagues(ClashOfClansOptionsInternal options) : base(options)
+        private readonly IGameData _gameData;
+        private readonly Validator _validator;
+
+        public Leagues(IGameData gameData, Validator validator)
         {
+            _gameData = gameData;
+            _validator = validator;
         }
 
         // GET /leagues
@@ -18,7 +24,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues{query}";
 
-            return await RequestAsync<LeagueList>(uri);
+            return await _gameData.RequestAsync<LeagueList>(uri);
         }
 
         // GET /leagues/{leagueId}
@@ -28,7 +34,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}";
 
-            return await RequestAsync<League>(uri);
+            return await _gameData.RequestAsync<League>(uri);
         }
 
         // GET /leagues/{leagueId}/seasons
@@ -40,7 +46,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons{query}";
 
-            return await RequestAsync<LeagueSeasonList>(uri);
+            return await _gameData.RequestAsync<LeagueSeasonList>(uri);
         }
 
         // GET /leagues/{leagueId}/seasons/{seasonId}
@@ -53,7 +59,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons/{seasonId}{query}";
 
-            return await RequestAsync<PlayerRankingList>(uri);
+            return await _gameData.RequestAsync<PlayerRankingList>(uri);
         }
     }
 }

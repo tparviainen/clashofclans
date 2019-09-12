@@ -1,9 +1,8 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
+using ClashOfClans.Validation;
 using System;
-using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("ClashOfClans.Tests")]
 namespace ClashOfClans
 {
     /// <summary>
@@ -20,12 +19,16 @@ namespace ClashOfClans
         /// <param name="token">Your personal API key</param>
         public ClashOfClansApi(string token)
         {
-            _options = new ClashOfClansOptionsInternal(token);
+            var validator = new Validator();
+            validator.ValidateToken(token);
 
-            Clans = new Clans(_options);
-            Locations = new Locations(_options);
-            Leagues = new Leagues(_options);
-            Players = new Players(_options);
+            _options = new ClashOfClansOptionsInternal(token);
+            var gameData = new GameData(_options);
+
+            Clans = new Clans(gameData, validator);
+            Locations = new Locations(gameData, validator);
+            Leagues = new Leagues(gameData, validator);
+            Players = new Players(gameData, validator);
         }
 
         /// <summary>
@@ -38,7 +41,7 @@ namespace ClashOfClans
 
             configure(_options);
 
-            if (_options.MaxRequestsPerSecond != maxRequestsPerSecond)
+            if (maxRequestsPerSecond != _options.MaxRequestsPerSecond)
             {
                 _options.ThrottleRequests = new ThrottleRequestsPerSecond(_options.MaxRequestsPerSecond);
             }
