@@ -1,14 +1,20 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
+using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
-    internal class Clans : ClashOfClansBase, IClans
+    internal class Clans : IClans
     {
-        public Clans(ClashOfClansOptionsInternal options) : base(options)
+        private readonly IGameData _gameData;
+        private readonly Validator _validator;
+
+        public Clans(IGameData gameData, Validator validator)
         {
+            _gameData = gameData;
+            _validator = validator;
         }
 
         // GET /clans
@@ -18,7 +24,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans{query}";
 
-            return await RequestAsync<SearchResult>(uri);
+            return await _gameData.RequestAsync<SearchResult>(uri);
         }
 
         // GET /clans/{clanTag}
@@ -28,7 +34,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}";
 
-            return await RequestAsync<Clan>(uri);
+            return await _gameData.RequestAsync<Clan>(uri);
         }
 
         // GET /clans/{clanTag}/members
@@ -40,7 +46,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/members{query}";
 
-            return await RequestAsync<ClanMemberList>(uri);
+            return await _gameData.RequestAsync<ClanMemberList>(uri);
         }
 
         // GET /clans/{clanTag}/warlog
@@ -52,7 +58,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/warlog{query}";
 
-            return await RequestAsync<WarLog>(uri);
+            return await _gameData.RequestAsync<WarLog>(uri);
         }
 
         // GET /clans/{clanTag}/currentwar
@@ -62,7 +68,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/currentwar";
 
-            return await RequestAsync<CurrentWar>(uri);
+            return await _gameData.RequestAsync<CurrentWar>(uri);
         }
 
         // GET /clans/{clanTag}/currentwar/leaguegroup
@@ -72,7 +78,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/currentwar/leaguegroup";
 
-            return await RequestAsync<CurrentWarLeagueGroup>(uri);
+            return await _gameData.RequestAsync<CurrentWarLeagueGroup>(uri);
         }
 
         // GET /clanwarleagues/wars/{warTag}
@@ -82,7 +88,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clanwarleagues/wars/{warTag}";
 
-            return await RequestAsync<ClanWarLeagueWar>(uri);
+            return await _gameData.RequestAsync<ClanWarLeagueWar>(uri);
         }
     }
 }

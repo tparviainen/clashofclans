@@ -1,13 +1,19 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
+using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
 {
-    internal class Players : ClashOfClansBase, IPlayers
+    internal class Players : IPlayers
     {
-        public Players(ClashOfClansOptionsInternal options) : base(options)
+        private readonly IGameData _gameData;
+        private readonly Validator _validator;
+
+        public Players(IGameData gameData, Validator validator)
         {
+            _gameData = gameData;
+            _validator = validator;
         }
 
         // GET /players/{playerTag}
@@ -17,7 +23,7 @@ namespace ClashOfClans.Api
 
             var uri = $"players/{playerTag}";
 
-            return await RequestAsync<PlayerDetail>(uri);
+            return await _gameData.RequestAsync<PlayerDetail>(uri);
         }
     }
 }
