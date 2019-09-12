@@ -1739,6 +1739,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.InlineModel2.BestSeason
   nameWithType: InlineModel2.BestSeason
+- uid: ClashOfClans.Models.InlineModel2.BestVersusSeason
+  name: BestVersusSeason
+  href: api/ClashOfClans.Models.InlineModel2.html#ClashOfClans_Models_InlineModel2_BestVersusSeason
+  commentId: P:ClashOfClans.Models.InlineModel2.BestVersusSeason
+  fullName: ClashOfClans.Models.InlineModel2.BestVersusSeason
+  nameWithType: InlineModel2.BestVersusSeason
+- uid: ClashOfClans.Models.InlineModel2.BestVersusSeason*
+  name: BestVersusSeason
+  href: api/ClashOfClans.Models.InlineModel2.html#ClashOfClans_Models_InlineModel2_BestVersusSeason_
+  commentId: Overload:ClashOfClans.Models.InlineModel2.BestVersusSeason
+  isSpec: "True"
+  fullName: ClashOfClans.Models.InlineModel2.BestVersusSeason
+  nameWithType: InlineModel2.BestVersusSeason
 - uid: ClashOfClans.Models.InlineModel2.CurrentSeason
   name: CurrentSeason
   href: api/ClashOfClans.Models.InlineModel2.html#ClashOfClans_Models_InlineModel2_CurrentSeason
@@ -1778,6 +1791,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.InlineModel2.PreviousSeason
   nameWithType: InlineModel2.PreviousSeason
+- uid: ClashOfClans.Models.InlineModel2.PreviousVersusSeason
+  name: PreviousVersusSeason
+  href: api/ClashOfClans.Models.InlineModel2.html#ClashOfClans_Models_InlineModel2_PreviousVersusSeason
+  commentId: P:ClashOfClans.Models.InlineModel2.PreviousVersusSeason
+  fullName: ClashOfClans.Models.InlineModel2.PreviousVersusSeason
+  nameWithType: InlineModel2.PreviousVersusSeason
+- uid: ClashOfClans.Models.InlineModel2.PreviousVersusSeason*
+  name: PreviousVersusSeason
+  href: api/ClashOfClans.Models.InlineModel2.html#ClashOfClans_Models_InlineModel2_PreviousVersusSeason_
+  commentId: Overload:ClashOfClans.Models.InlineModel2.PreviousVersusSeason
+  isSpec: "True"
+  fullName: ClashOfClans.Models.InlineModel2.PreviousVersusSeason
+  nameWithType: InlineModel2.PreviousVersusSeason
 - uid: ClashOfClans.Models.League
   name: League
   href: api/ClashOfClans.Models.League.html
