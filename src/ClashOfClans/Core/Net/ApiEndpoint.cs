@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace ClashOfClans.Core.Net
 {
     /// <summary>
-    /// A base class for accessing Clash of Clans game data through REST API
+    /// Represents a Clash of Clans game data REST API endpoint
     /// </summary>
     internal class ApiEndpoint
     {
