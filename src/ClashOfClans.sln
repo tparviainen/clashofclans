@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClans", "ClashOfClan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClans.Tests", "ClashOfClans.Tests\ClashOfClans.Tests.csproj", "{D8172664-9104-4D6B-AEB4-7CDA9F1AC8BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClashOfClans.App", "ClashOfClans.App\ClashOfClans.App.csproj", "{B86AFE64-B9A8-4C35-A75E-0FBE11185E67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClans.App", "ClashOfClans.App\ClashOfClans.App.csproj", "{B86AFE64-B9A8-4C35-A75E-0FBE11185E67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
