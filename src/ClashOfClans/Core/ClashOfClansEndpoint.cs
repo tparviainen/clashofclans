@@ -9,7 +9,7 @@ namespace ClashOfClans.Core
 {
     internal class ClashOfClansEndpoint : IApiEndpoint
     {
-        private readonly ApiClient _client;
+        private readonly GameDataClient _client;
         private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
         private IThrottleRequests _throttleRequests => _options.ThrottleRequests;
@@ -22,7 +22,7 @@ namespace ClashOfClans.Core
         public ClashOfClansEndpoint(ClashOfClansOptionsInternal options)
         {
             _options = options;
-            _client = new ApiClient(options.Token);
+            _client = new GameDataClient(options.Token);
             _serializer = new MessageSerializer();
         }
 

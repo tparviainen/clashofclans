@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 namespace ClashOfClans.Core.Net
 {
     /// <summary>
-    /// A base class for accessing Clash of Clans client API
+    /// A base class for accessing Clash of Clans game data through REST API
     /// </summary>
-    internal class ApiClient
+    internal class GameDataClient
     {
         private readonly AuthenticationHeaderValue _authorization;
         private readonly Uri _baseAddress = new Uri("https://api.clashofclans.com/v1/");
 
-        public ApiClient(string token)
+        public GameDataClient(string token)
         {
             _authorization = new AuthenticationHeaderValue("Bearer", token);
         }
