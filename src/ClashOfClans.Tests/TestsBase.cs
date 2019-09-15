@@ -21,8 +21,8 @@ namespace ClashOfClans.Tests
         protected static IConfigurationRoot _config;
         protected static ClashOfClansApi _coc;
 
-        public string PlayerTag { get => _config["playerTag"]; }
-        public string ClanTag { get => _config["clanTag"]; }
+        public IEnumerable<string> PlayerTags { get => _config.GetSection("playerTags").GetChildren().Select(x => x.Value); }
+        public IEnumerable<string> ClanTags { get => _config.GetSection("clanTags").GetChildren().Select(x => x.Value); }
 
         [AssemblyInitialize]
         public static async Task AssemblyInitialize(TestContext context)

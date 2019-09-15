@@ -10,13 +10,15 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerInformation()
         {
             // Arrange
-            var players = _coc.Players;
 
             // Act
-            var player = await players.GetAsync(PlayerTag);
+            foreach (var playerTag in PlayerTags)
+            {
+                var player = await _coc.Players.GetAsync(playerTag);
 
-            // Assert
-            Assert.IsNotNull(player);
+                // Assert
+                Assert.IsNotNull(player);
+            }
         }
     }
 }
