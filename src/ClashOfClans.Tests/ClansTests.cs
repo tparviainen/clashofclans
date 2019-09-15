@@ -155,30 +155,67 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroupAndWar()
         {
             // Arrange
+            var taskList = new List<Task<CurrentWarLeagueGroup>>();
 
             // Act
-            foreach (var clan in _clans.Items)
+            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
             {
-                Trace.WriteLine(clan);
+                taskList.Add(_coc.Clans.GetCurrentWarLeagueGroupAsync(clan.Tag));
+            }
 
-                try
+            try
+            {
+                await Task.WhenAll(taskList);
+            }
+            catch (ClashOfClansException)
+            {
+                // For clans that dont have CWL history
+            }
+
+            // Assert
+            var leagueGroups = taskList.Where(t => t.Status == TaskStatus.RanToCompletion).Select(t => t.Result);
+            Assert.IsTrue(leagueGroups.Any(), "Test data does not contain a clan with public CWL war log!");
+
+            foreach (var leagueGroup in leagueGroups)
+            {
+                Trace.WriteLine($"{leagueGroup}");
+
+                foreach (var round in leagueGroup.Rounds)
                 {
-                    var leaguegroup = await _coc.Clans.GetCurrentWarLeagueGroupAsync(clan.Tag);
-                    Trace.WriteLine(leaguegroup);
+                    var warRequests = new List<Task<ClanWarLeagueWar>>();
+                    foreach (var warTag in round.WarTags)
+                    {
+                        warRequests.Add(_coc.Clans.GetClanWarLeaguesWarsAsync(warTag));
+                    }
 
-                    // WarTag="#0" round not started
-                    var round = GetRandom(leaguegroup.Rounds, r => !r.WarTags.Contains("#0"));
-                    var warTag = GetRandom(round.WarTags);
-                    var clanWarLeagueWar = await _coc.Clans.GetClanWarLeaguesWarsAsync(warTag);
+                    var wars = await Task.WhenAll(warRequests);
+                    foreach (var war in wars)
+                    {
+                        Trace.WriteLine($"\n{war.Clan.Name} [{war.Clan.Stars}☆/{war.Clan.DestructionPercentage}/{war.Clan.Attacks}] vs {war.Opponent.Name} [{war.Opponent.Stars}☆/{war.Opponent.DestructionPercentage}/{war.Opponent.Attacks}]");
+                        Trace.WriteLine($"Preparation: {war.PreparationStartTime.ToLocalTime()}, start: {war.StartTime.ToLocalTime()}, end: {war.EndTime.ToLocalTime()}");
 
-                    // Assert
-                    Assert.IsNotNull(leaguegroup);
-                    Assert.IsNotNull(clanWarLeagueWar);
-                    break;
-                }
-                catch (ClashOfClansException ex)
-                {
-                    Trace.WriteLine(ex.Error);
+                        foreach (var member in war.Clan.Members.Where(m => m.Attacks != null).OrderBy(m => m.Attacks[0].Order))
+                        {
+                            var attack = member.Attacks[0];
+                            Trace.WriteLine($"-> {member.Name}, {attack.Stars}☆/{attack.DestructionPercentage}%");
+                        }
+
+                        foreach (var member in war.Clan.Members.Where(m => m.Attacks == null && m.BestOpponentAttack != null))
+                        {
+                            Trace.WriteLine($"-> {member.Name}");
+                        }
+
+                        foreach (var member in war.Opponent.Members.Where(m => m.Attacks != null).OrderBy(m => m.Attacks[0].Order))
+                        {
+                            var attack = member.Attacks[0];
+                            Trace.WriteLine($"<- {member.Name}, {attack.Stars}☆/{attack.DestructionPercentage}%");
+                        }
+
+                        foreach (var member in war.Opponent.Members.Where(m => m.Attacks == null && m.BestOpponentAttack != null))
+                        {
+                            Trace.WriteLine($"<- {member.Name}");
+                        }
+                    }
                 }
             }
         }
