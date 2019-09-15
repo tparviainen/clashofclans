@@ -1,4 +1,4 @@
-$packageVersion = "4.0.1"
+$packageVersion = "4.0.2"
 $project = "..\src\ClashOfClans\ClashOfClans.csproj"
 $configuration = "Release"
 

@@ -2,7 +2,7 @@
 using ClashOfClans.Models;
 using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -66,49 +66,63 @@ namespace ClashOfClans.Tests
         public async Task GetClanInformation()
         {
             // Arrange
-            var clanTag = GetRandom(_clans.Items).Tag;
+            var taskList = new List<Task<Clan>>();
+            var clanTags = _clans.Items.Select(c => c.Tag).ToList();
+            clanTags.AddRange(ClanTags);
 
             // Act
-            var clan = await _coc.Clans.GetAsync(clanTag);
-            Trace.WriteLine(clan);
+            foreach (var clanTag in clanTags)
+            {
+                taskList.Add(_coc.Clans.GetAsync(clanTag));
+            }
 
             // Assert
-            Assert.IsNotNull(clan);
+            foreach (var clan in await Task.WhenAll(taskList))
+            {
+                Assert.IsNotNull(clan);
+                Trace.WriteLine(clan.Dump());
+            }
         }
 
         [TestMethod]
         public async Task ListClanMembers()
         {
             // Arrange
-            var clanTag = GetRandom(_clans.Items).Tag;
+            var taskList = new List<Task<ClanMemberList>>();
 
             // Act
-            var clansMembers = await _coc.Clans.GetMembersAsync(clanTag);
+            foreach (var clanTag in ClanTags.Append(GetRandom(_clans.Items).Tag))
+            {
+                taskList.Add(_coc.Clans.GetMembersAsync(clanTag));
+            }
 
-            // Assert
-            Assert.IsNotNull(clansMembers);
+            foreach (var memberList in await Task.WhenAll(taskList))
+            {
+                // Assert
+                Assert.IsNotNull(memberList);
+                Trace.WriteLine(memberList.Dump());
+            }
         }
 
         [TestMethod]
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var clan = GetRandom(_clans.Items.Where(c => c.IsWarLogPublic == true).ToList());
+            var taskList = new List<Task<ClanWarLog>>();
 
             // Act
-            if (clan != null)
+            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
             {
-                Trace.WriteLine(clan);
-
-                var clanWarLog = await _coc.Clans.GetWarLogAsync(clan.Tag);
-                Trace.WriteLine(clanWarLog);
-
-                // Assert
-                Assert.IsNotNull(clanWarLog);
+                taskList.Add(_coc.Clans.GetWarLogAsync(clan.Tag));
             }
-            else
+
+            // Assert
+            Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
+
+            foreach (var warLog in await Task.WhenAll(taskList))
             {
-                Assert.Fail("Test data contains no clan with public war log!");
+                Assert.IsNotNull(warLog);
+                Trace.WriteLine(warLog.Dump());
             }
         }
 
@@ -116,18 +130,21 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             // Arrange
-            var clan = GetRandom(_clans.Items.Where(c => c.IsWarLogPublic == true).ToList());
+            var taskList = new List<Task<ClanWar>>();
 
             // Act
-            if (clan != null)
+            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
             {
-                Trace.WriteLine(clan);
+                taskList.Add(_coc.Clans.GetCurrentWarAsync(clan.Tag));
+            }
 
-                var currentWar = await _coc.Clans.GetCurrentWarAsync(clan.Tag);
-                Trace.WriteLine(currentWar);
+            // Assert
+            Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
 
-                // Assert
+            foreach (var currentWar in await Task.WhenAll(taskList))
+            {
                 Assert.IsNotNull(currentWar);
+                Trace.WriteLine(currentWar.Dump());
             }
         }
 
@@ -135,30 +152,48 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroupAndWar()
         {
             // Arrange
+            var taskList = new List<Task<ClanWarLeagueGroup>>();
+            var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+            clanTags.AddRange(ClanTags);
 
             // Act
-            foreach (var clan in _clans.Items)
+            foreach (var clanTag in clanTags)
             {
-                Trace.WriteLine(clan);
+                taskList.Add(_coc.Clans.GetCurrentWarLeagueGroupAsync(clanTag));
+            }
 
-                try
+            try
+            {
+                await Task.WhenAll(taskList);
+            }
+            catch (ClashOfClansException)
+            {
+                // For clans that dont have CWL history
+            }
+
+            // Assert
+            var leagueGroups = taskList.Where(t => t.Status == TaskStatus.RanToCompletion).Select(t => t.Result);
+            Assert.IsTrue(leagueGroups.Any(), "Test data does not contain a clan with public CWL war log!");
+
+            foreach (var leagueGroup in leagueGroups)
+            {
+                Assert.IsNotNull(leagueGroup);
+                Trace.WriteLine(leagueGroup.Dump());
+
+                foreach (var round in leagueGroup.Rounds)
                 {
-                    var leaguegroup = await _coc.Clans.GetCurrentWarLeagueGroupAsync(clan.Tag);
-                    Trace.WriteLine(leaguegroup);
+                    var warRequests = new List<Task<ClanWarLeagueWar>>();
+                    foreach (var warTag in round.WarTags)
+                    {
+                        warRequests.Add(_coc.Clans.GetClanWarLeaguesWarsAsync(warTag));
+                    }
 
-                    // WarTag="#0" round not started
-                    var round = GetRandom(leaguegroup.Rounds, r => !r.WarTags.Contains("#0"));
-                    var warTag = GetRandom(round.WarTags);
-                    var clanWarLeagueWar = await _coc.Clans.GetClanWarLeaguesWarsAsync(warTag);
-
-                    // Assert
-                    Assert.IsNotNull(leaguegroup);
-                    Assert.IsNotNull(clanWarLeagueWar);
-                    break;
-                }
-                catch (ClashOfClansException ex)
-                {
-                    Trace.WriteLine(ex.Error);
+                    var wars = await Task.WhenAll(warRequests);
+                    foreach (var war in wars)
+                    {
+                        Assert.IsNotNull(war);
+                        Trace.WriteLine(war.Dump());
+                    }
                 }
             }
         }

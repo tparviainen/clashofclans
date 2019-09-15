@@ -35,17 +35,20 @@ namespace ClashOfClans.Tests
             // Arrange
             var validator = new Validator();
 
-            try
+            foreach (var clanTag in ClanTags)
             {
-                // Act
-                validator.ValidateClanTag(ClanTag.Substring(1));
+                try
+                {
+                    // Act
+                    validator.ValidateClanTag(clanTag.Substring(1));
 
-                // Assert
-                Assert.Fail();
-            }
-            catch (ArgumentException ex)
-            {
-                Trace.WriteLine(ex);
+                    // Assert
+                    Assert.Fail();
+                }
+                catch (ArgumentException ex)
+                {
+                    Trace.WriteLine(ex);
+                } 
             }
         }
 
@@ -115,17 +118,20 @@ namespace ClashOfClans.Tests
             // Arrange
             var validator = new Validator();
 
-            try
+            foreach (var playerTag in PlayerTags)
             {
-                // Act
-                validator.ValidatePlayerTag(PlayerTag.Substring(1));
+                try
+                {
+                    // Act
+                    validator.ValidatePlayerTag(playerTag.Substring(1));
 
-                // Assert
-                Assert.Fail();
-            }
-            catch (ArgumentException ex)
-            {
-                Trace.WriteLine(ex);
+                    // Assert
+                    Assert.Fail();
+                }
+                catch (ArgumentException ex)
+                {
+                    Trace.WriteLine(ex);
+                }
             }
         }
 

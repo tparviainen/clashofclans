@@ -16,13 +16,13 @@ namespace ClashOfClans.Tests
         private readonly Random _random = new Random();
 
         protected static ClanList _clans;
-        protected static LocationList _locations;
         protected static LeagueList _leagues;
+        protected static LocationList _locations;
         protected static IConfigurationRoot _config;
         protected static ClashOfClansApi _coc;
 
-        public string PlayerTag { get => _config["playerTag"]; }
-        public string ClanTag { get => _config["clanTag"]; }
+        public IEnumerable<string> PlayerTags { get => _config.GetSection("playerTags").GetChildren().Select(x => x.Value); }
+        public IEnumerable<string> ClanTags { get => _config.GetSection("clanTags").GetChildren().Select(x => x.Value); }
 
         [AssemblyInitialize]
         public static async Task AssemblyInitialize(TestContext context)
@@ -37,18 +37,19 @@ namespace ClashOfClans.Tests
                 _coc.Configure(options =>
                 {
                     options.Logger = new ClashOfClansLogger(_config["logPath"]);
+                    options.MaxRequestsPerSecond = 50;
                 });
 
                 var query = new QueryClans
                 {
                     MinMembers = 40,
-                    MaxMembers = 40,
+                    MinClanLevel = 10,
                     Limit = 50
                 };
 
                 _clans = await _coc.Clans.GetAsync(query);
-                _locations = await _coc.Locations.GetAsync();
                 _leagues = await _coc.Leagues.GetAsync();
+                _locations = await _coc.Locations.GetAsync();
             }
             catch (ClashOfClansException ex)
             {
