@@ -99,22 +99,29 @@ namespace ClashOfClans.Tests
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var clan = GetRandom(_clans.Items.Where(c => c.IsWarLogPublic == true).ToList());
+            var taskList = new List<Task<WarLog>>();
 
             // Act
-            if (clan != null)
+            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
             {
-                Trace.WriteLine(clan);
-
-                var clanWarLog = await _coc.Clans.GetWarLogAsync(clan.Tag);
-                Trace.WriteLine(clanWarLog);
-
-                // Assert
-                Assert.IsNotNull(clanWarLog);
+                taskList.Add(_coc.Clans.GetWarLogAsync(clan.Tag));
             }
-            else
+
+            // Assert
+            Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
+
+            foreach (var warLog in await Task.WhenAll(taskList))
             {
-                Assert.Fail("Test data contains no clan with public war log!");
+                var first = warLog.Items.FirstOrDefault();
+                if (first != null)
+                {
+                    Trace.WriteLine($"\nClan: {first.Clan.Tag}/{first.Clan.Name}");
+
+                    foreach (var entry in warLog.Items.Where(w => w.Opponent.Tag != null))
+                    {
+                        Trace.WriteLine($"-> {entry.Result} against {entry.Opponent.Tag}/{entry.Opponent.Name} @ {entry.EndTime.ToLocalTime()}");
+                    }
+                }
             }
         }
 
