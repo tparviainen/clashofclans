@@ -43,7 +43,7 @@ namespace ClashOfClans.Tests
                 var query = new QueryClans
                 {
                     MinMembers = 40,
-                    MaxMembers = 40,
+                    MinClanLevel = 10,
                     Limit = 50
                 };
 
