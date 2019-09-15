@@ -129,18 +129,25 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             // Arrange
-            var clan = GetRandom(_clans.Items.Where(c => c.IsWarLogPublic == true).ToList());
+            var taskList = new List<Task<CurrentWar>>();
 
             // Act
-            if (clan != null)
+            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
             {
-                Trace.WriteLine(clan);
+                taskList.Add(_coc.Clans.GetCurrentWarAsync(clan.Tag));
+            }
 
-                var currentWar = await _coc.Clans.GetCurrentWarAsync(clan.Tag);
-                Trace.WriteLine(currentWar);
+            // Assert
+            Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
 
-                // Assert
-                Assert.IsNotNull(currentWar);
+            foreach (var currentWar in await Task.WhenAll(taskList))
+            {
+                // When clan is not in war all the values are null
+                if (currentWar.State != State.NotInWar)
+                {
+                    Trace.WriteLine($"{currentWar.Clan.Tag} vs {currentWar.Opponent.Tag}: {currentWar.State}, " +
+                        $"P:{currentWar.PreparationStartTime.ToLocalTime()}, S:{currentWar.StartTime.ToLocalTime()}, E:{currentWar.EndTime.ToLocalTime()}");
+                }
             }
         }
 
