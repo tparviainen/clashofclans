@@ -88,13 +88,20 @@ namespace ClashOfClans.Tests
         public async Task ListClanMembers()
         {
             // Arrange
-            var clanTag = GetRandom(_clans.Items).Tag;
+            var taskList = new List<Task<ClanMemberList>>();
 
             // Act
-            var clansMembers = await _coc.Clans.GetMembersAsync(clanTag);
+            foreach (var clanTag in ClanTags.Append(GetRandom(_clans.Items).Tag))
+            {
+                taskList.Add(_coc.Clans.GetMembersAsync(clanTag));
+            }
 
-            // Assert
-            Assert.IsNotNull(clansMembers);
+            foreach (var memberList in await Task.WhenAll(taskList))
+            {
+                // Assert
+                Assert.IsNotNull(memberList);
+                Trace.WriteLine(memberList.Dump());
+            }
         }
 
         [TestMethod]

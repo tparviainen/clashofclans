@@ -148,5 +148,22 @@ namespace ClashOfClans.Tests
         {
             return $"{entry.Clan.Dump()} vs {entry.Opponent.Dump()}, {entry.Result} @ {entry.EndTime.ToLocalTime()}";
         }
+
+        public static string Dump(this ClanMemberList list)
+        {
+            var sb = new StringBuilder();
+
+            if (list.Items != null)
+            {
+                foreach (var member in list.Items)
+                {
+                    sb.Append($"{member.Tag}/{member.Name}, donations {member.Donations}/{member.DonationsReceived}");
+                    sb.Append($"={((member.DonationsReceived != 0) ? member.Donations/(float)member.DonationsReceived : -1)}");
+                    sb.Append(Environment.NewLine);
+                }
+            }
+
+            return sb.ToString();
+        }
     }
 }
