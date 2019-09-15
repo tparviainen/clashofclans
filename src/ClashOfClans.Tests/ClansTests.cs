@@ -153,11 +153,13 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var taskList = new List<Task<CurrentWarLeagueGroup>>();
+            var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+            clanTags.AddRange(ClanTags);
 
             // Act
-            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
+            foreach (var clanTag in clanTags)
             {
-                taskList.Add(_coc.Clans.GetCurrentWarLeagueGroupAsync(clan.Tag));
+                taskList.Add(_coc.Clans.GetCurrentWarLeagueGroupAsync(clanTag));
             }
 
             try
