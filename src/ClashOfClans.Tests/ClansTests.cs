@@ -2,7 +2,7 @@
 using ClashOfClans.Models;
 using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -66,14 +66,20 @@ namespace ClashOfClans.Tests
         public async Task GetClanInformation()
         {
             // Arrange
-            var clanTag = GetRandom(_clans.Items).Tag;
+            var taskList = new List<Task<Clan>>();
 
             // Act
-            var clan = await _coc.Clans.GetAsync(clanTag);
-            Trace.WriteLine(clan);
+            foreach (var clan in _clans.Items)
+            {
+                taskList.Add(_coc.Clans.GetAsync(clan.Tag));
+            }
 
             // Assert
-            Assert.IsNotNull(clan);
+            foreach (var clan in await Task.WhenAll(taskList))
+            {
+                Assert.IsNotNull(clan);
+                Trace.WriteLine($"Tag: {clan.Tag}, name: {clan.Name}, level: {clan.ClanLevel}");
+            }
         }
 
         [TestMethod]
