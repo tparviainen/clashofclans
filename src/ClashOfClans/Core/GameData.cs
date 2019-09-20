@@ -10,7 +10,7 @@ namespace ClashOfClans.Core
     /// <summary>
     /// Provides a functionality to access game data.
     /// </summary>
-    internal class GameData : IGameData
+    internal sealed class GameData : IGameData
     {
         private readonly ApiEndpoint _endpoint;
         private readonly MessageSerializer _serializer;
@@ -20,7 +20,7 @@ namespace ClashOfClans.Core
         /// <summary>
         /// Logging method for diagnostics messages
         /// </summary>
-        protected void Log(string message) => _options.Logger?.Log(message);
+        private void Log(Guid correlationId, string message) => _options.Logger?.Log($"{correlationId}: {message}");
 
         public GameData(ClashOfClansOptionsInternal options)
         {
@@ -39,15 +39,18 @@ namespace ClashOfClans.Core
 
         private async Task<string> GetDataAsync(string requestUri)
         {
-            Log($"API: {GetType().Name}, Uri: /{requestUri}");
+            var correlationId = Guid.NewGuid();
+            Log(correlationId, $"Uri: /{requestUri}");
 
             var watch = Stopwatch.StartNew();
             await _throttleRequests.WaitAsync();
+            Log(correlationId, $"Throttling: {watch.ElapsedMilliseconds} ms");
+
             var response = await _endpoint.GetMessageAsync(requestUri);
-            Log($"{response}, completed in {watch.ElapsedMilliseconds} ms");
+            Log(correlationId, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
             var content = await response.Content.ReadAsStringAsync();
-            Log($"Content: {content}");
+            Log(correlationId, $"Content: {content}");
 
             if (response.IsSuccessStatusCode)
             {
