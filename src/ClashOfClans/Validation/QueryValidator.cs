@@ -7,12 +7,9 @@ namespace ClashOfClans.Validation
     {
         public Validator ValidateQuery(Query query)
         {
-            if (query != null)
+            if (query?.After != null && query?.Before != null)
             {
-                if (query.After != null && query.Before != null)
-                {
-                    throw new ArgumentException("Only after or before can be specified for a query, not both");
-                }
+                throw new ArgumentException("Only after or before can be specified for a query, not both");
             }
 
             return this;
