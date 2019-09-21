@@ -46,6 +46,7 @@ namespace ClashOfClans.Core
             await _throttleRequests.WaitAsync();
             Log(correlationId, $"Throttling: {watch.ElapsedMilliseconds} ms");
 
+            watch.Restart();
             var response = await _endpoint.GetMessageAsync(requestUri);
             Log(correlationId, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
