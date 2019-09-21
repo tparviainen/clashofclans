@@ -180,6 +180,28 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
+        public void ThreeCharactersLongNameIsValid()
+        {
+            // Arrange
+            var validator = new Validator();
+            var query = new QueryClans
+            {
+                Name = "abc"
+            };
+
+            try
+            {
+                // Act
+                validator.ValidateQueryClans(query);
+            }
+            catch (Exception)
+            {
+                // Assert
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
         public void OnlyAfterOrBeforeCanBeSpecifiedForAQueryNotBoth()
         {
             // Arrange
@@ -201,6 +223,50 @@ namespace ClashOfClans.Tests
             catch (ArgumentException ex)
             {
                 Trace.WriteLine(ex);
+            }
+        }
+
+        [TestMethod]
+        public void QueryWithAfterSpecifiedSucceeds()
+        {
+            // Arrange
+            var validator = new Validator();
+            var query = new Query
+            {
+                After = "after"
+            };
+
+            try
+            {
+                // Act
+                validator.ValidateQuery(query);
+            }
+            catch (Exception)
+            {
+                // Assert
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        public void QueryWithBeforeSpecifiedSucceeds()
+        {
+            // Arrange
+            var validator = new Validator();
+            var query = new Query
+            {
+                Before = "Before"
+            };
+
+            try
+            {
+                // Act
+                validator.ValidateQuery(query);
+            }
+            catch (Exception)
+            {
+                // Assert
+                Assert.Fail();
             }
         }
 
