@@ -339,7 +339,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateWarTag("#0");
+                validator.ValidateWarTag(Constants.InvalidWarTag);
 
                 // Assert
                 Assert.Fail();
