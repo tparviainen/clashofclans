@@ -183,7 +183,7 @@ namespace ClashOfClans.Tests
                 foreach (var round in leagueGroup.Rounds)
                 {
                     var warRequests = new List<Task<ClanWarLeagueWar>>();
-                    foreach (var warTag in round.WarTags)
+                    foreach (var warTag in round.WarTags.Where(wt => wt != "#0"))
                     {
                         warRequests.Add(_coc.Clans.GetClanWarLeaguesWarsAsync(warTag));
                     }
