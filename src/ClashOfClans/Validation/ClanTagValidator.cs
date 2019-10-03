@@ -11,9 +11,9 @@ namespace ClashOfClans.Validation
                 throw new ArgumentException("Clan tag must not be empty");
             }
 
-            if (!clanTag.StartsWith("#"))
+            if (!clanTag.StartsWith(Constants.TagStartChar))
             {
-                throw new ArgumentException("Clan tags start with hash character '#'");
+                throw new ArgumentException($"Clan tags start with hash character '{Constants.TagStartChar}'");
             }
 
             return this;

@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
+using ClashOfClans.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -131,11 +132,19 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var taskList = new List<Task<ClanWar>>();
+            var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+
+            foreach (var clanTag in ClanTags)
+            {
+                var clan = await _coc.Clans.GetAsync(clanTag);
+                if (clan.IsWarLogPublic == true)
+                    clanTags.Add(clan.Tag);
+            }
 
             // Act
-            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
+            foreach (var clanTag in clanTags)
             {
-                taskList.Add(_coc.Clans.GetCurrentWarAsync(clan.Tag));
+                taskList.Add(_coc.Clans.GetCurrentWarAsync(clanTag));
             }
 
             // Assert
@@ -183,7 +192,7 @@ namespace ClashOfClans.Tests
                 foreach (var round in leagueGroup.Rounds)
                 {
                     var warRequests = new List<Task<ClanWarLeagueWar>>();
-                    foreach (var warTag in round.WarTags.Where(wt => wt != "#0"))
+                    foreach (var warTag in round.WarTags.Where(wt => wt != Constants.InvalidWarTag))
                     {
                         warRequests.Add(_coc.Clans.GetClanWarLeaguesWarsAsync(warTag));
                     }

@@ -12,9 +12,9 @@ namespace ClashOfClans.Validation
                 throw new ArgumentException("Query must not be empty");
             }
 
-            if (query.Name != null && query.Name.Length < 3)
+            if (query.Name != null && query.Name.Length < Constants.MinQueryNameLength)
             {
-                throw new ArgumentException("Name needs to be at least three characters long");
+                throw new ArgumentException($"Name needs to be at least {Constants.MinQueryNameLength} characters long");
             }
 
             return this;
