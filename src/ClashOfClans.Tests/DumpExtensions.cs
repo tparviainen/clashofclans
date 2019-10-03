@@ -62,34 +62,8 @@ namespace ClashOfClans.Tests
 
             sb.Append(PSE(war.PreparationStartTime, war.StartTime, war.EndTime));
             sb.Append(Environment.NewLine);
-            sb.Append($"{war.Clan.Dump()}");
-            sb.Append(Environment.NewLine);
-
-            foreach (var member in war.Clan.Members.Where(m => m.Attacks != null).OrderBy(m => m.Attacks[0].Order))
-            {
-                sb.Append($"-> {member.Dump()}");
-                sb.Append(Environment.NewLine);
-            }
-
-            foreach (var member in war.Clan.Members.Where(m => m.Attacks == null && m.BestOpponentAttack != null))
-            {
-                sb.Append($"-> {member.Dump()}");
-                sb.Append(Environment.NewLine);
-            }
-
-            sb.Append($"{war.Opponent.Dump()}");
-            sb.Append(Environment.NewLine);
-            foreach (var member in war.Opponent.Members.Where(m => m.Attacks != null).OrderBy(m => m.Attacks[0].Order))
-            {
-                sb.Append($"<- {member.Dump()}");
-                sb.Append(Environment.NewLine);
-            }
-
-            foreach (var member in war.Opponent.Members.Where(m => m.Attacks == null && m.BestOpponentAttack != null))
-            {
-                sb.Append($"<- {member.Dump()}");
-                sb.Append(Environment.NewLine);
-            }
+            sb.Append(war.Clan.Dump());
+            sb.Append(war.Opponent.Dump());
 
             return sb.ToString();
         }
@@ -98,11 +72,11 @@ namespace ClashOfClans.Tests
         {
             var sb = new StringBuilder();
 
-            sb.Append(member.Name);
+            sb.Append($"{member.MapPosition}. {member.Tag}/{member.Name}");
 
             if (member.Attacks != null)
             {
-                foreach (var attack in member.Attacks)
+                foreach (var attack in member.Attacks.OrderBy(a => a.Order))
                 {
                     sb.Append($", {attack.Dump()}");
                 }
@@ -118,12 +92,41 @@ namespace ClashOfClans.Tests
 
         public static string Dump(this ClanWarAttack attack)
         {
-            return $"{attack.Stars}☆/{attack.DestructionPercentage}%";
+            return $"{attack.Stars}☆/{attack.DestructionPercentage}% vs {attack.DefenderTag}";
         }
 
         public static string Dump(this ClanWarLeagueWarClan clan)
         {
-            return $"{clan.Tag}/{clan.Name} [{clan.Stars}☆/{clan.DestructionPercentage}%/{clan.Attacks}]";
+            var sb = new StringBuilder();
+
+            sb.Append($"Clan {clan.Tag}/{clan.Name} [{clan.Stars}☆/{clan.DestructionPercentage}%/{clan.Attacks}]");
+            sb.Append(Environment.NewLine);
+
+            var members = clan.Members.Where(m => m.Attacks != null || m.BestOpponentAttack != null).OrderBy(m => m.MapPosition);
+            sb.Append(Dump("InWar", members));
+
+            members = clan.Members.Where(m => m.Attacks == null && m.BestOpponentAttack == null).OrderBy(m => m.MapPosition);
+            sb.Append(Dump("Roster", members));
+
+            return sb.ToString();
+        }
+
+        private static string Dump(string players, IOrderedEnumerable<ClanWarMember> members)
+        {
+            var sb = new StringBuilder();
+
+            if (members.Any())
+            {
+                sb.Append(players);
+                sb.Append(Environment.NewLine);
+                foreach (var member in members)
+                {
+                    sb.Append(member.Dump());
+                    sb.Append(Environment.NewLine);
+                }
+            }
+
+            return sb.ToString();
         }
 
         public static string Dump(this WarClan clan)
@@ -134,10 +137,10 @@ namespace ClashOfClans.Tests
 
             if (clan.Members != null)
             {
-                foreach (var member in clan.Members.Where(m => m.Attacks != null))
+                foreach (var member in clan.Members.OrderBy(m => m.MapPosition))
                 {
                     sb.Append(Environment.NewLine);
-                    sb.Append($"-> {member.Dump()}");
+                    sb.Append(member.Dump());
                 }
             }
 
