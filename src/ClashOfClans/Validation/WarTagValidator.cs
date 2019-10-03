@@ -11,7 +11,7 @@ namespace ClashOfClans.Validation
                 throw new ArgumentException("War tag must not be empty");
             }
 
-            if (warTag == "#0")
+            if (warTag == Constants.InvalidWarTag)
             {
                 throw new ArgumentException("War tag is not valid");
             }

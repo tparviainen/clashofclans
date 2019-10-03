@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
+using ClashOfClans.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -183,7 +184,7 @@ namespace ClashOfClans.Tests
                 foreach (var round in leagueGroup.Rounds)
                 {
                     var warRequests = new List<Task<ClanWarLeagueWar>>();
-                    foreach (var warTag in round.WarTags.Where(wt => wt != "#0"))
+                    foreach (var warTag in round.WarTags.Where(wt => wt != Constants.InvalidWarTag))
                     {
                         warRequests.Add(_coc.Clans.GetClanWarLeaguesWarsAsync(warTag));
                     }
