@@ -99,7 +99,7 @@ namespace ClashOfClans.Tests
         {
             var sb = new StringBuilder();
 
-            sb.Append($"Clan {clan.Tag}/{clan.Name} [{clan.Stars}☆/{clan.DestructionPercentage}%/{clan.Attacks}]");
+            sb.Append($"Clan {clan.Tag}/{clan.Name} [{clan.Stars}☆/{clan.DestructionPercentage:0.00}%/{clan.Attacks}]");
             sb.Append(Environment.NewLine);
 
             var members = clan.Members.Where(m => m.Attacks != null || m.BestOpponentAttack != null).OrderBy(m => m.MapPosition);
@@ -133,7 +133,7 @@ namespace ClashOfClans.Tests
         {
             var sb = new StringBuilder();
 
-            sb.Append($"{clan.Tag}/{clan.Name} [{clan.Stars}☆/{clan.DestructionPercentage}%/{clan.Attacks ?? -1}]");
+            sb.Append($"{clan.Tag}/{clan.Name} [{clan.Stars}☆/{clan.DestructionPercentage:0.00}%/{clan.Attacks ?? -1}]");
 
             if (clan.Members != null)
             {
