@@ -31,6 +31,18 @@ namespace ClashOfClans.App.Examples
         }
 
         /// <summary>
+        /// Get league information
+        /// </summary>
+        public async Task GetLeagueInformation()
+        {
+            var leagueId = 29000022; // Legend League identifier
+            var coc = new ClashOfClansApi(token);
+            var league = await coc.Leagues.GetAsync(leagueId);
+
+            Console.WriteLine($"Id: {league.Id} = {league.Name}");
+        }
+
+        /// <summary>
         /// Get league seasons. Note that league season information is available only for Legend League.
         /// </summary>
         public async Task GetLeagueSeasons()

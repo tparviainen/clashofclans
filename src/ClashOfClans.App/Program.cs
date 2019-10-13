@@ -26,6 +26,7 @@ namespace ClashOfClans.App
                 // Access league information
                 var leaguesExamples = new LeaguesExamples(token);
                 await leaguesExamples.ListLeagues();
+                await leaguesExamples.GetLeagueInformation();
                 await leaguesExamples.GetLeagueSeasons();
                 await leaguesExamples.GetLeagueSeasonRankings();
 
