@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans.App
 {
+    /// <summary>
+    /// The examples each create own ClashOfClansApi instance in order for each example
+    /// to be standalone. Normally you would create one instance of ClashOfClansApi and
+    /// use it everywhere in your application!
+    /// </summary>
     static class Program
     {
         static async Task Main(string[] args)
@@ -16,7 +21,9 @@ namespace ClashOfClans.App
             {
                 // Access clan specific information
                 var clansExamples = new ClansExamples(token, clanTag);
+                await clansExamples.SearchClans();
                 await clansExamples.GetClanInformation();
+                await clansExamples.ListClanMembers();
                 await clansExamples.RetrieveClansClanWarLog();
 
                 // Access player specific information
@@ -33,6 +40,7 @@ namespace ClashOfClans.App
                 // Access global and local rankings
                 var locationsExamples = new LocationsExamples(token);
                 await locationsExamples.ListLocations();
+                await locationsExamples.GetLocationInformation();
                 await locationsExamples.GetClanRankingsForASpecificLocation();
             }
             catch (ClashOfClansException ex)

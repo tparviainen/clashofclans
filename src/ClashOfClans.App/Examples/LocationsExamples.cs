@@ -30,6 +30,18 @@ namespace ClashOfClans.App.Examples
         }
 
         /// <summary>
+        /// Get information about specific location
+        /// </summary>
+        public async Task GetLocationInformation()
+        {
+            var coc = new ClashOfClansApi(token);
+            var locationId = 32000086; // Finland
+            var location = await coc.Locations.GetAsync(locationId);
+
+            Console.WriteLine($"Id: {location.Id} = {location.Name}");
+        }
+
+        /// <summary>
         /// Get clan rankings for a specific location
         /// </summary>
         public async Task GetClanRankingsForASpecificLocation()
