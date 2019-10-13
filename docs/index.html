@@ -73,66 +73,70 @@ at <a href="https://github.com/tparviainen/clashofclans">https://github.com/tpar
 </ol>
 <pre><code>Install-Package ClashOfClans
 </code></pre>
-<ol start="3">
-<li>After NuGet package installation create an instance of the API with the token you created in <em>step 1</em>.</li>
-</ol>
+<h1 id="api-usage-examples">API Usage Examples</h1>
+<p>Next variables are used in the examples below, so please set them to correct values first:</p>
 <pre><code class="lang-csharp">var token = &quot;[your own unique API key]&quot;;
-var coc = new ClashOfClansApi(token);
+var playerTag = &quot;#abcdefg&quot;;
+var clanTag = &quot;#hijklmn&quot;;
 </code></pre>
-<ol start="4">
-<li>The functionality provided by the Clash of Clans API is available via <code>ClashOfClansApi</code> instance. Below are few examples of how to use the API.</li>
-</ol>
-<ul>
-<li>Get Clan Information</li>
-</ul>
-<pre><code class="lang-csharp">var clanTag = &quot;[clan tag]&quot;;
+<h2 id="get-information-about-a-single-clan-by-clan-tag">Get information about a single clan by clan tag</h2>
+<pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
 var clan = await coc.Clans.GetAsync(clanTag);
 Console.WriteLine($&quot;Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members&quot;);
 </code></pre>
-<ul>
-<li>Retrieve Clan's Clan War Log</li>
-</ul>
-<pre><code class="lang-csharp">var clanTag = &quot;[clan tag]&quot;;
-var warLog = await coc.Clans.GetWarLogAsync(clanTag);
-var latest = warLog.Items.First();
-Console.WriteLine($&quot;Clan '{latest.Clan.Name}' had a war against '{latest.Opponent.Name}' that ended {latest.EndTime} UTC&quot;);
-</code></pre>
-<ul>
-<li>Get Player Information</li>
-</ul>
-<pre><code class="lang-csharp">var playerTag = &quot;[player tag]&quot;;
-var player = await coc.Players.GetAsync(playerTag);
-Console.WriteLine($&quot;Player '{player.Name}' is in clan '{player.Clan?.Name}'&quot;);
-</code></pre>
-<ul>
-<li>Get League Information</li>
-</ul>
-<pre><code class="lang-csharp">var leagues = await coc.Leagues.GetAsync();
-var league = leagues[&quot;Legend League&quot;];
-Console.WriteLine($&quot;'{league.Name}' has an ID {league.Id}&quot;);
-</code></pre>
-<ul>
-<li>Get Location Information</li>
-</ul>
-<pre><code class="lang-csharp">var locations = await coc.Locations.GetAsync();
-var location = locations[&quot;Finland&quot;];
-Console.WriteLine($&quot;'{location.Name}' has an ID {location.Id} and country code '{location.CountryCode}'&quot;);
-</code></pre>
-<ul>
-<li>Search Clans</li>
-</ul>
-<pre><code class="lang-csharp">var query = new QueryClans
+<h2 id="retrieve-clans-clan-war-log">Retrieve clan's clan war log</h2>
+<p>Please note that clan's war log is only available from a clan that has public war log!</p>
+<pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
+var clan = await coc.Clans.GetAsync(clanTag);
+
+if (clan.IsWarLogPublic == true)
 {
-    Limit = 1,
-    WarFrequency = WarFrequency.Always
-};
-var clans = await coc.Clans.GetAsync(query);
-var warClan = clans.Items.First();
-Console.WriteLine($&quot;Clan '{warClan.Name}' has {warClan.WarWins} wins, {warClan.WarLosses} losses and {warClan.WarTies} draws&quot;);
+    var warLog = await coc.Clans.GetWarLogAsync(clanTag);
+
+    foreach (var war in warLog.Items)
+    {
+        Console.WriteLine($&quot;{war.Result.ToString()[0]}: {Statistics(war.Clan)} vs {Statistics(war.Opponent)}&quot;);
+    }
+}
+
+string Statistics(WarClan clan) =&gt; $&quot;{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage}%]&quot;;
+</code></pre>
+<h2 id="get-information-about-a-single-player-by-player-tag">Get information about a single player by player tag</h2>
+<pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
+var player = await coc.Players.GetAsync(playerTag);
+Console.WriteLine($&quot;'{player.Name}' has {player.Trophies} \uD83C\uDFC6 and {player.WarStars} war stars&quot;);
+
+if (player.Clan != null)
+{
+    var d = (int)player.Donations;
+    var dr = (int)player.DonationsReceived;
+    Console.WriteLine($&quot;'{player.Name}' is a member of '{player.Clan.Name}' and has a donation ratio {d}/{dr}={(dr != 0 ? (d / (float)dr) : 0):0.00}&quot;);
+}
+</code></pre>
+<h2 id="list-leagues">List leagues</h2>
+<pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
+var leagues = await coc.Leagues.GetAsync();
+
+Console.WriteLine($&quot;Total amount of leagues: {leagues.Items.Count()}&quot;);
+
+foreach (var league in leagues.Items)
+{
+    Console.WriteLine($&quot;Id: {league.Id}, Name: {league.Name}&quot;);
+}
+</code></pre>
+<h2 id="list-locations">List locations</h2>
+<pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
+var locations = await coc.Locations.GetAsync();
+
+Console.WriteLine($&quot;Total amount of locations: {locations.Items.Count()}&quot;);
+
+foreach (var location in locations.Items)
+{
+    Console.WriteLine($&quot;Id: {location.Id}, Name: {location.Name}, IsCountry: {location.IsCountry}, CountryCode: {location.CountryCode}&quot;);
+}
 </code></pre>
 <h1 id="example-project">Example Project</h1>
-<p>Clash of Clans <a href="https://github.com/tparviainen/clashofclans">repository</a> contains .NET Core console application that uses the Clash of Clans API.
-The source code for the project is available at <a href="https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App">ClashOfClans.App</a>.</p>
+<p>All the above examples are copy pasted from the example project included in the Clash of Clans <a href="https://github.com/tparviainen/clashofclans">repository</a>. The source code for the project is available at <a href="https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App">ClashOfClans.App</a>.</p>
 <p>Clash of Clans API is fully asynchronous and if you want to use the API directly from the console application's Main method you need
 to use C# 7.1 features. More information about how to enable C# 7.1 features see
 <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version">Select the C# language version</a>.</p>
