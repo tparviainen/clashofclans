@@ -11,65 +11,86 @@ at [https://github.com/tparviainen/clashofclans](https://github.com/tparviainen/
 Install-Package ClashOfClans
 ```
 
-3. After NuGet package installation create an instance of the API with the token you created in *step 1*.
+# API Usage Examples
+
+Next variables are used in the examples below, so please set them to correct values first:
+
 ```csharp
 var token = "[your own unique API key]";
-var coc = new ClashOfClansApi(token);
+var playerTag = "#abcdefg";
+var clanTag = "#hijklmn";
 ```
 
-4. The functionality provided by the Clash of Clans API is available via `ClashOfClansApi` instance. Below are few examples of how to use the API.
+## Get information about a single clan by clan tag
 
-* Get Clan Information
 ```csharp
-var clanTag = "[clan tag]";
+var coc = new ClashOfClansApi(token);
 var clan = await coc.Clans.GetAsync(clanTag);
 Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
 ```
 
-* Retrieve Clan's Clan War Log
-```csharp
-var clanTag = "[clan tag]";
-var warLog = await coc.Clans.GetWarLogAsync(clanTag);
-var latest = warLog.Items.First();
-Console.WriteLine($"Clan '{latest.Clan.Name}' had a war against '{latest.Opponent.Name}' that ended {latest.EndTime} UTC");
-```
+## Retrieve clan's clan war log
+Please note that clan's war log is only available from a clan that has public war log!
 
-* Get Player Information
 ```csharp
-var playerTag = "[player tag]";
-var player = await coc.Players.GetAsync(playerTag);
-Console.WriteLine($"Player '{player.Name}' is in clan '{player.Clan?.Name}'");
-```
+var coc = new ClashOfClansApi(token);
+var clan = await coc.Clans.GetAsync(clanTag);
 
-* Get League Information
-```csharp
-var leagues = await coc.Leagues.GetAsync();
-var league = leagues["Legend League"];
-Console.WriteLine($"'{league.Name}' has an ID {league.Id}");
-```
-
-* Get Location Information
-```csharp
-var locations = await coc.Locations.GetAsync();
-var location = locations["Finland"];
-Console.WriteLine($"'{location.Name}' has an ID {location.Id} and country code '{location.CountryCode}'");
-```
-
-* Search Clans
-```csharp
-var query = new QueryClans
+if (clan.IsWarLogPublic == true)
 {
-    Limit = 1,
-    WarFrequency = WarFrequency.Always
-};
-var clans = await coc.Clans.GetAsync(query);
-var warClan = clans.Items.First();
-Console.WriteLine($"Clan '{warClan.Name}' has {warClan.WarWins} wins, {warClan.WarLosses} losses and {warClan.WarTies} draws");
+    var warLog = await coc.Clans.GetWarLogAsync(clanTag);
+
+    foreach (var war in warLog.Items)
+    {
+        Console.WriteLine($"{war.Result.ToString()[0]}: {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
+    }
+}
+
+string Statistics(WarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage}%]";
+```
+
+## Get information about a single player by player tag
+```csharp
+var coc = new ClashOfClansApi(token);
+var player = await coc.Players.GetAsync(playerTag);
+Console.WriteLine($"'{player.Name}' has {player.Trophies} \uD83C\uDFC6 and {player.WarStars} war stars");
+
+if (player.Clan != null)
+{
+    var d = (int)player.Donations;
+    var dr = (int)player.DonationsReceived;
+    Console.WriteLine($"'{player.Name}' is a member of '{player.Clan.Name}' and has a donation ratio {d}/{dr}={(dr != 0 ? (d / (float)dr) : 0):0.00}");
+}
+```
+
+## List leagues
+```csharp
+var coc = new ClashOfClansApi(token);
+var leagues = await coc.Leagues.GetAsync();
+
+Console.WriteLine($"Total amount of leagues: {leagues.Items.Count()}");
+
+foreach (var league in leagues.Items)
+{
+    Console.WriteLine($"Id: {league.Id}, Name: {league.Name}");
+}
+```
+
+## List locations
+```csharp
+var coc = new ClashOfClansApi(token);
+var locations = await coc.Locations.GetAsync();
+
+Console.WriteLine($"Total amount of locations: {locations.Items.Count()}");
+
+foreach (var location in locations.Items)
+{
+    Console.WriteLine($"Id: {location.Id}, Name: {location.Name}, IsCountry: {location.IsCountry}, CountryCode: {location.CountryCode}");
+}
 ```
 
 # Example Project
-Clash of Clans [repository](https://github.com/tparviainen/clashofclans) contains .NET Core console application that uses the Clash of Clans API. 
-The source code for the project is available at [ClashOfClans.App](https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App).
+All the above examples are copy pasted from the example project included in the Clash of Clans [repository](https://github.com/tparviainen/clashofclans). The source code for the project is available at [ClashOfClans.App](https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App).
 
 Clash of Clans API is fully asynchronous and if you want to use the API directly from the console application's Main method you need
 to use C# 7.1 features. More information about how to enable C# 7.1 features see 
