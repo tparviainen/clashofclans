@@ -1,4 +1,5 @@
-﻿using ClashOfClans.Core;
+﻿using ClashOfClans.App.Examples;
+using ClashOfClans.Core;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;

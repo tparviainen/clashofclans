@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.App
+namespace ClashOfClans.App.Examples
 {
     public class PlayersExamples
     {

@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.App
+namespace ClashOfClans.App.Examples
 {
     public class LeaguesExamples
     {
