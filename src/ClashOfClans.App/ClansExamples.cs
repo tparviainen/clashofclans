@@ -43,7 +43,7 @@ namespace ClashOfClans.App
                 }
             }
 
-            string Statistics(WarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage}%]";
+            string Statistics(WarClan warClan) => $"{warClan.Name} [{warClan.Stars}\u2605/{warClan.DestructionPercentage}%]";
         }
     }
 }
