@@ -38,7 +38,7 @@ namespace ClashOfClans.App.Examples
             var locationId = 32000086; // Finland
             var location = await coc.Locations.GetAsync(locationId);
 
-            Console.WriteLine($"Id: {location.Id} = {location.Name}");
+            Console.WriteLine($"Id: {location.Id}, Name: {location.Name}, IsCountry: {location.IsCountry}");
         }
 
         /// <summary>
