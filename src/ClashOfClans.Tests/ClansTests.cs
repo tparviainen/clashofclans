@@ -30,7 +30,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(searchResult);
-            Assert.AreEqual(limit, searchResult.Items.Count());
+            Assert.AreEqual(limit, searchResult.Items.Count);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace ClashOfClans.Tests
                 var searchResult = await _coc.Clans.GetAsync(query);
                 searchResult.Items.ToList().ForEach(clan => Trace.WriteLine(clan));
                 query.After = searchResult.Paging.Cursors.After;
-                count += searchResult.Items.Count();
+                count += searchResult.Items.Count;
             } while (query.After != null);
 
             // Assert

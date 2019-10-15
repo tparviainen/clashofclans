@@ -1,10 +1,12 @@
-﻿namespace ClashOfClans.Models
+﻿using System.Collections.Generic;
+
+namespace ClashOfClans.Models
 {
     public class Clan : Identity
     {
         public string Description { get; set; }
 
-        public ClanMember[] MemberList { get; set; }
+        public List<ClanMember> MemberList { get; set; }
 
         public Type? Type { get; set; }
 

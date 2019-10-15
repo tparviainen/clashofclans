@@ -1,7 +1,9 @@
-﻿namespace ClashOfClans.Models
+﻿using System.Collections.Generic;
+
+namespace ClashOfClans.Models
 {
     public class ClanVersusRankingList : Queryable
     {
-        public ClanVersusRanking[] Items { get; set; }
+        public List<ClanVersusRanking> Items { get; set; }
     }
 }
