@@ -9,10 +9,5 @@
         public int? MaxLevel { get; set; }
 
         public Village? Village { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Name}, Level {Level}/{MaxLevel}";
-        }
     }
 }

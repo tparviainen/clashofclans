@@ -9,10 +9,5 @@
         public bool? IsCountry { get; set; }
 
         public string CountryCode { get; set; }
-
-        public override string ToString()
-        {
-            return $"Location: Name '{Name}'";
-        }
     }
 }

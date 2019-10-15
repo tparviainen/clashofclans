@@ -9,10 +9,5 @@
         public ClanWarLeagueClanList Clans { get; set; }
 
         public ClanWarLeagueRoundList Rounds { get; set; }
-
-        public override string ToString()
-        {
-            return $"ClanWarLeagueGroup: State '{State}', Season '{Season}'";
-        }
     }
 }
