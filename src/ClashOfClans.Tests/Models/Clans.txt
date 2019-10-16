@@ -2,10 +2,11 @@
 Clan
 ]
 Clan {
-tag (string, optional),
 memberList (ClanMemberList, optional),
-isWarLogPublic (boolean, optional),
+tag (string, optional),
 warFrequency (string, optional),
+requiredTrophies (integer, optional),
+isWarLogPublic (boolean, optional),
 clanLevel (integer, optional),
 warWinStreak (integer, optional),
 warWins (integer, optional),
@@ -13,7 +14,7 @@ warTies (integer, optional),
 warLosses (integer, optional),
 clanPoints (integer, optional),
 clanVersusPoints (integer, optional),
-requiredTrophies (integer, optional),
+labels (LabelList, optional),
 name (string, optional),
 location (Location, optional),
 type (string, optional),
@@ -23,6 +24,9 @@ badgeUrls (object, optional)
 }
 ClanMemberList [
 ClanMember
+]
+LabelList [
+Label
 ]
 Location {
 localizedName (string, optional),
@@ -44,10 +48,15 @@ donationsReceived (integer, optional),
 trophies (integer, optional),
 versusTrophies (integer, optional)
 }
+Label {
+name (string, optional),
+id (integer, optional),
+iconUrls (object, optional)
+}
 League {
 localizedShortName (string, optional),
-localizedName (string, optional),
 name (string, optional),
+localizedName (string, optional),
 id (integer, optional),
 iconUrls (object, optional)
 }

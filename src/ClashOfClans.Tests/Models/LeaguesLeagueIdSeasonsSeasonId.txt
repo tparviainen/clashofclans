@@ -20,8 +20,8 @@ badgeUrls (object, optional)
 }
 League {
 localizedShortName (string, optional),
-localizedName (string, optional),
 name (string, optional),
+localizedName (string, optional),
 id (integer, optional),
 iconUrls (object, optional)
 }

@@ -11,6 +11,7 @@ legendStatistics (PlayerLegendStatistics, optional),
 troops (PlayerItemLevelList, optional),
 heroes (PlayerItemLevelList, optional),
 spells (PlayerItemLevelList, optional),
+labels (LabelList, optional),
 tag (string, optional),
 name (string, optional),
 expLevel (integer, optional),
@@ -33,21 +34,24 @@ badgeUrls (object, optional)
 }
 League {
 localizedShortName (string, optional),
-localizedName (string, optional),
 name (string, optional),
+localizedName (string, optional),
 id (integer, optional),
 iconUrls (object, optional)
 }
 PlayerLegendStatistics {
-bestVersusSeason (LegendLeagueTournamentSeasonResult, optional),
-previousVersusSeason (LegendLeagueTournamentSeasonResult, optional),
 currentSeason (LegendLeagueTournamentSeasonResult, optional),
 previousSeason (LegendLeagueTournamentSeasonResult, optional),
 bestSeason (LegendLeagueTournamentSeasonResult, optional),
+previousVersusSeason (LegendLeagueTournamentSeasonResult, optional),
+bestVersusSeason (LegendLeagueTournamentSeasonResult, optional),
 legendTrophies (integer, optional)
 }
 PlayerItemLevelList [
 PlayerItemLevel
+]
+LabelList [
+Label
 ]
 PlayerAchievementProgressList [
 PlayerAchievementProgress
@@ -62,6 +66,11 @@ level (integer, optional),
 name (string, optional),
 maxLevel (integer, optional),
 village (string, optional)
+}
+Label {
+name (string, optional),
+id (integer, optional),
+iconUrls (object, optional)
 }
 PlayerAchievementProgress {
 stars (integer, optional),
