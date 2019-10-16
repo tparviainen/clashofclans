@@ -68,5 +68,7 @@
         public PlayerItemLevelList Heroes { get; set; }
 
         public PlayerItemLevelList Spells { get; set; }
+
+        public LabelList Labels { get; set; }
     }
 }

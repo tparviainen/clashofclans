@@ -38,5 +38,7 @@ namespace ClashOfClans.Models
         public int? WarTies { get; set; }
 
         public int? WarLosses { get; set; }
+
+        public LabelList Labels { get; set; }
     }
 }
