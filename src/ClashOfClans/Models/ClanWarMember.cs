@@ -2,7 +2,7 @@
 {
     public class ClanWarMember : Identity
     {
-        public string TownhallLevel { get; set; }
+        public int? TownhallLevel { get; set; }
 
         public int? MapPosition { get; set; }
 
