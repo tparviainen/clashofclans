@@ -53,7 +53,8 @@ namespace ClashOfClans.Tests
             }
             catch (ClashOfClansException ex)
             {
-                Assert.Fail($"{ex.Error}");
+                var error = ex.Error;
+                Assert.Fail($"{error.Reason}: {error.Message}");
             }
         }
 
