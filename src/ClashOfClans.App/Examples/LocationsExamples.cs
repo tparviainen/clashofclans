@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.App.Examples
@@ -19,9 +18,9 @@ namespace ClashOfClans.App.Examples
         public async Task ListLocations()
         {
             var coc = new ClashOfClansApi(token);
-            var locations = await coc.Locations.GetAsync();
+            var locations = await coc.Locations.GetLocationsAsync();
 
-            Console.WriteLine($"Total amount of locations: {locations.Items.Count()}");
+            Console.WriteLine($"Total amount of locations: {locations.Items.Count}");
 
             foreach (var location in locations.Items)
             {
@@ -36,7 +35,7 @@ namespace ClashOfClans.App.Examples
         {
             var coc = new ClashOfClansApi(token);
             var locationId = 32000086; // Finland
-            var location = await coc.Locations.GetAsync(locationId);
+            var location = await coc.Locations.GetLocationAsync(locationId);
 
             Console.WriteLine($"Id: {location.Id}, Name: {location.Name}, IsCountry: {location.IsCountry}");
         }
@@ -47,12 +46,12 @@ namespace ClashOfClans.App.Examples
         public async Task GetClanRankingsForASpecificLocation()
         {
             var coc = new ClashOfClansApi(token);
-            var locations = await coc.Locations.GetAsync();
+            var locations = await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
             Console.WriteLine($"Clan rankings for {location.Name}");
 
-            var clanRankings = await coc.Locations.GetRankingsClansAsync(location.Id);
+            var clanRankings = await coc.Locations.GetClanRankingAsync(location.Id);
 
             foreach (var clan in clanRankings.Items)
             {

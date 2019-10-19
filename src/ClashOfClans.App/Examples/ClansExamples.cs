@@ -30,7 +30,7 @@ namespace ClashOfClans.App.Examples
             };
 
             var coc = new ClashOfClansApi(token);
-            var clans = await coc.Clans.GetAsync(query);
+            var clans = await coc.Clans.SearchClansAsync(query);
 
             foreach (var clan in clans.Items)
             {
@@ -44,7 +44,7 @@ namespace ClashOfClans.App.Examples
         public async Task GetClanInformation()
         {
             var coc = new ClashOfClansApi(token);
-            var clan = await coc.Clans.GetAsync(clanTag);
+            var clan = await coc.Clans.GetClanAsync(clanTag);
             Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
         }
 
@@ -54,7 +54,7 @@ namespace ClashOfClans.App.Examples
         public async Task ListClanMembers()
         {
             var coc = new ClashOfClansApi(token);
-            var clanMembers = await coc.Clans.GetMembersAsync(clanTag);
+            var clanMembers = await coc.Clans.GetClanMembersAsync(clanTag);
 
             foreach (var member in clanMembers.Items)
             {
@@ -68,11 +68,11 @@ namespace ClashOfClans.App.Examples
         public async Task RetrieveClansClanWarLog()
         {
             var coc = new ClashOfClansApi(token);
-            var clan = await coc.Clans.GetAsync(clanTag);
+            var clan = await coc.Clans.GetClanAsync(clanTag);
 
             if (clan.IsWarLogPublic == true)
             {
-                var warLog = await coc.Clans.GetWarLogAsync(clanTag);
+                var warLog = await coc.Clans.GetClanWarLogAsync(clanTag);
 
                 foreach (var war in warLog.Items)
                 {

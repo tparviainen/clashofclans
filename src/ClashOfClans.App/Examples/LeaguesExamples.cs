@@ -20,9 +20,9 @@ namespace ClashOfClans.App.Examples
         public async Task ListLeagues()
         {
             var coc = new ClashOfClansApi(token);
-            var leagues = await coc.Leagues.GetAsync();
+            var leagues = await coc.Leagues.GetLeaguesAsync();
 
-            Console.WriteLine($"Total amount of leagues: {leagues.Items.Count()}");
+            Console.WriteLine($"Total amount of leagues: {leagues.Items.Count}");
 
             foreach (var league in leagues.Items)
             {
@@ -37,7 +37,7 @@ namespace ClashOfClans.App.Examples
         {
             var leagueId = 29000022; // Legend League identifier
             var coc = new ClashOfClansApi(token);
-            var league = await coc.Leagues.GetAsync(leagueId);
+            var league = await coc.Leagues.GetLeagueAsync(leagueId);
 
             Console.WriteLine($"Id: {league.Id} = {league.Name}");
         }
@@ -48,11 +48,11 @@ namespace ClashOfClans.App.Examples
         public async Task GetLeagueSeasons()
         {
             var coc = new ClashOfClansApi(token);
-            var leagues = await coc.Leagues.GetAsync();
+            var leagues = await coc.Leagues.GetLeaguesAsync();
             var legendLeague = leagues["Legend League"];
-            var seasons = await coc.Leagues.GetSeasonsAsync(legendLeague.Id);
+            var seasons = await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
 
-            Console.WriteLine($"Total amount of '{legendLeague.Name}' seasons: {seasons.Items.Count()}");
+            Console.WriteLine($"Total amount of '{legendLeague.Name}' seasons: {seasons.Items.Count}");
 
             foreach (var season in seasons.Items)
             {
@@ -66,16 +66,16 @@ namespace ClashOfClans.App.Examples
         public async Task GetLeagueSeasonRankings()
         {
             var coc = new ClashOfClansApi(token);
-            var leagues = await coc.Leagues.GetAsync();
+            var leagues = await coc.Leagues.GetLeaguesAsync();
             var legendLeague = leagues["Legend League"];
-            var seasons = await coc.Leagues.GetSeasonsAsync(legendLeague.Id);
+            var seasons = await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
             var lastSeason = seasons.Items.Last();
             var query = new Query
             {
                 Limit = 100
             };
 
-            var seasonRankings = await coc.Leagues.GetSeasonsAsync(legendLeague.Id, lastSeason.Id, query);
+            var seasonRankings = await coc.Leagues.GetLeagueSeasonRankingsAsync(legendLeague.Id, lastSeason.Id, query);
 
             foreach (var player in seasonRankings.Items)
             {

@@ -20,7 +20,7 @@ namespace ClashOfClans.App.Examples
         public async Task GetPlayerInformation()
         {
             var coc = new ClashOfClansApi(token);
-            var player = await coc.Players.GetAsync(playerTag);
+            var player = await coc.Players.GetPlayerAsync(playerTag);
             Console.WriteLine($"'{player.Name}' has {player.Trophies} \uD83C\uDFC6 and {player.WarStars} war stars");
 
             if (player.Clan != null)
