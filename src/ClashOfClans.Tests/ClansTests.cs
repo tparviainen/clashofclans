@@ -26,11 +26,11 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var searchResult = await _coc.Clans.GetAsync(query);
+            var searchResult = await _coc.Clans.SearchClansAsync(query);
 
             // Assert
             Assert.IsNotNull(searchResult);
-            Assert.AreEqual(limit, searchResult.Items.Count());
+            Assert.AreEqual(limit, searchResult.Items.Count);
         }
 
         [TestMethod]
@@ -52,10 +52,10 @@ namespace ClashOfClans.Tests
             // Act
             do
             {
-                var searchResult = await _coc.Clans.GetAsync(query);
+                var searchResult = await _coc.Clans.SearchClansAsync(query);
                 searchResult.Items.ToList().ForEach(clan => Trace.WriteLine(clan));
                 query.After = searchResult.Paging.Cursors.After;
-                count += searchResult.Items.Count();
+                count += searchResult.Items.Count;
             } while (query.After != null);
 
             // Assert
@@ -74,7 +74,7 @@ namespace ClashOfClans.Tests
             // Act
             foreach (var clanTag in clanTags)
             {
-                taskList.Add(_coc.Clans.GetAsync(clanTag));
+                taskList.Add(_coc.Clans.GetClanAsync(clanTag));
             }
 
             // Assert
@@ -94,7 +94,7 @@ namespace ClashOfClans.Tests
             // Act
             foreach (var clanTag in ClanTags.Append(GetRandom(_clans.Items).Tag))
             {
-                taskList.Add(_coc.Clans.GetMembersAsync(clanTag));
+                taskList.Add(_coc.Clans.GetClanMembersAsync(clanTag));
             }
 
             foreach (var memberList in await Task.WhenAll(taskList))
@@ -109,12 +109,12 @@ namespace ClashOfClans.Tests
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var taskList = new List<Task<WarLog>>();
+            var taskList = new List<Task<ClanWarLog>>();
 
             // Act
             foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
             {
-                taskList.Add(_coc.Clans.GetWarLogAsync(clan.Tag));
+                taskList.Add(_coc.Clans.GetClanWarLogAsync(clan.Tag));
             }
 
             // Assert
@@ -131,12 +131,12 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             // Arrange
-            var taskList = new List<Task<CurrentWar>>();
+            var taskList = new List<Task<ClanWar>>();
             var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
 
             foreach (var clanTag in ClanTags)
             {
-                var clan = await _coc.Clans.GetAsync(clanTag);
+                var clan = await _coc.Clans.GetClanAsync(clanTag);
                 if (clan.IsWarLogPublic == true)
                     clanTags.Add(clan.Tag);
             }
@@ -161,14 +161,14 @@ namespace ClashOfClans.Tests
         public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroupAndWar()
         {
             // Arrange
-            var taskList = new List<Task<CurrentWarLeagueGroup>>();
+            var taskList = new List<Task<ClanWarLeagueGroup>>();
             var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
             clanTags.AddRange(ClanTags);
 
             // Act
             foreach (var clanTag in clanTags)
             {
-                taskList.Add(_coc.Clans.GetCurrentWarLeagueGroupAsync(clanTag));
+                taskList.Add(_coc.Clans.GetClanWarLeagueGroupAsync(clanTag));
             }
 
             try
@@ -194,7 +194,7 @@ namespace ClashOfClans.Tests
                     var warRequests = new List<Task<ClanWarLeagueWar>>();
                     foreach (var warTag in round.WarTags.Where(wt => wt != Constants.InvalidWarTag))
                     {
-                        warRequests.Add(_coc.Clans.GetClanWarLeaguesWarsAsync(warTag));
+                        warRequests.Add(_coc.Clans.GetClanWarLeagueWarAsync(warTag));
                     }
 
                     var wars = await Task.WhenAll(warRequests);

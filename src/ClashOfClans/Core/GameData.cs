@@ -60,14 +60,14 @@ namespace ClashOfClans.Core
 
             try
             {
-                var error = _serializer.Deserialize<Error>(content);
+                var error = _serializer.Deserialize<ClientError>(content);
                 throw new ClashOfClansException(error);
             }
             catch (Exception ex) when (ex.GetType() != typeof(ClashOfClansException))
             {
                 // In case of unknown exception, catch the content that caused the issue
                 // to the Reason attribute and provide information to caller.
-                var error = new Error
+                var error = new ClientError
                 {
                     Message = ex.Message,
                     Reason = content

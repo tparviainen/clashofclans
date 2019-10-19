@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class AchievementList
+    public class PlayerAchievementProgress
     {
         public string Name { get; set; }
 
@@ -15,10 +15,5 @@
         public string CompletionInfo { get; set; }
 
         public Village? Village { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
     }
 }

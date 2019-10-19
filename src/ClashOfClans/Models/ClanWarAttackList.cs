@@ -2,7 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public class PlayerItemLevelList : List<PlayerItemLevel>
+    public class ClanWarAttackList : List<ClanWarAttack>
     {
     }
 }

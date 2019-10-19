@@ -18,7 +18,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /locations
-        public async Task<LocationList> GetAsync(Query query = null)
+        public async Task<LocationList> GetLocationsAsync(Query query = null)
         {
             _validator.ValidateQuery(query);
 
@@ -28,7 +28,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /locations/{locationId}
-        public async Task<Location> GetAsync(int? locationId)
+        public async Task<Location> GetLocationAsync(int? locationId)
         {
             _validator.ValidateLocationId(locationId);
 
@@ -38,7 +38,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /locations/{locationId}/rankings/clans
-        public async Task<ClanRankingList> GetRankingsClansAsync(int? locationId, Query query = null)
+        public async Task<ClanRankingList> GetClanRankingAsync(int? locationId, Query query = null)
         {
             _validator
                 .ValidateLocationId(locationId)
@@ -50,7 +50,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /locations/{locationId}/rankings/players
-        public async Task<PlayerRankingList> GetRankingsPlayersAsync(int? locationId, Query query = null)
+        public async Task<PlayerRankingList> GetPlayerRankingAsync(int? locationId, Query query = null)
         {
             _validator
                 .ValidateLocationId(locationId)
@@ -62,7 +62,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /locations/{locationId}/rankings/clans-versus
-        public async Task<ClanRankingList> GetRankingsClansVersusAsync(int? locationId, Query query = null)
+        public async Task<ClanVersusRankingList> GetClanVersusRankingAsync(int? locationId, Query query = null)
         {
             _validator
                 .ValidateLocationId(locationId)
@@ -70,11 +70,11 @@ namespace ClashOfClans.Api
 
             var uri = $"locations/{locationId}/rankings/clans-versus{query}";
 
-            return await _gameData.RequestAsync<ClanRankingList>(uri);
+            return await _gameData.RequestAsync<ClanVersusRankingList>(uri);
         }
 
         // GET /locations/{locationId}/rankings/players-versus
-        public async Task<PlayerVersusRankingList> GetRankingsPlayersVersusAsync(int? locationId, Query query = null)
+        public async Task<PlayerVersusRankingList> GetPlayerVersusRankingAsync(int? locationId, Query query = null)
         {
             _validator
                 .ValidateLocationId(locationId)

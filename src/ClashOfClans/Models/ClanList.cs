@@ -2,7 +2,8 @@
 
 namespace ClashOfClans.Models
 {
-    public class PlayerItemLevelList : List<PlayerItemLevel>
+    public class ClanList : Queryable
     {
+        public List<Clan> Items { get; set; }
     }
 }

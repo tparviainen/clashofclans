@@ -12,7 +12,7 @@ namespace ClashOfClans.Tests
             return $"Tag: {clan.Tag}, name: {clan.Name}, level: {clan.ClanLevel}, members: {clan.Members}";
         }
 
-        public static string Dump(this WarLog warLog)
+        public static string Dump(this ClanWarLog warLog)
         {
             var sb = new StringBuilder();
 
@@ -28,20 +28,20 @@ namespace ClashOfClans.Tests
             return sb.ToString();
         }
 
-        public static string Dump(this CurrentWar currentWar)
+        public static string Dump(this ClanWar clanWar)
         {
             var sb = new StringBuilder();
             sb.Append(Environment.NewLine);
 
             // When clan is not in war all the values are null
-            if (currentWar.State != State.NotInWar)
+            if (clanWar.State != State.NotInWar)
             {
-                var pse = PSE(currentWar.PreparationStartTime, currentWar.StartTime, currentWar.EndTime);
-                sb.Append($"{currentWar.State} {pse}");
+                var pse = PSE(clanWar.PreparationStartTime, clanWar.StartTime, clanWar.EndTime);
+                sb.Append($"{clanWar.State} {pse}");
                 sb.Append(Environment.NewLine);
-                sb.Append($"{currentWar.Clan.Dump()}");
+                sb.Append($"{clanWar.Clan.Dump()}");
                 sb.Append(Environment.NewLine);
-                sb.Append($"{currentWar.Opponent.Dump()}");
+                sb.Append($"{clanWar.Opponent.Dump()}");
             }
             else
             {
@@ -85,7 +85,7 @@ namespace ClashOfClans.Tests
             return sb.ToString();
         }
 
-        public static string Dump(this CurrentWarLeagueGroup leagueGroup)
+        public static string Dump(this ClanWarLeagueGroup leagueGroup)
         {
             return $"CWL group: state '{leagueGroup.State}', season '{leagueGroup.Season}'";
         }
@@ -147,7 +147,7 @@ namespace ClashOfClans.Tests
             return sb.ToString();
         }
 
-        public static string Dump(this WarLogEntry entry)
+        public static string Dump(this ClanWarLogEntry entry)
         {
             return $"{entry.Clan.Dump()} vs {entry.Opponent.Dump()}, {entry.Result} @ {entry.EndTime.ToLocalTime()}";
         }

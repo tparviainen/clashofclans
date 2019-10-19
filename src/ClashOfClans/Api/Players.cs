@@ -17,13 +17,13 @@ namespace ClashOfClans.Api
         }
 
         // GET /players/{playerTag}
-        public async Task<PlayerDetail> GetAsync(string playerTag)
+        public async Task<Player> GetPlayerAsync(string playerTag)
         {
             _validator.ValidatePlayerTag(playerTag);
 
             var uri = $"players/{playerTag}";
 
-            return await _gameData.RequestAsync<PlayerDetail>(uri);
+            return await _gameData.RequestAsync<Player>(uri);
         }
     }
 }

@@ -18,17 +18,17 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans
-        public async Task<SearchResult> GetAsync(QueryClans query)
+        public async Task<ClanList> SearchClansAsync(QueryClans query)
         {
             _validator.ValidateQueryClans(query);
 
             var uri = $"clans{query}";
 
-            return await _gameData.RequestAsync<SearchResult>(uri);
+            return await _gameData.RequestAsync<ClanList>(uri);
         }
 
         // GET /clans/{clanTag}
-        public async Task<Clan> GetAsync(string clanTag)
+        public async Task<Clan> GetClanAsync(string clanTag)
         {
             _validator.ValidateClanTag(clanTag);
 
@@ -38,7 +38,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/members
-        public async Task<ClanMemberList> GetMembersAsync(string clanTag, Query query = null)
+        public async Task<ClanMemberList> GetClanMembersAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -50,7 +50,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/warlog
-        public async Task<WarLog> GetWarLogAsync(string clanTag, Query query = null)
+        public async Task<ClanWarLog> GetClanWarLogAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -58,31 +58,31 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/warlog{query}";
 
-            return await _gameData.RequestAsync<WarLog>(uri);
+            return await _gameData.RequestAsync<ClanWarLog>(uri);
         }
 
         // GET /clans/{clanTag}/currentwar
-        public async Task<CurrentWar> GetCurrentWarAsync(string clanTag)
+        public async Task<ClanWar> GetCurrentWarAsync(string clanTag)
         {
             _validator.ValidateClanTag(clanTag);
 
             var uri = $"clans/{clanTag}/currentwar";
 
-            return await _gameData.RequestAsync<CurrentWar>(uri);
+            return await _gameData.RequestAsync<ClanWar>(uri);
         }
 
         // GET /clans/{clanTag}/currentwar/leaguegroup
-        public async Task<CurrentWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag)
+        public async Task<ClanWarLeagueGroup> GetClanWarLeagueGroupAsync(string clanTag)
         {
             _validator.ValidateClanTag(clanTag);
 
             var uri = $"clans/{clanTag}/currentwar/leaguegroup";
 
-            return await _gameData.RequestAsync<CurrentWarLeagueGroup>(uri);
+            return await _gameData.RequestAsync<ClanWarLeagueGroup>(uri);
         }
 
         // GET /clanwarleagues/wars/{warTag}
-        public async Task<ClanWarLeagueWar> GetClanWarLeaguesWarsAsync(string warTag)
+        public async Task<ClanWarLeagueWar> GetClanWarLeagueWarAsync(string warTag)
         {
             _validator.ValidateWarTag(warTag);
 

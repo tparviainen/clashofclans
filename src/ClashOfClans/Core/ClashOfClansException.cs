@@ -14,13 +14,13 @@ namespace ClashOfClans.Core
         /// <summary>
         /// The error that caused the exception to occur.
         /// </summary>
-        public Error Error { get; }
+        public ClientError Error { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ClashOfClansException"/> class.
         /// </summary>
         /// <param name="error">API endpoint error</param>
-        public ClashOfClansException(Error error)
+        public ClashOfClansException(ClientError error)
         {
             Error = error;
         }
@@ -28,7 +28,7 @@ namespace ClashOfClans.Core
         protected ClashOfClansException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
-            Error = info.GetValue(nameof(Error), typeof(Error)) as Error;
+            Error = info.GetValue(nameof(Error), typeof(ClientError)) as ClientError;
         }
 
         [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]

@@ -2,11 +2,11 @@
 {
     public class ClanWarMember : Identity
     {
-        public string TownhallLevel { get; set; }
+        public int? TownhallLevel { get; set; }
 
         public int? MapPosition { get; set; }
 
-        public ClanWarAttack[] Attacks { get; set; }
+        public ClanWarAttackList Attacks { get; set; }
 
         public int? OpponentAttacks { get; set; }
 

@@ -1,4 +1,6 @@
-﻿namespace ClashOfClans.Models
+﻿using System.Collections.Generic;
+
+namespace ClashOfClans.Models
 {
     public class ClanWarLeagueWarClan : Identity
     {
@@ -12,6 +14,6 @@
 
         public float? DestructionPercentage { get; set; }
 
-        public ClanWarMember[] Members { get; set; }
+        public List<ClanWarMember> Members { get; set; }
     }
 }

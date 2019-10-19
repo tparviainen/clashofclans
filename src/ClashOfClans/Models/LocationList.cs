@@ -1,7 +1,9 @@
-﻿namespace ClashOfClans.Models
+﻿using System.Collections.Generic;
+
+namespace ClashOfClans.Models
 {
     public partial class LocationList : Queryable
     {
-        public Location[] Items { get; set; }
+        public List<Location> Items { get; set; }
     }
 }

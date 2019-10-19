@@ -1,6 +1,6 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class ClanRanking : Identity
+    public class ClanVersusRanking : Identity
     {
         public Location Location { get; set; }
 
@@ -15,5 +15,7 @@
         public int? Rank { get; set; }
 
         public int? PreviousRank { get; set; }
+
+        public int? ClanVersusPoints { get; set; }
     }
 }

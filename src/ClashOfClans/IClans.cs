@@ -16,7 +16,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan(s) that match the query criteria</returns>
-        Task<SearchResult> GetAsync(QueryClans query);
+        Task<ClanList> SearchClansAsync(QueryClans query);
 
         /// <summary>
         /// Get clan information
@@ -25,7 +25,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Requested clan</returns>
-        Task<Clan> GetAsync(string clanTag);
+        Task<Clan> GetClanAsync(string clanTag);
 
         /// <summary>
         /// List clan members
@@ -35,7 +35,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>List of clan members</returns>
-        Task<ClanMemberList> GetMembersAsync(string clanTag, Query query = null);
+        Task<ClanMemberList> GetClanMembersAsync(string clanTag, Query query = null);
 
         /// <summary>
         /// Retrieve clan's clan war log
@@ -45,7 +45,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan's clan war log</returns>
-        Task<WarLog> GetWarLogAsync(string clanTag, Query query = null);
+        Task<ClanWarLog> GetClanWarLogAsync(string clanTag, Query query = null);
 
         /// <summary>
         /// Retrieve information about clan's current clan war
@@ -54,7 +54,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Current war data</returns>
-        Task<CurrentWar> GetCurrentWarAsync(string clanTag);
+        Task<ClanWar> GetCurrentWarAsync(string clanTag);
 
         /// <summary>
         /// Retrieve information about clan's current clan war league group
@@ -63,7 +63,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan's current clan war league group</returns>
-        Task<CurrentWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag);
+        Task<ClanWarLeagueGroup> GetClanWarLeagueGroupAsync(string clanTag);
 
         /// <summary>
         /// Retrieve information about individual clan war league war
@@ -72,6 +72,6 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan war league war data</returns>
-        Task<ClanWarLeagueWar> GetClanWarLeaguesWarsAsync(string warTag);
+        Task<ClanWarLeagueWar> GetClanWarLeagueWarAsync(string warTag);
     }
 }
