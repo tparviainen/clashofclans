@@ -14,7 +14,7 @@ This repository contains a .NET Standard library for accessing Supercell's
 In order to use the functionality provided by this library you need an API key (token) that can be 
 created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
 
-100% Clash of Clans API coverage, including the [June 2019 Update](https://clashofclans.com/blog/release-notes/).
+100% Clash of Clans API coverage, including the [October 2019 Update](https://clashofclans.com/blog/release-notes/).
 
 # Getting Started
 - [Homepage](https://tparviainen.github.io/clashofclans/)
