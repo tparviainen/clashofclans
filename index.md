@@ -25,7 +25,7 @@ var clanTag = "#hijklmn";
 
 ```csharp
 var coc = new ClashOfClansApi(token);
-var clan = await coc.Clans.GetAsync(clanTag);
+var clan = await coc.Clans.GetClanAsync(clanTag);
 Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
 ```
 
@@ -34,11 +34,11 @@ Please note that clan's war log is only available from a clan that has public wa
 
 ```csharp
 var coc = new ClashOfClansApi(token);
-var clan = await coc.Clans.GetAsync(clanTag);
+var clan = await coc.Clans.GetClanAsync(clanTag);
 
 if (clan.IsWarLogPublic == true)
 {
-    var warLog = await coc.Clans.GetWarLogAsync(clanTag);
+    var warLog = await coc.Clans.GetClanWarLogAsync(clanTag);
 
     foreach (var war in warLog.Items)
     {
@@ -46,13 +46,13 @@ if (clan.IsWarLogPublic == true)
     }
 }
 
-string Statistics(WarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage}%]";
+string Statistics(WarClan warClan) => $"{warClan.Name} [{warClan.Stars}\u2605/{warClan.DestructionPercentage}%]";
 ```
 
 ## Get information about a single player by player tag
 ```csharp
 var coc = new ClashOfClansApi(token);
-var player = await coc.Players.GetAsync(playerTag);
+var player = await coc.Players.GetPlayerAsync(playerTag);
 Console.WriteLine($"'{player.Name}' has {player.Trophies} \uD83C\uDFC6 and {player.WarStars} war stars");
 
 if (player.Clan != null)
@@ -66,9 +66,9 @@ if (player.Clan != null)
 ## List leagues
 ```csharp
 var coc = new ClashOfClansApi(token);
-var leagues = await coc.Leagues.GetAsync();
+var leagues = await coc.Leagues.GetLeaguesAsync();
 
-Console.WriteLine($"Total amount of leagues: {leagues.Items.Count()}");
+Console.WriteLine($"Total amount of leagues: {leagues.Items.Count}");
 
 foreach (var league in leagues.Items)
 {
@@ -79,9 +79,9 @@ foreach (var league in leagues.Items)
 ## List locations
 ```csharp
 var coc = new ClashOfClansApi(token);
-var locations = await coc.Locations.GetAsync();
+var locations = await coc.Locations.GetLocationsAsync();
 
-Console.WriteLine($"Total amount of locations: {locations.Items.Count()}");
+Console.WriteLine($"Total amount of locations: {locations.Items.Count}");
 
 foreach (var location in locations.Items)
 {
