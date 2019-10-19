@@ -1,6 +1,0 @@
-﻿LeagueSeasonList [
-LeagueSeason
-]
-LeagueSeason {
-id (string, optional)
-}

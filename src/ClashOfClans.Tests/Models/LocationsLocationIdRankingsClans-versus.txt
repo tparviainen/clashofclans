@@ -1,7 +1,0 @@
-﻿ClanVersusRankingList [
-ClanVersusRanking
-]
-ClanVersusRanking {
-clanPoints (integer, optional),
-clanVersusPoints (integer, optional)
-}
