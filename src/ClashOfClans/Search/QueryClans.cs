@@ -19,7 +19,7 @@ namespace ClashOfClans.Search
 
         /// <summary>
         /// Filter by clan location identifier. For list of available locations,
-        /// refer to <see cref="ILocations.GetAsync(Query)" /> operation.
+        /// refer to <see cref="ILocations.GetLocationsAsync(Query)" /> operation.
         /// </summary>
         public int? LocationId { get; set; }
 

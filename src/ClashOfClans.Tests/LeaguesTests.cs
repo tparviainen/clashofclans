@@ -14,7 +14,7 @@ namespace ClashOfClans.Tests
             var leagues = _coc.Leagues;
 
             // Act
-            var leagueList = await leagues.GetAsync();
+            var leagueList = await leagues.GetLeaguesAsync();
 
             // Assert
             Assert.IsNotNull(leagueList);
@@ -28,7 +28,7 @@ namespace ClashOfClans.Tests
             var leagueId = GetRandom(_leagues.Items).Id;
 
             // Act
-            var league = await leagues.GetAsync(leagueId);
+            var league = await leagues.GetLeagueAsync(leagueId);
 
             // Assert
             Assert.IsNotNull(league);
@@ -41,7 +41,7 @@ namespace ClashOfClans.Tests
             var league = _leagues["Legend League"];
 
             // Act
-            var leagueSeasonList = await _coc.Leagues.GetSeasonsAsync(league.Id);
+            var leagueSeasonList = await _coc.Leagues.GetLeagueSeasonsAsync(league.Id);
 
             // Assert
             Assert.IsNotNull(leagueSeasonList);
@@ -52,7 +52,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var league = _leagues["Legend League"];
-            var leagueSeasonList = await _coc.Leagues.GetSeasonsAsync(league.Id);
+            var leagueSeasonList = await _coc.Leagues.GetLeagueSeasonsAsync(league.Id);
             var season = GetRandom(leagueSeasonList.Items);
             var query = new Query
             {
@@ -60,7 +60,7 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var seasonPlayerRankingList = await _coc.Leagues.GetSeasonsAsync(league.Id, season.Id, query);
+            var seasonPlayerRankingList = await _coc.Leagues.GetLeagueSeasonRankingsAsync(league.Id, season.Id, query);
 
             // Assert
             Assert.IsNotNull(seasonPlayerRankingList);

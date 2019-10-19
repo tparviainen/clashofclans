@@ -14,7 +14,7 @@ namespace ClashOfClans.Tests
             // Act
             foreach (var playerTag in PlayerTags)
             {
-                var player = await _coc.Players.GetAsync(playerTag);
+                var player = await _coc.Players.GetPlayerAsync(playerTag);
 
                 // Assert
                 Assert.IsNotNull(player);

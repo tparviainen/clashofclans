@@ -115,5 +115,43 @@ namespace ClashOfClans.Tests
 
             return false;
         }
+
+        /// <summary>
+        /// Checks that model type on assembly matches to the one mentioned in the API
+        /// documentation.
+        /// </summary>
+        protected bool PropertyTypesMatch(Type type, string typeName)
+        {
+            bool match;
+
+            switch (Type.GetTypeCode(type))
+            {
+                case TypeCode.Boolean:
+                    match = typeName == "boolean";
+                    break;
+
+                case TypeCode.Int32:
+                    if (type.IsEnum)
+                        match = typeName == "string";
+                    else
+                        match = typeName == "integer";
+                    break;
+
+                case TypeCode.Single:
+                    match = typeName == "Float";
+                    break;
+
+                case TypeCode.String:
+                case TypeCode.DateTime:
+                    match = typeName == "string";
+                    break;
+
+                default:
+                    match = typeName.Equals(type.Name);
+                    break;
+            }
+
+            return match;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>League list</returns>
-        Task<LeagueList> GetAsync(Query query = null);
+        Task<LeagueList> GetLeaguesAsync(Query query = null);
 
         /// <summary>
         /// Get league information
@@ -25,7 +25,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Requested league</returns>
-        Task<League> GetAsync(int? leagueId);
+        Task<League> GetLeagueAsync(int? leagueId);
 
         /// <summary>
         /// Get league seasons. Note that league season information is available only for Legend League.
@@ -35,7 +35,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>League season list</returns>
-        Task<LeagueSeasonList> GetSeasonsAsync(int? leagueId, Query query = null);
+        Task<LeagueSeasonList> GetLeagueSeasonsAsync(int? leagueId, Query query = null);
 
         /// <summary>
         /// Get league season rankings. Note that league season information is available only for Legend League.
@@ -46,6 +46,6 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Season player ranking list</returns>
-        Task<PlayerRankingList> GetSeasonsAsync(int? leagueId, string seasonId, Query query = null);
+        Task<PlayerRankingList> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null);
     }
 }

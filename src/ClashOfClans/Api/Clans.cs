@@ -18,7 +18,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans
-        public async Task<ClanList> GetAsync(QueryClans query)
+        public async Task<ClanList> SearchClansAsync(QueryClans query)
         {
             _validator.ValidateQueryClans(query);
 
@@ -28,7 +28,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}
-        public async Task<Clan> GetAsync(string clanTag)
+        public async Task<Clan> GetClanAsync(string clanTag)
         {
             _validator.ValidateClanTag(clanTag);
 
@@ -38,7 +38,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/members
-        public async Task<ClanMemberList> GetMembersAsync(string clanTag, Query query = null)
+        public async Task<ClanMemberList> GetClanMembersAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -50,7 +50,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/warlog
-        public async Task<ClanWarLog> GetWarLogAsync(string clanTag, Query query = null)
+        public async Task<ClanWarLog> GetClanWarLogAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -72,7 +72,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/currentwar/leaguegroup
-        public async Task<ClanWarLeagueGroup> GetCurrentWarLeagueGroupAsync(string clanTag)
+        public async Task<ClanWarLeagueGroup> GetClanWarLeagueGroupAsync(string clanTag)
         {
             _validator.ValidateClanTag(clanTag);
 
@@ -82,7 +82,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clanwarleagues/wars/{warTag}
-        public async Task<ClanWarLeagueWar> GetClanWarLeaguesWarsAsync(string warTag)
+        public async Task<ClanWarLeagueWar> GetClanWarLeagueWarAsync(string warTag)
         {
             _validator.ValidateWarTag(warTag);
 

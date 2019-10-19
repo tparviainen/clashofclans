@@ -90,5 +90,44 @@ namespace ClashOfClans.Tests
             // Assert
             Assert.AreEqual(0, count);
         }
+
+        [TestMethod]
+        public void CheckModelTypes()
+        {
+            // Arrange
+            var count = 0;
+
+            // Act
+            foreach (var modelName in _apiModelNames)
+            {
+                var properties = GetModelProperties(modelName);
+                var assemblyModel = _assemblyModels.SingleOrDefault(t => t.Name.Equals(modelName, StringComparison.InvariantCultureIgnoreCase));
+                if (assemblyModel != null)
+                {
+                    foreach (var property in assemblyModel.GetProperties())
+                    {
+                        if (SkipProperty(property))
+                        {
+                            continue;
+                        }
+
+                        if (properties.TryGetValue(property.Name, out string typeName))
+                        {
+                            var type = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                            var match = PropertyTypesMatch(type, typeName);
+
+                            if (!match)
+                            {
+                                Trace.WriteLine($"Mismatch: {modelName}.{property.Name} type {type.FullName} --> {typeName}");
+                                count++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Assert
+            Assert.AreEqual(0, count);
+        }
     }
 }

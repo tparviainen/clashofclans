@@ -15,6 +15,6 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Requested player data</returns>
-        Task<Player> GetAsync(string playerTag);
+        Task<Player> GetPlayerAsync(string playerTag);
     }
 }

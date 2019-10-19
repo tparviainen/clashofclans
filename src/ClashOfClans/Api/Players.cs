@@ -17,7 +17,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /players/{playerTag}
-        public async Task<Player> GetAsync(string playerTag)
+        public async Task<Player> GetPlayerAsync(string playerTag)
         {
             _validator.ValidatePlayerTag(playerTag);
 
