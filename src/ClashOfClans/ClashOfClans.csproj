@@ -13,7 +13,7 @@
     <Description>This package contains a .NET Standard library for accessing the services of Clash of Clans API.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>ClashOfClans</PackageId>
-    <PackageIconUrl>https://github.com/tparviainen/clashofclans/raw/master/images/icon.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageReleaseNotes>https://github.com/tparviainen/clashofclans/releases</PackageReleaseNotes>
   </PropertyGroup>
 
@@ -24,6 +24,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\images\icon.png" Pack="true" Visible="false" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
