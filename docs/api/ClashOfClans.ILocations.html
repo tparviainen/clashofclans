@@ -86,19 +86,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetAsync_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetAsync(ClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetClanRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetClanRankingAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L19">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L38">View Source</a>
   </span>
-  <a id="ClashOfClans_ILocations_GetAsync_" data-uid="ClashOfClans.ILocations.GetAsync*"></a>
-  <h4 id="ClashOfClans_ILocations_GetAsync_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetAsync(ClashOfClans.Search.Query)">GetAsync(Query)</h4>
-  <div class="markdown level1 summary"><p>List locations</p>
+  <a id="ClashOfClans_ILocations_GetClanRankingAsync_" data-uid="ClashOfClans.ILocations.GetClanRankingAsync*"></a>
+  <h4 id="ClashOfClans_ILocations_GetClanRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetClanRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetClanRankingAsync(Nullable&lt;Int32&gt;, Query)</h4>
+  <div class="markdown level1 summary"><p>Get clan rankings for a specific location</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;LocationList&gt; GetAsync(Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ClanRankingList&gt; GetClanRankingAsync(int? locationId, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,6 +110,12 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">locationId</span></td>
+        <td><p>Identifier of the location to retrieve</p>
+</td>
+      </tr>
       <tr>
         <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
         <td><span class="parametername">query</span></td>
@@ -128,8 +134,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.LocationList.html">LocationList</a>&gt;</td>
-        <td><p>Location list</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanRankingList.html">ClanRankingList</a>&gt;</td>
+        <td><p>Clan ranking list</p>
 </td>
       </tr>
     </tbody>
@@ -157,19 +163,96 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetAsync_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetAsync(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetClanVersusRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetClanVersusRankingAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L58">View Source</a>
+  </span>
+  <a id="ClashOfClans_ILocations_GetClanVersusRankingAsync_" data-uid="ClashOfClans.ILocations.GetClanVersusRankingAsync*"></a>
+  <h4 id="ClashOfClans_ILocations_GetClanVersusRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetClanVersusRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetClanVersusRankingAsync(Nullable&lt;Int32&gt;, Query)</h4>
+  <div class="markdown level1 summary"><p>Get clan versus rankings for a specific location</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ClanVersusRankingList&gt; GetClanVersusRankingAsync(int? locationId, Query query = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">locationId</span></td>
+        <td><p>Identifier of the location to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanVersusRankingList.html">ClanVersusRankingList</a>&gt;</td>
+        <td><p>Clan ranking list</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetLocationAsync_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetLocationAsync(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L28">View Source</a>
   </span>
-  <a id="ClashOfClans_ILocations_GetAsync_" data-uid="ClashOfClans.ILocations.GetAsync*"></a>
-  <h4 id="ClashOfClans_ILocations_GetAsync_System_Nullable_System_Int32__" data-uid="ClashOfClans.ILocations.GetAsync(System.Nullable{System.Int32})">GetAsync(Nullable&lt;Int32&gt;)</h4>
+  <a id="ClashOfClans_ILocations_GetLocationAsync_" data-uid="ClashOfClans.ILocations.GetLocationAsync*"></a>
+  <h4 id="ClashOfClans_ILocations_GetLocationAsync_System_Nullable_System_Int32__" data-uid="ClashOfClans.ILocations.GetLocationAsync(System.Nullable{System.Int32})">GetLocationAsync(Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p>Get location information</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Location&gt; GetAsync(int? locationId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Location&gt; GetLocationAsync(int? locationId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,19 +311,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetRankingsClansAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetRankingsClansAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetLocationsAsync_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetLocationsAsync(ClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L38">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L19">View Source</a>
   </span>
-  <a id="ClashOfClans_ILocations_GetRankingsClansAsync_" data-uid="ClashOfClans.ILocations.GetRankingsClansAsync*"></a>
-  <h4 id="ClashOfClans_ILocations_GetRankingsClansAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetRankingsClansAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetRankingsClansAsync(Nullable&lt;Int32&gt;, Query)</h4>
-  <div class="markdown level1 summary"><p>Get clan rankings for a specific location</p>
+  <a id="ClashOfClans_ILocations_GetLocationsAsync_" data-uid="ClashOfClans.ILocations.GetLocationsAsync*"></a>
+  <h4 id="ClashOfClans_ILocations_GetLocationsAsync_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetLocationsAsync(ClashOfClans.Search.Query)">GetLocationsAsync(Query)</h4>
+  <div class="markdown level1 summary"><p>List locations</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanRankingList&gt; GetRankingsClansAsync(int? locationId, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;LocationList&gt; GetLocationsAsync(Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,12 +335,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><span class="parametername">locationId</span></td>
-        <td><p>Identifier of the location to retrieve</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
         <td><span class="parametername">query</span></td>
@@ -276,8 +353,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanRankingList.html">ClanRankingList</a>&gt;</td>
-        <td><p>Clan ranking list</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.LocationList.html">LocationList</a>&gt;</td>
+        <td><p>Location list</p>
 </td>
       </tr>
     </tbody>
@@ -305,96 +382,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetRankingsClansVersusAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetRankingsClansVersusAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L58">View Source</a>
-  </span>
-  <a id="ClashOfClans_ILocations_GetRankingsClansVersusAsync_" data-uid="ClashOfClans.ILocations.GetRankingsClansVersusAsync*"></a>
-  <h4 id="ClashOfClans_ILocations_GetRankingsClansVersusAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetRankingsClansVersusAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetRankingsClansVersusAsync(Nullable&lt;Int32&gt;, Query)</h4>
-  <div class="markdown level1 summary"><p>Get clan versus rankings for a specific location</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanRankingList&gt; GetRankingsClansVersusAsync(int? locationId, Query query = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><span class="parametername">locationId</span></td>
-        <td><p>Identifier of the location to retrieve</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanRankingList.html">ClanRankingList</a>&gt;</td>
-        <td><p>Clan ranking list</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
-        <td><p>Communication error with the backend API</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>Argument is invalid</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetRankingsPlayersAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetRankingsPlayersAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetPlayerRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetPlayerRankingAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L48">View Source</a>
   </span>
-  <a id="ClashOfClans_ILocations_GetRankingsPlayersAsync_" data-uid="ClashOfClans.ILocations.GetRankingsPlayersAsync*"></a>
-  <h4 id="ClashOfClans_ILocations_GetRankingsPlayersAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetRankingsPlayersAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetRankingsPlayersAsync(Nullable&lt;Int32&gt;, Query)</h4>
+  <a id="ClashOfClans_ILocations_GetPlayerRankingAsync_" data-uid="ClashOfClans.ILocations.GetPlayerRankingAsync*"></a>
+  <h4 id="ClashOfClans_ILocations_GetPlayerRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetPlayerRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetPlayerRankingAsync(Nullable&lt;Int32&gt;, Query)</h4>
   <div class="markdown level1 summary"><p>Get player rankings for a specific location</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;PlayerRankingList&gt; GetRankingsPlayersAsync(int? locationId, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;PlayerRankingList&gt; GetPlayerRankingAsync(int? locationId, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -459,19 +459,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetRankingsPlayersVersusAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetRankingsPlayersVersusAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILocations_GetPlayerVersusRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILocations.GetPlayerVersusRankingAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILocations.cs/#L68">View Source</a>
   </span>
-  <a id="ClashOfClans_ILocations_GetRankingsPlayersVersusAsync_" data-uid="ClashOfClans.ILocations.GetRankingsPlayersVersusAsync*"></a>
-  <h4 id="ClashOfClans_ILocations_GetRankingsPlayersVersusAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetRankingsPlayersVersusAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetRankingsPlayersVersusAsync(Nullable&lt;Int32&gt;, Query)</h4>
+  <a id="ClashOfClans_ILocations_GetPlayerVersusRankingAsync_" data-uid="ClashOfClans.ILocations.GetPlayerVersusRankingAsync*"></a>
+  <h4 id="ClashOfClans_ILocations_GetPlayerVersusRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILocations.GetPlayerVersusRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetPlayerVersusRankingAsync(Nullable&lt;Int32&gt;, Query)</h4>
   <div class="markdown level1 summary"><p>Get player versus rankings for a specific location</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;PlayerVersusRankingList&gt; GetRankingsPlayersVersusAsync(int? locationId, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;PlayerVersusRankingList&gt; GetPlayerVersusRankingAsync(int? locationId, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

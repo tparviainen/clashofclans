@@ -86,90 +86,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetAsync_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetAsync(ClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILeagues.cs/#L19">View Source</a>
-  </span>
-  <a id="ClashOfClans_ILeagues_GetAsync_" data-uid="ClashOfClans.ILeagues.GetAsync*"></a>
-  <h4 id="ClashOfClans_ILeagues_GetAsync_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetAsync(ClashOfClans.Search.Query)">GetAsync(Query)</h4>
-  <div class="markdown level1 summary"><p>List leagues</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;LeagueList&gt; GetAsync(Query query = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.LeagueList.html">LeagueList</a>&gt;</td>
-        <td><p>League list</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
-        <td><p>Communication error with the backend API</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>Argument is invalid</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetAsync_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetAsync(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetLeagueAsync_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetLeagueAsync(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILeagues.cs/#L28">View Source</a>
   </span>
-  <a id="ClashOfClans_ILeagues_GetAsync_" data-uid="ClashOfClans.ILeagues.GetAsync*"></a>
-  <h4 id="ClashOfClans_ILeagues_GetAsync_System_Nullable_System_Int32__" data-uid="ClashOfClans.ILeagues.GetAsync(System.Nullable{System.Int32})">GetAsync(Nullable&lt;Int32&gt;)</h4>
+  <a id="ClashOfClans_ILeagues_GetLeagueAsync_" data-uid="ClashOfClans.ILeagues.GetLeagueAsync*"></a>
+  <h4 id="ClashOfClans_ILeagues_GetLeagueAsync_System_Nullable_System_Int32__" data-uid="ClashOfClans.ILeagues.GetLeagueAsync(System.Nullable{System.Int32})">GetLeagueAsync(Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p>Get league information</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;League&gt; GetAsync(int? leagueId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;League&gt; GetLeagueAsync(int? leagueId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,19 +157,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetSeasonsAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetSeasonsAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetLeaguesAsync_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetLeaguesAsync(ClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILeagues.cs/#L38">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILeagues.cs/#L19">View Source</a>
   </span>
-  <a id="ClashOfClans_ILeagues_GetSeasonsAsync_" data-uid="ClashOfClans.ILeagues.GetSeasonsAsync*"></a>
-  <h4 id="ClashOfClans_ILeagues_GetSeasonsAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetSeasonsAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetSeasonsAsync(Nullable&lt;Int32&gt;, Query)</h4>
-  <div class="markdown level1 summary"><p>Get league seasons. Note that league season information is available only for Legend League.</p>
+  <a id="ClashOfClans_ILeagues_GetLeaguesAsync_" data-uid="ClashOfClans.ILeagues.GetLeaguesAsync*"></a>
+  <h4 id="ClashOfClans_ILeagues_GetLeaguesAsync_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetLeaguesAsync(ClashOfClans.Search.Query)">GetLeaguesAsync(Query)</h4>
+  <div class="markdown level1 summary"><p>List leagues</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;LeagueSeasonList&gt; GetSeasonsAsync(int? leagueId, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;LeagueList&gt; GetLeaguesAsync(Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,12 +181,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><span class="parametername">leagueId</span></td>
-        <td><p>Identifier of the league whose seasons retrieve</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
         <td><span class="parametername">query</span></td>
@@ -276,8 +199,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.LeagueSeasonList.html">LeagueSeasonList</a>&gt;</td>
-        <td><p>League season list</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.LeagueList.html">LeagueList</a>&gt;</td>
+        <td><p>League list</p>
 </td>
       </tr>
     </tbody>
@@ -305,19 +228,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetSeasonsAsync_System_Nullable_System_Int32__System_String_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetSeasonsAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.String%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetLeagueSeasonRankingsAsync_System_Nullable_System_Int32__System_String_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetLeagueSeasonRankingsAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.String%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILeagues.cs/#L49">View Source</a>
   </span>
-  <a id="ClashOfClans_ILeagues_GetSeasonsAsync_" data-uid="ClashOfClans.ILeagues.GetSeasonsAsync*"></a>
-  <h4 id="ClashOfClans_ILeagues_GetSeasonsAsync_System_Nullable_System_Int32__System_String_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetSeasonsAsync(System.Nullable{System.Int32},System.String,ClashOfClans.Search.Query)">GetSeasonsAsync(Nullable&lt;Int32&gt;, String, Query)</h4>
+  <a id="ClashOfClans_ILeagues_GetLeagueSeasonRankingsAsync_" data-uid="ClashOfClans.ILeagues.GetLeagueSeasonRankingsAsync*"></a>
+  <h4 id="ClashOfClans_ILeagues_GetLeagueSeasonRankingsAsync_System_Nullable_System_Int32__System_String_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetLeagueSeasonRankingsAsync(System.Nullable{System.Int32},System.String,ClashOfClans.Search.Query)">GetLeagueSeasonRankingsAsync(Nullable&lt;Int32&gt;, String, Query)</h4>
   <div class="markdown level1 summary"><p>Get league season rankings. Note that league season information is available only for Legend League.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SeasonPlayerRankingList&gt; GetSeasonsAsync(int? leagueId, string seasonId, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;PlayerRankingList&gt; GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,8 +282,85 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.SeasonPlayerRankingList.html">SeasonPlayerRankingList</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.PlayerRankingList.html">PlayerRankingList</a>&gt;</td>
         <td><p>Season player ranking list</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_ILeagues_GetLeagueSeasonsAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetLeagueSeasonsAsync(System.Nullable%7BSystem.Int32%7D%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/ILeagues.cs/#L38">View Source</a>
+  </span>
+  <a id="ClashOfClans_ILeagues_GetLeagueSeasonsAsync_" data-uid="ClashOfClans.ILeagues.GetLeagueSeasonsAsync*"></a>
+  <h4 id="ClashOfClans_ILeagues_GetLeagueSeasonsAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetLeagueSeasonsAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)">GetLeagueSeasonsAsync(Nullable&lt;Int32&gt;, Query)</h4>
+  <div class="markdown level1 summary"><p>Get league seasons. Note that league season information is available only for Legend League.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;LeagueSeasonList&gt; GetLeagueSeasonsAsync(int? leagueId, Query query = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">leagueId</span></td>
+        <td><p>Identifier of the league whose seasons retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.LeagueSeasonList.html">LeagueSeasonList</a>&gt;</td>
+        <td><p>League season list</p>
 </td>
       </tr>
     </tbody>

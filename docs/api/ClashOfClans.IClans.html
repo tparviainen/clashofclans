@@ -86,90 +86,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetAsync_ClashOfClans_Search_QueryClans_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetAsync(ClashOfClans.Search.QueryClans)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L19">View Source</a>
-  </span>
-  <a id="ClashOfClans_IClans_GetAsync_" data-uid="ClashOfClans.IClans.GetAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetAsync_ClashOfClans_Search_QueryClans_" data-uid="ClashOfClans.IClans.GetAsync(ClashOfClans.Search.QueryClans)">GetAsync(QueryClans)</h4>
-  <div class="markdown level1 summary"><p>Search clans</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SearchResult&gt; GetAsync(QueryClans query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Search.QueryClans.html">QueryClans</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.SearchResult.html">SearchResult</a>&gt;</td>
-        <td><p>Clan(s) that match the query criteria</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
-        <td><p>Communication error with the backend API</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>Argument is invalid</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetClanAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetClanAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L28">View Source</a>
   </span>
-  <a id="ClashOfClans_IClans_GetAsync_" data-uid="ClashOfClans.IClans.GetAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetAsync_System_String_" data-uid="ClashOfClans.IClans.GetAsync(System.String)">GetAsync(String)</h4>
+  <a id="ClashOfClans_IClans_GetClanAsync_" data-uid="ClashOfClans.IClans.GetClanAsync*"></a>
+  <h4 id="ClashOfClans_IClans_GetClanAsync_System_String_" data-uid="ClashOfClans.IClans.GetClanAsync(System.String)">GetClanAsync(String)</h4>
   <div class="markdown level1 summary"><p>Get clan information</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Clan&gt; GetAsync(string clanTag)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Clan&gt; GetClanAsync(string clanTag)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,232 +157,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetClanWarLeaguesWarsAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetClanWarLeaguesWarsAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L75">View Source</a>
-  </span>
-  <a id="ClashOfClans_IClans_GetClanWarLeaguesWarsAsync_" data-uid="ClashOfClans.IClans.GetClanWarLeaguesWarsAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetClanWarLeaguesWarsAsync_System_String_" data-uid="ClashOfClans.IClans.GetClanWarLeaguesWarsAsync(System.String)">GetClanWarLeaguesWarsAsync(String)</h4>
-  <div class="markdown level1 summary"><p>Retrieve information about individual clan war league war</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanWarLeagueWar&gt; GetClanWarLeaguesWarsAsync(string warTag)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">warTag</span></td>
-        <td><p>Tag of the war whose information to retrieve</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanWarLeagueWar.html">ClanWarLeagueWar</a>&gt;</td>
-        <td><p>Clan war league war data</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
-        <td><p>Communication error with the backend API</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>Argument is invalid</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetCurrentWarAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetCurrentWarAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L57">View Source</a>
-  </span>
-  <a id="ClashOfClans_IClans_GetCurrentWarAsync_" data-uid="ClashOfClans.IClans.GetCurrentWarAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetCurrentWarAsync_System_String_" data-uid="ClashOfClans.IClans.GetCurrentWarAsync(System.String)">GetCurrentWarAsync(String)</h4>
-  <div class="markdown level1 summary"><p>Retrieve information about clan's current clan war</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;CurrentWar&gt; GetCurrentWarAsync(string clanTag)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">clanTag</span></td>
-        <td><p>Tag of the clan whose current clan war information to retrieve</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.CurrentWar.html">CurrentWar</a>&gt;</td>
-        <td><p>Current war data</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
-        <td><p>Communication error with the backend API</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>Argument is invalid</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetCurrentWarLeagueGroupAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetCurrentWarLeagueGroupAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L66">View Source</a>
-  </span>
-  <a id="ClashOfClans_IClans_GetCurrentWarLeagueGroupAsync_" data-uid="ClashOfClans.IClans.GetCurrentWarLeagueGroupAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetCurrentWarLeagueGroupAsync_System_String_" data-uid="ClashOfClans.IClans.GetCurrentWarLeagueGroupAsync(System.String)">GetCurrentWarLeagueGroupAsync(String)</h4>
-  <div class="markdown level1 summary"><p>Retrieve information about clan's current clan war league group</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;CurrentWarLeagueGroup&gt; GetCurrentWarLeagueGroupAsync(string clanTag)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">clanTag</span></td>
-        <td><p>Tag of the clan whose current clan war league group to retrieve</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.CurrentWarLeagueGroup.html">CurrentWarLeagueGroup</a>&gt;</td>
-        <td><p>Clan's current clan war league group</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
-        <td><p>Communication error with the backend API</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>Argument is invalid</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetMembersAsync_System_String_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetMembersAsync(System.String%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetClanMembersAsync_System_String_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetClanMembersAsync(System.String%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L38">View Source</a>
   </span>
-  <a id="ClashOfClans_IClans_GetMembersAsync_" data-uid="ClashOfClans.IClans.GetMembersAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetMembersAsync_System_String_ClashOfClans_Search_Query_" data-uid="ClashOfClans.IClans.GetMembersAsync(System.String,ClashOfClans.Search.Query)">GetMembersAsync(String, Query)</h4>
+  <a id="ClashOfClans_IClans_GetClanMembersAsync_" data-uid="ClashOfClans.IClans.GetClanMembersAsync*"></a>
+  <h4 id="ClashOfClans_IClans_GetClanMembersAsync_System_String_ClashOfClans_Search_Query_" data-uid="ClashOfClans.IClans.GetClanMembersAsync(System.String,ClashOfClans.Search.Query)">GetClanMembersAsync(String, Query)</h4>
   <div class="markdown level1 summary"><p>List clan members</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanMemberList&gt; GetMembersAsync(string clanTag, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ClanMemberList&gt; GetClanMembersAsync(string clanTag, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -518,19 +234,161 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetWarLogAsync_System_String_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetWarLogAsync(System.String%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetClanWarLeagueGroupAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetClanWarLeagueGroupAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L66">View Source</a>
+  </span>
+  <a id="ClashOfClans_IClans_GetClanWarLeagueGroupAsync_" data-uid="ClashOfClans.IClans.GetClanWarLeagueGroupAsync*"></a>
+  <h4 id="ClashOfClans_IClans_GetClanWarLeagueGroupAsync_System_String_" data-uid="ClashOfClans.IClans.GetClanWarLeagueGroupAsync(System.String)">GetClanWarLeagueGroupAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve information about clan's current clan war league group</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ClanWarLeagueGroup&gt; GetClanWarLeagueGroupAsync(string clanTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>Tag of the clan whose current clan war league group to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanWarLeagueGroup.html">ClanWarLeagueGroup</a>&gt;</td>
+        <td><p>Clan's current clan war league group</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetClanWarLeagueWarAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetClanWarLeagueWarAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L75">View Source</a>
+  </span>
+  <a id="ClashOfClans_IClans_GetClanWarLeagueWarAsync_" data-uid="ClashOfClans.IClans.GetClanWarLeagueWarAsync*"></a>
+  <h4 id="ClashOfClans_IClans_GetClanWarLeagueWarAsync_System_String_" data-uid="ClashOfClans.IClans.GetClanWarLeagueWarAsync(System.String)">GetClanWarLeagueWarAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve information about individual clan war league war</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ClanWarLeagueWar&gt; GetClanWarLeagueWarAsync(string warTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">warTag</span></td>
+        <td><p>Tag of the war whose information to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanWarLeagueWar.html">ClanWarLeagueWar</a>&gt;</td>
+        <td><p>Clan war league war data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetClanWarLogAsync_System_String_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetClanWarLogAsync(System.String%2CClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L48">View Source</a>
   </span>
-  <a id="ClashOfClans_IClans_GetWarLogAsync_" data-uid="ClashOfClans.IClans.GetWarLogAsync*"></a>
-  <h4 id="ClashOfClans_IClans_GetWarLogAsync_System_String_ClashOfClans_Search_Query_" data-uid="ClashOfClans.IClans.GetWarLogAsync(System.String,ClashOfClans.Search.Query)">GetWarLogAsync(String, Query)</h4>
+  <a id="ClashOfClans_IClans_GetClanWarLogAsync_" data-uid="ClashOfClans.IClans.GetClanWarLogAsync*"></a>
+  <h4 id="ClashOfClans_IClans_GetClanWarLogAsync_System_String_ClashOfClans_Search_Query_" data-uid="ClashOfClans.IClans.GetClanWarLogAsync(System.String,ClashOfClans.Search.Query)">GetClanWarLogAsync(String, Query)</h4>
   <div class="markdown level1 summary"><p>Retrieve clan's clan war log</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;WarLog&gt; GetWarLogAsync(string clanTag, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ClanWarLog&gt; GetClanWarLogAsync(string clanTag, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -566,8 +424,150 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.WarLog.html">WarLog</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanWarLog.html">ClanWarLog</a>&gt;</td>
         <td><p>Clan's clan war log</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_GetCurrentWarAsync_System_String_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.GetCurrentWarAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L57">View Source</a>
+  </span>
+  <a id="ClashOfClans_IClans_GetCurrentWarAsync_" data-uid="ClashOfClans.IClans.GetCurrentWarAsync*"></a>
+  <h4 id="ClashOfClans_IClans_GetCurrentWarAsync_System_String_" data-uid="ClashOfClans.IClans.GetCurrentWarAsync(System.String)">GetCurrentWarAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve information about clan's current clan war</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ClanWar&gt; GetCurrentWarAsync(string clanTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>Tag of the clan whose current clan war information to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanWar.html">ClanWar</a>&gt;</td>
+        <td><p>Current war data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IClans_SearchClansAsync_ClashOfClans_Search_QueryClans_.md&amp;value=---%0Auid%3A%20ClashOfClans.IClans.SearchClansAsync(ClashOfClans.Search.QueryClans)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IClans.cs/#L19">View Source</a>
+  </span>
+  <a id="ClashOfClans_IClans_SearchClansAsync_" data-uid="ClashOfClans.IClans.SearchClansAsync*"></a>
+  <h4 id="ClashOfClans_IClans_SearchClansAsync_ClashOfClans_Search_QueryClans_" data-uid="ClashOfClans.IClans.SearchClansAsync(ClashOfClans.Search.QueryClans)">SearchClansAsync(QueryClans)</h4>
+  <div class="markdown level1 summary"><p>Search clans</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ClanList&gt; SearchClansAsync(QueryClans query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Search.QueryClans.html">QueryClans</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanList.html">ClanList</a>&gt;</td>
+        <td><p>Clan(s) that match the query criteria</p>
 </td>
       </tr>
     </tbody>

@@ -81,17 +81,17 @@ var clanTag = &quot;#hijklmn&quot;;
 </code></pre>
 <h2 id="get-information-about-a-single-clan-by-clan-tag">Get information about a single clan by clan tag</h2>
 <pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
-var clan = await coc.Clans.GetAsync(clanTag);
+var clan = await coc.Clans.GetClanAsync(clanTag);
 Console.WriteLine($&quot;Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members&quot;);
 </code></pre>
 <h2 id="retrieve-clans-clan-war-log">Retrieve clan's clan war log</h2>
 <p>Please note that clan's war log is only available from a clan that has public war log!</p>
 <pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
-var clan = await coc.Clans.GetAsync(clanTag);
+var clan = await coc.Clans.GetClanAsync(clanTag);
 
 if (clan.IsWarLogPublic == true)
 {
-    var warLog = await coc.Clans.GetWarLogAsync(clanTag);
+    var warLog = await coc.Clans.GetClanWarLogAsync(clanTag);
 
     foreach (var war in warLog.Items)
     {
@@ -99,11 +99,11 @@ if (clan.IsWarLogPublic == true)
     }
 }
 
-string Statistics(WarClan clan) =&gt; $&quot;{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage}%]&quot;;
+string Statistics(WarClan warClan) =&gt; $&quot;{warClan.Name} [{warClan.Stars}\u2605/{warClan.DestructionPercentage}%]&quot;;
 </code></pre>
 <h2 id="get-information-about-a-single-player-by-player-tag">Get information about a single player by player tag</h2>
 <pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
-var player = await coc.Players.GetAsync(playerTag);
+var player = await coc.Players.GetPlayerAsync(playerTag);
 Console.WriteLine($&quot;'{player.Name}' has {player.Trophies} \uD83C\uDFC6 and {player.WarStars} war stars&quot;);
 
 if (player.Clan != null)
@@ -115,9 +115,9 @@ if (player.Clan != null)
 </code></pre>
 <h2 id="list-leagues">List leagues</h2>
 <pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
-var leagues = await coc.Leagues.GetAsync();
+var leagues = await coc.Leagues.GetLeaguesAsync();
 
-Console.WriteLine($&quot;Total amount of leagues: {leagues.Items.Count()}&quot;);
+Console.WriteLine($&quot;Total amount of leagues: {leagues.Items.Count}&quot;);
 
 foreach (var league in leagues.Items)
 {
@@ -126,9 +126,9 @@ foreach (var league in leagues.Items)
 </code></pre>
 <h2 id="list-locations">List locations</h2>
 <pre><code class="lang-csharp">var coc = new ClashOfClansApi(token);
-var locations = await coc.Locations.GetAsync();
+var locations = await coc.Locations.GetLocationsAsync();
 
-Console.WriteLine($&quot;Total amount of locations: {locations.Items.Count()}&quot;);
+Console.WriteLine($&quot;Total amount of locations: {locations.Items.Count}&quot;);
 
 foreach (var location in locations.Items)
 {
