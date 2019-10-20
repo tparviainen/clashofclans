@@ -53,7 +53,12 @@ namespace ClashOfClans.Tests
             do
             {
                 var searchResult = await _coc.Clans.SearchClansAsync(query);
-                searchResult.Items.ToList().ForEach(clan => Trace.WriteLine(clan));
+                searchResult.Items.ToList().ForEach(clan =>
+                {
+                    Assert.AreEqual(locationName, clan.Location.Name);
+                    Trace.WriteLine(clan);
+                });
+
                 query.After = searchResult.Paging.Cursors.After;
                 count += searchResult.Items.Count;
             } while (query.After != null);
