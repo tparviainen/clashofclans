@@ -2,8 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public class PlayerVersusRankingList : Queryable
+    public class PlayerVersusRankingList : List<PlayerVersusRanking>
     {
-        public List<PlayerVersusRanking> Items { get; set; }
     }
 }

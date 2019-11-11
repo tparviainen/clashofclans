@@ -18,7 +18,7 @@ namespace ClashOfClans.Models
         /// <returns>League data</returns>
         public League this[string name]
         {
-            get => Items?.SingleOrDefault(l => l.Name == name);
+            get => this.SingleOrDefault(l => l.Name == name);
         }
     }
 }

@@ -18,13 +18,13 @@ namespace ClashOfClans.Api
         }
 
         // GET /leagues
-        public async Task<LeagueList> GetLeaguesAsync(Query query = null)
+        public async Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null)
         {
             _validator.ValidateQuery(query);
 
             var uri = $"leagues{query}";
 
-            return await _gameData.RequestAsync<LeagueList>(uri);
+            return await _gameData.RequestAsync<QueryResult<LeagueList>>(uri);
         }
 
         // GET /leagues/{leagueId}
@@ -38,7 +38,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /leagues/{leagueId}/seasons
-        public async Task<LeagueSeasonList> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
+        public async Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
         {
             _validator
                 .ValidateLeagueId(leagueId)
@@ -46,11 +46,11 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons{query}";
 
-            return await _gameData.RequestAsync<LeagueSeasonList>(uri);
+            return await _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(uri);
         }
 
         // GET /leagues/{leagueId}/seasons/{seasonId}
-        public async Task<PlayerRankingList> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
+        public async Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
         {
             _validator
                 .ValidateLeagueId(leagueId)
@@ -59,7 +59,7 @@ namespace ClashOfClans.Api
 
             var uri = $"leagues/{leagueId}/seasons/{seasonId}{query}";
 
-            return await _gameData.RequestAsync<PlayerRankingList>(uri);
+            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(uri);
         }
     }
 }

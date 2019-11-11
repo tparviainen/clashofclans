@@ -18,13 +18,13 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans
-        public async Task<ClanList> SearchClansAsync(QueryClans query)
+        public async Task<QueryResult<ClanList>> SearchClansAsync(QueryClans query)
         {
             _validator.ValidateQueryClans(query);
 
             var uri = $"clans{query}";
 
-            return await _gameData.RequestAsync<ClanList>(uri);
+            return await _gameData.RequestAsync<QueryResult<ClanList>>(uri);
         }
 
         // GET /clans/{clanTag}
@@ -38,7 +38,7 @@ namespace ClashOfClans.Api
         }
 
         // GET /clans/{clanTag}/members
-        public async Task<ClanMemberList> GetClanMembersAsync(string clanTag, Query query = null)
+        public async Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -46,11 +46,11 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/members{query}";
 
-            return await _gameData.RequestAsync<ClanMemberList>(uri);
+            return await _gameData.RequestAsync<QueryResult<ClanMemberList>>(uri);
         }
 
         // GET /clans/{clanTag}/warlog
-        public async Task<ClanWarLog> GetClanWarLogAsync(string clanTag, Query query = null)
+        public async Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null)
         {
             _validator
                 .ValidateClanTag(clanTag)
@@ -58,7 +58,7 @@ namespace ClashOfClans.Api
 
             var uri = $"clans/{clanTag}/warlog{query}";
 
-            return await _gameData.RequestAsync<ClanWarLog>(uri);
+            return await _gameData.RequestAsync<QueryResult<ClanWarLog>>(uri);
         }
 
         // GET /clans/{clanTag}/currentwar

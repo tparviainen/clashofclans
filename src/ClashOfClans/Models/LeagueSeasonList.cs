@@ -2,8 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public class LeagueSeasonList : Queryable
+    public class LeagueSeasonList : List<LeagueSeason>
     {
-        public List<LeagueSeason> Items { get; set; }
     }
 }

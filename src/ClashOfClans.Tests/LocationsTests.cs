@@ -50,7 +50,7 @@ namespace ClashOfClans.Tests
         public async Task GetLocationInformation()
         {
             // Arrange
-            var locationId = GetRandom(_locations.Items).Id;
+            var locationId = GetRandom(_locations).Id;
 
             // Act
             var location = await _coc.Locations.GetLocationAsync(locationId);
@@ -63,7 +63,7 @@ namespace ClashOfClans.Tests
         public async Task GetClanRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
@@ -81,25 +81,25 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var playerRankingList = await _coc.Locations.GetPlayerRankingAsync(location.Id, query);
+            var playerRankingList = (await _coc.Locations.GetPlayerRankingAsync(location.Id, query)).Items;
 
             // Assert
             Assert.IsNotNull(playerRankingList);
-            Assert.IsTrue(playerRankingList.Items.Count <= ItemLimit, $"Id {location.Id}");
+            Assert.IsTrue(playerRankingList.Count <= ItemLimit, $"Id {location.Id}");
         }
 
         [TestMethod]
         public async Task GetClanVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
@@ -117,7 +117,7 @@ namespace ClashOfClans.Tests
         public async Task GetPlayerVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit

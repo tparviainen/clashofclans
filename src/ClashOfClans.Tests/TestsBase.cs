@@ -47,9 +47,9 @@ namespace ClashOfClans.Tests
                     Limit = 50
                 };
 
-                _clans = await _coc.Clans.SearchClansAsync(query);
-                _leagues = await _coc.Leagues.GetLeaguesAsync();
-                _locations = await _coc.Locations.GetLocationsAsync();
+                _clans = (await _coc.Clans.SearchClansAsync(query)).Items;
+                _leagues = (await _coc.Leagues.GetLeaguesAsync()).Items;
+                _locations = (await _coc.Locations.GetLocationsAsync()).Items;
             }
             catch (ClashOfClansException ex)
             {

@@ -1,0 +1,13 @@
+﻿namespace ClashOfClans.Models
+{
+    /// <summary>
+    /// A class representing a query result.
+    /// </summary>
+    /// <typeparam name="T">The type of the result items</typeparam>
+    public class QueryResult<T>
+    {
+        public T Items { get; set; }
+
+        public Paging Paging { get; set; }
+    }
+}

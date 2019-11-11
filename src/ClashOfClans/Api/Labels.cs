@@ -18,23 +18,23 @@ namespace ClashOfClans.Api
         }
 
         // GET /labels/clans
-        public async Task<ItemList<LabelList>> GetClanLabelsAsync(Query query = null)
+        public async Task<QueryResult<LabelList>> GetClanLabelsAsync(Query query = null)
         {
             _validator.ValidateQuery(query);
 
             var uri = $"labels/clans{query}";
 
-            return await _gameData.RequestAsync<ItemList<LabelList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<LabelList>>(uri);
         }
 
         // GET /labels/players
-        public async Task<ItemList<LabelList>> GetPlayerLabelsAsync(Query query = null)
+        public async Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query query = null)
         {
             _validator.ValidateQuery(query);
 
             var uri = $"labels/players{query}";
 
-            return await _gameData.RequestAsync<ItemList<LabelList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<LabelList>>(uri);
         }
     }
 }

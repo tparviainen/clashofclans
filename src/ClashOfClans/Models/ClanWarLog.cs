@@ -2,8 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public class ClanWarLog : Queryable
+    public class ClanWarLog : List<ClanWarLogEntry>
     {
-        public List<ClanWarLogEntry> Items { get; set; }
     }
 }

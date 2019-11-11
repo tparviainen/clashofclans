@@ -6,7 +6,8 @@ namespace ClashOfClans
 {
     public interface ILabels
     {
-        Task<ItemList<LabelList>> GetClanLabelsAsync(Query query = null);
-        Task<ItemList<LabelList>> GetPlayerLabelsAsync(Query query = null);
+        Task<QueryResult<LabelList>> GetClanLabelsAsync(Query query = null);
+
+        Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query query = null);
     }
 }

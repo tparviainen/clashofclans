@@ -25,7 +25,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var leagues = _coc.Leagues;
-            var leagueId = GetRandom(_leagues.Items).Id;
+            var leagueId = GetRandom(_leagues).Id;
 
             // Act
             var league = await leagues.GetLeagueAsync(leagueId);
