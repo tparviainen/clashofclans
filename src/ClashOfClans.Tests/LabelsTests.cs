@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Tests
@@ -17,6 +18,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(labels.Items);
+            labels.Items.ForEach(label => Trace.WriteLine(label.Dump()));
         }
 
         [TestMethod]
@@ -47,6 +49,7 @@ namespace ClashOfClans.Tests
 
             // Assert
             Assert.IsNotNull(labels.Items);
+            labels.Items.ForEach(label => Trace.WriteLine(label.Dump()));
         }
 
         [TestMethod]

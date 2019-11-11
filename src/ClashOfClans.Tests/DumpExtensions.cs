@@ -7,6 +7,8 @@ namespace ClashOfClans.Tests
 {
     public static class DumpExtensions
     {
+        public static string Dump(this Label label) => $"Id: {label.Id}, name: {label.Name}";
+
         public static string Dump(this Clan clan)
         {
             return $"Tag: {clan.Tag}, name: {clan.Name}, level: {clan.ClanLevel}, members: {clan.Members}";

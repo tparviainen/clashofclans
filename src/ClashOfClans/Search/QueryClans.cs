@@ -42,5 +42,10 @@ namespace ClashOfClans.Search
         /// Filter by minimum clan level.
         /// </summary>
         public int? MinClanLevel { get; set; }
+
+        /// <summary>
+        /// Comma separated list of label IDs to use for filtering results.
+        /// </summary>
+        public string LabelIds { get; set; }
     }
 }
