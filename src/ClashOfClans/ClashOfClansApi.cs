@@ -30,7 +30,6 @@ namespace ClashOfClans
             Leagues = new Leagues(gameData, validator);
             Players = new Players(gameData, validator);
             Labels = new Labels(gameData, validator);
-
         }
 
         /// <summary>
