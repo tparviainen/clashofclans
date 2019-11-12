@@ -11,5 +11,11 @@ namespace ClashOfClans.Search
         public T Items { get; set; }
 
         public Paging Paging { get; set; }
+
+        /// <summary>
+        /// Allow explicit conversion from <see cref="QueryResult{T}"/> to T. The reason this is explicit
+        /// is that <see cref="Paging"/> information is lost during the conversion.
+        /// </summary>
+        public static explicit operator T(QueryResult<T> queryResult) => queryResult.Items;
     }
 }
