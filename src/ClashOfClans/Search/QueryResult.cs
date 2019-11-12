@@ -1,4 +1,6 @@
-﻿namespace ClashOfClans.Models
+﻿using ClashOfClans.Models;
+
+namespace ClashOfClans.Search
 {
     /// <summary>
     /// A class representing a query result.
