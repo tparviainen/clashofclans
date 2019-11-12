@@ -4,7 +4,7 @@
     /// A class representing a query result.
     /// </summary>
     /// <typeparam name="T">The type of the result items</typeparam>
-    public class QueryResult<T>
+    public class QueryResult<T> where T : class
     {
         public T Items { get; set; }
 
