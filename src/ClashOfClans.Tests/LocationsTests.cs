@@ -1,4 +1,5 @@
-﻿using ClashOfClans.Search;
+﻿using ClashOfClans.Models;
+using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace ClashOfClans.Tests
             var locations = _coc.Locations;
 
             // Act
-            var locationList = await locations.GetLocationsAsync();
+            var locationList = (LocationList)await locations.GetLocationsAsync();
 
             // Assert
             Assert.IsNotNull(locationList);
@@ -70,11 +71,11 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var clanRankingList = await _coc.Locations.GetClanRankingAsync(location.Id, query);
+            var clanRankingList = (ClanRankingList)await _coc.Locations.GetClanRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Items.Count, $"Id {location.Id}");
+            Assert.AreEqual(ItemLimit, clanRankingList.Count, $"Id {location.Id}");
         }
 
         [TestMethod]
@@ -88,7 +89,7 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var playerRankingList = (await _coc.Locations.GetPlayerRankingAsync(location.Id, query)).Items;
+            var playerRankingList = (PlayerRankingList)await _coc.Locations.GetPlayerRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerRankingList);
@@ -106,11 +107,11 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var clanRankingList = await _coc.Locations.GetClanVersusRankingAsync(location.Id, query);
+            var clanRankingList = (ClanVersusRankingList)await _coc.Locations.GetClanVersusRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Items.Count, $"Id {location.Id}");
+            Assert.AreEqual(ItemLimit, clanRankingList.Count, $"Id {location.Id}");
         }
 
         [TestMethod]
@@ -124,11 +125,11 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var playerVersusRankingList = await _coc.Locations.GetPlayerVersusRankingAsync(location.Id, query);
+            var playerVersusRankingList = (PlayerVersusRankingList)await _coc.Locations.GetPlayerVersusRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerVersusRankingList);
-            Assert.IsTrue(playerVersusRankingList.Items.Count <= ItemLimit, $"Id {location.Id}");
+            Assert.IsTrue(playerVersusRankingList.Count <= ItemLimit, $"Id {location.Id}");
         }
     }
 }

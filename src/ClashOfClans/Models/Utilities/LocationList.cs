@@ -11,7 +11,7 @@ namespace ClashOfClans.Models
         /// <example>
         /// <code>
         /// var coc = new ClashOfClansApi(token);
-        /// var locations = await coc.Locations.GetAsync();
+        /// var locations = (LocationList)await coc.Locations.GetLocationsAsync();
         /// var location = locations["Finland"];
         /// </code>
         /// </example>

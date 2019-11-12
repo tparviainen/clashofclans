@@ -1,4 +1,5 @@
-﻿using ClashOfClans.Search;
+﻿using ClashOfClans.Models;
+using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace ClashOfClans.Tests
             var leagues = _coc.Leagues;
 
             // Act
-            var leagueList = await leagues.GetLeaguesAsync();
+            var leagueList = (LeagueList)await leagues.GetLeaguesAsync();
 
             // Assert
             Assert.IsNotNull(leagueList);
@@ -41,7 +42,7 @@ namespace ClashOfClans.Tests
             var league = _leagues["Legend League"];
 
             // Act
-            var leagueSeasonList = await _coc.Leagues.GetLeagueSeasonsAsync(league.Id);
+            var leagueSeasonList = (LeagueSeasonList)await _coc.Leagues.GetLeagueSeasonsAsync(league.Id);
 
             // Assert
             Assert.IsNotNull(leagueSeasonList);
@@ -60,7 +61,7 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var seasonPlayerRankingList = await _coc.Leagues.GetLeagueSeasonRankingsAsync(league.Id, season.Id, query);
+            var seasonPlayerRankingList = (PlayerRankingList)await _coc.Leagues.GetLeagueSeasonRankingsAsync(league.Id, season.Id, query);
 
             // Assert
             Assert.IsNotNull(seasonPlayerRankingList);

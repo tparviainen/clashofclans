@@ -102,11 +102,11 @@ namespace ClashOfClans.Tests
                 taskList.Add(_coc.Clans.GetClanMembersAsync(clanTag));
             }
 
-            foreach (var memberList in await Task.WhenAll(taskList))
+            foreach (ClanMemberList memberList in await Task.WhenAll(taskList))
             {
                 // Assert
                 Assert.IsNotNull(memberList);
-                Trace.WriteLine(memberList.Items.Dump());
+                Trace.WriteLine(memberList.Dump());
             }
         }
 
@@ -125,10 +125,10 @@ namespace ClashOfClans.Tests
             // Assert
             Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
 
-            foreach (var warLog in await Task.WhenAll(taskList))
+            foreach (ClanWarLog warLog in await Task.WhenAll(taskList))
             {
                 Assert.IsNotNull(warLog);
-                Trace.WriteLine(warLog.Items.Dump());
+                Trace.WriteLine(warLog.Dump());
             }
         }
 

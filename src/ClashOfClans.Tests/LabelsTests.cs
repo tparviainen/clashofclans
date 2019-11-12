@@ -1,4 +1,5 @@
-﻿using ClashOfClans.Search;
+﻿using ClashOfClans.Models;
+using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -14,11 +15,11 @@ namespace ClashOfClans.Tests
             // Arrange
 
             // Act
-            var labels = await _coc.Labels.GetClanLabelsAsync();
+            var labels = (LabelList)await _coc.Labels.GetClanLabelsAsync();
 
             // Assert
-            Assert.IsNotNull(labels.Items);
-            labels.Items.ForEach(label => Trace.WriteLine(label.Dump()));
+            Assert.IsNotNull(labels);
+            labels.ForEach(label => Trace.WriteLine(label.Dump()));
         }
 
         [TestMethod]
@@ -32,11 +33,11 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var labels = await _coc.Labels.GetClanLabelsAsync(query);
+            var labels = (LabelList)await _coc.Labels.GetClanLabelsAsync(query);
 
             // Assert
-            Assert.IsNotNull(labels.Items);
-            Assert.AreEqual(limit, labels.Items.Count);
+            Assert.IsNotNull(labels);
+            Assert.AreEqual(limit, labels.Count);
         }
 
         [TestMethod]
@@ -45,11 +46,11 @@ namespace ClashOfClans.Tests
             // Arrange
 
             // Act
-            var labels = await _coc.Labels.GetPlayerLabelsAsync();
+            var labels = (LabelList)await _coc.Labels.GetPlayerLabelsAsync();
 
             // Assert
-            Assert.IsNotNull(labels.Items);
-            labels.Items.ForEach(label => Trace.WriteLine(label.Dump()));
+            Assert.IsNotNull(labels);
+            labels.ForEach(label => Trace.WriteLine(label.Dump()));
         }
 
         [TestMethod]
@@ -63,11 +64,11 @@ namespace ClashOfClans.Tests
             };
 
             // Act
-            var labels = await _coc.Labels.GetPlayerLabelsAsync(query);
+            var labels = (LabelList)await _coc.Labels.GetPlayerLabelsAsync(query);
 
             // Assert
-            Assert.IsNotNull(labels.Items);
-            Assert.AreEqual(limit, labels.Items.Count);
+            Assert.IsNotNull(labels);
+            Assert.AreEqual(limit, labels.Count);
         }
     }
 }

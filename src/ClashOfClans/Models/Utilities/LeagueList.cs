@@ -11,7 +11,7 @@ namespace ClashOfClans.Models
         /// <example>
         /// <code>
         /// var coc = new ClashOfClansApi(token);
-        /// var leagues = await coc.Leagues.GetAsync();
+        /// var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
         /// var league = leagues["Legend League"];
         /// </code>
         /// </example>
