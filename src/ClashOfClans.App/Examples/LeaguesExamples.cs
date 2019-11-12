@@ -48,7 +48,7 @@ namespace ClashOfClans.App.Examples
         public async Task GetLeagueSeasons()
         {
             var coc = new ClashOfClansApi(token);
-            var leagues = await coc.Leagues.GetLeaguesAsync();
+            var leagues = (await coc.Leagues.GetLeaguesAsync()).Items;
             var legendLeague = leagues["Legend League"];
             var seasons = await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
 
@@ -66,7 +66,7 @@ namespace ClashOfClans.App.Examples
         public async Task GetLeagueSeasonRankings()
         {
             var coc = new ClashOfClansApi(token);
-            var leagues = await coc.Leagues.GetLeaguesAsync();
+            var leagues = (await coc.Leagues.GetLeaguesAsync()).Items;
             var legendLeague = leagues["Legend League"];
             var seasons = await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
             var lastSeason = seasons.Items.Last();
