@@ -56,7 +56,7 @@ namespace ClashOfClans.Tests
                 searchResult.Items.ToList().ForEach(clan =>
                 {
                     Assert.AreEqual(locationName, clan.Location.Name);
-                    Trace.WriteLine(clan);
+                    Trace.WriteLine(clan.Dump());
                 });
 
                 query.After = searchResult.Paging.Cursors.After;
