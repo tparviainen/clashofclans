@@ -42,6 +42,11 @@ namespace ClashOfClans.App
                 await locationsExamples.ListLocations();
                 await locationsExamples.GetLocationInformation();
                 await locationsExamples.GetClanRankingsForASpecificLocation();
+
+                // Access labels
+                var labelsExamples = new LabelsExamples(token);
+                await labelsExamples.ListClanLabels();
+                await labelsExamples.ListPlayerLabels();
             }
             catch (ClashOfClansException ex)
             {
