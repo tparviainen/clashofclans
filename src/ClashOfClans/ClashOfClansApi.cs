@@ -68,6 +68,9 @@ namespace ClashOfClans
         /// </summary>
         public IPlayers Players { get; }
 
+        /// <summary>
+        /// Access labels
+        /// </summary>
         public ILabels Labels { get; }
     }
 }
