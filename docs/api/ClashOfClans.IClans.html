@@ -169,7 +169,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanMemberList&gt; GetClanMembersAsync(string clanTag, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;QueryResult&lt;ClanMemberList&gt;&gt; GetClanMembersAsync(string clanTag, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +205,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanMemberList.html">ClanMemberList</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="ClashOfClans.Models.ClanMemberList.html">ClanMemberList</a>&gt;&gt;</td>
         <td><p>List of clan members</p>
 </td>
       </tr>
@@ -388,7 +388,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanWarLog&gt; GetClanWarLogAsync(string clanTag, Query query = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;QueryResult&lt;ClanWarLog&gt;&gt; GetClanWarLogAsync(string clanTag, Query query = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,7 +424,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanWarLog.html">ClanWarLog</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="ClashOfClans.Models.ClanWarLog.html">ClanWarLog</a>&gt;&gt;</td>
         <td><p>Clan's clan war log</p>
 </td>
       </tr>
@@ -536,7 +536,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ClanList&gt; SearchClansAsync(QueryClans query)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;QueryResult&lt;ClanList&gt;&gt; SearchClansAsync(QueryClans query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -566,7 +566,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Models.ClanList.html">ClanList</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="ClashOfClans.Models.ClanList.html">ClanList</a>&gt;&gt;</td>
         <td><p>Clan(s) that match the query criteria</p>
 </td>
       </tr>
