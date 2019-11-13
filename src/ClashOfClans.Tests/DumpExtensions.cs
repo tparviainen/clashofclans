@@ -7,6 +7,8 @@ namespace ClashOfClans.Tests
 {
     public static class DumpExtensions
     {
+        public static string Dump(this Label label) => $"Id: {label.Id}, name: {label.Name}";
+
         public static string Dump(this Clan clan)
         {
             return $"Tag: {clan.Tag}, name: {clan.Name}, level: {clan.ClanLevel}, members: {clan.Members}";
@@ -16,9 +18,9 @@ namespace ClashOfClans.Tests
         {
             var sb = new StringBuilder();
 
-            if (warLog.Items != null)
+            if (warLog != null)
             {
-                foreach (var entry in warLog.Items.Where(w => w.Opponent.Tag != null))
+                foreach (var entry in warLog.Where(w => w.Opponent.Tag != null))
                 {
                     sb.Append(Environment.NewLine);
                     sb.Append(entry.Dump());
@@ -156,9 +158,9 @@ namespace ClashOfClans.Tests
         {
             var sb = new StringBuilder();
 
-            if (list.Items != null)
+            if (list != null)
             {
-                foreach (var member in list.Items)
+                foreach (var member in list)
                 {
                     sb.Append($"{member.Tag}/{member.Name}, donations {member.Donations}/{member.DonationsReceived}");
                     sb.Append($"={((member.DonationsReceived != 0) ? member.Donations/(float)member.DonationsReceived : -1)}");

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClashOfClans.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.App.Examples
@@ -46,7 +47,7 @@ namespace ClashOfClans.App.Examples
         public async Task GetClanRankingsForASpecificLocation()
         {
             var coc = new ClashOfClansApi(token);
-            var locations = await coc.Locations.GetLocationsAsync();
+            var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
             Console.WriteLine($"Clan rankings for {location.Name}");

@@ -56,7 +56,7 @@ namespace ClashOfClans.Tests
                 searchResult.Items.ToList().ForEach(clan =>
                 {
                     Assert.AreEqual(locationName, clan.Location.Name);
-                    Trace.WriteLine(clan);
+                    Trace.WriteLine(clan.Dump());
                 });
 
                 query.After = searchResult.Paging.Cursors.After;
@@ -73,7 +73,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var taskList = new List<Task<Clan>>();
-            var clanTags = _clans.Items.Select(c => c.Tag).ToList();
+            var clanTags = _clans.Select(c => c.Tag).ToList();
             clanTags.AddRange(ClanTags);
 
             // Act
@@ -94,15 +94,15 @@ namespace ClashOfClans.Tests
         public async Task ListClanMembers()
         {
             // Arrange
-            var taskList = new List<Task<ClanMemberList>>();
+            var taskList = new List<Task<QueryResult<ClanMemberList>>>();
 
             // Act
-            foreach (var clanTag in ClanTags.Append(GetRandom(_clans.Items).Tag))
+            foreach (var clanTag in ClanTags.Append(GetRandom(_clans).Tag))
             {
                 taskList.Add(_coc.Clans.GetClanMembersAsync(clanTag));
             }
 
-            foreach (var memberList in await Task.WhenAll(taskList))
+            foreach (ClanMemberList memberList in await Task.WhenAll(taskList))
             {
                 // Assert
                 Assert.IsNotNull(memberList);
@@ -114,10 +114,10 @@ namespace ClashOfClans.Tests
         public async Task RetrieveClansClanWarLog()
         {
             // Arrange
-            var taskList = new List<Task<ClanWarLog>>();
+            var taskList = new List<Task<QueryResult<ClanWarLog>>>();
 
             // Act
-            foreach (var clan in _clans.Items.Where(c => c.IsWarLogPublic == true))
+            foreach (var clan in _clans.Where(c => c.IsWarLogPublic == true))
             {
                 taskList.Add(_coc.Clans.GetClanWarLogAsync(clan.Tag));
             }
@@ -125,7 +125,7 @@ namespace ClashOfClans.Tests
             // Assert
             Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
 
-            foreach (var warLog in await Task.WhenAll(taskList))
+            foreach (ClanWarLog warLog in await Task.WhenAll(taskList))
             {
                 Assert.IsNotNull(warLog);
                 Trace.WriteLine(warLog.Dump());
@@ -137,7 +137,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var taskList = new List<Task<ClanWar>>();
-            var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+            var clanTags = _clans.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
 
             foreach (var clanTag in ClanTags)
             {
@@ -167,7 +167,7 @@ namespace ClashOfClans.Tests
         {
             // Arrange
             var taskList = new List<Task<ClanWarLeagueGroup>>();
-            var clanTags = _clans.Items.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+            var clanTags = _clans.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
             clanTags.AddRange(ClanTags);
 
             // Act

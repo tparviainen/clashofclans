@@ -1,4 +1,5 @@
-﻿using ClashOfClans.Search;
+﻿using ClashOfClans.Models;
+using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace ClashOfClans.Tests
             var locations = _coc.Locations;
 
             // Act
-            var locationList = await locations.GetLocationsAsync();
+            var locationList = (LocationList)await locations.GetLocationsAsync();
 
             // Assert
             Assert.IsNotNull(locationList);
@@ -50,7 +51,7 @@ namespace ClashOfClans.Tests
         public async Task GetLocationInformation()
         {
             // Arrange
-            var locationId = GetRandom(_locations.Items).Id;
+            var locationId = GetRandom(_locations).Id;
 
             // Act
             var location = await _coc.Locations.GetLocationAsync(locationId);
@@ -63,72 +64,72 @@ namespace ClashOfClans.Tests
         public async Task GetClanRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var clanRankingList = await _coc.Locations.GetClanRankingAsync(location.Id, query);
+            var clanRankingList = (ClanRankingList)await _coc.Locations.GetClanRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Items.Count, $"Id {location.Id}");
+            Assert.AreEqual(ItemLimit, clanRankingList.Count, $"Id {location.Id}");
         }
 
         [TestMethod]
         public async Task GetPlayerRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var playerRankingList = await _coc.Locations.GetPlayerRankingAsync(location.Id, query);
+            var playerRankingList = (PlayerRankingList)await _coc.Locations.GetPlayerRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerRankingList);
-            Assert.IsTrue(playerRankingList.Items.Count <= ItemLimit, $"Id {location.Id}");
+            Assert.IsTrue(playerRankingList.Count <= ItemLimit, $"Id {location.Id}");
         }
 
         [TestMethod]
         public async Task GetClanVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var clanRankingList = await _coc.Locations.GetClanVersusRankingAsync(location.Id, query);
+            var clanRankingList = (ClanVersusRankingList)await _coc.Locations.GetClanVersusRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Items.Count, $"Id {location.Id}");
+            Assert.AreEqual(ItemLimit, clanRankingList.Count, $"Id {location.Id}");
         }
 
         [TestMethod]
         public async Task GetPlayerVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations.Items, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry == true);
             var query = new Query
             {
                 Limit = ItemLimit
             };
 
             // Act
-            var playerVersusRankingList = await _coc.Locations.GetPlayerVersusRankingAsync(location.Id, query);
+            var playerVersusRankingList = (PlayerVersusRankingList)await _coc.Locations.GetPlayerVersusRankingAsync(location.Id, query);
 
             // Assert
             Assert.IsNotNull(playerVersusRankingList);
-            Assert.IsTrue(playerVersusRankingList.Items.Count <= ItemLimit, $"Id {location.Id}");
+            Assert.IsTrue(playerVersusRankingList.Count <= ItemLimit, $"Id {location.Id}");
         }
     }
 }

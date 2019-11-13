@@ -16,7 +16,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan(s) that match the query criteria</returns>
-        Task<ClanList> SearchClansAsync(QueryClans query);
+        Task<QueryResult<ClanList>> SearchClansAsync(QueryClans query);
 
         /// <summary>
         /// Get clan information
@@ -35,7 +35,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>List of clan members</returns>
-        Task<ClanMemberList> GetClanMembersAsync(string clanTag, Query query = null);
+        Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null);
 
         /// <summary>
         /// Retrieve clan's clan war log
@@ -45,7 +45,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan's clan war log</returns>
-        Task<ClanWarLog> GetClanWarLogAsync(string clanTag, Query query = null);
+        Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null);
 
         /// <summary>
         /// Retrieve information about clan's current clan war

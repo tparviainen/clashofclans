@@ -2,8 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public partial class LocationList : Queryable
+    public partial class LocationList : List<Location>
     {
-        public List<Location> Items { get; set; }
     }
 }

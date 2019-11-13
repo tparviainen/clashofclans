@@ -11,14 +11,14 @@ namespace ClashOfClans.Models
         /// <example>
         /// <code>
         /// var coc = new ClashOfClansApi(token);
-        /// var leagues = await coc.Leagues.GetAsync();
+        /// var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
         /// var league = leagues["Legend League"];
         /// </code>
         /// </example>
         /// <returns>League data</returns>
         public League this[string name]
         {
-            get => Items?.SingleOrDefault(l => l.Name == name);
+            get => this.SingleOrDefault(l => l.Name == name);
         }
     }
 }

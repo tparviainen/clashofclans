@@ -29,6 +29,7 @@ namespace ClashOfClans
             Locations = new Locations(gameData, validator);
             Leagues = new Leagues(gameData, validator);
             Players = new Players(gameData, validator);
+            Labels = new Labels(gameData, validator);
         }
 
         /// <summary>
@@ -66,5 +67,10 @@ namespace ClashOfClans
         /// Access player specific information
         /// </summary>
         public IPlayers Players { get; }
+
+        /// <summary>
+        /// Access labels
+        /// </summary>
+        public ILabels Labels { get; }
     }
 }

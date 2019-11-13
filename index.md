@@ -25,12 +25,13 @@ var playerTag = "[player tag]";
 var clanTag = "[clan tag]";
 ```
 
-## Define `using`-statements
+## Add `using`-directives
 
 
 ```C#
 using ClashOfClans;
 using ClashOfClans.Models;
+using ClashOfClans.Search;
 ```
 
 ## Get information about a single clan by clan tag
@@ -42,7 +43,7 @@ var clan = await coc.Clans.GetClanAsync(clanTag);
 Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
 ```
 
-    Clan 'Storm Nation' is a level 16 clan and has 47 members
+    Clan 'Storm Nation' is a level 17 clan and has 49 members
     
 
 ## Retrieve clan's clan war log
@@ -56,10 +57,10 @@ var clan = await coc.Clans.GetClanAsync(clanTag);
 
 if (clan.IsWarLogPublic == true)
 {
-    var warLog = await coc.Clans.GetClanWarLogAsync(clanTag);
+    var warLog = (ClanWarLog)await coc.Clans.GetClanWarLogAsync(clanTag);
 
     // Take only last 10 wars
-    foreach (var war in warLog.Items.Take(10))
+    foreach (var war in warLog.Take(10))
     {
         Console.WriteLine($"{war.EndTime.ToString("s")} = {war.Result.ToString()[0]}: {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
     }
@@ -68,16 +69,16 @@ if (clan.IsWarLogPublic == true)
 string Statistics(WarClan warClan) => $"{warClan.Name} [{warClan.Stars}\u2605/{warClan.DestructionPercentage}%]";
 ```
 
+    2019-11-11T19:23:59 = W: Storm Nation [138★/92,84%] vs dutch lotus cw [68★/38,24%]
+    2019-11-09T17:48:34 = L: Storm Nation [88★/49,56%] vs вєуσи∂ ιиfιиιту [150★/100%]
+    2019-11-07T16:03:26 = W: Storm Nation [145★/96,54%] vs Farm X3 [72★/40,46%]
+    2019-11-05T14:25:21 = L: Storm Nation [95★/51,84%] vs MALAYA ALL FARM [150★/100%]
     2019-11-01T18:51:49 = L: Storm Nation [92★/52,2%] vs War Farmers [135★/91,3%]
     2019-10-30T17:05:43 = L: Storm Nation [100★/56,4%] vs MALAYA ALL FARM [150★/100%]
     2019-10-28T15:33:35 = W: Storm Nation [150★/100%] vs "Millenium" [100★/60,32%]
     2019-10-26T14:06:57 = L: Storm Nation [88★/65,4%] vs Sylhet Royals [137★/92,62%]
     2019-10-24T10:12:43 = W: Storm Nation [141★/93,82%] vs 12th man clan [101★/57,16%]
     2019-10-22T04:37:00 = L: Storm Nation [37★/26,88%] vs USA fun [150★/100%]
-    2019-10-20T02:39:37 = W: Storm Nation [139★/92,7%] vs Melbourne 1.1 [85★/47,22%]
-    2019-10-18T00:28:52 = W: Storm Nation [131★/87,28%] vs Farming PEK's [71★/41,12%]
-    2019-10-15T20:55:44 = L: Storm Nation [91★/50,84%] vs kelate sohorr [126★/84%]
-    2019-10-13T19:23:48 = L: Storm Nation [90★/51,3%] vs War Snipers 2.4 [150★/100%]
     
 
 ## Get information about a single player by player tag
@@ -96,8 +97,8 @@ if (player.Clan != null)
 }
 ```
 
-    '--[t0m1]--' has 4510 🏆 and 1981 war ⭐
-    '--[t0m1]--' is a member of 'Storm Nation' and has a donation ratio 284/40=7,10
+    '--[t0m1]--' has 4441 🏆 and 2016 war ⭐
+    '--[t0m1]--' is a member of 'Storm Nation' and has a donation ratio 657/319=2,06
     
 
 ## List leagues
@@ -105,11 +106,11 @@ if (player.Clan != null)
 
 ```C#
 var coc = new ClashOfClansApi(token);
-var leagues = await coc.Leagues.GetLeaguesAsync();
+var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
 
-Console.WriteLine($"Total amount of leagues: {leagues.Items.Count}");
+Console.WriteLine($"Total amount of leagues: {leagues.Count}");
 
-foreach (var league in leagues.Items)
+foreach (var league in leagues)
 {
     Console.WriteLine($"Id: {league.Id}, Name: {league.Name}");
 }
@@ -146,11 +147,11 @@ foreach (var league in leagues.Items)
 
 ```C#
 var coc = new ClashOfClansApi(token);
-var locations = await coc.Locations.GetLocationsAsync();
+var locations = (LocationList)await coc.Locations.GetLocationsAsync();
 
-Console.WriteLine($"Total amount of locations: {locations.Items.Count}");
+Console.WriteLine($"Total amount of locations: {locations.Count}");
 
-foreach (var location in locations.Items.Where(l => l.Name.StartsWith("E")))
+foreach (var location in locations.Where(l => l.Name.StartsWith("E")))
 {
     Console.Write($"Id: {location.Id}, Name: {location.Name}, IsCountry: {location.IsCountry}");
     if (location.IsCountry == true)

@@ -2,8 +2,7 @@
 
 namespace ClashOfClans.Models
 {
-    public partial class LeagueList : Queryable
+    public partial class LeagueList : List<League>
     {
-        public List<League> Items { get; set; }
     }
 }
