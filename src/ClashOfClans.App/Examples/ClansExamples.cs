@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.App.Examples
@@ -30,9 +31,9 @@ namespace ClashOfClans.App.Examples
             };
 
             var coc = new ClashOfClansApi(token);
-            var clans = await coc.Clans.SearchClansAsync(query);
+            var clans = (ClanList)await coc.Clans.SearchClansAsync(query);
 
-            foreach (var clan in clans.Items)
+            foreach (var clan in clans)
             {
                 Console.WriteLine($"{clan.Tag}/{clan.Name} has {clan.Members} members and is level {clan.ClanLevel} clan");
             }
@@ -54,9 +55,9 @@ namespace ClashOfClans.App.Examples
         public async Task ListClanMembers()
         {
             var coc = new ClashOfClansApi(token);
-            var clanMembers = await coc.Clans.GetClanMembersAsync(clanTag);
+            var clanMembers = (ClanMemberList)await coc.Clans.GetClanMembersAsync(clanTag);
 
-            foreach (var member in clanMembers.Items)
+            foreach (var member in clanMembers)
             {
                 Console.WriteLine($"{member.ClanRank}. {member.Name}, {member.Trophies} \uD83C\uDFC6, {member.League.Name}");
             }
@@ -74,13 +75,26 @@ namespace ClashOfClans.App.Examples
             {
                 var warLog = await coc.Clans.GetClanWarLogAsync(clanTag);
 
-                foreach (var war in warLog.Items)
+                foreach (var war in warLog.Items.Where(w => w.Result != null))
                 {
                     Console.WriteLine($"{war.Result.ToString()[0]}: {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
                 }
             }
 
             string Statistics(WarClan warClan) => $"{warClan.Name} [{warClan.Stars}\u2605/{warClan.DestructionPercentage}%]";
+        }
+
+        /// <summary>
+        /// Retrieve information about clan's current clan war
+        /// </summary>
+        public async Task RetrieveInformationAboutClansCurrentClanWar()
+        {
+            var coc = new ClashOfClansApi(token);
+            var war = await coc.Clans.GetCurrentWarAsync(clanTag);
+
+            Console.WriteLine($"State: {war.State}, {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
+
+            string Statistics(WarClan warClan) => $"{warClan.Name} {warClan.Attacks}/{warClan.Stars}\u2605/{warClan.DestructionPercentage:0.00}%";
         }
     }
 }
