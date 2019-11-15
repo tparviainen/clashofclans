@@ -1,4 +1,5 @@
 ﻿using ClashOfClans.Models;
+using ClashOfClans.Search;
 using System;
 using System.Threading.Tasks;
 
@@ -57,6 +58,28 @@ namespace ClashOfClans.App.Examples
             foreach (var clan in clanRankings.Items)
             {
                 Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}");
+            }
+        }
+
+        /// <summary>
+        /// Get player rankings for a specific location
+        /// </summary>
+        public async Task GetPlayerRankingsForASpecificLocation()
+        {
+            var coc = new ClashOfClansApi(token);
+            var locations = (LocationList)await coc.Locations.GetLocationsAsync();
+            var location = locations["Finland"];
+            var query = new Query
+            {
+                Limit = 10
+            };
+
+            var playerRankingList = (PlayerRankingList)await coc.Locations.GetPlayerRankingAsync(location.Id, query);
+
+            Console.WriteLine($"{location.Name} top {query.Limit} @ {DateTime.Now}");
+            foreach (var player in playerRankingList)
+            {
+                Console.WriteLine($"Rank {player.Rank}, {player.Trophies} \uD83C\uDFC6, player {player.Name}");
             }
         }
     }
