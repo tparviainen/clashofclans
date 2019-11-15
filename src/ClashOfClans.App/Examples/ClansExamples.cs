@@ -90,9 +90,9 @@ namespace ClashOfClans.App.Examples
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
             var coc = new ClashOfClansApi(token);
-            var war = await coc.Clans.GetCurrentWarAsync(clanTag);
+            var clanWar = await coc.Clans.GetCurrentWarAsync(clanTag);
 
-            Console.WriteLine($"State: {war.State}, {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
+            Console.WriteLine($"State: {clanWar.State}, {Statistics(clanWar.Clan)} vs {Statistics(clanWar.Opponent)}");
 
             string Statistics(WarClan warClan) => $"{warClan.Name} {warClan.Attacks}/{warClan.Stars}\u2605/{warClan.DestructionPercentage:0.00}%";
         }

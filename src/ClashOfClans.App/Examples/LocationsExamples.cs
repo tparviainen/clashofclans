@@ -20,11 +20,11 @@ namespace ClashOfClans.App.Examples
         public async Task ListLocations()
         {
             var coc = new ClashOfClansApi(token);
-            var locations = await coc.Locations.GetLocationsAsync();
+            var locations = (LocationList)await coc.Locations.GetLocationsAsync();
 
-            Console.WriteLine($"Total amount of locations: {locations.Items.Count}");
+            Console.WriteLine($"Total amount of locations: {locations.Count}");
 
-            foreach (var location in locations.Items)
+            foreach (var location in locations)
             {
                 Console.WriteLine($"Id: {location.Id}, Name: {location.Name}, IsCountry: {location.IsCountry}, CountryCode: {location.CountryCode}");
             }
@@ -53,9 +53,9 @@ namespace ClashOfClans.App.Examples
 
             Console.WriteLine($"Clan rankings for {location.Name}");
 
-            var clanRankings = await coc.Locations.GetClanRankingAsync(location.Id);
+            var clanRankings = (ClanRankingList)await coc.Locations.GetClanRankingAsync(location.Id);
 
-            foreach (var clan in clanRankings.Items)
+            foreach (var clan in clanRankings)
             {
                 Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}");
             }
@@ -74,10 +74,10 @@ namespace ClashOfClans.App.Examples
                 Limit = 10
             };
 
-            var playerRankingList = (PlayerRankingList)await coc.Locations.GetPlayerRankingAsync(location.Id, query);
+            var playerRankings = (PlayerRankingList)await coc.Locations.GetPlayerRankingAsync(location.Id, query);
 
             Console.WriteLine($"{location.Name} top {query.Limit} @ {DateTime.Now}");
-            foreach (var player in playerRankingList)
+            foreach (var player in playerRankings)
             {
                 Console.WriteLine($"Rank {player.Rank}, {player.Trophies} \uD83C\uDFC6, player {player.Name}");
             }
@@ -93,9 +93,9 @@ namespace ClashOfClans.App.Examples
             var location = locations["Finland"];
 
             Console.WriteLine($"Clan versus rankings for {location.Name}");
-            var clanVersusRankingList = (ClanVersusRankingList)await coc.Locations.GetClanVersusRankingAsync(location.Id);
+            var clanVersusRankings = (ClanVersusRankingList)await coc.Locations.GetClanVersusRankingAsync(location.Id);
 
-            foreach (var clan in clanVersusRankingList)
+            foreach (var clan in clanVersusRankings)
             {
                 Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}, {clan.ClanVersusPoints} \uD83C\uDFC6");
             }
@@ -110,9 +110,9 @@ namespace ClashOfClans.App.Examples
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
-            var playerVersusRankingList = (PlayerVersusRankingList)await coc.Locations.GetPlayerVersusRankingAsync(location.Id);
+            var playerVersusRankings = (PlayerVersusRankingList)await coc.Locations.GetPlayerVersusRankingAsync(location.Id);
 
-            foreach (var player in playerVersusRankingList)
+            foreach (var player in playerVersusRankings)
             {
                 Console.WriteLine($"Rank {player.Rank}, {player.VersusTrophies} \uD83C\uDFC6, player {player.Name}");
             }
