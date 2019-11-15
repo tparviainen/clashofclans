@@ -82,5 +82,23 @@ namespace ClashOfClans.App.Examples
                 Console.WriteLine($"Rank {player.Rank}, {player.Trophies} \uD83C\uDFC6, player {player.Name}");
             }
         }
+
+        /// <summary>
+        /// Get clan versus rankings for a specific location
+        /// </summary>
+        public async Task GetClanVersusRankingsForASpecificLocation()
+        {
+            var coc = new ClashOfClansApi(token);
+            var locations = (LocationList)await coc.Locations.GetLocationsAsync();
+            var location = locations["Finland"];
+
+            Console.WriteLine($"Clan versus rankings for {location.Name}");
+            var clanVersusRankingList = (ClanVersusRankingList)await coc.Locations.GetClanVersusRankingAsync(location.Id);
+
+            foreach (var clan in clanVersusRankingList)
+            {
+                Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}, {clan.ClanVersusPoints} \uD83C\uDFC6");
+            }
+        }
     }
 }
