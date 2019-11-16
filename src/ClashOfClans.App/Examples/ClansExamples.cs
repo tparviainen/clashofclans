@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -95,6 +96,38 @@ namespace ClashOfClans.App.Examples
             Console.WriteLine($"State: {clanWar.State}, {Statistics(clanWar.Clan)} vs {Statistics(clanWar.Opponent)}");
 
             string Statistics(WarClan warClan) => $"{warClan.Name} {warClan.Attacks}/{warClan.Stars}\u2605/{warClan.DestructionPercentage:0.00}%";
+        }
+
+        /// <summary>
+        /// Retrieve information about clan's current clan war league (CWL) group and wars
+        /// </summary>
+        public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroup()
+        {
+            var coc = new ClashOfClansApi(token);
+            var clanWarLeagueGroup = await coc.Clans.GetClanWarLeagueGroupAsync(clanTag);
+
+            Console.WriteLine($"Season: {clanWarLeagueGroup.Season}, State: {clanWarLeagueGroup.State}");
+
+            // Retrieve information about individual clan war league (CWL) war
+            for (int i = 0; i < clanWarLeagueGroup.Rounds.Count; i++)
+            {
+                var round = clanWarLeagueGroup.Rounds[i];
+                Console.WriteLine($"Round {i + 1}.");
+
+                var clanWarLeagueRequests = new List<Task<ClanWarLeagueWar>>();
+                foreach (var warTag in round.WarTags.Where(wt => wt != "#0"))
+                {
+                    clanWarLeagueRequests.Add(coc.Clans.GetClanWarLeagueWarAsync(warTag));
+                }
+
+                var clanWarLeagueWars = await Task.WhenAll(clanWarLeagueRequests);
+                foreach (var clanWarLeagueWar in clanWarLeagueWars)
+                {
+                    Console.WriteLine($" {clanWarLeagueWar.StartTime.ToLocalTime()}: {Statistics(clanWarLeagueWar.Clan)} vs {Statistics(clanWarLeagueWar.Opponent)}");
+                }
+            }
+
+            string Statistics(ClanWarLeagueWarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage:0.00}%/{clan.Attacks}]";
         }
     }
 }
