@@ -4,6 +4,13 @@ namespace ClashOfClans.Search
 {
     /// <summary>
     /// A class representing a query result.
+    ///
+    /// API calls that support filtering the responses in the form of <see cref="Query"/> parameter
+    /// pack the response to <see cref="QueryResult{T}"/>.
+    ///
+    /// If the <see cref="Paging"/> from the response is not needed the <see cref="QueryResult{T}"/>
+    /// can be casted to actual response model type T via explicit cast operator.
+    ///
     /// </summary>
     /// <typeparam name="T">The type of the result items</typeparam>
     public class QueryResult<T> where T : class
