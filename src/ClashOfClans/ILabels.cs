@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
+    /// <summary>
+    /// Access clan and player labels
+    /// </summary>
     public interface ILabels
     {
         /// <summary>
