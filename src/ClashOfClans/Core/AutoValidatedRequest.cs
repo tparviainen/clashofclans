@@ -123,7 +123,7 @@ namespace ClashOfClans.Core
 
         public string Uri
         {
-            get => _uri;
+            get => $"{_uri}{Query}";
 
             set
             {

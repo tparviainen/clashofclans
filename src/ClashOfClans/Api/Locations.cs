@@ -19,7 +19,7 @@ namespace ClashOfClans.Api
             var request = new AutoValidatedRequest
             {
                 Query = query,
-                Uri = $"/locations{query}"
+                Uri = "/locations"
             };
 
             return await _gameData.RequestAsync<QueryResult<LocationList>>(request);
@@ -42,7 +42,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/clans{query}"
+                Uri = $"/locations/{locationId}/rankings/clans"
             };
 
             return await _gameData.RequestAsync<QueryResult<ClanRankingList>>(request);
@@ -54,7 +54,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/players{query}"
+                Uri = $"/locations/{locationId}/rankings/players"
             };
 
             return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
@@ -66,7 +66,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/clans-versus{query}"
+                Uri = $"/locations/{locationId}/rankings/clans-versus"
             };
 
             return await _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(request);
@@ -78,7 +78,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/players-versus{query}"
+                Uri = $"/locations/{locationId}/rankings/players-versus"
             };
 
             return await _gameData.RequestAsync<QueryResult<PlayerVersusRankingList>>(request);

@@ -19,7 +19,7 @@ namespace ClashOfClans.Api
             var request = new AutoValidatedRequest
             {
                 QueryClans = query,
-                Uri = $"/clans{query}"
+                Uri = "/clans"
             };
 
             return await _gameData.RequestAsync<QueryResult<ClanList>>(request);
@@ -42,7 +42,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 ClanTag = clanTag,
-                Uri = $"/clans/{clanTag}/members{query}"
+                Uri = $"/clans/{clanTag}/members"
             };
 
             return await _gameData.RequestAsync<QueryResult<ClanMemberList>>(request);
@@ -54,7 +54,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 ClanTag = clanTag,
-                Uri = $"/clans/{clanTag}/warlog{query}"
+                Uri = $"/clans/{clanTag}/warlog"
             };
 
             return await _gameData.RequestAsync<QueryResult<ClanWarLog>>(request);

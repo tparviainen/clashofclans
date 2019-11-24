@@ -19,7 +19,7 @@ namespace ClashOfClans.Api
             var request = new AutoValidatedRequest
             {
                 Query = query,
-                Uri = $"/leagues{query}"
+                Uri = "/leagues"
             };
 
             return await _gameData.RequestAsync<QueryResult<LeagueList>>(request);
@@ -42,7 +42,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 LeagueId = leagueId,
-                Uri = $"/leagues/{leagueId}/seasons{query}"
+                Uri = $"/leagues/{leagueId}/seasons"
             };
 
             return await _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(request);
@@ -55,7 +55,7 @@ namespace ClashOfClans.Api
                 Query = query,
                 LeagueId = leagueId,
                 SeasonId = seasonId,
-                Uri = $"/leagues/{leagueId}/seasons/{seasonId}{query}"
+                Uri = $"/leagues/{leagueId}/seasons/{seasonId}"
             };
 
             return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
