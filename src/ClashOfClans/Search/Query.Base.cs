@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Web;
 
 namespace ClashOfClans.Search
 {
@@ -27,7 +28,7 @@ namespace ClashOfClans.Search
                         qValue = $"{char.ToLowerInvariant(qValue[0])}{qValue.Substring(1)}";
                     }
 
-                    sb.Append($"&{property.Name.ToLower()}={qValue}");
+                    sb.Append($"&{property.Name.ToLower()}={HttpUtility.UrlEncode(qValue)}");
                 }
             }
 
