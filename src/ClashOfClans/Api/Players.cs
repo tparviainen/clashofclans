@@ -1,6 +1,5 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
-using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
@@ -8,22 +7,21 @@ namespace ClashOfClans.Api
     internal class Players : IPlayers
     {
         private readonly IGameData _gameData;
-        private readonly Validator _validator;
 
-        public Players(IGameData gameData, Validator validator)
+        public Players(IGameData gameData)
         {
             _gameData = gameData;
-            _validator = validator;
         }
 
-        // GET /players/{playerTag}
         public async Task<Player> GetPlayerAsync(string playerTag)
         {
-            _validator.ValidatePlayerTag(playerTag);
+            var request = new AutoValidatedRequest
+            {
+                PlayerTag = playerTag,
+                Uri = $"/players/{playerTag}"
+            };
 
-            var uri = $"players/{playerTag}";
-
-            return await _gameData.RequestAsync<Player>(uri);
+            return await _gameData.RequestAsync<Player>(request);
         }
     }
 }

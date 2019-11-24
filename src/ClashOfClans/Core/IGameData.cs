@@ -7,6 +7,6 @@ namespace ClashOfClans.Core
     /// </summary>
     internal interface IGameData
     {
-        Task<T> RequestAsync<T>(string uri) where T : class;
+        Task<T> RequestAsync<T>(AutoValidatedRequest request) where T : class;
     }
 }

@@ -20,7 +20,7 @@ namespace ClashOfClans.Core
         /// <summary>
         /// Logging method for diagnostics messages
         /// </summary>
-        private void Log(Guid correlationId, string message) => _options.Logger?.Log($"{correlationId}: {message}");
+        private void Log(AutoValidatedRequest request, string message) => _options.Logger?.Log($"{request.CorrelationId}: {message}");
 
         public GameData(ClashOfClansOptionsInternal options)
         {
@@ -29,29 +29,27 @@ namespace ClashOfClans.Core
             _serializer = new MessageSerializer();
         }
 
-        public async Task<T> RequestAsync<T>(string uri) where T : class
+        public async Task<T> RequestAsync<T>(AutoValidatedRequest request) where T : class
         {
-            // Hash character '#' needs to be URL-encoded properly to work in URL
-            var data = await GetDataAsync(uri.Replace("#", "%23"));
+            Log(request, $"Uri: /{request.Uri}");
+
+            var data = await GetDataAsync(request);
 
             return _serializer.Deserialize<T>(data);
         }
 
-        private async Task<string> GetDataAsync(string requestUri)
+        private async Task<string> GetDataAsync(AutoValidatedRequest request)
         {
-            var correlationId = Guid.NewGuid();
-            Log(correlationId, $"Uri: /{requestUri}");
-
             var watch = Stopwatch.StartNew();
             await _throttleRequests.WaitAsync();
-            Log(correlationId, $"Throttling: {watch.ElapsedMilliseconds} ms");
+            Log(request, $"Throttling: {watch.ElapsedMilliseconds} ms");
 
             watch.Restart();
-            var response = await _endpoint.GetMessageAsync(requestUri);
-            Log(correlationId, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
+            var response = await _endpoint.GetMessageAsync(request.Uri);
+            Log(request, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
             var content = await response.Content.ReadAsStringAsync();
-            Log(correlationId, $"Content: {content}");
+            Log(request, $"Content: {content}");
 
             if (response.IsSuccessStatusCode)
             {
