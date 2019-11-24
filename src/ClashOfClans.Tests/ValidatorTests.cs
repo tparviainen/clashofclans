@@ -1,5 +1,5 @@
-﻿using ClashOfClans.Search;
-using ClashOfClans.Validation;
+﻿using ClashOfClans.Core;
+using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
@@ -13,12 +13,12 @@ namespace ClashOfClans.Tests
         public void ClanTagMustNotBeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateClanTag(null);
+                request.ClanTag = null;
 
                 // Assert
                 Assert.Fail();
@@ -33,14 +33,14 @@ namespace ClashOfClans.Tests
         public void ClanTagsStartWithHashCharacter()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             foreach (var clanTag in ClanTags)
             {
                 try
                 {
                     // Act
-                    validator.ValidateClanTag(clanTag.Substring(1));
+                    request.ClanTag = clanTag.Substring(1);
 
                     // Assert
                     Assert.Fail();
@@ -56,12 +56,12 @@ namespace ClashOfClans.Tests
         public void LeagueIdentifierMustNotBeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateLeagueId(null);
+                request.LeagueId = null;
 
                 // Assert
                 Assert.Fail();
@@ -76,12 +76,12 @@ namespace ClashOfClans.Tests
         public void LocationIdentifierMustNotNeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateLocationId(null);
+                request.LocationId = null;
 
                 // Assert
                 Assert.Fail();
@@ -96,12 +96,12 @@ namespace ClashOfClans.Tests
         public void PlayerTagMustNotBeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidatePlayerTag("");
+                request.PlayerTag = "";
 
                 // Assert
                 Assert.Fail();
@@ -116,14 +116,14 @@ namespace ClashOfClans.Tests
         public void PlayerTagsStartWithHashCharacter()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             foreach (var playerTag in PlayerTags)
             {
                 try
                 {
                     // Act
-                    validator.ValidatePlayerTag(playerTag.Substring(1));
+                    request.PlayerTag = playerTag.Substring(1);
 
                     // Assert
                     Assert.Fail();
@@ -139,12 +139,12 @@ namespace ClashOfClans.Tests
         public void QueryMustNotBeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateQueryClans(null);
+                request.QueryClans = null;
 
                 // Assert
                 Assert.Fail();
@@ -159,7 +159,7 @@ namespace ClashOfClans.Tests
         public void NameNeedsToBeAtLeastThreeCharactersLong()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
             var query = new QueryClans
             {
                 Name = "ab"
@@ -168,7 +168,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateQueryClans(query);
+                request.QueryClans = query;
 
                 // Assert
                 Assert.Fail();
@@ -183,7 +183,7 @@ namespace ClashOfClans.Tests
         public void ThreeCharactersLongNameIsValid()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
             var query = new QueryClans
             {
                 Name = "abc"
@@ -192,7 +192,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateQueryClans(query);
+                request.QueryClans = query;
             }
             catch (Exception)
             {
@@ -202,10 +202,35 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
+        public void ValidNameButInvalidPagingCombination()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+            var query = new QueryClans
+            {
+                Name = "Clan #1",
+                After = "after",
+                Before = "before"
+            };
+
+            try
+            {
+                request.QueryClans = query;
+
+                // Assert
+                Assert.Fail();
+            }
+            catch (ArgumentException ex)
+            {
+                Trace.WriteLine(ex);
+            }
+        }
+
+        [TestMethod]
         public void OnlyAfterOrBeforeCanBeSpecifiedForAQueryNotBoth()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
             var query = new Query
             {
                 After = "after",
@@ -215,7 +240,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateQuery(query);
+                request.Query = query;
 
                 // Assert
                 Assert.Fail();
@@ -230,7 +255,7 @@ namespace ClashOfClans.Tests
         public void QueryWithAfterSpecifiedSucceeds()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
             var query = new Query
             {
                 After = "after"
@@ -239,7 +264,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateQuery(query);
+                request.Query = query;
             }
             catch (Exception)
             {
@@ -252,7 +277,7 @@ namespace ClashOfClans.Tests
         public void QueryWithBeforeSpecifiedSucceeds()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
             var query = new Query
             {
                 Before = "Before"
@@ -261,7 +286,7 @@ namespace ClashOfClans.Tests
             try
             {
                 // Act
-                validator.ValidateQuery(query);
+                request.Query = query;
             }
             catch (Exception)
             {
@@ -274,32 +299,12 @@ namespace ClashOfClans.Tests
         public void SeasonIdentifierMustNotBeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateSeasonId(null);
-
-                // Assert
-                Assert.Fail();
-            }
-            catch (ArgumentException ex)
-            {
-                Trace.WriteLine(ex);
-            }
-        }
-
-        [TestMethod]
-        public void TokenMustNotBeEmpty()
-        {
-            // Arrange
-            var validator = new Validator();
-
-            try
-            {
-                // Act
-                validator.ValidateToken(null);
+                request.SeasonId = null;
 
                 // Assert
                 Assert.Fail();
@@ -314,12 +319,12 @@ namespace ClashOfClans.Tests
         public void WarTagMustNotBeEmpty()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateWarTag(null);
+                request.WarTag = null;
 
                 // Assert
                 Assert.Fail();
@@ -334,12 +339,12 @@ namespace ClashOfClans.Tests
         public void WarTagIsNotValid()
         {
             // Arrange
-            var validator = new Validator();
+            var request = new AutoValidatedRequest();
 
             try
             {
                 // Act
-                validator.ValidateWarTag(Constants.InvalidWarTag);
+                request.WarTag = Constants.InvalidWarTag;
 
                 // Assert
                 Assert.Fail();
@@ -348,6 +353,21 @@ namespace ClashOfClans.Tests
             {
                 Trace.WriteLine(ex);
             }
+        }
+
+        [TestMethod]
+        public void RequestsHaveUniqueCorrelationId()
+        {
+            // Arrange
+            var req1 = new AutoValidatedRequest();
+            var req2 = new AutoValidatedRequest();
+
+            // Act
+
+            // Assert
+            Assert.IsNotNull(req1.CorrelationId);
+            Assert.IsNotNull(req2.CorrelationId);
+            Assert.AreNotEqual(req1.CorrelationId, req2.CorrelationId);
         }
     }
 }

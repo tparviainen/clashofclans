@@ -1,7 +1,6 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
-using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
@@ -9,80 +8,80 @@ namespace ClashOfClans.Api
     internal class Locations : ILocations
     {
         private readonly IGameData _gameData;
-        private readonly Validator _validator;
 
-        public Locations(IGameData gameData, Validator validator)
+        public Locations(IGameData gameData)
         {
             _gameData = gameData;
-            _validator = validator;
         }
 
-        // GET /locations
         public async Task<QueryResult<LocationList>> GetLocationsAsync(Query query = null)
         {
-            _validator.ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                Uri = $"/locations{query}"
+            };
 
-            var uri = $"locations{query}";
-
-            return await _gameData.RequestAsync<QueryResult<LocationList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<LocationList>>(request);
         }
 
-        // GET /locations/{locationId}
         public async Task<Location> GetLocationAsync(int? locationId)
         {
-            _validator.ValidateLocationId(locationId);
+            var request = new AutoValidatedRequest
+            {
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}"
+            };
 
-            var uri = $"locations/{locationId}";
-
-            return await _gameData.RequestAsync<Location>(uri);
+            return await _gameData.RequestAsync<Location>(request);
         }
 
-        // GET /locations/{locationId}/rankings/clans
         public async Task<QueryResult<ClanRankingList>> GetClanRankingAsync(int? locationId, Query query = null)
         {
-            _validator
-                .ValidateLocationId(locationId)
-                .ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/clans{query}"
+            };
 
-            var uri = $"locations/{locationId}/rankings/clans{query}";
-
-            return await _gameData.RequestAsync<QueryResult<ClanRankingList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<ClanRankingList>>(request);
         }
 
-        // GET /locations/{locationId}/rankings/players
         public async Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query query = null)
         {
-            _validator
-                .ValidateLocationId(locationId)
-                .ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/players{query}"
+            };
 
-            var uri = $"locations/{locationId}/rankings/players{query}";
-
-            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
 
-        // GET /locations/{locationId}/rankings/clans-versus
         public async Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query query = null)
         {
-            _validator
-                .ValidateLocationId(locationId)
-                .ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/clans-versus{query}"
+            };
 
-            var uri = $"locations/{locationId}/rankings/clans-versus{query}";
-
-            return await _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(request);
         }
 
-        // GET /locations/{locationId}/rankings/players-versus
         public async Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query query = null)
         {
-            _validator
-                .ValidateLocationId(locationId)
-                .ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/players-versus{query}"
+            };
 
-            var uri = $"locations/{locationId}/rankings/players-versus{query}";
-
-            return await _gameData.RequestAsync<QueryResult<PlayerVersusRankingList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<PlayerVersusRankingList>>(request);
         }
     }
 }

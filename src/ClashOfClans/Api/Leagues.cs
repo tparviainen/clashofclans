@@ -1,7 +1,6 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
-using ClashOfClans.Validation;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Api
@@ -9,57 +8,57 @@ namespace ClashOfClans.Api
     internal class Leagues : ILeagues
     {
         private readonly IGameData _gameData;
-        private readonly Validator _validator;
 
-        public Leagues(IGameData gameData, Validator validator)
+        public Leagues(IGameData gameData)
         {
             _gameData = gameData;
-            _validator = validator;
         }
 
-        // GET /leagues
         public async Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null)
         {
-            _validator.ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                Uri = $"/leagues{query}"
+            };
 
-            var uri = $"leagues{query}";
-
-            return await _gameData.RequestAsync<QueryResult<LeagueList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<LeagueList>>(request);
         }
 
-        // GET /leagues/{leagueId}
         public async Task<League> GetLeagueAsync(int? leagueId)
         {
-            _validator.ValidateLeagueId(leagueId);
+            var request = new AutoValidatedRequest
+            {
+                LeagueId = leagueId,
+                Uri = $"/leagues/{leagueId}"
+            };
 
-            var uri = $"leagues/{leagueId}";
-
-            return await _gameData.RequestAsync<League>(uri);
+            return await _gameData.RequestAsync<League>(request);
         }
 
-        // GET /leagues/{leagueId}/seasons
         public async Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
         {
-            _validator
-                .ValidateLeagueId(leagueId)
-                .ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LeagueId = leagueId,
+                Uri = $"/leagues/{leagueId}/seasons{query}"
+            };
 
-            var uri = $"leagues/{leagueId}/seasons{query}";
-
-            return await _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(request);
         }
 
-        // GET /leagues/{leagueId}/seasons/{seasonId}
         public async Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
         {
-            _validator
-                .ValidateLeagueId(leagueId)
-                .ValidateSeasonId(seasonId)
-                .ValidateQuery(query);
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LeagueId = leagueId,
+                SeasonId = seasonId,
+                Uri = $"/leagues/{leagueId}/seasons/{seasonId}{query}"
+            };
 
-            var uri = $"leagues/{leagueId}/seasons/{seasonId}{query}";
-
-            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(uri);
+            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
     }
 }
