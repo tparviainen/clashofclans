@@ -113,6 +113,13 @@ namespace ClashOfClans.Core
                     throw new ArgumentException($"Name needs to be at least {Constants.MinQueryNameLength} characters long");
                 }
 
+                if (value.LabelIds != null)
+                {
+                    // TODO
+                    // - Comma separatered list of label IDs to use for filtering results.
+                    // - 'Invalid format for parameter LabelIds'
+                }
+
                 Query = value;
             }
         }
