@@ -1,5 +1,5 @@
 # https://docs.microsoft.com/en-us/nuget/concepts/package-versioning : Major.Minor.Patch[-Suffix]
-$packageVersion = "6.0.1"
+$packageVersion = "6.0.3"
 $project = "..\src\ClashOfClans\ClashOfClans.csproj"
 $configuration = "Release"
 
