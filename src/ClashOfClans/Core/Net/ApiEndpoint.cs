@@ -12,7 +12,7 @@ namespace ClashOfClans.Core.Net
     internal class ApiEndpoint
     {
         // HttpClient is intended to be instantiated once and re-used throughout the life of an application
-        private static readonly HttpClient _client = new HttpClient();
+        private readonly HttpClient _client = new HttpClient();
 
         public ApiEndpoint(string token)
         {
