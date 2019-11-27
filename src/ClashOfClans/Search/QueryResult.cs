@@ -6,10 +6,18 @@ namespace ClashOfClans.Search
     /// A class representing a query result.
     ///
     /// API calls that support filtering the responses in the form of <see cref="Query"/> parameter
-    /// pack the response to <see cref="QueryResult{T}"/>.
+    /// return the response in <see cref="QueryResult{T}"/>.
     ///
     /// If the <see cref="Paging"/> from the response is not needed the <see cref="QueryResult{T}"/>
     /// can be casted to actual response model type T via explicit cast operator.
+    /// <example>
+    /// <code>
+    /// var coc = new ClashOfClansApi(token);
+    /// var labels = (LabelList)await coc.Labels.GetClanLabelsAsync();
+    /// foreach (var label in labels)
+    ///     Console.WriteLine($"Id: {label.Id}, name: {label.Name}");
+    /// </code>
+    /// </example>
     ///
     /// </summary>
     /// <typeparam name="T">The type of the result items</typeparam>
