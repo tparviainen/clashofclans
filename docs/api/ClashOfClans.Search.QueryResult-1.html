@@ -75,9 +75,15 @@
   </h1>
   <div class="markdown level0 summary"><p>A class representing a query result.</p>
 <p>API calls that support filtering the responses in the form of <a class="xref" href="ClashOfClans.Search.Query.html">Query</a> parameter
-pack the response to <a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult&lt;T&gt;</a>.</p>
+return the response in <a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult&lt;T&gt;</a>.</p>
 <p>If the <a class="xref" href="ClashOfClans.Search.QueryResult-1.html#ClashOfClans_Search_QueryResult_1_Paging">Paging</a> from the response is not needed the <a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult&lt;T&gt;</a>
-can be casted to actual response model type T via explicit cast operator.</p>
+can be casted to actual response model type T via explicit cast operator.
+<example><p>
+<pre><code>var coc = new ClashOfClansApi(token);
+var labels = (LabelList)await coc.Labels.GetClanLabelsAsync();
+foreach (var label in labels)
+    Console.WriteLine($&quot;Id: {label.Id}, name: {label.Name}&quot;);</code></pre>
+</example>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -115,7 +121,7 @@ can be casted to actual response model type T via explicit cast operator.</p>
     <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Search_QueryResult_1_Items.md&amp;value=---%0Auid%3A%20ClashOfClans.Search.QueryResult%601.Items%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L18">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L26">View Source</a>
   </span>
   <a id="ClashOfClans_Search_QueryResult_1_Items_" data-uid="ClashOfClans.Search.QueryResult`1.Items*"></a>
   <h4 id="ClashOfClans_Search_QueryResult_1_Items" data-uid="ClashOfClans.Search.QueryResult`1.Items">Items</h4>
@@ -145,7 +151,7 @@ can be casted to actual response model type T via explicit cast operator.</p>
     <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Search_QueryResult_1_Paging.md&amp;value=---%0Auid%3A%20ClashOfClans.Search.QueryResult%601.Paging%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L20">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L28">View Source</a>
   </span>
   <a id="ClashOfClans_Search_QueryResult_1_Paging_" data-uid="ClashOfClans.Search.QueryResult`1.Paging*"></a>
   <h4 id="ClashOfClans_Search_QueryResult_1_Paging" data-uid="ClashOfClans.Search.QueryResult`1.Paging">Paging</h4>
@@ -177,7 +183,7 @@ can be casted to actual response model type T via explicit cast operator.</p>
     <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Search_QueryResult_1_op_Explicit_ClashOfClans_Search_QueryResult__0____0.md&amp;value=---%0Auid%3A%20ClashOfClans.Search.QueryResult%601.op_Explicit(ClashOfClans.Search.QueryResult%7B%600%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L26">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L34">View Source</a>
   </span>
   <a id="ClashOfClans_Search_QueryResult_1_op_Explicit_" data-uid="ClashOfClans.Search.QueryResult`1.op_Explicit*"></a>
   <h4 id="ClashOfClans_Search_QueryResult_1_op_Explicit_ClashOfClans_Search_QueryResult__0____0" data-uid="ClashOfClans.Search.QueryResult`1.op_Explicit(ClashOfClans.Search.QueryResult{`0})~`0">Explicit(QueryResult&lt;T&gt; to T)</h4>
@@ -232,7 +238,7 @@ is that <a class="xref" href="ClashOfClans.Search.QueryResult-1.html#ClashOfClan
                     <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Search_QueryResult_1.md&amp;value=---%0Auid%3A%20ClashOfClans.Search.QueryResult%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/Search/QueryResult.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
