@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides programmatic configuration for the Clash of Clans API
     /// </summary>
-    public class ClashOfClansOptions
+    public abstract class ClashOfClansOptions
     {
         protected ClashOfClansOptions(string token)
         {
