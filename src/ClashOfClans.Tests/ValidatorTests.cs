@@ -48,7 +48,7 @@ namespace ClashOfClans.Tests
                 catch (ArgumentException ex)
                 {
                     Trace.WriteLine(ex);
-                } 
+                }
             }
         }
 
@@ -368,6 +368,78 @@ namespace ClashOfClans.Tests
             Assert.IsNotNull(req1.CorrelationId);
             Assert.IsNotNull(req2.CorrelationId);
             Assert.AreNotEqual(req1.CorrelationId, req2.CorrelationId);
+        }
+
+        [TestMethod]
+        public void ValidLabelIdsAccepted()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+            var query = new QueryClans
+            {
+                LabelIds = "56000000"
+            };
+
+            try
+            {
+                // Act
+                request.QueryClans = query;
+            }
+            catch (Exception ex)
+            {
+                Trace.WriteLine(ex);
+
+                // Assert
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        public void CommaSeparatedListOfValidLabelIdsAccepted()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+            var query = new QueryClans
+            {
+                LabelIds = "56000000,56000001,56000002"
+            };
+
+            try
+            {
+                // Act
+                request.QueryClans = query;
+            }
+            catch (Exception ex)
+            {
+                Trace.WriteLine(ex);
+
+                // Assert
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        public void ExtraSpacesBetweenCommaSeparatedListOfValidLabelIdsThrowsException()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+            var query = new QueryClans
+            {
+                LabelIds = "56000000, 56000001, 56000002"
+            };
+
+            try
+            {
+                // Act
+                request.QueryClans = query;
+
+                // Assert
+                Assert.Fail();
+            }
+            catch (ArgumentException ex)
+            {
+                Trace.WriteLine(ex);
+            }
         }
     }
 }
