@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Search;
 using System;
+using System.Text.RegularExpressions;
 
 namespace ClashOfClans.Core
 {
@@ -78,6 +79,8 @@ namespace ClashOfClans.Core
         #endregion
 
         #region QUERY_CLANS
+        private static readonly Regex _labelIdsRegex = new Regex(@"^\d+(,\d+)*$");
+
         public QueryClans QueryClans
         {
             get => (QueryClans)_query;
@@ -94,11 +97,9 @@ namespace ClashOfClans.Core
                     throw new ArgumentException($"Name needs to be at least {Constants.MinQueryNameLength} characters long");
                 }
 
-                if (value.LabelIds != null)
+                if (value.LabelIds != null && !_labelIdsRegex.IsMatch(value.LabelIds))
                 {
-                    // TODO
-                    // - Comma separatered list of label IDs to use for filtering results.
-                    // - 'Invalid format for parameter LabelIds'
+                    throw new ArgumentException($"Invalid format for parameter {nameof(QueryClans.LabelIds)}");
                 }
 
                 Query = value;
