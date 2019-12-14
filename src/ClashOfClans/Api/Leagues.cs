@@ -14,7 +14,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public async Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null)
+        public Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -22,10 +22,10 @@ namespace ClashOfClans.Api
                 Uri = "/leagues"
             };
 
-            return await _gameData.RequestAsync<QueryResult<LeagueList>>(request);
+            return _gameData.RequestAsync<QueryResult<LeagueList>>(request);
         }
 
-        public async Task<League> GetLeagueAsync(int? leagueId)
+        public Task<League> GetLeagueAsync(int? leagueId)
         {
             var request = new AutoValidatedRequest
             {
@@ -33,10 +33,10 @@ namespace ClashOfClans.Api
                 Uri = $"/leagues/{leagueId}"
             };
 
-            return await _gameData.RequestAsync<League>(request);
+            return _gameData.RequestAsync<League>(request);
         }
 
-        public async Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
+        public Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -45,10 +45,10 @@ namespace ClashOfClans.Api
                 Uri = $"/leagues/{leagueId}/seasons"
             };
 
-            return await _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(request);
+            return _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(request);
         }
 
-        public async Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
+        public Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -58,7 +58,7 @@ namespace ClashOfClans.Api
                 Uri = $"/leagues/{leagueId}/seasons/{seasonId}"
             };
 
-            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
+            return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
     }
 }

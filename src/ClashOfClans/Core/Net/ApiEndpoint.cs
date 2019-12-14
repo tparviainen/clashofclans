@@ -27,9 +27,6 @@ namespace ClashOfClans.Core.Net
             sp.ConnectionLeaseTimeout = (int)TimeSpan.FromMinutes(1).TotalMilliseconds;
         }
 
-        public async Task<HttpResponseMessage> GetMessageAsync(string requestUri)
-        {
-            return await _client.GetAsync(requestUri);
-        }
+        public Task<HttpResponseMessage> GetMessageAsync(string requestUri) => _client.GetAsync(requestUri);
     }
 }

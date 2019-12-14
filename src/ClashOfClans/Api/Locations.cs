@@ -14,7 +14,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public async Task<QueryResult<LocationList>> GetLocationsAsync(Query query = null)
+        public Task<QueryResult<LocationList>> GetLocationsAsync(Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -22,10 +22,10 @@ namespace ClashOfClans.Api
                 Uri = "/locations"
             };
 
-            return await _gameData.RequestAsync<QueryResult<LocationList>>(request);
+            return _gameData.RequestAsync<QueryResult<LocationList>>(request);
         }
 
-        public async Task<Location> GetLocationAsync(int? locationId)
+        public Task<Location> GetLocationAsync(int? locationId)
         {
             var request = new AutoValidatedRequest
             {
@@ -33,10 +33,10 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}"
             };
 
-            return await _gameData.RequestAsync<Location>(request);
+            return _gameData.RequestAsync<Location>(request);
         }
 
-        public async Task<QueryResult<ClanRankingList>> GetClanRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<ClanRankingList>> GetClanRankingAsync(int? locationId, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -45,10 +45,10 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/clans"
             };
 
-            return await _gameData.RequestAsync<QueryResult<ClanRankingList>>(request);
+            return _gameData.RequestAsync<QueryResult<ClanRankingList>>(request);
         }
 
-        public async Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -57,10 +57,10 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/players"
             };
 
-            return await _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
+            return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
 
-        public async Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -69,10 +69,10 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/clans-versus"
             };
 
-            return await _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(request);
+            return _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(request);
         }
 
-        public async Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -81,7 +81,7 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/players-versus"
             };
 
-            return await _gameData.RequestAsync<QueryResult<PlayerVersusRankingList>>(request);
+            return _gameData.RequestAsync<QueryResult<PlayerVersusRankingList>>(request);
         }
     }
 }

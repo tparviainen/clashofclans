@@ -14,7 +14,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public async Task<QueryResult<ClanList>> SearchClansAsync(QueryClans query)
+        public Task<QueryResult<ClanList>> SearchClansAsync(QueryClans query)
         {
             var request = new AutoValidatedRequest
             {
@@ -22,10 +22,10 @@ namespace ClashOfClans.Api
                 Uri = "/clans"
             };
 
-            return await _gameData.RequestAsync<QueryResult<ClanList>>(request);
+            return _gameData.RequestAsync<QueryResult<ClanList>>(request);
         }
 
-        public async Task<Clan> GetClanAsync(string clanTag)
+        public Task<Clan> GetClanAsync(string clanTag)
         {
             var request = new AutoValidatedRequest
             {
@@ -33,10 +33,10 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}"
             };
 
-            return await _gameData.RequestAsync<Clan>(request);
+            return _gameData.RequestAsync<Clan>(request);
         }
 
-        public async Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null)
+        public Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -45,10 +45,10 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}/members"
             };
 
-            return await _gameData.RequestAsync<QueryResult<ClanMemberList>>(request);
+            return _gameData.RequestAsync<QueryResult<ClanMemberList>>(request);
         }
 
-        public async Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null)
+        public Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -57,10 +57,10 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}/warlog"
             };
 
-            return await _gameData.RequestAsync<QueryResult<ClanWarLog>>(request);
+            return _gameData.RequestAsync<QueryResult<ClanWarLog>>(request);
         }
 
-        public async Task<ClanWar> GetCurrentWarAsync(string clanTag)
+        public Task<ClanWar> GetCurrentWarAsync(string clanTag)
         {
             var request = new AutoValidatedRequest
             {
@@ -68,10 +68,10 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}/currentwar"
             };
 
-            return await _gameData.RequestAsync<ClanWar>(request);
+            return _gameData.RequestAsync<ClanWar>(request);
         }
 
-        public async Task<ClanWarLeagueGroup> GetClanWarLeagueGroupAsync(string clanTag)
+        public Task<ClanWarLeagueGroup> GetClanWarLeagueGroupAsync(string clanTag)
         {
             var request = new AutoValidatedRequest
             {
@@ -79,10 +79,10 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}/currentwar/leaguegroup"
             };
 
-            return await _gameData.RequestAsync<ClanWarLeagueGroup>(request);
+            return _gameData.RequestAsync<ClanWarLeagueGroup>(request);
         }
 
-        public async Task<ClanWarLeagueWar> GetClanWarLeagueWarAsync(string warTag)
+        public Task<ClanWarLeagueWar> GetClanWarLeagueWarAsync(string warTag)
         {
             var request = new AutoValidatedRequest
             {
@@ -90,7 +90,7 @@ namespace ClashOfClans.Api
                 Uri = $"/clanwarleagues/wars/{warTag}"
             };
 
-            return await _gameData.RequestAsync<ClanWarLeagueWar>(request);
+            return _gameData.RequestAsync<ClanWarLeagueWar>(request);
         }
     }
 }
