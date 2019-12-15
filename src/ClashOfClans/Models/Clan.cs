@@ -10,6 +10,9 @@ namespace ClashOfClans.Models
 
         public Type? Type { get; set; }
 
+        /// <summary>
+        /// Clan location
+        /// </summary>
         public Location Location { get; set; }
 
         public UrlContainer BadgeUrls { get; set; }
@@ -29,6 +32,9 @@ namespace ClashOfClans.Models
 
         public int? WarWinStreak { get; set; }
 
+        /// <summary>
+        /// Wars won
+        /// </summary>
         public int? WarWins { get; set; }
 
         public bool? IsWarLogPublic { get; set; }
