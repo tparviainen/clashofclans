@@ -33,7 +33,7 @@ namespace ClashOfClans.Core
         {
             Log(request, $"Uri: /{request.Uri}");
 
-            var data = await GetDataAsync(request);
+            var data = await GetDataAsync(request).ConfigureAwait(false);
 
             return _serializer.Deserialize<T>(data);
         }
@@ -41,14 +41,14 @@ namespace ClashOfClans.Core
         private async Task<string> GetDataAsync(AutoValidatedRequest request)
         {
             var watch = Stopwatch.StartNew();
-            await _throttleRequests.WaitAsync();
+            await _throttleRequests.WaitAsync().ConfigureAwait(false);
             Log(request, $"Throttling: {watch.ElapsedMilliseconds} ms");
 
             watch.Restart();
-            var response = await _endpoint.GetMessageAsync(request.Uri);
+            var response = await _endpoint.GetMessageAsync(request.Uri).ConfigureAwait(false);
             Log(request, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
-            var content = await response.Content.ReadAsStringAsync();
+            var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             Log(request, $"Content: {content}");
 
             if (response.IsSuccessStatusCode)

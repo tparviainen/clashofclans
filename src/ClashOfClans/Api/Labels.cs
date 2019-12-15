@@ -14,7 +14,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public async Task<QueryResult<LabelList>> GetClanLabelsAsync(Query query = null)
+        public Task<QueryResult<LabelList>> GetClanLabelsAsync(Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -22,10 +22,10 @@ namespace ClashOfClans.Api
                 Uri = "/labels/clans"
             };
 
-            return await _gameData.RequestAsync<QueryResult<LabelList>>(request);
+            return _gameData.RequestAsync<QueryResult<LabelList>>(request);
         }
 
-        public async Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query query = null)
+        public Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query query = null)
         {
             var request = new AutoValidatedRequest
             {
@@ -33,7 +33,7 @@ namespace ClashOfClans.Api
                 Uri = "/labels/players"
             };
 
-            return await _gameData.RequestAsync<QueryResult<LabelList>>(request);
+            return _gameData.RequestAsync<QueryResult<LabelList>>(request);
         }
     }
 }

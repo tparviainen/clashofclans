@@ -27,7 +27,7 @@ namespace ClashOfClans.Core
 
             if (millisecondsDelay > 0)
             {
-                await Task.Delay(millisecondsDelay);
+                await Task.Delay(millisecondsDelay).ConfigureAwait(false);
             }
         }
 

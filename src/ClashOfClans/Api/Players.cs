@@ -13,7 +13,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public async Task<Player> GetPlayerAsync(string playerTag)
+        public Task<Player> GetPlayerAsync(string playerTag)
         {
             var request = new AutoValidatedRequest
             {
@@ -21,7 +21,7 @@ namespace ClashOfClans.Api
                 Uri = $"/players/{playerTag}"
             };
 
-            return await _gameData.RequestAsync<Player>(request);
+            return _gameData.RequestAsync<Player>(request);
         }
     }
 }
