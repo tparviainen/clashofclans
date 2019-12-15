@@ -5,3 +5,6 @@ apiRules:
 - exclude:
       uidRegex: ^System\.Exception
       type: Type
+- exclude:
+      uidRegex: ^System\.Collections
+      type: Type
