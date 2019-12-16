@@ -1,7 +1,7 @@
 # Clash of Clans
 <img align="right" width="100px" src="https://github.com/tparviainen/clashofclans/raw/master/images/icon.png" />
 
-[![Build status](https://programmingwithtomi.visualstudio.com/GitHub/_apis/build/status/clashofclans)](https://programmingwithtomi.visualstudio.com/GitHub/_build/latest?definitionId=3)
+![Build status](https://github.com/tparviainen/clashofclans/workflows/build/badge.svg)
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
 ![Downloads](https://img.shields.io/nuget/dt/ClashOfClans.svg)
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
