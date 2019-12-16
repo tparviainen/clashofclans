@@ -127,7 +127,7 @@ namespace ClashOfClans.App.Examples
                 }
             }
 
-            string Statistics(ClanWarLeagueWarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage:0.00}%/{clan.Attacks}]";
+            static string Statistics(ClanWarLeagueWarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage:0.00}%/{clan.Attacks}]";
         }
     }
 }
