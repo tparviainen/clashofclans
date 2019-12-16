@@ -16,6 +16,20 @@ namespace ClashOfClans.Core
         /// </summary>
         public ClientError Error { get; }
 
+        public ClashOfClansException()
+        {
+        }
+
+        public ClashOfClansException(string message)
+            : base(message)
+        {
+        }
+
+        public ClashOfClansException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ClashOfClansException"/> class.
         /// </summary>
