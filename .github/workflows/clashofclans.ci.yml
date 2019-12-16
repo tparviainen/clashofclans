@@ -1,4 +1,4 @@
-name: ClashOfClans.CI
+name: build
 
 on:
   push:
