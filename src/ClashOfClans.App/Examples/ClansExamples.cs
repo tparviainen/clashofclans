@@ -95,7 +95,7 @@ namespace ClashOfClans.App.Examples
 
             Console.WriteLine($"State: {clanWar.State}, {Statistics(clanWar.Clan)} vs {Statistics(clanWar.Opponent)}");
 
-            string Statistics(WarClan warClan) => $"{warClan.Name} {warClan.Attacks}/{warClan.Stars}\u2605/{warClan.DestructionPercentage:0.00}%";
+            static string Statistics(WarClan warClan) => $"{warClan.Name} {warClan.Attacks}/{warClan.Stars}\u2605/{warClan.DestructionPercentage:0.00}%";
         }
 
         /// <summary>
