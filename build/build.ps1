@@ -4,8 +4,9 @@ param ([switch]$ci)
 $major = 6  # Major: Breaking changes
 $minor = 0  # Minor: New features, but backwards compatible
 $patch = 4  # Patch: Backwards compatible bug fixes only
-
 $packageVersion = "$major.$minor.$patch"
+
+$configuration = "Release"
 $project = "..\src\ClashOfClans\ClashOfClans.csproj"
 
 if ($ci) {
@@ -18,14 +19,6 @@ if ($ci) {
     $packageVersion = "$packageVersion-$suffix"
     $configuration = "Debug"
 }
-else {
-    $configuration = "Release"
-}
-
-write-host "dotnet clean -c $configuration $project"
-write-host "dotnet pack -p:PackageVersion=$packageVersion -p:Version=$packageVersion -c $configuration $project"
-
-exit
 
 dotnet clean -c $configuration $project
 dotnet pack -p:PackageVersion=$packageVersion -p:Version=$packageVersion -c $configuration $project
