@@ -23,8 +23,14 @@ jobs:
       working-directory: ./build
       shell: pwsh
       run: ./build.ps1 -ci
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v1
+      with:
+        nuget-version: 'latest'
     - name: Publish the package to GPR
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       working-directory: ./src
-      run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg --source "github"
+      run: |
+        nuget sources add -name "GPR" -source "https://nuget.pkg.github.com/tparviainen/index.json" -username tparviainen -password ${{secrets.GITHUB_TOKEN}}
+        nuget push ClashOfClans/bin/Release/*.nupkg -source "GPR"
