@@ -27,4 +27,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       working-directory: ./src
-      run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg -s https://nuget.pkg.github.com/tparviainen/index.json -k ${GITHUB_TOKEN}
+      run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg --source "github"
