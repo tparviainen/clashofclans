@@ -26,3 +26,5 @@ jobs:
     - name: Publish the package to GPR
       working-directory: ./src
       run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg -s https://nuget.pkg.github.com/tparviainen/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
