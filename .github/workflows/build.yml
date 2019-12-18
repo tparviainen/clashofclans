@@ -10,22 +10,19 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
-        source-url: https://nuget.pkg.github.com/tparviainen/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - name: Build with dotnet
-      run: dotnet build --configuration Release ./src/ClashOfClans.sln
-    - name: CI
+    - name: CI build
       working-directory: ./build
       shell: pwsh
       run: ./build.ps1 -ci
     - name: Publish the package to GPR
       working-directory: ./src
-      run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg
+      run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg -s https://nuget.pkg.github.com/tparviainen/index.json
