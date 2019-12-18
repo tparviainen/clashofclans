@@ -32,5 +32,5 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       working-directory: ./src
       run: |
-        nuget sources add -name "GPR" -source "https://nuget.pkg.github.com/tparviainen/index.json" -username tparviainen -password ${{secrets.GITHUB_TOKEN}}
+        nuget source add -name "GPR" -source "https://nuget.pkg.github.com/tparviainen/index.json" -username tparviainen -password ${{secrets.GITHUB_TOKEN}}
         nuget push ClashOfClans/bin/Release/*.nupkg -source "GPR"
