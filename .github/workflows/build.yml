@@ -19,5 +19,12 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build with dotnet
       run: dotnet build --configuration Release ./src/ClashOfClans.sln
-    - name: Add GPR source
-      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/tparviainen/index.json -Username tparviainen -Password ${{secrets.GITHUB_TOKEN}}
+    - name: CI build
+      working-directory: ./build
+      shell: pwsh
+      run: ./build.ps1 -ci
+    - name: Publish the package to GPR
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      working-directory: ./src
+      run: dotnet nuget push ClashOfClans/bin/Release/*.nupkg -s https://nuget.pkg.github.com/tparviainen/index.json -k ${GITHUB_TOKEN}
