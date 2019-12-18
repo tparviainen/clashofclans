@@ -1,6 +1,6 @@
 name: .NET Core
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -13,3 +13,7 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build with dotnet
       run: dotnet build --configuration Release ./src/ClashOfClans.sln
+    - name: CI
+      working-directory: ./build
+      shell: pwsh
+      run: ./build.ps1 -ci
