@@ -17,7 +17,6 @@ if ($ci) {
     $time=Get-Date -Format 'HHmm'
 
     $packageVersion = "$packageVersion-$suffix"
-    $configuration = "Debug"
 }
 
 dotnet clean -c $configuration $project
