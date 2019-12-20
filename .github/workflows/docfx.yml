@@ -1,0 +1,29 @@
+name: DocFX
+
+on:
+  push:
+    paths-ignore: 
+      - 'docs/**'
+    branches:
+      - master
+
+jobs:
+  docfx:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: windows-latest
+
+    steps:
+    - run: git config --global user.name 'Tomi Parviainen'
+    - run: git config --global user.email 'tparviainen@users.noreply.github.com'
+
+    - uses: actions/checkout@v2
+
+    - name: Setup DocFX
+      run: choco install docfx
+
+    - name: Build with DocFX
+      run: docfx
+
+    - run: git commit -am "Update GitHub Pages"
+    - run: git push
