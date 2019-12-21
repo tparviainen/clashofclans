@@ -39,13 +39,13 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.ClashOfClansApi.Clans
   nameWithType: ClashOfClansApi.Clans
-- uid: ClashOfClans.ClashOfClansApi.Configure(Action{ClashOfClans.Core.ClashOfClansOptions})
+- uid: ClashOfClans.ClashOfClansApi.Configure(System.Action{ClashOfClans.Core.ClashOfClansOptions})
   name: Configure(Action<ClashOfClansOptions>)
-  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi_Configure_Action_ClashOfClans_Core_ClashOfClansOptions__
-  commentId: M:ClashOfClans.ClashOfClansApi.Configure(Action{ClashOfClans.Core.ClashOfClansOptions})
+  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi_Configure_System_Action_ClashOfClans_Core_ClashOfClansOptions__
+  commentId: M:ClashOfClans.ClashOfClansApi.Configure(System.Action{ClashOfClans.Core.ClashOfClansOptions})
   name.vb: Configure(Action(Of ClashOfClansOptions))
-  fullName: ClashOfClans.ClashOfClansApi.Configure(Action<ClashOfClans.Core.ClashOfClansOptions>)
-  fullName.vb: ClashOfClans.ClashOfClansApi.Configure(Action(Of ClashOfClans.Core.ClashOfClansOptions))
+  fullName: ClashOfClans.ClashOfClansApi.Configure(System.Action<ClashOfClans.Core.ClashOfClansOptions>)
+  fullName.vb: ClashOfClans.ClashOfClansApi.Configure(System.Action(Of ClashOfClans.Core.ClashOfClansOptions))
   nameWithType: ClashOfClansApi.Configure(Action<ClashOfClansOptions>)
   nameWithType.vb: ClashOfClansApi.Configure(Action(Of ClashOfClansOptions))
 - uid: ClashOfClans.ClashOfClansApi.Configure*
@@ -131,11 +131,11 @@ references:
   commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(ClashOfClans.Models.ClientError)
   fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(ClashOfClans.Models.ClientError)
   nameWithType: ClashOfClansException.ClashOfClansException(ClientError)
-- uid: ClashOfClans.Core.ClashOfClansException.#ctor(SerializationInfo,StreamingContext)
+- uid: ClashOfClans.Core.ClashOfClansException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   name: ClashOfClansException(SerializationInfo, StreamingContext)
-  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException__ctor_SerializationInfo_StreamingContext_
-  commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(SerializationInfo,StreamingContext)
-  fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(SerializationInfo, StreamingContext)
+  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: ClashOfClansException.ClashOfClansException(SerializationInfo, StreamingContext)
 - uid: ClashOfClans.Core.ClashOfClansException.#ctor(System.String)
   name: ClashOfClansException(String)
@@ -143,11 +143,11 @@ references:
   commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(System.String)
   fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(System.String)
   nameWithType: ClashOfClansException.ClashOfClansException(String)
-- uid: ClashOfClans.Core.ClashOfClansException.#ctor(System.String,Exception)
+- uid: ClashOfClans.Core.ClashOfClansException.#ctor(System.String,System.Exception)
   name: ClashOfClansException(String, Exception)
-  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException__ctor_System_String_Exception_
-  commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(System.String,Exception)
-  fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(System.String, Exception)
+  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException__ctor_System_String_System_Exception_
+  commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(System.String,System.Exception)
+  fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(System.String, System.Exception)
   nameWithType: ClashOfClansException.ClashOfClansException(String, Exception)
 - uid: ClashOfClans.Core.ClashOfClansException.#ctor*
   name: ClashOfClansException
@@ -169,11 +169,11 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansException.Error
   nameWithType: ClashOfClansException.Error
-- uid: ClashOfClans.Core.ClashOfClansException.GetObjectData(SerializationInfo,StreamingContext)
+- uid: ClashOfClans.Core.ClashOfClansException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   name: GetObjectData(SerializationInfo, StreamingContext)
-  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException_GetObjectData_SerializationInfo_StreamingContext_
-  commentId: M:ClashOfClans.Core.ClashOfClansException.GetObjectData(SerializationInfo,StreamingContext)
-  fullName: ClashOfClans.Core.ClashOfClansException.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:ClashOfClans.Core.ClashOfClansException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: ClashOfClans.Core.ClashOfClansException.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: ClashOfClansException.GetObjectData(SerializationInfo, StreamingContext)
 - uid: ClashOfClans.Core.ClashOfClansException.GetObjectData*
   name: GetObjectData
