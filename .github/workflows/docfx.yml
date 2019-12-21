@@ -29,7 +29,11 @@ jobs:
       run: choco install docfx
 
     - name: Build with DocFX
-      run: docfx
+      run: |
+        Remove-Item .\docs\ -Recurse
+        docfx
 
-    - run: git commit -am "Update GitHub Pages"
-    - run: git push
+    - name: Update GitHub Pages
+      run: |
+        git commit -am "Update GitHub Pages"
+        git push
