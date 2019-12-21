@@ -18,6 +18,12 @@ jobs:
     - run: git config --global user.email ${env:GITHUB_ACTOR}@users.noreply.github.com
 
     - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+
+    - name: Build with dotnet
+      run: dotnet build ./src/ClashOfClans/ClashOfClans.csproj
 
     - name: Setup DocFX
       run: choco install docfx
