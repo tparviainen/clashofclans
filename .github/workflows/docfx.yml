@@ -14,8 +14,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - run: git config --global user.name 'Tomi Parviainen'
-    - run: git config --global user.email 'tparviainen@users.noreply.github.com'
+    - run: git config --global user.name ${env:GITHUB_ACTOR}
+    - run: git config --global user.email ${env:GITHUB_ACTOR}@users.noreply.github.com
 
     - uses: actions/checkout@v2
 
