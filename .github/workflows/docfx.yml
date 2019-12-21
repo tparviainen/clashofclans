@@ -10,7 +10,7 @@ on:
 jobs:
   docfx:
     env:
-      GITHUB_TOKEN: ${{ secrets.DOCFX_PAT }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: windows-latest
 
     steps:
