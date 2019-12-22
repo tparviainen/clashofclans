@@ -35,7 +35,9 @@ jobs:
         docfx
 
     - name: Update GitHub Pages
-      run: |
-        git commit -am "Update GitHub Pages"
-        git remote set-url origin https://${env:GITHUB_ACTOR}:${env:GITHUB_DOCFX}@github.com/tparviainen/clashofclans.git
-        git push
+      run: git commit -am "Update GitHub Pages"
+
+    - run: git remote set-url origin https://${env:GITHUB_ACTOR}:${env:GITHUB_DOCFX}@github.com/tparviainen/clashofclans.git
+    - run: git status
+    - run: git push
+    - run: git status
