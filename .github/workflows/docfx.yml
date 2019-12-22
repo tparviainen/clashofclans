@@ -11,6 +11,7 @@ jobs:
   docfx:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_DOCFX: ${{ secrets.GITHUB_DOCFX }}
     runs-on: windows-latest
 
     steps:
@@ -30,10 +31,11 @@ jobs:
 
     - name: Build with DocFX
       run: |
-        Remove-Item .\docs\ -Recurse
+        Remove-Item ./docs/ -Recurse
         docfx
 
     - name: Update GitHub Pages
       run: |
+        git remote set-url origin https://${env:GITHUB_ACTOR}:${env:GITHUB_DOCFX}@github.com/tparviainen/clashofclans.git
         git commit -am "Update GitHub Pages"
         git push
