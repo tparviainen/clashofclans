@@ -11,7 +11,6 @@ jobs:
   docfx:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_DOCFX: ${{ secrets.GITHUB_DOCFX }}
     runs-on: windows-latest
 
     steps:
@@ -35,9 +34,6 @@ jobs:
         docfx
 
     - name: Update GitHub Pages
-      run: git commit -am "Update GitHub Pages"
-
-    - run: git remote set-url origin https://${env:GITHUB_ACTOR}:${env:GITHUB_DOCFX}@github.com/tparviainen/clashofclans.git
-    - run: git status
-    - run: git push
-    - run: git status
+      run: |
+        git commit -am "Update GitHub Pages"
+        git push
