@@ -35,8 +35,7 @@ jobs:
         docfx
         New-Item -Path ../docs/ -Name .nojekyll
 
-    - name: Update GitHub Pages
-      run: |
-        git add -A
-        git commit -am "Update GitHub Pages"
-        git push
+#    - name: Update GitHub Pages
+    - run: git add -A
+    - run: git commit -am "Update GitHub Pages"
+    - run: git push
