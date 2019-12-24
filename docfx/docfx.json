@@ -3,12 +3,13 @@
     {
       "src": [
         {
+          "src": "../",
           "files": [
             "src/ClashOfClans/ClashOfClans.csproj"
           ]
         }
       ],
-      "dest": "api",
+      "dest": "obj/api",
       "filter": "filterConfig.yml",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
@@ -21,8 +22,8 @@
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "api/index.md"
+          "obj/api/**.yml",
+          "obj/api/index.md"
         ]
       },
       {
@@ -52,7 +53,7 @@
         ]
       }
     ],
-    "dest": "docs",
+    "dest": "../docs",
     "globalMetadataFiles": [],
     "globalMetadata": {
       "_appLogoPath": "images/icon.svg",
