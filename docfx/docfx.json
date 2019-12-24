@@ -3,6 +3,7 @@
     {
       "src": [
         {
+          "src": "../",
           "files": [
             "src/ClashOfClans/ClashOfClans.csproj"
           ]
@@ -52,7 +53,7 @@
         ]
       }
     ],
-    "dest": "docs",
+    "dest": "../docs",
     "globalMetadataFiles": [],
     "globalMetadata": {
       "_appLogoPath": "images/icon.svg",
