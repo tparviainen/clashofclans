@@ -33,6 +33,7 @@ jobs:
       run: |
         Remove-Item ../docs/ -Recurse
         docfx
+        New-Item -Path ../docs/ -Name .nojekyll
 
     - name: Update GitHub Pages
       run: |
