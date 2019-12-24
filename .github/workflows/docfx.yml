@@ -37,5 +37,6 @@ jobs:
 
     - name: Update GitHub Pages
       run: |
-        git commit -am "Update GitHub Pages"
+        git add .
+        git commit -m "Update GitHub Pages"
         git push
