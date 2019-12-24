@@ -29,8 +29,9 @@ jobs:
       run: choco install docfx
 
     - name: Build with DocFX
+      working-directory: docfx
       run: |
-        Remove-Item ./docs/ -Recurse
+        Remove-Item ../docs/ -Recurse
         docfx
 
     - name: Update GitHub Pages
