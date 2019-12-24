@@ -9,7 +9,7 @@
           ]
         }
       ],
-      "dest": "obj/api",
+      "dest": "api",
       "filter": "filterConfig.yml",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
@@ -22,8 +22,8 @@
     "content": [
       {
         "files": [
-          "obj/api/**.yml",
-          "obj/api/index.md"
+          "api/**.yml",
+          "api/index.md"
         ]
       },
       {
