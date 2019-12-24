@@ -9,8 +9,8 @@ on:
 
 jobs:
   docfx:
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#    env:
+#      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: windows-latest
 
     steps:
@@ -18,6 +18,8 @@ jobs:
     - run: git config --global user.email ${env:GITHUB_ACTOR}@users.noreply.github.com
 
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GITHUB_DOCFX }}
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
