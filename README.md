@@ -1,5 +1,5 @@
 # Clash of Clans
-<img align="right" width="100px" src="https://github.com/tparviainen/clashofclans/raw/master/images/icon.png" />
+<img align="right" width="100px" src="https://github.com/tparviainen/clashofclans/raw/master/docfx/images/icon.png" />
 
 ![Build status](https://github.com/tparviainen/clashofclans/workflows/build/badge.svg)
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
