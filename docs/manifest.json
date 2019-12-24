@@ -1,20 +1,8 @@
 {
   "homepages": [],
-  "source_base_path": "D:/a/clashofclans/clashofclans",
+  "source_base_path": "D:/a/clashofclans/clashofclans/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html",
-          "hash": "K1ErCSqjdSeHuhIXZzzMBg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/ClashOfClans.ClashOfClansApi.yml",
@@ -909,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "ip7NdIZxemch4RyxpVZbzw=="
+          "hash": "GOsSCF8v+MvtrpM7AMfegw=="
         }
       },
       "is_incremental": false,
@@ -933,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "evXUeIfUj1bDGlAfCYQ1Mw=="
+          "hash": "UX7Y3124cAm9XqOn97ZItg=="
         }
       },
       "is_incremental": false,
@@ -990,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "avDGOelg44usZ2oZG7CLxg=="
+          "hash": "O306NF9VRmdBWn2mPPKBeQ=="
         }
       },
       "is_incremental": false,
@@ -1027,16 +1015,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 4,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 74,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
