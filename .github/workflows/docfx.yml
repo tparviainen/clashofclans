@@ -33,9 +33,11 @@ jobs:
       run: |
         Remove-Item ../docs/ -Recurse
         docfx
-        New-Item -Path ../docs/ -Name .nojekyll
 
-#    - name: Update GitHub Pages
-    - run: git add -A
-    - run: git commit -am "Update GitHub Pages"
-    - run: git push
+    - name: Stage all changes
+      run: git add -A
+
+    - name: Update GitHub Pages
+      run: |
+        git commit -am "Update GitHub Pages"
+        git push
