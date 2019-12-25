@@ -2,6 +2,7 @@
 <img align="right" width="100px" src="https://github.com/tparviainen/clashofclans/raw/master/docfx/images/icon.png" />
 
 ![Build status](https://github.com/tparviainen/clashofclans/workflows/build/badge.svg)
+![Docs status](https://github.com/tparviainen/clashofclans/workflows/docs/badge.svg)
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
 ![Downloads](https://img.shields.io/nuget/dt/ClashOfClans.svg)
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
