@@ -69,6 +69,9 @@
 
         public PlayerItemLevelList Spells { get; set; }
 
+        /// <summary>
+        /// Labels to describe player's play style
+        /// </summary>
         public LabelList Labels { get; set; }
     }
 }

@@ -45,6 +45,9 @@ namespace ClashOfClans.Models
 
         public int? WarLosses { get; set; }
 
+        /// <summary>
+        /// Labels to describe clan
+        /// </summary>
         public LabelList Labels { get; set; }
     }
 }
