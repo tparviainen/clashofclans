@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Unit
 {
     [TestClass]
     public class ClashOfClansExceptionTests
