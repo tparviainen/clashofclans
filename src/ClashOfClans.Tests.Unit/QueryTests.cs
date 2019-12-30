@@ -2,7 +2,7 @@
 using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Unit
 {
     [TestClass]
     public class QueryTests
