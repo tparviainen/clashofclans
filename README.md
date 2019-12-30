@@ -3,6 +3,7 @@
 
 ![Build status](https://github.com/tparviainen/clashofclans/workflows/build/badge.svg)
 ![Docs status](https://github.com/tparviainen/clashofclans/workflows/docs/badge.svg)
+![Unit tests](https://github.com/tparviainen/clashofclans/workflows/tests/badge.svg)
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
 ![Downloads](https://img.shields.io/nuget/dt/ClashOfClans.svg)
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
