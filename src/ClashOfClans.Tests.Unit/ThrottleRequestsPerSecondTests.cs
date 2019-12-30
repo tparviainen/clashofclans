@@ -1,11 +1,11 @@
-﻿using ClashOfClans.Core;
+using ClashOfClans.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Unit
 {
     [TestClass]
     public class ThrottleRequestsPerSecondTests

@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Text;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Integration
 {
     public static class DumpExtensions
     {

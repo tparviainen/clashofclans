@@ -3,7 +3,7 @@ using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Integration
 {
     [TestClass]
     public class LocationsTests : TestsBase

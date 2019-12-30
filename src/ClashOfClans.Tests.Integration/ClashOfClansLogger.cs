@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Integration
 {
     class ClashOfClansLogger : IClashOfClansLogger
     {

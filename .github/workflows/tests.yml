@@ -1,4 +1,4 @@
-name: build
+name: tests
 
 on:
   push:
@@ -18,7 +18,8 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.100
+        dotnet-version: 2.2.402
 
-    - name: Build with dotnet
-      run: dotnet build ./src/ClashOfClans.sln
+    - name: Unit Tests
+      working-directory: src
+      run: dotnet test --filter FullyQualifiedName~ClashOfClans.Tests.Unit

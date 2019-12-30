@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Integration
 {
     [TestClass]
     public class PlayersTests : TestsBase
