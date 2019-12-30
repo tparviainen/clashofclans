@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Integration
 {
     [TestClass]
     public class LabelsTests : TestsBase

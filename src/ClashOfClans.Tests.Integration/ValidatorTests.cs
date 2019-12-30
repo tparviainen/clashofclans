@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
 
-namespace ClashOfClans.Tests
+namespace ClashOfClans.Tests.Integration
 {
     [TestClass]
     public class ValidatorTests : TestsBase
