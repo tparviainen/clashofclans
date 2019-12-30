@@ -9,7 +9,7 @@ namespace ClashOfClans.Tests
     public class ValidatorTests : TestsBase
     {
         [TestMethod]
-        public void ClanTagsStartWithHashCharacter()
+        public void ClanTagsDontStartWithHashCharacter()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -32,7 +32,30 @@ namespace ClashOfClans.Tests
         }
 
         [TestMethod]
-        public void PlayerTagsStartWithHashCharacter()
+        public void ClanTagsStartWithHashCharacter()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+
+            foreach (var clanTag in ClanTags)
+            {
+                try
+                {
+                    // Act
+                    request.ClanTag = clanTag;
+                }
+                catch (ArgumentException ex)
+                {
+                    // Assert
+                    Assert.Fail();
+
+                    Trace.WriteLine(ex);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void PlayerTagsDontStartWithHashCharacter()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -49,6 +72,29 @@ namespace ClashOfClans.Tests
                 }
                 catch (ArgumentException ex)
                 {
+                    Trace.WriteLine(ex);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void PlayerTagsStartWithHashCharacter()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+
+            foreach (var playerTag in PlayerTags)
+            {
+                try
+                {
+                    // Act
+                    request.PlayerTag = playerTag;
+                }
+                catch (ArgumentException ex)
+                {
+                    // Assert
+                    Assert.Fail();
+
                     Trace.WriteLine(ex);
                 }
             }
