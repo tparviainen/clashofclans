@@ -2,9 +2,9 @@ name: docs
 
 on:
   push:
-    paths-ignore: 
-      - 'docs/**'
-      - 'build/**'
+    paths:
+      - 'docfx/**'
+      - 'src/**'
     branches:
       - master
 
