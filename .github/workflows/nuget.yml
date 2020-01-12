@@ -1,4 +1,4 @@
-name: docs
+name: nuget
 
 on:
   push:
@@ -24,4 +24,4 @@ jobs:
       working-directory: build
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: build.cmd
+      run: build.ps1
