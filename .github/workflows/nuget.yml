@@ -1,0 +1,27 @@
+name: docs
+
+on:
+  push:
+    paths:
+      - 'build/version.txt'
+    branches:
+      - master
+
+jobs:
+  docfx:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+
+    - name: Setup NuGet CLI
+      run: choco install nuget.commandline
+
+    - name: Build and push to NuGet Gallery
+      working-directory: build
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: build.cmd
