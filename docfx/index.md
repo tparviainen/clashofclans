@@ -38,12 +38,12 @@ using ClashOfClans.Search;
 
 
 ```C#
-var coc = new ClashOfClansApi(token);
+var coc = new ClashOfClansClient(token);
 var clan = await coc.Clans.GetClanAsync(clanTag);
 Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
 ```
 
-    Clan 'Storm Nation' is a level 17 clan and has 49 members
+    Clan 'Storm Nation' is a level 17 clan and has 50 members
     
 
 ## Retrieve clan's clan war log
@@ -52,7 +52,7 @@ Please note that clan's war log is only available from a clan that has public wa
 
 
 ```C#
-var coc = new ClashOfClansApi(token);
+var coc = new ClashOfClansClient(token);
 var clan = await coc.Clans.GetClanAsync(clanTag);
 
 if (clan.IsWarLogPublic == true)
@@ -69,23 +69,23 @@ if (clan.IsWarLogPublic == true)
 string Statistics(WarClan warClan) => $"{warClan.Name} [{warClan.Stars}\u2605/{warClan.DestructionPercentage}%]";
 ```
 
-    2019-11-11T19:23:59 = W: Storm Nation [138★/92,84%] vs dutch lotus cw [68★/38,24%]
-    2019-11-09T17:48:34 = L: Storm Nation [88★/49,56%] vs вєуσи∂ ιиfιиιту [150★/100%]
-    2019-11-07T16:03:26 = W: Storm Nation [145★/96,54%] vs Farm X3 [72★/40,46%]
-    2019-11-05T14:25:21 = L: Storm Nation [95★/51,84%] vs MALAYA ALL FARM [150★/100%]
-    2019-11-01T18:51:49 = L: Storm Nation [92★/52,2%] vs War Farmers [135★/91,3%]
-    2019-10-30T17:05:43 = L: Storm Nation [100★/56,4%] vs MALAYA ALL FARM [150★/100%]
-    2019-10-28T15:33:35 = W: Storm Nation [150★/100%] vs "Millenium" [100★/60,32%]
-    2019-10-26T14:06:57 = L: Storm Nation [88★/65,4%] vs Sylhet Royals [137★/92,62%]
-    2019-10-24T10:12:43 = W: Storm Nation [141★/93,82%] vs 12th man clan [101★/57,16%]
-    2019-10-22T04:37:00 = L: Storm Nation [37★/26,88%] vs USA fun [150★/100%]
+    2020-01-13T20:30:07 = L: Storm Nation [100★/55,8%] vs Mini Thieves [150★/100%]
+    2020-01-11T17:04:43 = L: Storm Nation [99★/55,6%] vs вєуσи∂ ιиfιиιту [150★/100%]
+    2020-01-09T16:08:03 = L: Storm Nation [95★/53,5%] vs 互刷 [119★/78,68%]
+    2020-01-07T12:56:51 = L: Storm Nation [95★/51,8%] vs Bomba [131★/87,1%]
+    2020-01-05T11:30:14 = L: Storm Nation [99★/55,08%] vs Farm 4 Life [119★/78,68%]
+    2019-12-30T11:19:38 = W: Storm Nation [144★/96%] vs POLCATZ [100★/58,92%]
+    2019-12-28T09:05:10 = W: Storm Nation [144★/95,1%] vs Farm.NL2 [100★/55,44%]
+    2019-12-26T07:21:49 = W: Storm Nation [129★/86%] vs Farm X3 [71★/40,02%]
+    2019-12-24T05:44:15 = W: Storm Nation [150★/100%] vs Organised Chaos [100★/56,08%]
+    2019-12-21T23:42:50 = L: Storm Nation [85★/47,58%] vs ACCESS: DENIED [138★/92%]
     
 
 ## Get information about a single player by player tag
 
 
 ```C#
-var coc = new ClashOfClansApi(token);
+var coc = new ClashOfClansClient(token);
 var player = await coc.Players.GetPlayerAsync(playerTag);
 Console.WriteLine($"'{player.Name}' has {player.Trophies} \uD83C\uDFC6 and {player.WarStars} war \u2B50");
 
@@ -97,15 +97,15 @@ if (player.Clan != null)
 }
 ```
 
-    '--[t0m1]--' has 4441 🏆 and 2016 war ⭐
-    '--[t0m1]--' is a member of 'Storm Nation' and has a donation ratio 657/319=2,06
+    '--[t0m1]--' has 2974 🏆 and 2140 war ⭐
+    '--[t0m1]--' is a member of 'Storm Nation' and has a donation ratio 1553/2101=0,74
     
 
 ## List leagues
 
 
 ```C#
-var coc = new ClashOfClansApi(token);
+var coc = new ClashOfClansClient(token);
 var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
 
 Console.WriteLine($"Total amount of leagues: {leagues.Count}");
@@ -146,7 +146,7 @@ foreach (var league in leagues)
 
 
 ```C#
-var coc = new ClashOfClansApi(token);
+var coc = new ClashOfClansClient(token);
 var locations = (LocationList)await coc.Locations.GetLocationsAsync();
 
 Console.WriteLine($"Total amount of locations: {locations.Count}");
