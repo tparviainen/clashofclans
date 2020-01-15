@@ -5,10 +5,10 @@ using System;
 namespace ClashOfClans
 {
     /// <summary>
-    /// Clash of Clans API that provides access to information about
-    /// clans, locations, leagues and players.
+    /// Provides the client class for accessing information about clans, locations, leagues
+    /// players and labels from Supercell's Clash of Clans service.
     /// </summary>
-    public class ClashOfClansApi
+    public class ClashOfClansClient : IClashOfClans
     {
         private readonly ClashOfClansOptionsInternal _options;
 
@@ -16,7 +16,7 @@ namespace ClashOfClans
         /// Initializes a new instance of the Clash of Clans API
         /// </summary>
         /// <param name="token">Your personal API key</param>
-        public ClashOfClansApi(string token)
+        public ClashOfClansClient(string token)
         {
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -49,29 +49,22 @@ namespace ClashOfClans
             }
         }
 
-        /// <summary>
-        /// Access clan specific information
-        /// </summary>
         public IClans Clans { get; }
 
-        /// <summary>
-        /// Access global and local rankings
-        /// </summary>
         public ILocations Locations { get; }
 
-        /// <summary>
-        /// Access league information
-        /// </summary>
         public ILeagues Leagues { get; }
 
-        /// <summary>
-        /// Access player specific information
-        /// </summary>
         public IPlayers Players { get; }
 
-        /// <summary>
-        /// Access labels
-        /// </summary>
         public ILabels Labels { get; }
+    }
+
+    [Obsolete("Use ClashOfClansClient instead.")]
+    public class ClashOfClansApi : ClashOfClansClient
+    {
+        public ClashOfClansApi(string token) : base(token)
+        {
+        }
     }
 }

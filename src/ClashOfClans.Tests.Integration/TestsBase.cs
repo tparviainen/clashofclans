@@ -19,7 +19,7 @@ namespace ClashOfClans.Tests.Integration
         protected static LeagueList _leagues;
         protected static LocationList _locations;
         protected static IConfigurationRoot _config;
-        protected static ClashOfClansApi _coc;
+        protected static ClashOfClansClient _coc;
 
         public static IEnumerable<string> PlayerTags { get => _config.GetSection("playerTags").GetChildren().Select(x => x.Value); }
         public static IEnumerable<string> ClanTags { get => _config.GetSection("clanTags").GetChildren().Select(x => x.Value); }
@@ -33,7 +33,7 @@ namespace ClashOfClans.Tests.Integration
                     .AddJsonFile("AppSettings.test.json")
                     .Build();
 
-                _coc = new ClashOfClansApi(_config["api:token"]);
+                _coc = new ClashOfClansClient(_config["api:token"]);
                 _coc.Configure(options =>
                 {
                     options.Logger = new ClashOfClansLogger(_config["logPath"]);

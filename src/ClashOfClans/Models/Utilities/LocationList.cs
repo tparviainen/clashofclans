@@ -10,7 +10,7 @@ namespace ClashOfClans.Models
         /// <param name="name">Location name</param>
         /// <example>
         /// <code>
-        /// var coc = new ClashOfClansApi(token);
+        /// var coc = new ClashOfClansClient(token);
         /// var locations = (LocationList)await coc.Locations.GetLocationsAsync();
         /// var location = locations["Finland"];
         /// </code>

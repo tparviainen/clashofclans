@@ -10,7 +10,7 @@ namespace ClashOfClans.Models
         /// <param name="name">League name</param>
         /// <example>
         /// <code>
-        /// var coc = new ClashOfClansApi(token);
+        /// var coc = new ClashOfClansClient(token);
         /// var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
         /// var league = leagues["Legend League"];
         /// </code>

@@ -12,7 +12,7 @@ namespace ClashOfClans.Search
     /// can be casted to actual response model type T via explicit cast operator.
     /// <example>
     /// <code>
-    /// var coc = new ClashOfClansApi(token);
+    /// var coc = new ClashOfClansClient(token);
     /// var labels = (LabelList)await coc.Labels.GetClanLabelsAsync();
     /// foreach (var label in labels)
     ///     Console.WriteLine($"Id: {label.Id}, name: {label.Name}");
