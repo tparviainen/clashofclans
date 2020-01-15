@@ -18,7 +18,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task ListClanLabels()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var labels = (LabelList)await coc.Labels.GetClanLabelsAsync();
 
             foreach (var label in labels)
@@ -32,7 +32,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task ListPlayerLabels()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var labels = (LabelList)await coc.Labels.GetPlayerLabelsAsync();
 
             foreach (var label in labels)

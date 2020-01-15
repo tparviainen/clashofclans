@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace ClashOfClans.App
 {
     /// <summary>
-    /// The examples each create own ClashOfClansApi instance in order for each example
-    /// to be standalone. Normally you would create one instance of ClashOfClansApi and
+    /// The examples each create own ClashOfClansClient instance in order for each example
+    /// to be standalone. Normally you would create one instance of ClashOfClansClient and
     /// use it everywhere in your application!
     /// </summary>
     static class Program

@@ -31,7 +31,7 @@ namespace ClashOfClans.App.Examples
                 Limit = 10
             };
 
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var clans = (ClanList)await coc.Clans.SearchClansAsync(query);
 
             foreach (var clan in clans)
@@ -45,7 +45,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetClanInformation()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var clan = await coc.Clans.GetClanAsync(clanTag);
             Console.WriteLine($"Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members");
         }
@@ -55,7 +55,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task ListClanMembers()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var clanMembers = (ClanMemberList)await coc.Clans.GetClanMembersAsync(clanTag);
 
             foreach (var member in clanMembers)
@@ -69,7 +69,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task RetrieveClansClanWarLog()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var clan = await coc.Clans.GetClanAsync(clanTag);
 
             if (clan.IsWarLogPublic == true)
@@ -90,7 +90,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task RetrieveInformationAboutClansCurrentClanWar()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var clanWar = await coc.Clans.GetCurrentWarAsync(clanTag);
 
             Console.WriteLine($"State: {clanWar.State}, {Statistics(clanWar.Clan)} vs {Statistics(clanWar.Opponent)}");
@@ -103,7 +103,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task RetrieveInformationAboutClansCurrentClanWarLeagueGroup()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var clanWarLeagueGroup = await coc.Clans.GetClanWarLeagueGroupAsync(clanTag);
 
             Console.WriteLine($"Season: {clanWarLeagueGroup.Season}, State: {clanWarLeagueGroup.State}");

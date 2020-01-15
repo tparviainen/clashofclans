@@ -19,7 +19,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task ListLocations()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
 
             Console.WriteLine($"Total amount of locations: {locations.Count}");
@@ -35,7 +35,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetLocationInformation()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var locationId = 32000086; // Finland
             var location = await coc.Locations.GetLocationAsync(locationId);
 
@@ -47,7 +47,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetClanRankingsForASpecificLocation()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
@@ -66,7 +66,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetPlayerRankingsForASpecificLocation()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
             var query = new Query
@@ -88,7 +88,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetClanVersusRankingsForASpecificLocation()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
@@ -106,7 +106,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetPlayerVersusRankingsForASpecificLocation()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 

@@ -20,7 +20,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task ListLeagues()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
 
             Console.WriteLine($"Total amount of leagues: {leagues.Count}");
@@ -37,7 +37,7 @@ namespace ClashOfClans.App.Examples
         public async Task GetLeagueInformation()
         {
             var leagueId = 29000022; // Legend League identifier
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var league = await coc.Leagues.GetLeagueAsync(leagueId);
 
             Console.WriteLine($"Id: {league.Id} = {league.Name}");
@@ -48,7 +48,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetLeagueSeasons()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
             var legendLeague = leagues["Legend League"];
             var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
@@ -66,7 +66,7 @@ namespace ClashOfClans.App.Examples
         /// </summary>
         public async Task GetLeagueSeasonRankings()
         {
-            var coc = new ClashOfClansApi(token);
+            var coc = new ClashOfClansClient(token);
             var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
             var legendLeague = leagues["Legend League"];
             var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
