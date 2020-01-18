@@ -24,7 +24,7 @@ namespace ClashOfClans.Tests.Integration
 
             // Act / Assert
             await _coc.Clans.SearchClansAsync(query);
-            Assert.IsFalse(query.MoveToPreviousItems());
+            Assert.IsFalse(query.MoveToPreviousItems(), "After initial query there should be no previous items!");
             Assert.IsTrue(query.MoveToNextItems());
 
             await _coc.Clans.SearchClansAsync(query);
