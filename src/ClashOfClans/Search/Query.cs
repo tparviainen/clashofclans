@@ -22,5 +22,34 @@ namespace ClashOfClans.Search
         /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
         /// </summary>
         public string Before { get; set; }
+
+        /// <summary>
+        /// Moves the <see cref="After"/> marker to next group of items
+        /// </summary>
+        /// <returns>true if there are next items, false if there are no next items</returns>
+        public bool MoveToNextItems() => SetMarkers(after: _cursors?.After);
+
+        /// <summary>
+        /// Moves the <see cref="Before"/> marker to previous group of items
+        /// </summary>
+        /// <returns>true if there are previous items, false if there are no previous items</returns>
+        public bool MoveToPreviousItems() => SetMarkers(before: _cursors?.Before);
+
+        private Cursors _cursors;
+
+        internal void SetCursors(Cursors cursors) => _cursors = cursors;
+
+        private bool SetMarkers(string before = null, string after = null)
+        {
+            Before = before;
+            After = after;
+
+            if (Before != null || After != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

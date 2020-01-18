@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Core.Net;
 using ClashOfClans.Core.Serialization;
 using ClashOfClans.Models;
+using ClashOfClans.Search;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -35,8 +36,22 @@ namespace ClashOfClans.Core
 
             var data = await GetDataAsync(request).ConfigureAwait(false);
 
-            return _serializer.Deserialize<T>(data);
+            var deserializedData = _serializer.Deserialize<T>(data);
+
+            if (request.Query != null && IsGenericType<T>(typeof(QueryResult<>)))
+            {
+                var paging = GetPaging(deserializedData);
+                request.Query.SetCursors(paging.Cursors);
+            }
+
+            return deserializedData;
         }
+
+        private Paging GetPaging<T>(T data) =>
+            data.GetType().GetProperty(nameof(QueryResult<object>.Paging)).GetValue(data) as Paging;
+
+        private bool IsGenericType<TType>(System.Type type) =>
+            typeof(TType).IsGenericType && typeof(TType).GetGenericTypeDefinition() == type;
 
         private async Task<string> GetDataAsync(AutoValidatedRequest request)
         {
