@@ -8,6 +8,23 @@ namespace ClashOfClans.Tests.Unit
     public class QueryTests
     {
         [TestMethod]
+        public void QueryMarkerMoveToEmptyCursors()
+        {
+            // Arrange
+            var query = new Query
+            {
+            };
+
+            // Act
+            var prev = query.MoveToPreviousItems();
+            var next = query.MoveToNextItems();
+
+            // Assert
+            Assert.IsFalse(prev, "Empty markers should not allow move!");
+            Assert.IsFalse(next, "Empty markers should not allow move!");
+        }
+
+        [TestMethod]
         public void QueryLimitSetTo10()
         {
             // Arrange
