@@ -24,13 +24,15 @@ namespace ClashOfClans.Search
         public string Before { get; set; }
 
         /// <summary>
-        /// Moves the <see cref="After"/> marker to next group of items
+        /// Moves the <see cref="After"/> marker to next group of items. After successful move the
+        /// client can repeat the previous API query to get next items.
         /// </summary>
         /// <returns>true if there are next items, false if there are no next items</returns>
         public bool MoveToNextItems() => SetMarkers(after: _cursors?.After);
 
         /// <summary>
-        /// Moves the <see cref="Before"/> marker to previous group of items
+        /// Moves the <see cref="Before"/> marker to previous group of items. After successful move
+        /// the client can repeat the previous API query to get previous items.
         /// </summary>
         /// <returns>true if there are previous items, false if there are no previous items</returns>
         public bool MoveToPreviousItems() => SetMarkers(before: _cursors?.Before);
