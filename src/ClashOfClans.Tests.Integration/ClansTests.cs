@@ -13,6 +13,26 @@ namespace ClashOfClans.Tests.Integration
     public class ClansTests : TestsBase
     {
         [TestMethod]
+        public async Task MovePagingMarkers()
+        {
+            // Arrange
+            var query = new QueryClans
+            {
+                MinMembers = 40,
+                Limit = 1
+            };
+
+            // Act / Assert
+            await _coc.Clans.SearchClansAsync(query);
+            Assert.IsFalse(query.MoveToPreviousItems(), "After initial query there should be no previous items!");
+            Assert.IsTrue(query.MoveToNextItems());
+
+            await _coc.Clans.SearchClansAsync(query);
+            Assert.IsTrue(query.MoveToPreviousItems());
+            Assert.IsTrue(query.MoveToNextItems());
+        }
+
+        [TestMethod]
         public async Task SearchClans()
         {
             // Arrange
@@ -51,16 +71,16 @@ namespace ClashOfClans.Tests.Integration
             // Act
             do
             {
-                var searchResult = await _coc.Clans.SearchClansAsync(query);
-                searchResult.Items.ToList().ForEach(clan =>
+                var clans = (ClanList)await _coc.Clans.SearchClansAsync(query);
+
+                foreach (var clan in clans)
                 {
                     Assert.AreEqual(locationName, clan.Location.Name);
                     Trace.WriteLine(clan.Dump());
-                });
+                }
 
-                query.After = searchResult.Paging.Cursors.After;
-                count += searchResult.Items.Count;
-            } while (query.After != null);
+                count += clans.Count;
+            } while (query.MoveToNextItems());
 
             // Assert
             Trace.WriteLine($"{locationName}: {count}");
