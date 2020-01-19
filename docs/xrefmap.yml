@@ -3461,6 +3461,32 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Search.Query.Limit
   nameWithType: Query.Limit
+- uid: ClashOfClans.Search.Query.MoveToNextItems
+  name: MoveToNextItems()
+  href: api/ClashOfClans.Search.Query.html#ClashOfClans_Search_Query_MoveToNextItems
+  commentId: M:ClashOfClans.Search.Query.MoveToNextItems
+  fullName: ClashOfClans.Search.Query.MoveToNextItems()
+  nameWithType: Query.MoveToNextItems()
+- uid: ClashOfClans.Search.Query.MoveToNextItems*
+  name: MoveToNextItems
+  href: api/ClashOfClans.Search.Query.html#ClashOfClans_Search_Query_MoveToNextItems_
+  commentId: Overload:ClashOfClans.Search.Query.MoveToNextItems
+  isSpec: "True"
+  fullName: ClashOfClans.Search.Query.MoveToNextItems
+  nameWithType: Query.MoveToNextItems
+- uid: ClashOfClans.Search.Query.MoveToPreviousItems
+  name: MoveToPreviousItems()
+  href: api/ClashOfClans.Search.Query.html#ClashOfClans_Search_Query_MoveToPreviousItems
+  commentId: M:ClashOfClans.Search.Query.MoveToPreviousItems
+  fullName: ClashOfClans.Search.Query.MoveToPreviousItems()
+  nameWithType: Query.MoveToPreviousItems()
+- uid: ClashOfClans.Search.Query.MoveToPreviousItems*
+  name: MoveToPreviousItems
+  href: api/ClashOfClans.Search.Query.html#ClashOfClans_Search_Query_MoveToPreviousItems_
+  commentId: Overload:ClashOfClans.Search.Query.MoveToPreviousItems
+  isSpec: "True"
+  fullName: ClashOfClans.Search.Query.MoveToPreviousItems
+  nameWithType: Query.MoveToPreviousItems
 - uid: ClashOfClans.Search.Query.ToString
   name: ToString()
   href: api/ClashOfClans.Search.Query.html#ClashOfClans_Search_Query_ToString
