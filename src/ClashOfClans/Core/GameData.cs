@@ -26,7 +26,7 @@ namespace ClashOfClans.Core
         public GameData(ClashOfClansOptionsInternal options)
         {
             _options = options;
-            _endpoint = new ApiEndpoint(options.Token);
+            _endpoint = new ApiEndpoint(options.Tokens);
             _serializer = new MessageSerializer();
         }
 
