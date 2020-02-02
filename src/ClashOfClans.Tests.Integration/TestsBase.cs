@@ -33,7 +33,8 @@ namespace ClashOfClans.Tests.Integration
                     .AddJsonFile("AppSettings.test.json")
                     .Build();
 
-                _coc = new ClashOfClansClient(_config["api:token"]);
+                var tokens = _config.GetSection("api:tokens").GetChildren().Select(x => x.Value);
+                _coc = new ClashOfClansClient(tokens.ToArray());
                 _coc.Configure(options =>
                 {
                     options.Logger = new ClashOfClansLogger(_config["logPath"]);
