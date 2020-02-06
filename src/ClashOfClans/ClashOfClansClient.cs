@@ -53,7 +53,9 @@ namespace ClashOfClans
 
             if (maxRequestsPerSecond != _options.MaxRequestsPerSecond)
             {
-                _options.ThrottleRequests = new ThrottleRequestsPerSecond(_options.MaxRequestsPerSecond);
+                _options.ThrottleRequests = new ThrottleRequestsPerSecond(
+                    _options.MaxRequestsPerSecond,
+                    _options.Tokens.Count);
             }
         }
 

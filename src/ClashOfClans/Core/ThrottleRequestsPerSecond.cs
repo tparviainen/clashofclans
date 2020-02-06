@@ -9,7 +9,7 @@ namespace ClashOfClans.Core
         private readonly long _delayBetweenApiCalls;
         private readonly object _throttlingLock = new object();
 
-        public ThrottleRequestsPerSecond(int maxRequestsPerSecond)
+        public ThrottleRequestsPerSecond(int maxRequestsPerSecond, int tokens = 1)
         {
             if (maxRequestsPerSecond <= 0)
             {
@@ -17,7 +17,7 @@ namespace ClashOfClans.Core
             }
 
             _nextAllowedApiCallTime = DateTime.Now;
-            _delayBetweenApiCalls = TimeSpan.TicksPerSecond / maxRequestsPerSecond;
+            _delayBetweenApiCalls = TimeSpan.TicksPerSecond / (maxRequestsPerSecond * tokens);
         }
 
         public Task WaitAsync()

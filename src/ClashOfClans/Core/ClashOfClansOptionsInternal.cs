@@ -8,7 +8,7 @@ namespace ClashOfClans.Core
 
         public ClashOfClansOptionsInternal(IReadOnlyList<string> tokens) : base(tokens)
         {
-            ThrottleRequests = new ThrottleRequestsPerSecond(MaxRequestsPerSecond);
+            ThrottleRequests = new ThrottleRequestsPerSecond(MaxRequestsPerSecond, tokens.Count);
         }
     }
 }
