@@ -24,18 +24,14 @@ namespace ClashOfClans.Search
 
                     // Enumerations need to start with a lowercase character
                     if (Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
-                    {
                         qValue = $"{char.ToLowerInvariant(qValue[0])}{qValue.Substring(1)}";
-                    }
 
                     sb.Append($"&{property.Name.ToLower()}={WebUtility.UrlEncode(qValue)}");
                 }
             }
 
             if (sb.Length != 0)
-            {
                 return $"?{sb.ToString(1, sb.Length - 1)}";
-            }
 
             return string.Empty;
         }

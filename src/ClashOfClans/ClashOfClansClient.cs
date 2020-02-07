@@ -19,16 +19,12 @@ namespace ClashOfClans
         public ClashOfClansClient(params string[] tokens)
         {
             if (tokens.Length == 0)
-            {
                 throw new ArgumentException("At least one API token is required");
-            }
 
             foreach (var token in tokens)
             {
                 if (string.IsNullOrWhiteSpace(token))
-                {
                     throw new ArgumentException("Token must not be empty");
-                }
             }
 
             _options = new ClashOfClansOptionsInternal(tokens);

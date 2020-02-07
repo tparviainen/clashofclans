@@ -67,9 +67,7 @@ namespace ClashOfClans.Core
             Log(request, $"Content: {content}");
 
             if (response.IsSuccessStatusCode)
-            {
                 return content;
-            }
 
             try
             {

@@ -12,9 +12,7 @@ namespace ClashOfClans.Core
         public ThrottleRequestsPerSecond(int maxRequestsPerSecond, int tokens = 1)
         {
             if (maxRequestsPerSecond <= 0)
-            {
                 throw new ArgumentException(nameof(maxRequestsPerSecond));
-            }
 
             _nextAllowedApiCallTime = DateTime.Now;
             _delayBetweenApiCalls = TimeSpan.TicksPerSecond / (maxRequestsPerSecond * tokens);
@@ -26,9 +24,7 @@ namespace ClashOfClans.Core
             var millisecondsDelay = (int)(continuationTime - DateTime.Now).TotalMilliseconds;
 
             if (millisecondsDelay > 0)
-            {
                 return Task.Delay(millisecondsDelay);
-            }
 
             return Task.CompletedTask;
         }
@@ -44,9 +40,7 @@ namespace ClashOfClans.Core
                 var continuationTime = _nextAllowedApiCallTime;
 
                 if (continuationTime < now)
-                {
                     continuationTime = now;
-                }
 
                 _nextAllowedApiCallTime = continuationTime.AddTicks(_delayBetweenApiCalls);
 

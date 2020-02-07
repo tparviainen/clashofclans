@@ -47,9 +47,7 @@ namespace ClashOfClans.Search
             After = after;
 
             if (Before != null || After != null)
-            {
                 return true;
-            }
 
             return false;
         }
