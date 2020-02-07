@@ -16,7 +16,7 @@ namespace ClashOfClans.Core
         private readonly ApiEndpoint _endpoint;
         private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
-        private IThrottleRequests _throttleRequests => _options.ThrottleRequests;
+        private IThrottleRequests ThrottleRequests => _options.ThrottleRequests;
 
         /// <summary>
         /// Logging method for diagnostics messages
@@ -56,7 +56,7 @@ namespace ClashOfClans.Core
         private async Task<string> GetDataAsync(AutoValidatedRequest request)
         {
             var watch = Stopwatch.StartNew();
-            await _throttleRequests.WaitAsync().ConfigureAwait(false);
+            await ThrottleRequests.WaitAsync().ConfigureAwait(false);
             Log(request, $"Throttling: {watch.ElapsedMilliseconds} ms");
 
             watch.Restart();
