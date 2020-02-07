@@ -32,12 +32,15 @@ references:
   commentId: T:ClashOfClans.ClashOfClansClient
   fullName: ClashOfClans.ClashOfClansClient
   nameWithType: ClashOfClansClient
-- uid: ClashOfClans.ClashOfClansClient.#ctor(System.String)
-  name: ClashOfClansClient(String)
-  href: api/ClashOfClans.ClashOfClansClient.html#ClashOfClans_ClashOfClansClient__ctor_System_String_
-  commentId: M:ClashOfClans.ClashOfClansClient.#ctor(System.String)
-  fullName: ClashOfClans.ClashOfClansClient.ClashOfClansClient(System.String)
-  nameWithType: ClashOfClansClient.ClashOfClansClient(String)
+- uid: ClashOfClans.ClashOfClansClient.#ctor(System.String[])
+  name: ClashOfClansClient(String[])
+  href: api/ClashOfClans.ClashOfClansClient.html#ClashOfClans_ClashOfClansClient__ctor_System_String___
+  commentId: M:ClashOfClans.ClashOfClansClient.#ctor(System.String[])
+  name.vb: ClashOfClansClient(String())
+  fullName: ClashOfClans.ClashOfClansClient.ClashOfClansClient(System.String[])
+  fullName.vb: ClashOfClans.ClashOfClansClient.ClashOfClansClient(System.String())
+  nameWithType: ClashOfClansClient.ClashOfClansClient(String[])
+  nameWithType.vb: ClashOfClansClient.ClashOfClansClient(String())
 - uid: ClashOfClans.ClashOfClansClient.#ctor*
   name: ClashOfClansClient
   href: api/ClashOfClans.ClashOfClansClient.html#ClashOfClans_ClashOfClansClient__ctor_
@@ -207,12 +210,15 @@ references:
   commentId: T:ClashOfClans.Core.ClashOfClansOptions
   fullName: ClashOfClans.Core.ClashOfClansOptions
   nameWithType: ClashOfClansOptions
-- uid: ClashOfClans.Core.ClashOfClansOptions.#ctor(System.String)
-  name: ClashOfClansOptions(String)
-  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions__ctor_System_String_
-  commentId: M:ClashOfClans.Core.ClashOfClansOptions.#ctor(System.String)
-  fullName: ClashOfClans.Core.ClashOfClansOptions.ClashOfClansOptions(System.String)
-  nameWithType: ClashOfClansOptions.ClashOfClansOptions(String)
+- uid: ClashOfClans.Core.ClashOfClansOptions.#ctor(System.Collections.Generic.IReadOnlyList{System.String})
+  name: ClashOfClansOptions(IReadOnlyList<String>)
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions__ctor_System_Collections_Generic_IReadOnlyList_System_String__
+  commentId: M:ClashOfClans.Core.ClashOfClansOptions.#ctor(System.Collections.Generic.IReadOnlyList{System.String})
+  name.vb: ClashOfClansOptions(IReadOnlyList(Of String))
+  fullName: ClashOfClans.Core.ClashOfClansOptions.ClashOfClansOptions(System.Collections.Generic.IReadOnlyList<System.String>)
+  fullName.vb: ClashOfClans.Core.ClashOfClansOptions.ClashOfClansOptions(System.Collections.Generic.IReadOnlyList(Of System.String))
+  nameWithType: ClashOfClansOptions.ClashOfClansOptions(IReadOnlyList<String>)
+  nameWithType.vb: ClashOfClansOptions.ClashOfClansOptions(IReadOnlyList(Of String))
 - uid: ClashOfClans.Core.ClashOfClansOptions.#ctor*
   name: ClashOfClansOptions
   href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions__ctor_
@@ -259,6 +265,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansOptions.Token
   nameWithType: ClashOfClansOptions.Token
+- uid: ClashOfClans.Core.ClashOfClansOptions.Tokens
+  name: Tokens
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Tokens
+  commentId: P:ClashOfClans.Core.ClashOfClansOptions.Tokens
+  fullName: ClashOfClans.Core.ClashOfClansOptions.Tokens
+  nameWithType: ClashOfClansOptions.Tokens
+- uid: ClashOfClans.Core.ClashOfClansOptions.Tokens*
+  name: Tokens
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Tokens_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptions.Tokens
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptions.Tokens
+  nameWithType: ClashOfClansOptions.Tokens
 - uid: ClashOfClans.Core.IClashOfClansLogger
   name: IClashOfClansLogger
   href: api/ClashOfClans.Core.IClashOfClansLogger.html
