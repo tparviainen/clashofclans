@@ -12,20 +12,20 @@ namespace ClashOfClans.Core.Net
     /// </summary>
     internal class ApiEndpoint
     {
-        private int _httpClientIndex = 0;
-        private readonly object _throttlingLock = new object();
+        private int _index = 0;
+        private readonly object _indexLock = new object();
         private readonly IList<HttpClient> _clients = new List<HttpClient>();
 
         private HttpClient Client
         {
             get
             {
-                lock (_throttlingLock)
+                lock (_indexLock)
                 {
-                    if (++_httpClientIndex == _clients.Count)
-                        _httpClientIndex = 0;
+                    if (++_index == _clients.Count)
+                        _index = 0;
 
-                    return _clients[_httpClientIndex];
+                    return _clients[_index];
                 }
             }
         }
@@ -34,7 +34,6 @@ namespace ClashOfClans.Core.Net
         {
             var address = new Uri("https://api.clashofclans.com/v1/");
 
-            // Create token specific HttpClient
             foreach (var token in tokens)
                 _clients.Add(CreateHttpClient(token, address));
 
@@ -48,9 +47,11 @@ namespace ClashOfClans.Core.Net
         /// </summary>
         private HttpClient CreateHttpClient(string token, Uri address)
         {
-            var client = new HttpClient();
+            var client = new HttpClient
+            {
+                BaseAddress = address
+            };
 
-            client.BaseAddress = address;
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
