@@ -28,12 +28,14 @@ namespace ClashOfClans.Tests.Integration
         public async Task GetPlayerInformationInALoopWithoutThrottling()
         {
             // Arrange
+            var tokenCount = 0;
             var playerTag = PlayerTags.First();
             var requestCount = 200;
             var requestsPerSecond = 50;
             var sw = new Stopwatch();
             _coc.Configure(options =>
             {
+                tokenCount = options.Tokens.Count;
                 Assert.IsTrue(options.MaxRequestsPerSecond == requestsPerSecond);
             });
 
@@ -45,7 +47,7 @@ namespace ClashOfClans.Tests.Integration
                 _ = await Task.WhenAll(results);
                 sw.Stop();
 
-                Trace.WriteLine($"{requestCount} requests took {sw.ElapsedMilliseconds} ms with {requestsPerSecond} requests/second rate");
+                Trace.WriteLine($"{requestCount} requests took {sw.ElapsedMilliseconds} ms with {tokenCount} token(s) and {requestsPerSecond} requests/second rate");
             }
             catch (Exception ex)
             {

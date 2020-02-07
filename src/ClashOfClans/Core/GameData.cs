@@ -16,7 +16,7 @@ namespace ClashOfClans.Core
         private readonly ApiEndpoint _endpoint;
         private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
-        private IThrottleRequests _throttleRequests => _options.ThrottleRequests;
+        private IThrottleRequests ThrottleRequests => _options.ThrottleRequests;
 
         /// <summary>
         /// Logging method for diagnostics messages
@@ -26,7 +26,7 @@ namespace ClashOfClans.Core
         public GameData(ClashOfClansOptionsInternal options)
         {
             _options = options;
-            _endpoint = new ApiEndpoint(options.Token);
+            _endpoint = new ApiEndpoint(options.Tokens);
             _serializer = new MessageSerializer();
         }
 
@@ -56,7 +56,7 @@ namespace ClashOfClans.Core
         private async Task<string> GetDataAsync(AutoValidatedRequest request)
         {
             var watch = Stopwatch.StartNew();
-            await _throttleRequests.WaitAsync().ConfigureAwait(false);
+            await ThrottleRequests.WaitAsync().ConfigureAwait(false);
             Log(request, $"Throttling: {watch.ElapsedMilliseconds} ms");
 
             watch.Restart();
@@ -67,9 +67,7 @@ namespace ClashOfClans.Core
             Log(request, $"Content: {content}");
 
             if (response.IsSuccessStatusCode)
-            {
                 return content;
-            }
 
             try
             {

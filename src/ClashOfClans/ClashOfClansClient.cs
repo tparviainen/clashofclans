@@ -15,15 +15,19 @@ namespace ClashOfClans
         /// <summary>
         /// Initializes a new instance of the Clash of Clans API
         /// </summary>
-        /// <param name="token">Your personal API key</param>
-        public ClashOfClansClient(string token)
+        /// <param name="tokens">Your personal API key(s)</param>
+        public ClashOfClansClient(params string[] tokens)
         {
-            if (string.IsNullOrWhiteSpace(token))
+            if (tokens.Length == 0)
+                throw new ArgumentException("At least one API token is required");
+
+            foreach (var token in tokens)
             {
-                throw new ArgumentException("Token must not be empty");
+                if (string.IsNullOrWhiteSpace(token))
+                    throw new ArgumentException("Token must not be empty");
             }
 
-            _options = new ClashOfClansOptionsInternal(token);
+            _options = new ClashOfClansOptionsInternal(tokens);
             var gameData = new GameData(_options);
 
             Clans = new Clans(gameData);
@@ -45,7 +49,9 @@ namespace ClashOfClans
 
             if (maxRequestsPerSecond != _options.MaxRequestsPerSecond)
             {
-                _options.ThrottleRequests = new ThrottleRequestsPerSecond(_options.MaxRequestsPerSecond);
+                _options.ThrottleRequests = new ThrottleRequestsPerSecond(
+                    _options.MaxRequestsPerSecond,
+                    _options.Tokens.Count);
             }
         }
 

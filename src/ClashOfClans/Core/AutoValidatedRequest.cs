@@ -21,14 +21,10 @@ namespace ClashOfClans.Core
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                {
                     throw new ArgumentException("War tag must not be empty");
-                }
 
                 if (value == Constants.InvalidWarTag)
-                {
                     throw new ArgumentException("War tag is not valid");
-                }
 
                 _warTag = value;
             }
@@ -45,14 +41,10 @@ namespace ClashOfClans.Core
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                {
                     throw new ArgumentException("Clan tag must not be empty");
-                }
 
                 if (!value.StartsWith(Constants.TagStartChar))
-                {
                     throw new ArgumentException($"Clan tags start with hash character '{Constants.TagStartChar}'");
-                }
 
                 _clanTag = value;
             }
@@ -69,9 +61,7 @@ namespace ClashOfClans.Core
             set
             {
                 if (value?.After != null && value?.Before != null)
-                {
                     throw new ArgumentException("Only after or before can be specified for a query, not both");
-                }
 
                 _query = value;
             }
@@ -88,19 +78,13 @@ namespace ClashOfClans.Core
             set
             {
                 if (value == null)
-                {
                     throw new ArgumentException("Query must not be empty");
-                }
 
                 if (value.Name != null && value.Name.Length < Constants.MinQueryNameLength)
-                {
                     throw new ArgumentException($"Name needs to be at least {Constants.MinQueryNameLength} characters long");
-                }
 
                 if (value.LabelIds != null && !_labelIdsRegex.IsMatch(value.LabelIds))
-                {
                     throw new ArgumentException($"Invalid format for parameter {nameof(QueryClans.LabelIds)}");
-                }
 
                 Query = value;
             }
@@ -136,14 +120,10 @@ namespace ClashOfClans.Core
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                {
                     throw new ArgumentException("Player tag must not be empty");
-                }
 
                 if (!value.StartsWith(Constants.TagStartChar))
-                {
                     throw new ArgumentException($"Player tags start with hash character '{Constants.TagStartChar}'");
-                }
 
                 _playerTag = value;
             }
@@ -160,9 +140,7 @@ namespace ClashOfClans.Core
             set
             {
                 if (!value.HasValue)
-                {
                     throw new ArgumentException("League identifier must not be empty");
-                }
 
                 _leagueId = value;
             }
@@ -179,9 +157,7 @@ namespace ClashOfClans.Core
             set
             {
                 if (!value.HasValue)
-                {
                     throw new ArgumentException("Location identifier must not be empty");
-                }
 
                 _locationId = value;
             }
@@ -198,9 +174,7 @@ namespace ClashOfClans.Core
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                {
                     throw new ArgumentException("Season identifier must not be empty");
-                }
 
                 _seasonId = value;
             }

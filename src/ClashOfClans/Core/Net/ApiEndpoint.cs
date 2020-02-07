@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -11,22 +12,53 @@ namespace ClashOfClans.Core.Net
     /// </summary>
     internal class ApiEndpoint
     {
-        // HttpClient is intended to be instantiated once and re-used throughout the life of an application
-        private readonly HttpClient _client = new HttpClient();
+        private int _index = 0;
+        private readonly object _indexLock = new object();
+        private readonly IList<HttpClient> _clients = new List<HttpClient>();
 
-        public ApiEndpoint(string token)
+        private HttpClient Client
         {
-            _client.BaseAddress = new Uri("https://api.clashofclans.com/v1/");
+            get
+            {
+                lock (_indexLock)
+                {
+                    if (++_index == _clients.Count)
+                        _index = 0;
 
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                    return _clients[_index];
+                }
+            }
+        }
+
+        public ApiEndpoint(IReadOnlyList<string> tokens)
+        {
+            var address = new Uri("https://api.clashofclans.com/v1/");
+
+            foreach (var token in tokens)
+                _clients.Add(CreateHttpClient(token, address));
 
             // Sets the number of milliseconds after which an active ServicePoint connection is closed
-            var sp = ServicePointManager.FindServicePoint(_client.BaseAddress);
+            var sp = ServicePointManager.FindServicePoint(address);
             sp.ConnectionLeaseTimeout = (int)TimeSpan.FromMinutes(1).TotalMilliseconds;
         }
 
-        public Task<HttpResponseMessage> GetMessageAsync(string requestUri) => _client.GetAsync(requestUri);
+        /// <summary>
+        /// HttpClient is intended to be instantiated once and re-used throughout the life of an application
+        /// </summary>
+        private HttpClient CreateHttpClient(string token, Uri address)
+        {
+            var client = new HttpClient
+            {
+                BaseAddress = address
+            };
+
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            return client;
+        }
+
+        public Task<HttpResponseMessage> GetMessageAsync(string requestUri) => Client.GetAsync(requestUri);
     }
 }
