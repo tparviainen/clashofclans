@@ -6,4 +6,4 @@
 #   Patch: Backwards compatible bug fixes only
 #   -Suffix (optional): a hyphen followed by a string denoting a pre-release version (rc1, rc2, etc.)
 
-6.3.0-rc1
+6.3.0
