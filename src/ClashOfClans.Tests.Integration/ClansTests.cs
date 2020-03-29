@@ -96,10 +96,7 @@ namespace ClashOfClans.Tests.Integration
             clanTags.AddRange(ClanTags);
 
             // Act
-            foreach (var clanTag in clanTags)
-            {
-                taskList.Add(_coc.Clans.GetClanAsync(clanTag));
-            }
+            clanTags.ForEach(clanTag => taskList.Add(_coc.Clans.GetClanAsync(clanTag)));
 
             // Assert
             foreach (var clan in await Task.WhenAll(taskList))
@@ -166,10 +163,7 @@ namespace ClashOfClans.Tests.Integration
             }
 
             // Act
-            foreach (var clanTag in clanTags)
-            {
-                taskList.Add(_coc.Clans.GetCurrentWarAsync(clanTag));
-            }
+            clanTags.ForEach(clanTag => taskList.Add(_coc.Clans.GetCurrentWarAsync(clanTag)));
 
             // Assert
             Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
@@ -190,10 +184,7 @@ namespace ClashOfClans.Tests.Integration
             clanTags.AddRange(ClanTags);
 
             // Act
-            foreach (var clanTag in clanTags)
-            {
-                taskList.Add(_coc.Clans.GetClanWarLeagueGroupAsync(clanTag));
-            }
+            clanTags.ForEach(clanTag => taskList.Add(_coc.Clans.GetClanWarLeagueGroupAsync(clanTag)));
 
             try
             {
