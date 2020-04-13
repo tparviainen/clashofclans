@@ -65,12 +65,4 @@ namespace ClashOfClans
 
         public ILabels Labels { get; }
     }
-
-    [Obsolete("Use ClashOfClansClient instead.")]
-    public class ClashOfClansApi : ClashOfClansClient
-    {
-        public ClashOfClansApi(string token) : base(token)
-        {
-        }
-    }
 }
