@@ -55,7 +55,7 @@ namespace ClashOfClans.App
             }
             catch (ClashOfClansException ex)
             {
-                Console.WriteLine(ex.Error);
+                Console.WriteLine($"Exception: {ex.Error.Reason}, {ex.Error.Message}");
             }
         }
 
