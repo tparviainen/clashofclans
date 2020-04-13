@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace ClashOfClans.Core
 {
@@ -18,12 +16,6 @@ namespace ClashOfClans.Core
         /// Your personal API key(s) for Supercell REST API
         /// </summary>
         public IReadOnlyList<string> Tokens { get; }
-
-        /// <summary>
-        /// Your personal API key for Supercell REST API
-        /// </summary>
-        [Obsolete("Use Tokens instead.")]
-        public string Token => Tokens.FirstOrDefault();
 
         /// <summary>
         /// Throttling limit for API requests per token. Default 10 API requests per second.
