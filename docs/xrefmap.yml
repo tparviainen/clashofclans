@@ -7,25 +7,6 @@ references:
   commentId: N:ClashOfClans
   fullName: ClashOfClans
   nameWithType: ClashOfClans
-- uid: ClashOfClans.ClashOfClansApi
-  name: ClashOfClansApi
-  href: api/ClashOfClans.ClashOfClansApi.html
-  commentId: T:ClashOfClans.ClashOfClansApi
-  fullName: ClashOfClans.ClashOfClansApi
-  nameWithType: ClashOfClansApi
-- uid: ClashOfClans.ClashOfClansApi.#ctor(System.String)
-  name: ClashOfClansApi(String)
-  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi__ctor_System_String_
-  commentId: M:ClashOfClans.ClashOfClansApi.#ctor(System.String)
-  fullName: ClashOfClans.ClashOfClansApi.ClashOfClansApi(System.String)
-  nameWithType: ClashOfClansApi.ClashOfClansApi(String)
-- uid: ClashOfClans.ClashOfClansApi.#ctor*
-  name: ClashOfClansApi
-  href: api/ClashOfClans.ClashOfClansApi.html#ClashOfClans_ClashOfClansApi__ctor_
-  commentId: Overload:ClashOfClans.ClashOfClansApi.#ctor
-  isSpec: "True"
-  fullName: ClashOfClans.ClashOfClansApi.ClashOfClansApi
-  nameWithType: ClashOfClansApi.ClashOfClansApi
 - uid: ClashOfClans.ClashOfClansClient
   name: ClashOfClansClient
   href: api/ClashOfClans.ClashOfClansClient.html
@@ -252,19 +233,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansOptions.MaxRequestsPerSecond
   nameWithType: ClashOfClansOptions.MaxRequestsPerSecond
-- uid: ClashOfClans.Core.ClashOfClansOptions.Token
-  name: Token
-  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Token
-  commentId: P:ClashOfClans.Core.ClashOfClansOptions.Token
-  fullName: ClashOfClans.Core.ClashOfClansOptions.Token
-  nameWithType: ClashOfClansOptions.Token
-- uid: ClashOfClans.Core.ClashOfClansOptions.Token*
-  name: Token
-  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Token_
-  commentId: Overload:ClashOfClans.Core.ClashOfClansOptions.Token
-  isSpec: "True"
-  fullName: ClashOfClans.Core.ClashOfClansOptions.Token
-  nameWithType: ClashOfClansOptions.Token
 - uid: ClashOfClans.Core.ClashOfClansOptions.Tokens
   name: Tokens
   href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Tokens
