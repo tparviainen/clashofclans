@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClans.Tests.Integrat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClans.App", "ClashOfClans.App\ClashOfClans.App.csproj", "{B86AFE64-B9A8-4C35-A75E-0FBE11185E67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClashOfClans.Tests.Unit", "ClashOfClans.Tests.Unit\ClashOfClans.Tests.Unit.csproj", "{CAB7A2EB-4E77-4D11-844B-F4094BCE27AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClans.Tests.Unit", "ClashOfClans.Tests.Unit\ClashOfClans.Tests.Unit.csproj", "{CAB7A2EB-4E77-4D11-844B-F4094BCE27AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClashOfClans.Models", "ClashOfClans.Models\ClashOfClans.Models.csproj", "{3EC12BB3-6211-44EC-A975-9A2B002A84D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CAB7A2EB-4E77-4D11-844B-F4094BCE27AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB7A2EB-4E77-4D11-844B-F4094BCE27AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB7A2EB-4E77-4D11-844B-F4094BCE27AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC12BB3-6211-44EC-A975-9A2B002A84D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC12BB3-6211-44EC-A975-9A2B002A84D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC12BB3-6211-44EC-A975-9A2B002A84D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC12BB3-6211-44EC-A975-9A2B002A84D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
