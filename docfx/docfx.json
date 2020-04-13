@@ -5,6 +5,7 @@
         {
           "src": "../",
           "files": [
+            "src/ClashOfClans.Models/ClashOfClans.Models.csproj",
             "src/ClashOfClans/ClashOfClans.csproj"
           ]
         }
