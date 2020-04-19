@@ -5,6 +5,7 @@ on:
     paths:
       - 'docfx/**'
       - 'src/ClashOfClans/**'
+      - 'src/ClashOfClans.Models/**'
     branches:
       - master
 
