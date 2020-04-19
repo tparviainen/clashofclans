@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>ClashOfClans Game API</PackageTags>
     <PackageProjectUrl>https://tparviainen.github.io/clashofclans/</PackageProjectUrl>
@@ -16,6 +17,12 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageReleaseNotes>https://github.com/tparviainen/clashofclans/releases</PackageReleaseNotes>
   </PropertyGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
