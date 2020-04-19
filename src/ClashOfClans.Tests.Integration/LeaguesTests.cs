@@ -66,5 +66,32 @@ namespace ClashOfClans.Tests.Integration
             // Assert
             Assert.IsNotNull(seasonPlayerRankingList);
         }
+
+        [TestMethod]
+        public async Task ListWarLeagues()
+        {
+            // Arrange
+            var leagues = _coc.Leagues;
+
+            // Act
+            var warLeagueList = (WarLeagueList)await leagues.GetWarLeaguesAsync();
+
+            // Assert
+            Assert.IsNotNull(warLeagueList);
+        }
+
+        [TestMethod]
+        public async Task GetWarLeagueInformation()
+        {
+            // Arrange
+            var leagues = _coc.Leagues;
+            var warLeagueId = GetRandom(_warLeagues).Id;
+
+            // Act
+            var warLeague = await leagues.GetWarLeagueAsync(warLeagueId);
+
+            // Assert
+            Assert.IsNotNull(warLeague);
+        }
     }
 }

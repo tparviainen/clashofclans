@@ -39,6 +39,8 @@ namespace ClashOfClans.Models
 
         public bool? IsWarLogPublic { get; set; }
 
+        public WarLeague WarLeague { get; set; }
+
         public int? Members { get; set; }
 
         public int? WarTies { get; set; }

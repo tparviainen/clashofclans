@@ -47,5 +47,23 @@ namespace ClashOfClans
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Season player ranking list</returns>
         Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null);
+
+        /// <summary>
+        /// Get war league information
+        /// </summary>
+        /// <param name="leagueId">Identifier of the league</param>
+        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
+        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
+        /// <returns>Requested war league</returns>
+        Task<WarLeague> GetWarLeagueAsync(int? leagueId);
+
+        /// <summary>
+        /// List war leagues
+        /// </summary>
+        /// <param name="query">Query parameters</param>
+        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
+        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
+        /// <returns>War league list</returns>
+        Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query query = null);
     }
 }
