@@ -532,6 +532,35 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.ILeagues.GetLeagueSeasonsAsync
   nameWithType: ILeagues.GetLeagueSeasonsAsync
+- uid: ClashOfClans.ILeagues.GetWarLeagueAsync(System.Nullable{System.Int32})
+  name: GetWarLeagueAsync(Nullable<Int32>)
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetWarLeagueAsync_System_Nullable_System_Int32__
+  commentId: M:ClashOfClans.ILeagues.GetWarLeagueAsync(System.Nullable{System.Int32})
+  name.vb: GetWarLeagueAsync(Nullable(Of Int32))
+  fullName: ClashOfClans.ILeagues.GetWarLeagueAsync(System.Nullable<System.Int32>)
+  fullName.vb: ClashOfClans.ILeagues.GetWarLeagueAsync(System.Nullable(Of System.Int32))
+  nameWithType: ILeagues.GetWarLeagueAsync(Nullable<Int32>)
+  nameWithType.vb: ILeagues.GetWarLeagueAsync(Nullable(Of Int32))
+- uid: ClashOfClans.ILeagues.GetWarLeagueAsync*
+  name: GetWarLeagueAsync
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetWarLeagueAsync_
+  commentId: Overload:ClashOfClans.ILeagues.GetWarLeagueAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILeagues.GetWarLeagueAsync
+  nameWithType: ILeagues.GetWarLeagueAsync
+- uid: ClashOfClans.ILeagues.GetWarLeaguesAsync(ClashOfClans.Search.Query)
+  name: GetWarLeaguesAsync(Query)
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetWarLeaguesAsync_ClashOfClans_Search_Query_
+  commentId: M:ClashOfClans.ILeagues.GetWarLeaguesAsync(ClashOfClans.Search.Query)
+  fullName: ClashOfClans.ILeagues.GetWarLeaguesAsync(ClashOfClans.Search.Query)
+  nameWithType: ILeagues.GetWarLeaguesAsync(Query)
+- uid: ClashOfClans.ILeagues.GetWarLeaguesAsync*
+  name: GetWarLeaguesAsync
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetWarLeaguesAsync_
+  commentId: Overload:ClashOfClans.ILeagues.GetWarLeaguesAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILeagues.GetWarLeaguesAsync
+  nameWithType: ILeagues.GetWarLeaguesAsync
 - uid: ClashOfClans.ILocations
   name: ILocations
   href: api/ClashOfClans.ILocations.html
@@ -831,6 +860,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.WarFrequency
   nameWithType: Clan.WarFrequency
+- uid: ClashOfClans.Models.Clan.WarLeague
+  name: WarLeague
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_WarLeague
+  commentId: P:ClashOfClans.Models.Clan.WarLeague
+  fullName: ClashOfClans.Models.Clan.WarLeague
+  nameWithType: Clan.WarLeague
+- uid: ClashOfClans.Models.Clan.WarLeague*
+  name: WarLeague
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_WarLeague_
+  commentId: Overload:ClashOfClans.Models.Clan.WarLeague
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.WarLeague
+  nameWithType: Clan.WarLeague
 - uid: ClashOfClans.Models.Clan.WarLosses
   name: WarLosses
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_WarLosses
@@ -3397,6 +3439,44 @@ references:
   commentId: F:ClashOfClans.Models.WarFrequency.Unknown
   fullName: ClashOfClans.Models.WarFrequency.Unknown
   nameWithType: WarFrequency.Unknown
+- uid: ClashOfClans.Models.WarLeague
+  name: WarLeague
+  href: api/ClashOfClans.Models.WarLeague.html
+  commentId: T:ClashOfClans.Models.WarLeague
+  fullName: ClashOfClans.Models.WarLeague
+  nameWithType: WarLeague
+- uid: ClashOfClans.Models.WarLeague.Id
+  name: Id
+  href: api/ClashOfClans.Models.WarLeague.html#ClashOfClans_Models_WarLeague_Id
+  commentId: P:ClashOfClans.Models.WarLeague.Id
+  fullName: ClashOfClans.Models.WarLeague.Id
+  nameWithType: WarLeague.Id
+- uid: ClashOfClans.Models.WarLeague.Id*
+  name: Id
+  href: api/ClashOfClans.Models.WarLeague.html#ClashOfClans_Models_WarLeague_Id_
+  commentId: Overload:ClashOfClans.Models.WarLeague.Id
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarLeague.Id
+  nameWithType: WarLeague.Id
+- uid: ClashOfClans.Models.WarLeague.Name
+  name: Name
+  href: api/ClashOfClans.Models.WarLeague.html#ClashOfClans_Models_WarLeague_Name
+  commentId: P:ClashOfClans.Models.WarLeague.Name
+  fullName: ClashOfClans.Models.WarLeague.Name
+  nameWithType: WarLeague.Name
+- uid: ClashOfClans.Models.WarLeague.Name*
+  name: Name
+  href: api/ClashOfClans.Models.WarLeague.html#ClashOfClans_Models_WarLeague_Name_
+  commentId: Overload:ClashOfClans.Models.WarLeague.Name
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarLeague.Name
+  nameWithType: WarLeague.Name
+- uid: ClashOfClans.Models.WarLeagueList
+  name: WarLeagueList
+  href: api/ClashOfClans.Models.WarLeagueList.html
+  commentId: T:ClashOfClans.Models.WarLeagueList
+  fullName: ClashOfClans.Models.WarLeagueList
+  nameWithType: WarLeagueList
 - uid: ClashOfClans.Search
   name: ClashOfClans.Search
   href: api/ClashOfClans.Search.html

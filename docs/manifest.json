@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ILeagues.html",
-          "hash": "XYJtix4kaRvYdxFMZ851gg=="
+          "hash": "UAid9GvSi/1WS+9xQQvH/Q=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Clan.html",
-          "hash": "WPVnaMHprstbh4ZKELxuwA=="
+          "hash": "4wXcmGLdeumKHHhhtvpGfA=="
         }
       },
       "is_incremental": false,
@@ -833,11 +833,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarLeague.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarLeague.html",
+          "hash": "hbUsII3wEPMNa39Uyw+K+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.WarLeagueList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.WarLeagueList.html",
+          "hash": "ncyxVVj3h7XJHP/AsZ1uew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ClashOfClans.Models.yml",
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.html",
-          "hash": "KSrfcXp83eCZSdGPIHob0A=="
+          "hash": "eG5tvBsWctirGl86dJ6MWw=="
         }
       },
       "is_incremental": false,
@@ -921,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "2G/jRLypqSCX9Bz/9RwIFg=="
+          "hash": "KjLm55BGUpUbVBMR2tBzTw=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1053,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 75,
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
