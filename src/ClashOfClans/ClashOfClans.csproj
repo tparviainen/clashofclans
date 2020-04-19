@@ -2,27 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageTags>ClashOfClans Game API</PackageTags>
-    <PackageProjectUrl>https://tparviainen.github.io/clashofclans/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/tparviainen/clashofclans</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <Authors>Tomi Parviainen</Authors>
-    <Company />
     <Description>This package contains a .NET Standard library for accessing the services of Clash of Clans API.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>ClashOfClans</PackageId>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageReleaseNotes>https://github.com/tparviainen/clashofclans/releases</PackageReleaseNotes>
   </PropertyGroup>
-
-  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
-    </ItemGroup>
-  </Target>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
@@ -31,10 +18,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\docfx\images\icon.png" Pack="true" Visible="false" PackagePath="\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
