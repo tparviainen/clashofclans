@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClashOfClans" Version="7.0.0-rc5" />
+    <PackageReference Include="ClashOfClans" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.2" />
   </ItemGroup>
 
