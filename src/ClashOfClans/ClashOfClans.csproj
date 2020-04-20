@@ -3,10 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Authors>Tomi Parviainen</Authors>
-    <Description>This package contains a .NET Standard library for accessing the services of Clash of Clans API.</Description>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageId>ClashOfClans</PackageId>
+
+    <NuspecFile>ClashOfClans.nuspec</NuspecFile>
+    <NuspecProperties>$(NuspecProperties);version=$(Version)</NuspecProperties>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
