@@ -38,6 +38,8 @@ namespace ClashOfClans.App
                 await leaguesExamples.GetLeagueInformation();
                 await leaguesExamples.GetLeagueSeasons();
                 await leaguesExamples.GetLeagueSeasonRankings();
+                await leaguesExamples.ListWarLeagues();
+                await leaguesExamples.GetWarLeagueInformation();
 
                 // Access global and local rankings
                 var locationsExamples = new LocationsExamples(token);

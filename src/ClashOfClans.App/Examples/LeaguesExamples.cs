@@ -83,5 +83,33 @@ namespace ClashOfClans.App.Examples
                 Console.WriteLine($"{player.Rank}. {player.Name}, {player.Trophies} \uD83C\uDFC6, attacks won {player.AttackWins}, defenses won {player.DefenseWins}");
             }
         }
+
+        /// <summary>
+        /// List war leagues
+        /// </summary>
+        public async Task ListWarLeagues()
+        {
+            var coc = new ClashOfClansClient(token);
+            var warLeagues = (WarLeagueList)await coc.Leagues.GetWarLeaguesAsync();
+
+            Console.WriteLine($"Total amount of war leagues: {warLeagues.Count}");
+
+            foreach (var warLeague in warLeagues)
+            {
+                Console.WriteLine($"Id: {warLeague.Id}, Name: {warLeague.Name}");
+            }
+        }
+
+        /// <summary>
+        /// Get war league information
+        /// </summary>
+        public async Task GetWarLeagueInformation()
+        {
+            var warLeagueId = 48000000; // Unranked
+            var coc = new ClashOfClansClient(token);
+            var warLeague = await coc.Leagues.GetWarLeagueAsync(warLeagueId);
+
+            Console.WriteLine($"Id: {warLeague.Id} = {warLeague.Name}");
+        }
     }
 }
