@@ -61,17 +61,6 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
 
-        public Task<WarLeague> GetWarLeagueAsync(int? leagueId)
-        {
-            var request = new AutoValidatedRequest
-            {
-                LeagueId = leagueId,
-                Uri = $"/warleagues/{leagueId}"
-            };
-
-            return _gameData.RequestAsync<WarLeague>(request);
-        }
-
         public Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query query = null)
         {
             var request = new AutoValidatedRequest
@@ -81,6 +70,17 @@ namespace ClashOfClans.Api
             };
 
             return _gameData.RequestAsync<QueryResult<WarLeagueList>>(request);
+        }
+
+        public Task<WarLeague> GetWarLeagueAsync(int? leagueId)
+        {
+            var request = new AutoValidatedRequest
+            {
+                LeagueId = leagueId,
+                Uri = $"/warleagues/{leagueId}"
+            };
+
+            return _gameData.RequestAsync<WarLeague>(request);
         }
     }
 }
