@@ -24,3 +24,6 @@ created in Clash of Clans [developer web site](https://developer.clashofclans.co
 - [NuGet Package](https://www.nuget.org/packages/ClashOfClans)
 - [Release Notes](https://github.com/tparviainen/clashofclans/releases)
 - [License](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
+
+# Disclaimer
+This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: www.supercell.com/fan-content-policy.
