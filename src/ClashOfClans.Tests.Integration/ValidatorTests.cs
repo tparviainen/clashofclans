@@ -9,7 +9,7 @@ namespace ClashOfClans.Tests.Integration
     public class ValidatorTests : TestsBase
     {
         [TestMethod]
-        public void ClanTagsDontStartWithHashCharacter()
+        public void InvalidClanTagStartCharacterThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -32,7 +32,7 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public void ClanTagsStartWithHashCharacter()
+        public void ClanTagsFromConfigFileAreValid()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -55,7 +55,7 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public void PlayerTagsDontStartWithHashCharacter()
+        public void InvalidPlayerTagStartCharacterThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -78,7 +78,7 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public void PlayerTagsStartWithHashCharacter()
+        public void PlayerTagsFromConfigFileAreValid()
         {
             // Arrange
             var request = new AutoValidatedRequest();

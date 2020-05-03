@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Models;
 using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace ClashOfClans.Tests.Unit
 {
@@ -8,7 +9,7 @@ namespace ClashOfClans.Tests.Unit
     public class QueryTests
     {
         [TestMethod]
-        public void QueryMarkerMoveToEmptyCursors()
+        public void MoveToPreviousOrNextItemsIsNotPossibleWithEmptyMarkers()
         {
             // Arrange
             var query = new Query
@@ -25,7 +26,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryLimitSetTo10()
+        public void QueryWithLimitSet()
         {
             // Arrange
             var query = new Query
@@ -41,7 +42,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryLimitAndAfterSet()
+        public void QueryWithLimitAndAfterSet()
         {
             // Arrange
             var query = new Query
@@ -55,13 +56,13 @@ namespace ClashOfClans.Tests.Unit
 
             // Assert
             Assert.AreEqual('?', queryString[0]);
-            Assert.IsTrue(queryString.Contains("&"));
             Assert.IsTrue(queryString.Contains("limit=20"));
             Assert.IsTrue(queryString.Contains("after=12345"));
+            Assert.AreEqual(1, queryString.Count(c => c == '&'), $"The amount of '&' characters in '{queryString}' is wrong.");
         }
 
         [TestMethod]
-        public void QuaryClansForSpecificLocation()
+        public void QueryClansWithLocationIdSet()
         {
             // Arrange
             var query = new QueryClans
@@ -77,7 +78,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryClansForSpecificLocationAndLimit()
+        public void QueryClansWithLocationIdAndLimitSet()
         {
             // Arrange
             var query = new QueryClans
@@ -97,7 +98,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryClansWithWarFrequency()
+        public void QueryClansWithWarFrequencySet()
         {
             // Arrange
             var query = new QueryClans

@@ -24,31 +24,37 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public void LocationFinlandExists()
+        [DataRow("Russia")]
+        [DataRow("Finland")]
+        [DataRow("United States")]
+        public void GetLocationInformationByName(string locationName)
         {
             // Arrange
 
             // Act
-            var finland = _locations["Finland"];
+            var location = _locations[locationName];
 
             // Assert
-            Assert.IsNotNull(finland);
+            Assert.IsNotNull(location, $"Valid location '{locationName}' should return location information.");
         }
 
         [TestMethod]
-        public void LocationRepublicOfFinlandDoesNotExist()
+        [DataRow(null)]
+        [DataRow("finland")]
+        [DataRow("Republic of Finland")]
+        public void InvalidLocationNameReturnsNull(string locationName)
         {
             // Arrange
 
             // Act
-            var republicOfFinland = _locations["Republic of Finland"];
+            var location = _locations[locationName];
 
             // Assert
-            Assert.IsNull(republicOfFinland);
+            Assert.IsNull(location, $"Invalid location '{locationName}' should return null.");
         }
 
         [TestMethod]
-        public async Task GetLocationInformation()
+        public async Task GetLocationInformationById()
         {
             // Arrange
             var locationId = GetRandom(_locations).Id;
@@ -57,7 +63,7 @@ namespace ClashOfClans.Tests.Integration
             var location = await _coc.Locations.GetLocationAsync(locationId);
 
             // Assert
-            Assert.IsNotNull(location);
+            Assert.IsNotNull(location, $"Valid location id '{locationId}' should return location information.");
         }
 
         [TestMethod]
