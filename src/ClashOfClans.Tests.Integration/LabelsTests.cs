@@ -10,7 +10,7 @@ namespace ClashOfClans.Tests.Integration
     public class LabelsTests : TestsBase
     {
         [TestMethod]
-        public async Task ListClanLabels()
+        public async Task GetClanLabels()
         {
             // Arrange
 
@@ -23,7 +23,7 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public async Task ListClanLabelsLimit5()
+        public async Task Get5ClanLabels()
         {
             // Arrange
             var limit = 5;
@@ -37,11 +37,11 @@ namespace ClashOfClans.Tests.Integration
 
             // Assert
             Assert.IsNotNull(labels);
-            Assert.AreEqual(limit, labels.Count);
+            Assert.AreEqual(limit, labels.Count, $"The amount of clan labels was different to requested amount.");
         }
 
         [TestMethod]
-        public async Task ListPlayerLabels()
+        public async Task GetPlayerLabels()
         {
             // Arrange
 
@@ -54,7 +54,7 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public async Task ListPlayerLabelsLimit10()
+        public async Task Get10PlayerLabels()
         {
             // Arrange
             var limit = 10;
@@ -68,7 +68,7 @@ namespace ClashOfClans.Tests.Integration
 
             // Assert
             Assert.IsNotNull(labels);
-            Assert.AreEqual(limit, labels.Count);
+            Assert.AreEqual(limit, labels.Count, $"The amount of player labels was different to requested amount.");
         }
     }
 }

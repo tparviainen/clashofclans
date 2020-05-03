@@ -10,7 +10,7 @@ namespace ClashOfClans.Tests.Unit
     public class ValidatorTests
     {
         [TestMethod]
-        public void ClanTagMustNotBeEmpty()
+        public void SetEmptyClanTagThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -30,7 +30,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void LeagueIdentifierMustNotBeEmpty()
+        public void SetEmptyLeagueIdentifierThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -50,7 +50,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void LocationIdentifierMustNotNeEmpty()
+        public void SetEmptyLocationIdentifierThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -70,7 +70,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void PlayerTagMustNotBeEmpty()
+        public void SetEmptyPlayerTagThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -90,7 +90,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryMustNotBeEmpty()
+        public void SetEmptyQueryThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -110,7 +110,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void NameNeedsToBeAtLeastThreeCharactersLong()
+        public void SetTooShortNameThrowsException()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -134,7 +134,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void ThreeCharactersLongNameIsValid()
+        public void SetThreeCharactersLongName()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -156,13 +156,12 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void ValidNameButInvalidPagingCombination()
+        public void SetAfterAndBeforeForQueryClansThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
             var query = new QueryClans
             {
-                Name = "Clan #1",
                 After = "after",
                 Before = "before"
             };
@@ -181,7 +180,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void OnlyAfterOrBeforeCanBeSpecifiedForAQueryNotBoth()
+        public void SetAfterAndBeforeForQueryThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -206,7 +205,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryWithAfterSpecifiedSucceeds()
+        public void SetQueryWithAfterSpecified()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -228,7 +227,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void QueryWithBeforeSpecifiedSucceeds()
+        public void SetQueryWithBeforeSpecified()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -250,7 +249,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void SeasonIdentifierMustNotBeEmpty()
+        public void SetInvalidSeasonIdentifierThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -270,7 +269,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void WarTagMustNotBeEmpty()
+        public void SetNullWarTagThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -290,7 +289,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void WarTagIsNotValid()
+        public void SetInvalidWarTagThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -310,7 +309,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void RequestsHaveUniqueCorrelationId()
+        public void EachRequestHasUniqueCorrelationId()
         {
             // Arrange
             var req1 = new AutoValidatedRequest();
@@ -325,7 +324,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void ValidLabelIdsAccepted()
+        public void SetValidLabelIds()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -349,7 +348,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void CommaSeparatedListOfValidLabelIdsAccepted()
+        public void SetMultipleLabelIds()
         {
             // Arrange
             var request = new AutoValidatedRequest();
@@ -373,7 +372,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void ExtraSpacesBetweenCommaSeparatedListOfValidLabelIdsThrowsException()
+        public void SetMultipleLabelIdsWithInvalidSeparatorThrows()
         {
             // Arrange
             var request = new AutoValidatedRequest();

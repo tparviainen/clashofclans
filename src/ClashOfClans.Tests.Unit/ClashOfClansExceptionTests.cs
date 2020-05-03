@@ -12,7 +12,7 @@ namespace ClashOfClans.Tests.Unit
     {
         [TestMethod]
         [ExpectedException(typeof(ClashOfClansException))]
-        public void CanThrowException()
+        public void ThrowClashOfClansException()
         {
             // Arrange
             var error = new ClientError();
@@ -24,7 +24,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void BinaryFormatterSerializationAndDeserialization()
+        public void SerializeAndDeserializeClashOfClansExceptionUsingBinaryFormatter()
         {
             // Arrange
             var error = new ClientError
@@ -51,7 +51,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void NewtonsoftJsonSerializationAndDeserialization()
+        public void SerializeAndDeserializeClashOfClansExceptionUsingNewtonsoft()
         {
             // Arrange
             var error = new ClientError

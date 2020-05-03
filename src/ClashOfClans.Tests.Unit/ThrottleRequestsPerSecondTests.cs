@@ -11,7 +11,7 @@ namespace ClashOfClans.Tests.Unit
     public class ThrottleRequestsPerSecondTests
     {
         [TestMethod]
-        public async Task WaitedCallsAreThrottled()
+        public async Task ThrottleIndividualApiCalls()
         {
             // Arrange
             var maxRequestsPerSecond = 20;
@@ -40,7 +40,7 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public async Task NonWaitedCallsAreThrottled()
+        public async Task ThrottleSimultaneousApiCalls()
         {
             // Arrange
             var rounds = 3;

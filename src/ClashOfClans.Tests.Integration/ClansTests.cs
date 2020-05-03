@@ -2,6 +2,7 @@
 using ClashOfClans.Models;
 using ClashOfClans.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace ClashOfClans.Tests.Integration
     public class ClansTests : TestsBase
     {
         [TestMethod]
-        public async Task MovePagingMarkers()
+        public async Task SearchClansWithQueryLimitProducesMovablePagingMarkers()
         {
             // Arrange
             var query = new QueryClans
@@ -37,9 +38,10 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var limit = 10;
+            var name = "Phoenix";
             var query = new QueryClans
             {
-                Name = "Phoenix",
+                Name = name,
                 Limit = limit,
                 WarFrequency = WarFrequency.Never
             };
@@ -50,6 +52,7 @@ namespace ClashOfClans.Tests.Integration
             // Assert
             Assert.IsNotNull(searchResult);
             Assert.AreEqual(limit, searchResult.Items.Count);
+            Assert.IsTrue(searchResult.Items.All(c => c.Name.Contains(name, StringComparison.OrdinalIgnoreCase)));
         }
 
         [TestMethod]
