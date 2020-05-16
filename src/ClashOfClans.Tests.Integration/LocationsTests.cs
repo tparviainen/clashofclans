@@ -40,7 +40,7 @@ namespace ClashOfClans.Tests.Integration
 
         [TestMethod]
         [DataRow(null)]
-        [DataRow("finland")]
+        [DataRow("Funland")]
         [DataRow("Republic of Finland")]
         public void InvalidLocationNameReturnsNull(string locationName)
         {
@@ -51,6 +51,23 @@ namespace ClashOfClans.Tests.Integration
 
             // Assert
             Assert.IsNull(location, $"Invalid location '{locationName}' should return null.");
+        }
+
+        [TestMethod]
+        [DataRow("Canada")]
+        [DataRow("Finland")]
+        public void ValidLocationNameWithWrongCaseSensitivityReturnsNull(string locationName)
+        {
+            // Arrange
+            var validLocation = _locations[locationName];
+            var invalidLocationName = validLocation.Name.ToLower();
+
+            // Act
+            var invalidLocation = _locations[invalidLocationName];
+
+            // Assert
+            Assert.IsNull(invalidLocation, $"Location '{invalidLocationName}' should return null.");
+            Assert.AreNotEqual(validLocation, invalidLocation);
         }
 
         [TestMethod]
