@@ -3,6 +3,8 @@ using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans.Api
 {
     internal class Clans : IClans
@@ -36,7 +38,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<Clan>(request);
         }
 
-        public Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null)
+        public Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -48,7 +50,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<ClanMemberList>>(request);
         }
 
-        public Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null)
+        public Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {

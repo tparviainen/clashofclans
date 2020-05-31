@@ -2,6 +2,8 @@
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans
 {
     /// <summary>
@@ -31,21 +33,21 @@ namespace ClashOfClans
         /// List clan members
         /// </summary>
         /// <param name="clanTag">Tag of the clan whose members to retrieve</param>
-        /// <param name="query">Query parameters</param>
+        /// <param name="query">Optional query parameters</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>List of clan members</returns>
-        Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null);
+        Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query? query = default);
 
         /// <summary>
         /// Retrieve clan's clan war log
         /// </summary>
         /// <param name="clanTag">Tag of the clan whose war log to retrieve</param>
-        /// <param name="query">Query parameters</param>
+        /// <param name="query">Optional query parameters</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan's clan war log</returns>
-        Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null);
+        Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query? query = default);
 
         /// <summary>
         /// Retrieve information about clan's current clan war
