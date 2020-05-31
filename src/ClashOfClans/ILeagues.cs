@@ -2,6 +2,8 @@
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans
 {
     /// <summary>
@@ -12,11 +14,11 @@ namespace ClashOfClans
         /// <summary>
         /// List leagues
         /// </summary>
-        /// <param name="query">Query parameters</param>
+        /// <param name="query">Optional query parameters</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>League list</returns>
-        Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null);
+        Task<QueryResult<LeagueList>> GetLeaguesAsync(Query? query = default);
 
         /// <summary>
         /// Get league information
@@ -31,31 +33,31 @@ namespace ClashOfClans
         /// Get league seasons. Note that league season information is available only for Legend League.
         /// </summary>
         /// <param name="leagueId">Identifier of the league whose seasons retrieve</param>
-        /// <param name="query">Query parameters</param>
+        /// <param name="query">Optional query parameters</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>League season list</returns>
-        Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null);
+        Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query? query = default);
 
         /// <summary>
         /// Get league season rankings. Note that league season information is available only for Legend League.
         /// </summary>
         /// <param name="leagueId">Identifier of the league whose season rankings retrieve</param>
         /// <param name="seasonId">Identifier of the season whose rankings retrieve</param>
-        /// <param name="query">Query parameters</param>
+        /// <param name="query">Optional query parameters</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Season player ranking list</returns>
-        Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null);
+        Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query? query = default);
 
         /// <summary>
         /// List war leagues
         /// </summary>
-        /// <param name="query">Query parameters</param>
+        /// <param name="query">Optional query parameters</param>
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>War league list</returns>
-        Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query query = null);
+        Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query? query = default);
 
         /// <summary>
         /// Get war league information

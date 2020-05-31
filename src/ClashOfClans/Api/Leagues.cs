@@ -3,6 +3,8 @@ using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans.Api
 {
     internal class Leagues : ILeagues
@@ -14,7 +16,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null)
+        public Task<QueryResult<LeagueList>> GetLeaguesAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -36,7 +38,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<League>(request);
         }
 
-        public Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
+        public Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -48,7 +50,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(request);
         }
 
-        public Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
+        public Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -61,7 +63,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
 
-        public Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query query = null)
+        public Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
