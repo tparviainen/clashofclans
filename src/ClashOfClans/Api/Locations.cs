@@ -3,6 +3,8 @@ using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans.Api
 {
     internal class Locations : ILocations
@@ -14,7 +16,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public Task<QueryResult<LocationList>> GetLocationsAsync(Query query = null)
+        public Task<QueryResult<LocationList>> GetLocationsAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -36,7 +38,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<Location>(request);
         }
 
-        public Task<QueryResult<ClanRankingList>> GetClanRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<ClanRankingList>> GetClanRankingAsync(int? locationId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -48,7 +50,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<ClanRankingList>>(request);
         }
 
-        public Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -60,7 +62,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
         }
 
-        public Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -72,7 +74,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(request);
         }
 
-        public Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query query = null)
+        public Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
