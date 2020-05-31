@@ -3,6 +3,8 @@ using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans.Api
 {
     internal class Labels : ILabels
@@ -14,7 +16,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public Task<QueryResult<LabelList>> GetClanLabelsAsync(Query query = null)
+        public Task<QueryResult<LabelList>> GetClanLabelsAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -25,7 +27,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<QueryResult<LabelList>>(request);
         }
 
-        public Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query query = null)
+        public Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
