@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans.Core.Net
 {
     /// <summary>
