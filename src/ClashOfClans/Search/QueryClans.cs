@@ -1,5 +1,7 @@
 ﻿using ClashOfClans.Models;
 
+#nullable enable
+
 namespace ClashOfClans.Search
 {
     public class QueryClans : Query
@@ -10,7 +12,7 @@ namespace ClashOfClans.Search
         /// is interpreted as wild card search, so it may appear anywhere in
         /// the clan name.
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// Filter by clan war frequency.
@@ -46,6 +48,6 @@ namespace ClashOfClans.Search
         /// <summary>
         /// Comma separated list of label IDs to use for filtering results.
         /// </summary>
-        public string LabelIds { get; set; }
+        public string? LabelIds { get; set; }
     }
 }
