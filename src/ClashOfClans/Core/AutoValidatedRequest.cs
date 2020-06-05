@@ -2,6 +2,8 @@
 using System;
 using System.Text.RegularExpressions;
 
+#nullable enable
+
 namespace ClashOfClans.Core
 {
     /// <summary>
@@ -12,9 +14,9 @@ namespace ClashOfClans.Core
         public Guid CorrelationId { get; } = Guid.NewGuid();
 
         #region WAR_TAG
-        private string _warTag;
+        private string? _warTag;
 
-        public string WarTag
+        public string? WarTag
         {
             get => _warTag;
 
@@ -32,9 +34,9 @@ namespace ClashOfClans.Core
         #endregion
 
         #region CLAN_TAG
-        private string _clanTag;
+        private string? _clanTag;
 
-        public string ClanTag
+        public string? ClanTag
         {
             get => _clanTag;
 
@@ -52,9 +54,9 @@ namespace ClashOfClans.Core
         #endregion
 
         #region QUERY
-        private Query _query;
+        private Query? _query;
 
-        public Query Query
+        public Query? Query
         {
             get => _query;
 
@@ -71,9 +73,9 @@ namespace ClashOfClans.Core
         #region QUERY_CLANS
         private static readonly Regex _labelIdsRegex = new Regex(@"^\d+(,\d+)*$");
 
-        public QueryClans QueryClans
+        public QueryClans? QueryClans
         {
-            get => (QueryClans)_query;
+            get => (QueryClans?)_query;
 
             set
             {
@@ -92,7 +94,7 @@ namespace ClashOfClans.Core
         #endregion
 
         #region URI
-        private string _uri;
+        private string _uri = default!;
 
         public string Uri
         {
@@ -111,9 +113,9 @@ namespace ClashOfClans.Core
         #endregion
 
         #region PLAYER_TAG
-        private string _playerTag;
+        private string? _playerTag;
 
-        public string PlayerTag
+        public string? PlayerTag
         {
             get => _playerTag;
 
@@ -165,9 +167,9 @@ namespace ClashOfClans.Core
         #endregion
 
         #region SEASON_ID
-        private string _seasonId;
+        private string? _seasonId;
 
-        public string SeasonId
+        public string? SeasonId
         {
             get => _seasonId;
 
