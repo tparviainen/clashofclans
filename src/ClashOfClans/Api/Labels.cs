@@ -3,8 +3,6 @@ using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System.Threading.Tasks;
 
-#nullable enable
-
 namespace ClashOfClans.Api
 {
     internal class Labels : ILabels

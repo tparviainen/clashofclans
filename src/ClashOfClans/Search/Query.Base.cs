@@ -2,8 +2,6 @@
 using System.Net;
 using System.Text;
 
-#nullable enable
-
 namespace ClashOfClans.Search
 {
     public partial class Query

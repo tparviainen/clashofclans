@@ -2,8 +2,6 @@
 using System.IO;
 using System.Text;
 
-#nullable enable
-
 namespace ClashOfClans.Core.Serialization
 {
     internal class MessageSerializer

@@ -2,8 +2,6 @@
 using System;
 using System.Text.RegularExpressions;
 
-#nullable enable
-
 namespace ClashOfClans.Core
 {
     /// <summary>

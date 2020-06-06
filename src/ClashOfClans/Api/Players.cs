@@ -2,8 +2,6 @@
 using ClashOfClans.Models;
 using System.Threading.Tasks;
 
-#nullable enable
-
 namespace ClashOfClans.Api
 {
     internal class Players : IPlayers

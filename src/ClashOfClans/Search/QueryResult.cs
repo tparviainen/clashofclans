@@ -1,7 +1,5 @@
 ﻿using ClashOfClans.Models;
 
-#nullable enable
-
 namespace ClashOfClans.Search
 {
     /// <summary>

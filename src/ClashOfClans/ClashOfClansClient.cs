@@ -2,8 +2,6 @@
 using ClashOfClans.Core;
 using System;
 
-#nullable enable
-
 namespace ClashOfClans
 {
     /// <summary>

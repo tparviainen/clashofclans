@@ -1,8 +1,6 @@
 ﻿using ClashOfClans.Search;
 using System.Threading.Tasks;
 
-#nullable enable
-
 namespace ClashOfClans.Core
 {
     /// <summary>
