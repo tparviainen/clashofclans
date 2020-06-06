@@ -3,6 +3,8 @@ using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
+#nullable enable
+
 namespace ClashOfClans.Core
 {
     /// <summary>
@@ -14,7 +16,7 @@ namespace ClashOfClans.Core
         /// <summary>
         /// The error that caused the exception to occur.
         /// </summary>
-        public ClientError Error { get; }
+        public ClientError Error { get; } = default!;
 
         public ClashOfClansException()
         {
@@ -42,18 +44,14 @@ namespace ClashOfClans.Core
         protected ClashOfClansException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
-            Error = info.GetValue(nameof(Error), typeof(ClientError)) as ClientError;
+            Error = (ClientError)info.GetValue(nameof(Error), typeof(ClientError))!;
         }
 
         [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            if (info == null)
-                throw new ArgumentNullException(nameof(info));
-
-            info.AddValue(nameof(Error), Error);
-
             base.GetObjectData(info, context);
+            info.AddValue(nameof(Error), Error);
         }
     }
 }
