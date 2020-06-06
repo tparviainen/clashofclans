@@ -24,7 +24,7 @@ namespace ClashOfClans.Api
                 Uri = "/labels/clans"
             };
 
-            return _gameData.RequestAsync<QueryResult<LabelList>>(request);
+            return _gameData.QueryAsync<LabelList>(request);
         }
 
         public Task<QueryResult<LabelList>> GetPlayerLabelsAsync(Query? query = default)
@@ -35,7 +35,7 @@ namespace ClashOfClans.Api
                 Uri = "/labels/players"
             };
 
-            return _gameData.RequestAsync<QueryResult<LabelList>>(request);
+            return _gameData.QueryAsync<LabelList>(request);
         }
     }
 }

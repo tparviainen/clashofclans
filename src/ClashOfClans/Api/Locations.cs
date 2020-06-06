@@ -24,7 +24,7 @@ namespace ClashOfClans.Api
                 Uri = "/locations"
             };
 
-            return _gameData.RequestAsync<QueryResult<LocationList>>(request);
+            return _gameData.QueryAsync<LocationList>(request);
         }
 
         public Task<Location> GetLocationAsync(int? locationId)
@@ -47,7 +47,7 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/clans"
             };
 
-            return _gameData.RequestAsync<QueryResult<ClanRankingList>>(request);
+            return _gameData.QueryAsync<ClanRankingList>(request);
         }
 
         public Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query? query = default)
@@ -59,7 +59,7 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/players"
             };
 
-            return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
+            return _gameData.QueryAsync<PlayerRankingList>(request);
         }
 
         public Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query? query = default)
@@ -71,7 +71,7 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/clans-versus"
             };
 
-            return _gameData.RequestAsync<QueryResult<ClanVersusRankingList>>(request);
+            return _gameData.QueryAsync<ClanVersusRankingList>(request);
         }
 
         public Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default)
@@ -83,7 +83,7 @@ namespace ClashOfClans.Api
                 Uri = $"/locations/{locationId}/rankings/players-versus"
             };
 
-            return _gameData.RequestAsync<QueryResult<PlayerVersusRankingList>>(request);
+            return _gameData.QueryAsync<PlayerVersusRankingList>(request);
         }
     }
 }
