@@ -6,6 +6,8 @@ using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace ClashOfClans.Core
 {
     /// <summary>
@@ -30,28 +32,24 @@ namespace ClashOfClans.Core
             _serializer = new MessageSerializer();
         }
 
+        public async Task<QueryResult<T>> QueryAsync<T>(AutoValidatedRequest request) where T : class
+        {
+            var deserializedData = await RequestAsync<QueryResult<T>>(request).ConfigureAwait(false);
+
+            if (request.Query != null)
+                request.Query.SetCursors(deserializedData.Paging.Cursors);
+
+            return deserializedData;
+        }
+
         public async Task<T> RequestAsync<T>(AutoValidatedRequest request) where T : class
         {
             Log(request, $"Uri: /{request.Uri}");
 
             var data = await GetDataAsync(request).ConfigureAwait(false);
 
-            var deserializedData = _serializer.Deserialize<T>(data);
-
-            if (request.Query != null && IsGenericType<T>(typeof(QueryResult<>)))
-            {
-                var paging = GetPaging(deserializedData);
-                request.Query.SetCursors(paging.Cursors);
-            }
-
-            return deserializedData;
+            return _serializer.Deserialize<T>(data);
         }
-
-        private Paging GetPaging<T>(T data) =>
-            data.GetType().GetProperty(nameof(QueryResult<object>.Paging)).GetValue(data) as Paging;
-
-        private bool IsGenericType<TType>(System.Type type) =>
-            typeof(TType).IsGenericType && typeof(TType).GetGenericTypeDefinition() == type;
 
         private async Task<string> GetDataAsync(AutoValidatedRequest request)
         {

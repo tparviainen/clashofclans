@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using ClashOfClans.Search;
+using System.Threading.Tasks;
+
+#nullable enable
 
 namespace ClashOfClans.Core
 {
@@ -7,6 +10,7 @@ namespace ClashOfClans.Core
     /// </summary>
     internal interface IGameData
     {
+        Task<QueryResult<T>> QueryAsync<T>(AutoValidatedRequest request) where T : class;
         Task<T> RequestAsync<T>(AutoValidatedRequest request) where T : class;
     }
 }
