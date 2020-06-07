@@ -92,11 +92,17 @@ namespace ClashOfClans.Core
         #endregion
 
         #region URI
-        private string _uri = default!;
+        private string? _uri;
 
         public string Uri
         {
-            get => $"{_uri}{Query}";
+            get
+            {
+                if (_uri == null)
+                    throw new InvalidOperationException("Uninitialized property: " + nameof(Uri));
+
+                return $"{_uri}{Query}";
+            }
 
             set
             {
