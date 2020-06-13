@@ -1,6 +1,4 @@
-﻿#nullable enable
-
-namespace ClashOfClans.Models
+﻿namespace ClashOfClans.Models
 {
     public class Paging
     {

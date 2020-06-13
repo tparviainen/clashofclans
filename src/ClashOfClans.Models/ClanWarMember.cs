@@ -6,10 +6,10 @@
 
         public int? MapPosition { get; set; }
 
-        public ClanWarAttackList Attacks { get; set; }
+        public ClanWarAttackList? Attacks { get; set; }
 
         public int? OpponentAttacks { get; set; }
 
-        public ClanWarAttack BestOpponentAttack { get; set; }
+        public ClanWarAttack? BestOpponentAttack { get; set; }
     }
 }

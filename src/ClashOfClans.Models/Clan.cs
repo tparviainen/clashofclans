@@ -4,18 +4,18 @@ namespace ClashOfClans.Models
 {
     public class Clan : Identity
     {
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
-        public List<ClanMember> MemberList { get; set; }
+        public List<ClanMember>? MemberList { get; set; }
 
         public Type? Type { get; set; }
 
         /// <summary>
         /// Clan location
         /// </summary>
-        public Location Location { get; set; }
+        public Location? Location { get; set; }
 
-        public UrlContainer BadgeUrls { get; set; }
+        public UrlContainer BadgeUrls { get; set; } = default!;
 
         public int? ClanLevel { get; set; }
 
@@ -39,7 +39,7 @@ namespace ClashOfClans.Models
 
         public bool? IsWarLogPublic { get; set; }
 
-        public WarLeague WarLeague { get; set; }
+        public WarLeague WarLeague { get; set; } = default!;
 
         public int? Members { get; set; }
 
@@ -50,6 +50,6 @@ namespace ClashOfClans.Models
         /// <summary>
         /// Labels to describe clan
         /// </summary>
-        public LabelList Labels { get; set; }
+        public LabelList Labels { get; set; } = default!;
     }
 }

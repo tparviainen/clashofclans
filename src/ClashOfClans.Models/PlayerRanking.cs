@@ -14,8 +14,8 @@
 
         public int? PreviousRank { get; set; }
 
-        public PlayerRankingClan Clan { get; set; }
+        public PlayerRankingClan? Clan { get; set; }
 
-        public League League { get; set; }
+        public League? League { get; set; }
     }
 }

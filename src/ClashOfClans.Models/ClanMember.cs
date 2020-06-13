@@ -6,7 +6,7 @@
 
         public int? ExpLevel { get; set; }
 
-        public League League { get; set; }
+        public League League { get; set; } = default!;
 
         public int? Trophies { get; set; }
 

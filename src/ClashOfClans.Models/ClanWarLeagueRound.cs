@@ -4,6 +4,6 @@ namespace ClashOfClans.Models
 {
     public class ClanWarLeagueRound
     {
-        public List<string> WarTags { get; set; }
+        public List<string> WarTags { get; set; } = default!;
     }
 }

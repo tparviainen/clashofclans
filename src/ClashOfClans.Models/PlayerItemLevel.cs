@@ -2,7 +2,7 @@
 {
     public class PlayerItemLevel
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = default!;
 
         public int? Level { get; set; }
 

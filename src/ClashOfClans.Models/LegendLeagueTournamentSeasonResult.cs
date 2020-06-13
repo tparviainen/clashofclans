@@ -2,7 +2,7 @@
 {
     public class LegendLeagueTournamentSeasonResult
     {
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         public int? Rank { get; set; }
 

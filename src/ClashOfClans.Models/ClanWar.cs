@@ -2,8 +2,8 @@
 {
     public class ClanWar : WarBase
     {
-        public WarClan Clan { get; set; }
+        public WarClan Clan { get; set; } = default!;
 
-        public WarClan Opponent { get; set; }
+        public WarClan Opponent { get; set; } = default!;
     }
 }

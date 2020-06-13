@@ -10,8 +10,8 @@ namespace ClashOfClans.Models
 
         public int? TeamSize { get; set; }
 
-        public WarClan Clan { get; set; }
+        public WarClan Clan { get; set; } = default!;
 
-        public WarClan Opponent { get; set; }
+        public WarClan Opponent { get; set; } = default!;
     }
 }

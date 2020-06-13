@@ -1,8 +1,12 @@
 ﻿namespace ClashOfClans.Models
 {
-    public class WarClan : Identity
+    public class WarClan
     {
-        public UrlContainer BadgeUrls { get; set; }
+        public string? Tag { get; set; }
+
+        public string? Name { get; set; }
+
+        public UrlContainer BadgeUrls { get; set; } = default!;
 
         public int? ClanLevel { get; set; }
 
@@ -14,6 +18,6 @@
 
         public int? ExpEarned { get; set; }
 
-        public ClanWarMemberList Members { get; set; }
+        public ClanWarMemberList? Members { get; set; }
     }
 }

@@ -12,6 +12,6 @@
 
         public int? VersusBattleWins { get; set; }
 
-        public PlayerRankingClan Clan { get; set; }
+        public PlayerRankingClan? Clan { get; set; }
     }
 }

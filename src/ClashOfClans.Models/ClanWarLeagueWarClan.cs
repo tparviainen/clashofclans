@@ -4,7 +4,7 @@ namespace ClashOfClans.Models
 {
     public class ClanWarLeagueWarClan : Identity
     {
-        public UrlContainer BadgeUrls { get; set; }
+        public UrlContainer BadgeUrls { get; set; } = default!;
 
         public int? ClanLevel { get; set; }
 
@@ -14,6 +14,6 @@ namespace ClashOfClans.Models
 
         public float? DestructionPercentage { get; set; }
 
-        public List<ClanWarMember> Members { get; set; }
+        public List<ClanWarMember> Members { get; set; } = default!;
     }
 }
