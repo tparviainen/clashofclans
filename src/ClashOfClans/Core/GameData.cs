@@ -1,9 +1,12 @@
 ﻿using ClashOfClans.Core.Net;
 using ClashOfClans.Core.Serialization;
+using ClashOfClans.Extensions;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Core
@@ -17,6 +20,10 @@ namespace ClashOfClans.Core
         private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
         private IThrottleRequests ThrottleRequests => _options.ThrottleRequests;
+
+#if DEBUG
+        private readonly HashSet<string> _nullProperties = new HashSet<string>();
+#endif
 
         /// <summary>
         /// Logging method for diagnostics messages
@@ -46,7 +53,18 @@ namespace ClashOfClans.Core
 
             var data = await GetDataAsync(request).ConfigureAwait(false);
 
-            return _serializer.Deserialize<T>(data);
+            var deserializedData = _serializer.Deserialize<T>(data);
+
+#if DEBUG
+            var nullProperties = deserializedData.GetNullProperties();
+
+            lock (_nullProperties)
+                _nullProperties.UnionWith(nullProperties);
+
+            Log(request, $"Aggregate list of null properties ({_nullProperties.Count}):\n{{\n  {string.Join("\n  ", _nullProperties.OrderBy(p => p).ToArray())}\n}}");
+#endif
+
+            return deserializedData;
         }
 
         private async Task<string> GetDataAsync(AutoValidatedRequest request)
