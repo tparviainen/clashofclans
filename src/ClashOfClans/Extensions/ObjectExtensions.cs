@@ -31,7 +31,7 @@ namespace ClashOfClans.Extensions
                 {
                     foreach (var item in list)
                     {
-                        if (item.GetType().Namespace == ClashOfClansModelsNamespace)
+                        if (item?.GetType().Namespace == ClashOfClansModelsNamespace)
                             nullProperties.UnionWith(item.GetNullProperties());
                     }
                 }
