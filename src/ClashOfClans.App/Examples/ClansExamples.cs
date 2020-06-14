@@ -78,7 +78,7 @@ namespace ClashOfClans.App.Examples
 
                 foreach (var war in warLog.Items.Where(w => w.Result != null))
                 {
-                    Console.WriteLine($"{war.Result.ToString()[0]}: {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
+                    Console.WriteLine($"{war.Result.ToString()![0]}: {Statistics(war.Clan)} vs {Statistics(war.Opponent)}");
                 }
             }
 
