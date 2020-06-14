@@ -3384,6 +3384,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.WarClan.Members
   nameWithType: WarClan.Members
+- uid: ClashOfClans.Models.WarClan.Name
+  name: Name
+  href: api/ClashOfClans.Models.WarClan.html#ClashOfClans_Models_WarClan_Name
+  commentId: P:ClashOfClans.Models.WarClan.Name
+  fullName: ClashOfClans.Models.WarClan.Name
+  nameWithType: WarClan.Name
+- uid: ClashOfClans.Models.WarClan.Name*
+  name: Name
+  href: api/ClashOfClans.Models.WarClan.html#ClashOfClans_Models_WarClan_Name_
+  commentId: Overload:ClashOfClans.Models.WarClan.Name
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarClan.Name
+  nameWithType: WarClan.Name
 - uid: ClashOfClans.Models.WarClan.Stars
   name: Stars
   href: api/ClashOfClans.Models.WarClan.html#ClashOfClans_Models_WarClan_Stars
@@ -3397,6 +3410,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.WarClan.Stars
   nameWithType: WarClan.Stars
+- uid: ClashOfClans.Models.WarClan.Tag
+  name: Tag
+  href: api/ClashOfClans.Models.WarClan.html#ClashOfClans_Models_WarClan_Tag
+  commentId: P:ClashOfClans.Models.WarClan.Tag
+  fullName: ClashOfClans.Models.WarClan.Tag
+  nameWithType: WarClan.Tag
+- uid: ClashOfClans.Models.WarClan.Tag*
+  name: Tag
+  href: api/ClashOfClans.Models.WarClan.html#ClashOfClans_Models_WarClan_Tag_
+  commentId: Overload:ClashOfClans.Models.WarClan.Tag
+  isSpec: "True"
+  fullName: ClashOfClans.Models.WarClan.Tag
+  nameWithType: WarClan.Tag
 - uid: ClashOfClans.Models.WarFrequency
   name: WarFrequency
   href: api/ClashOfClans.Models.WarFrequency.html
