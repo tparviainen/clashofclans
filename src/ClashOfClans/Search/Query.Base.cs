@@ -20,7 +20,7 @@ namespace ClashOfClans.Search
                 var pValue = property.GetValue(this);
                 if (pValue != null)
                 {
-                    var qValue = pValue.ToString();
+                    var qValue = pValue.ToString()!;
 
                     // Enumerations need to start with a lowercase character
                     if (Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)

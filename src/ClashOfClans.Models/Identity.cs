@@ -5,8 +5,8 @@
     /// </summary>
     public class Identity
     {
-        public string Tag { get; set; }
+        public string Tag { get; set; } = default!;
 
-        public string Name { get; set; }
+        public string Name { get; set; } = default!;
     }
 }

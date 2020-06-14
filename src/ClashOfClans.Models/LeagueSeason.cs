@@ -2,6 +2,6 @@
 {
     public class LeagueSeason
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = default!;
     }
 }

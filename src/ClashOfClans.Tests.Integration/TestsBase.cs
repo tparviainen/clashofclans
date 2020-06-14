@@ -14,13 +14,12 @@ namespace ClashOfClans.Tests.Integration
     public class TestsBase
     {
         private readonly Random _random = new Random();
-
-        protected static ClanList _clans;
-        protected static LeagueList _leagues;
-        protected static LocationList _locations;
-        protected static WarLeagueList _warLeagues;
-        protected static IConfigurationRoot _config;
-        protected static ClashOfClansClient _coc;
+        protected static ClanList _clans = default!;
+        protected static LeagueList _leagues = default!;
+        protected static LocationList _locations = default!;
+        protected static WarLeagueList _warLeagues = default!;
+        protected static IConfigurationRoot _config = default!;
+        protected static ClashOfClansClient _coc = default!;
 
         public static IEnumerable<string> PlayerTags { get => _config.GetSection("playerTags").GetChildren().Select(x => x.Value); }
         public static IEnumerable<string> ClanTags { get => _config.GetSection("clanTags").GetChildren().Select(x => x.Value); }
@@ -64,17 +63,10 @@ namespace ClashOfClans.Tests.Integration
         /// <summary>
         /// Returns a random element from the given list
         /// </summary>
-        protected T GetRandom<T>(IList<T> list, Func<T, bool> predicate = null) where T : class
+        protected T GetRandom<T>(IList<T> list, Func<T, bool>? predicate = default) where T : class
         {
-            if (list == null)
-            {
-                throw new ArgumentNullException(nameof(list));
-            }
-
             if (predicate != null)
-            {
                 list = list.Where(predicate).ToList();
-            }
 
             return list[_random.Next(list.Count)];
         }

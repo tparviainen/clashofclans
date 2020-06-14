@@ -8,8 +8,8 @@ namespace ClashOfClans.Models
     [Serializable]
     public class ClientError
     {
-        public string Reason { get; set; }
+        public string Reason { get; set; } = default!;
 
-        public string Message { get; set; }
+        public string Message { get; set; } = default!;
     }
 }

@@ -2,9 +2,9 @@
 {
     public class ClanWarAttack
     {
-        public string AttackerTag { get; set; }
+        public string AttackerTag { get; set; } = default!;
 
-        public string DefenderTag { get; set; }
+        public string DefenderTag { get; set; } = default!;
 
         public int? Stars { get; set; }
 

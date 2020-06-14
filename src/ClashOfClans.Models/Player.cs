@@ -53,25 +53,25 @@
         /// </summary>
         public int? DonationsReceived { get; set; }
 
-        public PlayerClan Clan { get; set; }
+        public PlayerClan? Clan { get; set; }
 
-        public League League { get; set; }
+        public League? League { get; set; }
 
-        public PlayerLegendStatistics LegendStatistics { get; set; }
+        public PlayerLegendStatistics? LegendStatistics { get; set; }
 
-        public PlayerAchievementProgressList Achievements { get; set; }
+        public PlayerAchievementProgressList Achievements { get; set; } = default!;
 
         public int? VersusBattleWinCount { get; set; }
 
-        public PlayerItemLevelList Troops { get; set; }
+        public PlayerItemLevelList Troops { get; set; } = default!;
 
-        public PlayerItemLevelList Heroes { get; set; }
+        public PlayerItemLevelList Heroes { get; set; } = default!;
 
-        public PlayerItemLevelList Spells { get; set; }
+        public PlayerItemLevelList Spells { get; set; } = default!;
 
         /// <summary>
         /// Labels to describe player's play style
         /// </summary>
-        public LabelList Labels { get; set; }
+        public LabelList Labels { get; set; } = default!;
     }
 }

@@ -25,6 +25,6 @@ namespace ClashOfClans.Core
         /// <summary>
         /// Logger for diagnostics messages
         /// </summary>
-        public IClashOfClansLogger Logger { get; set; }
+        public IClashOfClansLogger? Logger { get; set; }
     }
 }

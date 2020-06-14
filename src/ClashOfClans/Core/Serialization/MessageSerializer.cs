@@ -8,27 +8,22 @@ namespace ClashOfClans.Core.Serialization
     {
         public T Deserialize<T>(string data) where T : class
         {
-            if (data != null)
+            using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(data)))
             {
-                using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(data)))
+                var serializer = new JsonSerializer
                 {
-                    var serializer = new JsonSerializer
-                    {
 #if DEBUG
-                        MissingMemberHandling = MissingMemberHandling.Error,
+                    MissingMemberHandling = MissingMemberHandling.Error,
 #endif
-                        DateFormatString = "yyyyMMddTHHmmss.fffK"
-                    };
+                    DateFormatString = "yyyyMMddTHHmmss.fffK"
+                };
 
-                    using (var stream = new StreamReader(ms))
-                    {
-                        var reader = new JsonTextReader(stream);
-                        return serializer.Deserialize<T>(reader);
-                    }
+                using (var stream = new StreamReader(ms))
+                {
+                    var reader = new JsonTextReader(stream);
+                    return serializer.Deserialize<T>(reader)!;
                 }
             }
-
-            return null;
         }
     }
 }

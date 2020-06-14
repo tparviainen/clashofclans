@@ -2,9 +2,9 @@
 {
     public class ClanVersusRanking : Identity
     {
-        public Location Location { get; set; }
+        public Location Location { get; set; } = default!;
 
-        public UrlContainer BadgeUrls { get; set; }
+        public UrlContainer BadgeUrls { get; set; } = default!;
 
         public int? ClanLevel { get; set; }
 

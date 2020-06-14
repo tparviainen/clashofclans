@@ -78,7 +78,7 @@ namespace ClashOfClans.Tests.Integration
 
                 foreach (var clan in clans)
                 {
-                    Assert.AreEqual(locationName, clan.Location.Name);
+                    Assert.AreEqual(locationName, clan.Location?.Name);
                     Trace.WriteLine(clan.Dump());
                 }
 

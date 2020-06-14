@@ -14,14 +14,14 @@ namespace ClashOfClans.Search
         /// be found from the response, inside the <see cref="Paging"/> property. Note that
         /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
         /// </summary>
-        public string After { get; set; }
+        public string? After { get; set; }
 
         /// <summary>
         /// Return only items that occur before this marker. Before marker can
         /// be found from the response, inside the <see cref="Paging"/> property. Note that
         /// only <see cref="After"/> or <see cref="Before"/> can be specified for a request, not both.
         /// </summary>
-        public string Before { get; set; }
+        public string? Before { get; set; }
 
         /// <summary>
         /// Moves the <see cref="After"/> marker to next group of items. After successful move the
@@ -37,11 +37,11 @@ namespace ClashOfClans.Search
         /// <returns>true if there are previous items, false if there are no previous items</returns>
         public bool MoveToPreviousItems() => SetMarkers(before: _cursors?.Before);
 
-        private Cursors _cursors;
+        private Cursors? _cursors;
 
         internal void SetCursors(Cursors cursors) => _cursors = cursors;
 
-        private bool SetMarkers(string before = null, string after = null)
+        private bool SetMarkers(string? before = default, string? after = default)
         {
             Before = before;
             After = after;

@@ -1,5 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ClashOfClans.Core;
+using ClashOfClans.Models;
+using ClashOfClans.Search;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +25,63 @@ namespace ClashOfClans.Tests.Integration
 
                 // Assert
                 Assert.IsNotNull(player);
+            }
+        }
+
+        [TestMethod]
+        public async Task GetPlayerInformationForClanMembers()
+        {
+            for (int i = 0; i < _clans.Count / 4; i++)
+            {
+                // Arrange
+                var clan = GetRandom(_clans);
+                var members = (ClanMemberList)await _coc.Clans.GetClanMembersAsync(clan.Tag);
+                var players = new List<Task<Player>>();
+
+                // Act
+                members.ForEach(m => players.Add(_coc.Players.GetPlayerAsync(m.Tag)));
+
+                try
+                {
+                    await Task.WhenAll(players);
+                }
+                catch (ClashOfClansException)
+                {
+                    // 'Not Found' players
+                }
+
+                // Assert
+                Assert.IsTrue(players.Count > 0);
+            }
+        }
+
+        [TestMethod]
+        public async Task GetPlayerInformationForLeaguePlayers()
+        {
+            // Arrange
+            var league = _leagues["Legend League"];
+            var leagueSeasonList = await _coc.Leagues.GetLeagueSeasonsAsync(league.Id);
+            var season = GetRandom(leagueSeasonList.Items);
+            var query = new Query
+            {
+                Limit = 100
+            };
+            var seasonPlayerRankingList = (PlayerRankingList)await _coc.Leagues.GetLeagueSeasonRankingsAsync(league.Id, season.Id, query);
+
+            // Act
+            foreach (var playerTag in seasonPlayerRankingList.Select(p => p.Tag))
+            {
+                try
+                {
+                    var player = await _coc.Players.GetPlayerAsync(playerTag);
+
+                    // Assert
+                    Assert.IsNotNull(player);
+                }
+                catch (ClashOfClansException)
+                {
+                    // 'Not Found' players
+                }
             }
         }
 

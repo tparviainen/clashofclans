@@ -14,7 +14,7 @@ namespace ClashOfClans.Api
             _gameData = gameData;
         }
 
-        public Task<QueryResult<LeagueList>> GetLeaguesAsync(Query query = null)
+        public Task<QueryResult<LeagueList>> GetLeaguesAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -22,7 +22,7 @@ namespace ClashOfClans.Api
                 Uri = "/leagues"
             };
 
-            return _gameData.RequestAsync<QueryResult<LeagueList>>(request);
+            return _gameData.QueryAsync<LeagueList>(request);
         }
 
         public Task<League> GetLeagueAsync(int? leagueId)
@@ -36,7 +36,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<League>(request);
         }
 
-        public Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query query = null)
+        public Task<QueryResult<LeagueSeasonList>> GetLeagueSeasonsAsync(int? leagueId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -45,10 +45,10 @@ namespace ClashOfClans.Api
                 Uri = $"/leagues/{leagueId}/seasons"
             };
 
-            return _gameData.RequestAsync<QueryResult<LeagueSeasonList>>(request);
+            return _gameData.QueryAsync<LeagueSeasonList>(request);
         }
 
-        public Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query query = null)
+        public Task<QueryResult<PlayerRankingList>> GetLeagueSeasonRankingsAsync(int? leagueId, string seasonId, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -58,10 +58,10 @@ namespace ClashOfClans.Api
                 Uri = $"/leagues/{leagueId}/seasons/{seasonId}"
             };
 
-            return _gameData.RequestAsync<QueryResult<PlayerRankingList>>(request);
+            return _gameData.QueryAsync<PlayerRankingList>(request);
         }
 
-        public Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query query = null)
+        public Task<QueryResult<WarLeagueList>> GetWarLeaguesAsync(Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -69,7 +69,7 @@ namespace ClashOfClans.Api
                 Uri = $"/warleagues"
             };
 
-            return _gameData.RequestAsync<QueryResult<WarLeagueList>>(request);
+            return _gameData.QueryAsync<WarLeagueList>(request);
         }
 
         public Task<WarLeague> GetWarLeagueAsync(int? leagueId)

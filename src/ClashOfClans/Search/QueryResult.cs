@@ -23,9 +23,9 @@ namespace ClashOfClans.Search
     /// <typeparam name="T">The type of the result items</typeparam>
     public class QueryResult<T> where T : class
     {
-        public T Items { get; set; }
+        public T Items { get; set; } = default!;
 
-        public Paging Paging { get; set; }
+        public Paging Paging { get; set; } = default!;
 
         /// <summary>
         /// Allow explicit conversion from <see cref="QueryResult{T}"/> to T. The reason this is explicit

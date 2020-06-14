@@ -10,6 +10,26 @@ namespace ClashOfClans.Tests.Unit
     public class ValidatorTests
     {
         [TestMethod]
+        public void GetUninitializedUriThrows()
+        {
+            // Arrange
+            var request = new AutoValidatedRequest();
+
+            // Act
+            try
+            {
+                var uri = request.Uri;
+
+                // Assert
+                Assert.Fail($"Uri has a value '{uri}'");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Trace.WriteLine(ex);
+            }
+        }
+
+        [TestMethod]
         public void SetEmptyClanTagThrows()
         {
             // Arrange

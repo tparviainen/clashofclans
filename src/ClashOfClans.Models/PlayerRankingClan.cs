@@ -2,6 +2,6 @@
 {
     public class PlayerRankingClan : Identity
     {
-        public UrlContainer BadgeUrls { get; set; }
+        public UrlContainer BadgeUrls { get; set; } = default!;
     }
 }

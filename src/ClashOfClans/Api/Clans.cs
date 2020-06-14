@@ -22,7 +22,7 @@ namespace ClashOfClans.Api
                 Uri = "/clans"
             };
 
-            return _gameData.RequestAsync<QueryResult<ClanList>>(request);
+            return _gameData.QueryAsync<ClanList>(request);
         }
 
         public Task<Clan> GetClanAsync(string clanTag)
@@ -36,7 +36,7 @@ namespace ClashOfClans.Api
             return _gameData.RequestAsync<Clan>(request);
         }
 
-        public Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query query = null)
+        public Task<QueryResult<ClanMemberList>> GetClanMembersAsync(string clanTag, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -45,10 +45,10 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}/members"
             };
 
-            return _gameData.RequestAsync<QueryResult<ClanMemberList>>(request);
+            return _gameData.QueryAsync<ClanMemberList>(request);
         }
 
-        public Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query query = null)
+        public Task<QueryResult<ClanWarLog>> GetClanWarLogAsync(string clanTag, Query? query = default)
         {
             var request = new AutoValidatedRequest
             {
@@ -57,7 +57,7 @@ namespace ClashOfClans.Api
                 Uri = $"/clans/{clanTag}/warlog"
             };
 
-            return _gameData.RequestAsync<QueryResult<ClanWarLog>>(request);
+            return _gameData.QueryAsync<ClanWarLog>(request);
         }
 
         public Task<ClanWar> GetCurrentWarAsync(string clanTag)
