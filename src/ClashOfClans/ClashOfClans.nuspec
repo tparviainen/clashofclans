@@ -8,7 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://tparviainen.github.io/clashofclans/</projectUrl>
-    <description>This package contains a .NET Standard library for accessing the services of Clash of Clans API.</description>
+    <description>ClashOfClans is a .NET library for accessing the Supercell's Clash of Clans API. This library provides easy to use API, strongly typed models, takes care of API throttling and supports multiple API tokens.</description>
     <releaseNotes>https://github.com/tparviainen/clashofclans/releases</releaseNotes>
     <tags>ClashOfClans Game API</tags>
     <icon>icon.png</icon>
