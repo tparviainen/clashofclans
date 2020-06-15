@@ -10,7 +10,7 @@
     <projectUrl>https://tparviainen.github.io/clashofclans/</projectUrl>
     <description>ClashOfClans is a .NET library for accessing the Supercell's Clash of Clans API. This library provides easy to use API, strongly typed models, takes care of API throttling and supports multiple API tokens.</description>
     <releaseNotes>https://github.com/tparviainen/clashofclans/releases</releaseNotes>
-    <tags>ClashOfClans Game API</tags>
+    <tags>ClashOfClans Game API Supercell</tags>
     <icon>icon.png</icon>
     <repository type="git" url="https://github.com/tparviainen/clashofclans" />
     <dependencies>
