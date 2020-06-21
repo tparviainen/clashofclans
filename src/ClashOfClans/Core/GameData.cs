@@ -56,7 +56,7 @@ namespace ClashOfClans.Core
             var deserializedData = _serializer.Deserialize<T>(data);
 
 #if DEBUG
-            var nullProperties = deserializedData.GetNullProperties();
+            var nullProperties = deserializedData.GetNullMembers();
 
             lock (_nullProperties)
                 _nullProperties.UnionWith(nullProperties);
