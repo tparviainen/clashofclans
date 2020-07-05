@@ -11,10 +11,7 @@
 .NET library for accessing the Supercell's Clash of Clans API.
 
 # Info
-This repository contains a .NET Standard library for accessing Supercell's 
-[Clash of Clans API](https://developer.clashofclans.com/).
-In order to use the functionality provided by this library you need an API key (token) that can be 
-created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
+This repository contains a .NET Standard library for accessing Supercell's [Clash of Clans API](https://developer.clashofclans.com/). ClashOfClans library provides easy to use API, strongly typed models, takes care of API throttling and supports multiple API tokens. In order to use the functionality provided by ClashOfClans library you need an API key (token) that can be created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
 
 100% Clash of Clans API coverage, including the [Summer 2020 Update](https://clashofclans.com/blog/release-notes/).
 
