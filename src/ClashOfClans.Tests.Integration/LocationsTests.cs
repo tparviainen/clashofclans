@@ -87,7 +87,7 @@ namespace ClashOfClans.Tests.Integration
         public async Task GetClanRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry);
             var query = new Query
             {
                 Limit = ItemLimit
@@ -105,7 +105,7 @@ namespace ClashOfClans.Tests.Integration
         public async Task GetPlayerRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry);
             var query = new Query
             {
                 Limit = ItemLimit
@@ -123,7 +123,7 @@ namespace ClashOfClans.Tests.Integration
         public async Task GetClanVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry);
             var query = new Query
             {
                 Limit = ItemLimit
@@ -141,7 +141,7 @@ namespace ClashOfClans.Tests.Integration
         public async Task GetPlayerVersusRankingsForASpecificLocation()
         {
             // Arrange
-            var location = GetRandom(_locations, l => l.IsCountry == true);
+            var location = GetRandom(_locations, l => l.IsCountry);
             var query = new Query
             {
                 Limit = ItemLimit

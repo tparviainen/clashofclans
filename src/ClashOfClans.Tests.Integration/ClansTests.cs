@@ -136,7 +136,7 @@ namespace ClashOfClans.Tests.Integration
             var taskList = new List<Task<QueryResult<ClanWarLog>>>();
 
             // Act
-            foreach (var clan in _clans.Where(c => c.IsWarLogPublic == true))
+            foreach (var clan in _clans.Where(c => c.IsWarLogPublic))
             {
                 taskList.Add(_coc.Clans.GetClanWarLogAsync(clan.Tag));
             }
@@ -156,12 +156,12 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var taskList = new List<Task<ClanWar>>();
-            var clanTags = _clans.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+            var clanTags = _clans.Where(c => c.IsWarLogPublic).Select(c => c.Tag).ToList();
 
             foreach (var clanTag in ClanTags)
             {
                 var clan = await _coc.Clans.GetClanAsync(clanTag);
-                if (clan.IsWarLogPublic == true)
+                if (clan.IsWarLogPublic)
                     clanTags.Add(clan.Tag);
             }
 
@@ -183,7 +183,7 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var taskList = new List<Task<ClanWarLeagueGroup>>();
-            var clanTags = _clans.Where(c => c.IsWarLogPublic == true).Select(c => c.Tag).ToList();
+            var clanTags = _clans.Where(c => c.IsWarLogPublic).Select(c => c.Tag).ToList();
             clanTags.AddRange(ClanTags);
 
             // Act

@@ -2,7 +2,9 @@
 {
     public class ClanWarLeagueClan : Identity
     {
-        public int? ClanLevel { get; set; }
+        private int? clanLevel;
+
+        public int ClanLevel { get => clanLevel ?? default; set => clanLevel = value; }
 
         public UrlContainer BadgeUrls { get; set; } = default!;
 
