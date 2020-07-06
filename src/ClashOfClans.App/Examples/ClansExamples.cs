@@ -72,7 +72,7 @@ namespace ClashOfClans.App.Examples
             var coc = new ClashOfClansClient(token);
             var clan = await coc.Clans.GetClanAsync(clanTag);
 
-            if (clan.IsWarLogPublic == true)
+            if (clan.IsWarLogPublic)
             {
                 var warLog = await coc.Clans.GetClanWarLogAsync(clanTag);
 

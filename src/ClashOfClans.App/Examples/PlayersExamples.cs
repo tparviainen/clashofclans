@@ -25,8 +25,8 @@ namespace ClashOfClans.App.Examples
 
             if (player.Clan != null)
             {
-                var d = (int)player.Donations!;
-                var dr = (int)player.DonationsReceived!;
+                var d = player.Donations;
+                var dr = player.DonationsReceived;
                 Console.WriteLine($"'{player.Name}' is a member of '{player.Clan.Name}' and has a donation ratio {d}/{dr}={(dr != 0 ? (d / (float)dr) : 0):0.00}");
             }
         }
