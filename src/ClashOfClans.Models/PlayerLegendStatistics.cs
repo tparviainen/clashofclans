@@ -2,7 +2,9 @@
 {
     public class PlayerLegendStatistics
     {
-        public int? LegendTrophies { get; set; }
+        private int? _legendTrophies;
+
+        public int LegendTrophies { get => _legendTrophies ?? default; set => _legendTrophies = value; }
 
         public LegendLeagueTournamentSeasonResult? BestVersusSeason { get; set; }
 

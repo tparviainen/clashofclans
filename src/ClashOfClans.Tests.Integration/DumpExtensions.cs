@@ -162,8 +162,8 @@ namespace ClashOfClans.Tests.Integration
             {
                 foreach (var member in list)
                 {
-                    int donations = (int)member.Donations!;
-                    int donationsReceived = (int)member.DonationsReceived!;
+                    int donations = member.Donations;
+                    int donationsReceived = member.DonationsReceived;
 
                     sb.Append($"{member.Tag}/{member.Name}, donations {donations}/{donationsReceived}");
                     sb.Append($"={((donationsReceived != 0) ? donations / (float)donationsReceived : -1)}");

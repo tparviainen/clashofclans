@@ -2,6 +2,8 @@
 {
     public class ClanWarLeagueClanMember : Identity
     {
-        public int? TownHallLevel { get; set; }
+        private int? _townHallLevel;
+
+        public int TownHallLevel { get => _townHallLevel ?? default; set => _townHallLevel = value; }
     }
 }

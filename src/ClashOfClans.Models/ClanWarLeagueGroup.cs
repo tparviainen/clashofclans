@@ -2,7 +2,9 @@
 {
     public class ClanWarLeagueGroup
     {
-        public State? State { get; set; }
+        private State? _state;
+
+        public State State { get => _state ?? default; set => _state = value; }
 
         public string Season { get; set; } = default!;
 
