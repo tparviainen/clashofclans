@@ -16,6 +16,10 @@
     <NoWarn>$(NoWarn);1701;1702;1591</NoWarn>
   </PropertyGroup>
 
+  <ItemGroup Condition="'$(Configuration)'=='Release'">
+    <Compile Remove="Core\NullableTypes.cs" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>

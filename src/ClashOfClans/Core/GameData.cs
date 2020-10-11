@@ -4,7 +4,6 @@ using ClashOfClans.Extensions;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,7 +21,7 @@ namespace ClashOfClans.Core
         private IThrottleRequests ThrottleRequests => _options.ThrottleRequests;
 
 #if DEBUG
-        private readonly HashSet<string> _nullProperties = new HashSet<string>();
+        private readonly NullableTypes _nullableTypes = new NullableTypes();
 #endif
 
         /// <summary>
@@ -52,16 +51,21 @@ namespace ClashOfClans.Core
             Log(request, $"Uri: /{request.Uri}");
 
             var data = await GetDataAsync(request).ConfigureAwait(false);
-
             var deserializedData = _serializer.Deserialize<T>(data);
 
 #if DEBUG
-            var nullProperties = deserializedData.GetNullMembers();
-
-            lock (_nullProperties)
-                _nullProperties.UnionWith(nullProperties);
-
-            Log(request, $"Aggregate list of null properties ({_nullProperties.Count}):\n{{\n  {string.Join("\n  ", _nullProperties.OrderBy(p => p).ToArray())}\n}}");
+            lock (_nullableTypes)
+            {
+                var nullProperties = deserializedData.GetNullMembers();
+                _nullableTypes.Add(nullProperties);
+                var nullableTypes = _nullableTypes.GetUncheckedNulls();
+                if (nullableTypes != default)
+                {
+                    var today = DateTime.Now.ToShortDateString();
+                    var properties = string.Join(Environment.NewLine, nullableTypes.Select(kvp => $"{kvp.Key}, {today}, total {kvp.Value}"));
+                    Log(request, $"Aggregate list of null properties:{Environment.NewLine + properties}");
+                }
+            }
 #endif
 
             return deserializedData;
