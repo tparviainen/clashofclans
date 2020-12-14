@@ -19,7 +19,7 @@ jobs:
 
     - uses: actions/checkout@v2
       with:
-        token: ${{ secrets.GITHUB_DOCFX }}
+        token: ${{ secrets.DOCFX_API_KEY }}
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.x'
