@@ -1,5 +1,7 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 
 namespace ClashOfClans
@@ -11,6 +13,11 @@ namespace ClashOfClans
     public class ClashOfClansClient : IClashOfClans
     {
         private readonly ClashOfClansOptionsInternal _options;
+
+        public ClashOfClansClient(IOptions<ClashOfClansOptions> options, ILogger<ClashOfClansClient>? logger = default)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Initializes a new instance of the Clash of Clans API
