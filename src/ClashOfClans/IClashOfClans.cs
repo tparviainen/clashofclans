@@ -29,5 +29,10 @@
         /// Access labels
         /// </summary>
         ILabels Labels { get; }
+
+        /// <summary>
+        /// Access information about gold pass
+        /// </summary>
+        IGoldPass GoldPass { get; }
     }
 }
