@@ -679,6 +679,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.IPlayers.GetPlayerAsync
   nameWithType: IPlayers.GetPlayerAsync
+- uid: ClashOfClans.IPlayers.VerifyTokenAsync(System.String,System.String)
+  name: VerifyTokenAsync(String, String)
+  href: api/ClashOfClans.IPlayers.html#ClashOfClans_IPlayers_VerifyTokenAsync_System_String_System_String_
+  commentId: M:ClashOfClans.IPlayers.VerifyTokenAsync(System.String,System.String)
+  fullName: ClashOfClans.IPlayers.VerifyTokenAsync(System.String, System.String)
+  nameWithType: IPlayers.VerifyTokenAsync(String, String)
+- uid: ClashOfClans.IPlayers.VerifyTokenAsync*
+  name: VerifyTokenAsync
+  href: api/ClashOfClans.IPlayers.html#ClashOfClans_IPlayers_VerifyTokenAsync_
+  commentId: Overload:ClashOfClans.IPlayers.VerifyTokenAsync
+  isSpec: "True"
+  fullName: ClashOfClans.IPlayers.VerifyTokenAsync
+  nameWithType: IPlayers.VerifyTokenAsync
 - uid: ClashOfClans.Models
   name: ClashOfClans.Models
   href: api/ClashOfClans.Models.html
@@ -1356,6 +1369,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanWarAttack.DestructionPercentage
   nameWithType: ClanWarAttack.DestructionPercentage
+- uid: ClashOfClans.Models.ClanWarAttack.Duration
+  name: Duration
+  href: api/ClashOfClans.Models.ClanWarAttack.html#ClashOfClans_Models_ClanWarAttack_Duration
+  commentId: P:ClashOfClans.Models.ClanWarAttack.Duration
+  fullName: ClashOfClans.Models.ClanWarAttack.Duration
+  nameWithType: ClanWarAttack.Duration
+- uid: ClashOfClans.Models.ClanWarAttack.Duration*
+  name: Duration
+  href: api/ClashOfClans.Models.ClanWarAttack.html#ClashOfClans_Models_ClanWarAttack_Duration_
+  commentId: Overload:ClashOfClans.Models.ClanWarAttack.Duration
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanWarAttack.Duration
+  nameWithType: ClanWarAttack.Duration
 - uid: ClashOfClans.Models.ClanWarAttack.Order
   name: Order
   href: api/ClashOfClans.Models.ClanWarAttack.html#ClashOfClans_Models_ClanWarAttack_Order
@@ -3129,6 +3155,24 @@ references:
   commentId: F:ClashOfClans.Models.State.WarEnded
   fullName: ClashOfClans.Models.State.WarEnded
   nameWithType: State.WarEnded
+- uid: ClashOfClans.Models.Status
+  name: Status
+  href: api/ClashOfClans.Models.Status.html
+  commentId: T:ClashOfClans.Models.Status
+  fullName: ClashOfClans.Models.Status
+  nameWithType: Status
+- uid: ClashOfClans.Models.Status.Invalid
+  name: Invalid
+  href: api/ClashOfClans.Models.Status.html#ClashOfClans_Models_Status_Invalid
+  commentId: F:ClashOfClans.Models.Status.Invalid
+  fullName: ClashOfClans.Models.Status.Invalid
+  nameWithType: Status.Invalid
+- uid: ClashOfClans.Models.Status.Ok
+  name: Ok
+  href: api/ClashOfClans.Models.Status.html#ClashOfClans_Models_Status_Ok
+  commentId: F:ClashOfClans.Models.Status.Ok
+  fullName: ClashOfClans.Models.Status.Ok
+  nameWithType: Status.Ok
 - uid: ClashOfClans.Models.Type
   name: Type
   href: api/ClashOfClans.Models.Type.html
@@ -3211,6 +3255,70 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.UrlContainer.Tiny
   nameWithType: UrlContainer.Tiny
+- uid: ClashOfClans.Models.VerifyTokenRequest
+  name: VerifyTokenRequest
+  href: api/ClashOfClans.Models.VerifyTokenRequest.html
+  commentId: T:ClashOfClans.Models.VerifyTokenRequest
+  fullName: ClashOfClans.Models.VerifyTokenRequest
+  nameWithType: VerifyTokenRequest
+- uid: ClashOfClans.Models.VerifyTokenRequest.Token
+  name: Token
+  href: api/ClashOfClans.Models.VerifyTokenRequest.html#ClashOfClans_Models_VerifyTokenRequest_Token
+  commentId: P:ClashOfClans.Models.VerifyTokenRequest.Token
+  fullName: ClashOfClans.Models.VerifyTokenRequest.Token
+  nameWithType: VerifyTokenRequest.Token
+- uid: ClashOfClans.Models.VerifyTokenRequest.Token*
+  name: Token
+  href: api/ClashOfClans.Models.VerifyTokenRequest.html#ClashOfClans_Models_VerifyTokenRequest_Token_
+  commentId: Overload:ClashOfClans.Models.VerifyTokenRequest.Token
+  isSpec: "True"
+  fullName: ClashOfClans.Models.VerifyTokenRequest.Token
+  nameWithType: VerifyTokenRequest.Token
+- uid: ClashOfClans.Models.VerifyTokenResponse
+  name: VerifyTokenResponse
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html
+  commentId: T:ClashOfClans.Models.VerifyTokenResponse
+  fullName: ClashOfClans.Models.VerifyTokenResponse
+  nameWithType: VerifyTokenResponse
+- uid: ClashOfClans.Models.VerifyTokenResponse.Status
+  name: Status
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html#ClashOfClans_Models_VerifyTokenResponse_Status
+  commentId: P:ClashOfClans.Models.VerifyTokenResponse.Status
+  fullName: ClashOfClans.Models.VerifyTokenResponse.Status
+  nameWithType: VerifyTokenResponse.Status
+- uid: ClashOfClans.Models.VerifyTokenResponse.Status*
+  name: Status
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html#ClashOfClans_Models_VerifyTokenResponse_Status_
+  commentId: Overload:ClashOfClans.Models.VerifyTokenResponse.Status
+  isSpec: "True"
+  fullName: ClashOfClans.Models.VerifyTokenResponse.Status
+  nameWithType: VerifyTokenResponse.Status
+- uid: ClashOfClans.Models.VerifyTokenResponse.Tag
+  name: Tag
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html#ClashOfClans_Models_VerifyTokenResponse_Tag
+  commentId: P:ClashOfClans.Models.VerifyTokenResponse.Tag
+  fullName: ClashOfClans.Models.VerifyTokenResponse.Tag
+  nameWithType: VerifyTokenResponse.Tag
+- uid: ClashOfClans.Models.VerifyTokenResponse.Tag*
+  name: Tag
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html#ClashOfClans_Models_VerifyTokenResponse_Tag_
+  commentId: Overload:ClashOfClans.Models.VerifyTokenResponse.Tag
+  isSpec: "True"
+  fullName: ClashOfClans.Models.VerifyTokenResponse.Tag
+  nameWithType: VerifyTokenResponse.Tag
+- uid: ClashOfClans.Models.VerifyTokenResponse.Token
+  name: Token
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html#ClashOfClans_Models_VerifyTokenResponse_Token
+  commentId: P:ClashOfClans.Models.VerifyTokenResponse.Token
+  fullName: ClashOfClans.Models.VerifyTokenResponse.Token
+  nameWithType: VerifyTokenResponse.Token
+- uid: ClashOfClans.Models.VerifyTokenResponse.Token*
+  name: Token
+  href: api/ClashOfClans.Models.VerifyTokenResponse.html#ClashOfClans_Models_VerifyTokenResponse_Token_
+  commentId: Overload:ClashOfClans.Models.VerifyTokenResponse.Token
+  isSpec: "True"
+  fullName: ClashOfClans.Models.VerifyTokenResponse.Token
+  nameWithType: VerifyTokenResponse.Token
 - uid: ClashOfClans.Models.Village
   name: Village
   href: api/ClashOfClans.Models.Village.html

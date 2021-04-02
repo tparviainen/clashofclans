@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ClashOfClansClient.html",
-          "hash": "uhAKwRxMvTpiOi6EpiAEyw=="
+          "hash": "cxa7Coay2LnUuk2tLF6omA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.ClashOfClansException.html",
-          "hash": "qHLjUsoPWj5VuIjM2nwXJQ=="
+          "hash": "NwH4iPgbCqrLhY4S4qLn3g=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.ClashOfClansOptions.html",
-          "hash": "RxVwEuUi/a5nIcHINVFZKw=="
+          "hash": "yfbb8z6iUGceQBb9B6yS1Q=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.IClashOfClansLogger.html",
-          "hash": "cAWxsQWxASGHYmlrrMIJgQ=="
+          "hash": "XZbMQw3NZk3gV6TEFNqMcQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.html",
-          "hash": "lzSPBmTcG0sMDwdTcf1/XQ=="
+          "hash": "Ngw57+NhnTdjZBZVdG0E3w=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.IClans.html",
-          "hash": "aGetruBSEzNx/nGA5t5CQw=="
+          "hash": "5eULFd869jIgeJ5yCJou5Q=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.IClashOfClans.html",
-          "hash": "03wukSRAnXANdWjOukpZTQ=="
+          "hash": "wWn+ISDKMAGuA2pBj22AAg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ILabels.html",
-          "hash": "YtUCnBMqs4aOHlsRPBlUIQ=="
+          "hash": "XZ+DKmPGSYgTMsQKcTZmMA=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ILeagues.html",
-          "hash": "JgLDdfP0yZLgG4H9/P43Ew=="
+          "hash": "pP/Yxfwfd5kfrLV0COD/+Q=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ILocations.html",
-          "hash": "LefyxpR/+GqFsR/iWc1ylg=="
+          "hash": "3WyiTJsgl6oGdSvcS3En4w=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.IPlayers.html",
-          "hash": "2PftmWyniHnLhRTkZkTgTQ=="
+          "hash": "e2XK1l3Y/J+bi3NftmgjXw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Clan.html",
-          "hash": "ovajpjrfkkx1naLCKiIemA=="
+          "hash": "zZK+1fNo5MsjVK+u1mdlxA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanList.html",
-          "hash": "iW/XRA82+3rLd86G3tk6HQ=="
+          "hash": "FgvLj4KUawKYB5/XyrFoVQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanMember.html",
-          "hash": "FGTL91zyqp1ikSGaqIZWQA=="
+          "hash": "3kaQqPiNupUIKwOInMOkLw=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanMemberList.html",
-          "hash": "FhS38qz9X3PzWwB15KX/pw=="
+          "hash": "Zdv14F2xUxBvV/2Yk8OM8w=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanRanking.html",
-          "hash": "pYCI4EbACP4larYmmLEOaA=="
+          "hash": "iOkIiwTZxStR2UlbknPSJA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanRankingList.html",
-          "hash": "fOKLDnwMVkflb19TwS1ytw=="
+          "hash": "Vk8fZbFZJ7Q8x8uDpD7yKQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanVersusRanking.html",
-          "hash": "0L4UKTlva3EpY8vyfhJ3Bg=="
+          "hash": "MHHKgggKYsZ3avDUdrHcqg=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanVersusRankingList.html",
-          "hash": "jwn0bHl/wrF9o5nCHJPSsg=="
+          "hash": "aBf2asqlb+cCkAfhn2xQ/g=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWar.html",
-          "hash": "zn70S6t4b3NSSXMJEZVjrA=="
+          "hash": "qBNP7BEsjwdhR6FHJaPfQg=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarAttack.html",
-          "hash": "GtfiQVitfHqfhTH0w/B52g=="
+          "hash": "7PDLgzMhLkDUi423MuSnWg=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarAttackList.html",
-          "hash": "rCo2Gi4RvBLY0NDf9PYByg=="
+          "hash": "I21JcRdqwrznBJXsN/j5Pw=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueClan.html",
-          "hash": "nE5O9+EfYWrV+cSVh3xa0w=="
+          "hash": "KtbETyBO6BJraK7L7H6Vpg=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueClanList.html",
-          "hash": "8hdIHu/PuP47mShuo3N4Pw=="
+          "hash": "znCdFgrSPrR71etKxwHCnw=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueClanMember.html",
-          "hash": "WyGRZxac3+UrL7viMOoFuw=="
+          "hash": "jj18vGY22st8M70G9e94Nw=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueClanMemberList.html",
-          "hash": "jsBau3nEVMrFxQ9BZLBSZA=="
+          "hash": "Wssx8g8FM38psTwRogDP/A=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueGroup.html",
-          "hash": "0Cs1smgrRcV5fziQkaZqXw=="
+          "hash": "NVoNJlWPP54Ck/g2eAZVDQ=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueRound.html",
-          "hash": "zECexOUR3aO7KUkhtr5Q+w=="
+          "hash": "81Jr+4UQdXcehE1gVTKlxA=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueRoundList.html",
-          "hash": "Cki8eMg1hW1dXP46wEELag=="
+          "hash": "lYhJC8rg1IkfbrbVBEr9xA=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueWar.html",
-          "hash": "qVVTtPA6VR/vlb/P19t9rg=="
+          "hash": "VUtfWV423wzZ5FvMc/9cEA=="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLeagueWarClan.html",
-          "hash": "VPqDWUltmxeWNEVgfsZjlg=="
+          "hash": "WN2O+3PrNaus0hnnj9PGkQ=="
         }
       },
       "is_incremental": false,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLog.html",
-          "hash": "HgYkp2ju6cfnt/d4oo4+PA=="
+          "hash": "HuvlLEXF99eFWK7uDvR4jw=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarLogEntry.html",
-          "hash": "Jeamq2CCz9MK/KtBWvZtfw=="
+          "hash": "ONzZkzWKQDFvqImBmiw9LA=="
         }
       },
       "is_incremental": false,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarMember.html",
-          "hash": "kEHxytxou0B3moHEJbqMGg=="
+          "hash": "FefcDugRY+JkeBHikAW6+Q=="
         }
       },
       "is_incremental": false,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanWarMemberList.html",
-          "hash": "j3Azx3cpYHWyTjpg/uPV9w=="
+          "hash": "r/Ym/OdkX+XXYOMb6bjXWg=="
         }
       },
       "is_incremental": false,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClientError.html",
-          "hash": "MXvUoWDnIQ9IPESET15Zmg=="
+          "hash": "gb+XJ2E90h3/keVbA5HNLA=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Cursors.html",
-          "hash": "UT5+tiFsDSpdpuR7w8LQVw=="
+          "hash": "CRj5+IlIuOE7USrllOxcvw=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Identity.html",
-          "hash": "+qLHjS0jS0eEbjvjXVweQA=="
+          "hash": "Cxifgiwuf9dmFpL1zkwoBg=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Label.html",
-          "hash": "AghCP7gtNPtgbXD4Uam+aQ=="
+          "hash": "0GQ7J/BWDynuxI+oD7/FLA=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LabelList.html",
-          "hash": "lk1/qzu29B7mkMshR/2A2A=="
+          "hash": "odd4o8x8sFqEYg9nkXfvFA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.League.html",
-          "hash": "IOTMgi9uzJV6GP5+sHZkBA=="
+          "hash": "vEMw48OzQDt0oDiG0fzlMA=="
         }
       },
       "is_incremental": false,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LeagueList.html",
-          "hash": "fl7zjbyBu4D+axGUstAJLg=="
+          "hash": "t6JmYs7ZXDEK+hgk5Qzfrg=="
         }
       },
       "is_incremental": false,
@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LeagueSeason.html",
-          "hash": "12o6aioHevmtTjLqYe5Oig=="
+          "hash": "hmpqhh7e38rWNVuDcwcNrg=="
         }
       },
       "is_incremental": false,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LeagueSeasonList.html",
-          "hash": "2YMXWMTQVz4CMjEaowB7sA=="
+          "hash": "vXMGLn1DLNc8AltAOC4xdA=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LegendLeagueTournamentSeasonResult.html",
-          "hash": "7PPNj25ai2btH0clNHoHtA=="
+          "hash": "aGybczjW7g195Mp9sl+a6w=="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Location.html",
-          "hash": "F7Xsh9gDPTdZDTaKbd9AXA=="
+          "hash": "eDs8kOOsn0+N/2jxKa0xHA=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.LocationList.html",
-          "hash": "uoM5LZWcZgASR6vFF1Llsw=="
+          "hash": "jCAxCV0vIlj3j67A/cvbWQ=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Paging.html",
-          "hash": "42clABzztgftFgFSlXblWA=="
+          "hash": "rY9ZfS2xT9MFQE+zeBticQ=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Player.html",
-          "hash": "T4EjSNjfdjibG27rB5rjDg=="
+          "hash": "6aX7YkalpAxTZk7QEpmY4Q=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerAchievementProgress.html",
-          "hash": "Km/COQXnMQCydBn/Bbxjuw=="
+          "hash": "5xLQqueyk6q+gXNeY7ww7Q=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerAchievementProgressList.html",
-          "hash": "tqYPNsnvX/ANtzX3oolZEA=="
+          "hash": "PQGkvtIrph8FEhwB84ctyw=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerClan.html",
-          "hash": "J5JpimrWARXACyIMGBeiWg=="
+          "hash": "Zn+t7Kk6DMGRpdXtv7QyJQ=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerItemLevel.html",
-          "hash": "wyhC3JShn9iww+mU0Xs47A=="
+          "hash": "hVIq/ohsanulAbEnzWHpPw=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerItemLevelList.html",
-          "hash": "JNmQ7QfUOlGxdh0dW+MVLg=="
+          "hash": "4h4bCsMNu9m2lEcp+yEYZQ=="
         }
       },
       "is_incremental": false,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerLegendStatistics.html",
-          "hash": "iy48YTsHTrF6p8bifEBJCw=="
+          "hash": "RGb96ozl+/YzfdrOhg4yfw=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerRanking.html",
-          "hash": "MbCMfeQeqqtmKaqgYIx2wA=="
+          "hash": "cOmnYviY8tNKHV7dzm59pg=="
         }
       },
       "is_incremental": false,
@@ -681,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerRankingClan.html",
-          "hash": "FSlsGyKbJKhHAzg2E/DEHw=="
+          "hash": "P6bOt7PT1Ya1noGq9/Vv6Q=="
         }
       },
       "is_incremental": false,
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerRankingList.html",
-          "hash": "lVwfcUvWg81pdohUpDFqaA=="
+          "hash": "VbsbEaZiNOAA9A9S1eymaA=="
         }
       },
       "is_incremental": false,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerVersusRanking.html",
-          "hash": "vd4VkAnfM4GVopaAeuqeIg=="
+          "hash": "/FCCCEQctFHrmOdrZ3vvfQ=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.PlayerVersusRankingList.html",
-          "hash": "VMr4IavABzZ9KaZe0iefWw=="
+          "hash": "j1p8RtrZ9gKNzSFY8x++/w=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Result.html",
-          "hash": "ZqSUV2uxYIO5BNif1W4fRQ=="
+          "hash": "ms4oZSXrMDu4j6zUgJSCbw=="
         }
       },
       "is_incremental": false,
@@ -741,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Role.html",
-          "hash": "RDqYFtDoI7lSTlGzOOJzCw=="
+          "hash": "AGNZZqX5ymRGZXw/3cQeRA=="
         }
       },
       "is_incremental": false,
@@ -753,7 +753,19 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.State.html",
-          "hash": "H/1uE4KeGxAYeTILyNcIVA=="
+          "hash": "/c4oKzf0lYYstS+n2iYcmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.Status.html",
+          "hash": "uas4z4imBUxMF1ax9TEeqA=="
         }
       },
       "is_incremental": false,
@@ -765,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Type.html",
-          "hash": "SfTocJTfwo9JsftZQeGqqg=="
+          "hash": "7/o83O/Cat2zY5kNmZgt+A=="
         }
       },
       "is_incremental": false,
@@ -777,7 +789,31 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.UrlContainer.html",
-          "hash": "YBVoucEWyDW9uD/BXtYiww=="
+          "hash": "MRGq3JAozbNoozMOJIyjog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.VerifyTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.VerifyTokenRequest.html",
+          "hash": "tanBHZGBDaMGOjyHoPF/NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.VerifyTokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.VerifyTokenResponse.html",
+          "hash": "942tVSKM2Rv6mY6OCIUc+Q=="
         }
       },
       "is_incremental": false,
@@ -789,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Village.html",
-          "hash": "JIzkVx5A43k5oDqcli7ZDQ=="
+          "hash": "8Q3HniNcXuenPoSjCyAc8A=="
         }
       },
       "is_incremental": false,
@@ -801,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.WarBase.html",
-          "hash": "nFxyf4R0hkfGjcQN2uWKOw=="
+          "hash": "3DiCA/lX/BLWHptXvbaYxw=="
         }
       },
       "is_incremental": false,
@@ -813,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.WarClan.html",
-          "hash": "X63s017QqTtvIH7/O2QK5A=="
+          "hash": "k6Cv1It8gPxJDTXvsbEb8w=="
         }
       },
       "is_incremental": false,
@@ -825,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.WarFrequency.html",
-          "hash": "3vvUYlzB8w6VHlpqAwoL9w=="
+          "hash": "2VLHaMfUFtLYGvv8O7AcLw=="
         }
       },
       "is_incremental": false,
@@ -837,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.WarLeague.html",
-          "hash": "BCU+IgUVjZ2mmpLbiJGDuA=="
+          "hash": "uHoaMoZqkZAxlkpdmQvUxw=="
         }
       },
       "is_incremental": false,
@@ -849,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.WarLeagueList.html",
-          "hash": "JzyRbFtw3hQxhjvMpICfYw=="
+          "hash": "/p+R1SMU2Vb/wrfcMb5n4w=="
         }
       },
       "is_incremental": false,
@@ -861,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.html",
-          "hash": "ond09rNOx1QF1NVvZy1mig=="
+          "hash": "KjgO74cy7RBI+BuCpDrciQ=="
         }
       },
       "is_incremental": false,
@@ -873,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Search.Query.html",
-          "hash": "ckisDAjLPqAKiFuXpUHOaQ=="
+          "hash": "FfAUD8fukPuWaAVc1cK+TQ=="
         }
       },
       "is_incremental": false,
@@ -885,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Search.QueryClans.html",
-          "hash": "3JRWOmkKZbHYZDNKKxIxtQ=="
+          "hash": "506zbOy+EtcJKqDg+szlog=="
         }
       },
       "is_incremental": false,
@@ -897,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Search.QueryResult-1.html",
-          "hash": "JZqPG3bDfp4fj/3WWOjd4A=="
+          "hash": "fcCNglQ+j6u2PeFGoadocw=="
         }
       },
       "is_incremental": false,
@@ -909,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Search.html",
-          "hash": "6ruS8UWkk3xKzWDo5Wc8Cg=="
+          "hash": "OahsPRxs3Oh56sPBSFKimw=="
         }
       },
       "is_incremental": false,
@@ -921,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.html",
-          "hash": "TG58pmb3Pi49TUVjQIixaw=="
+          "hash": "3QOD8WfN/8voEV5j5eBY/Q=="
         }
       },
       "is_incremental": false,
@@ -933,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "RJhgnVyojLk/0ArDbvb4Vw=="
+          "hash": "BCG6CM2FsZcv3YjhbuIWcw=="
         }
       },
       "is_incremental": false,
@@ -945,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "KjLm55BGUpUbVBMR2tBzTw=="
+          "hash": "8pXnqi+sk1gl8plQJsY4Uw=="
         }
       },
       "is_incremental": false,
@@ -957,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "k2YYTMZPoZd5yZSrTzK/Sw=="
+          "hash": "3PIWtQEp8458joW3x3m3hA=="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ohsKEK3FK7nzkuLOWvusrg=="
+          "hash": "oZCZCT5x2FC50UUhbhvjRA=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1089,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 77,
+          "total_file_count": 80,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
