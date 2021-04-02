@@ -23,5 +23,20 @@ namespace ClashOfClans.Api
 
             return _gameData.RequestAsync<Player>(request);
         }
+
+        public Task<VerifyTokenResponse> VerifyTokenAsync(string playerTag, string apiToken)
+        {
+            var request = new AutoValidatedRequest
+            {
+                PlayerTag = playerTag,
+                Uri = $"/players/{playerTag}/verifytoken",
+                Content = new VerifyTokenRequest
+                {
+                    Token = apiToken
+                }
+            };
+
+            return _gameData.RequestAsync<VerifyTokenResponse>(request);
+        }
     }
 }

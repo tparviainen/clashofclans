@@ -78,7 +78,9 @@ namespace ClashOfClans.Core
             Log(request, $"Throttling: {watch.ElapsedMilliseconds} ms");
 
             watch.Restart();
-            var response = await _endpoint.GetMessageAsync(request.Uri).ConfigureAwait(false);
+            var response = request.Content == default ?
+                await _endpoint.GetMessageAsync(request.Uri).ConfigureAwait(false) :
+                await _endpoint.PostMessageAsync(request.Uri, _serializer.Serialize(request.Content)).ConfigureAwait(false);
             Log(request, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);

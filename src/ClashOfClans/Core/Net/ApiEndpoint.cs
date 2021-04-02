@@ -60,5 +60,8 @@ namespace ClashOfClans.Core.Net
         }
 
         public Task<HttpResponseMessage> GetMessageAsync(string requestUri) => Client.GetAsync(requestUri);
+
+        public Task<HttpResponseMessage> PostMessageAsync(string requestUri, string content) =>
+            Client.PostAsync(requestUri, new StringContent(content));
     }
 }

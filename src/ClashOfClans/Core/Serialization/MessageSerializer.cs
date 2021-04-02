@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.IO;
 using System.Text;
 
@@ -24,6 +25,16 @@ namespace ClashOfClans.Core.Serialization
                     return serializer.Deserialize<T>(reader)!;
                 }
             }
+        }
+
+        public string Serialize(object value)
+        {
+            var settings = new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+
+            return JsonConvert.SerializeObject(value, settings);
         }
     }
 }

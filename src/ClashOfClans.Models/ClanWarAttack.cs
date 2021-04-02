@@ -5,6 +5,7 @@
         private int? _stars;
         private int? _destructionPercentage;
         private int? _order;
+        private int? _duration;
 
         public string AttackerTag { get; set; } = default!;
 
@@ -15,5 +16,7 @@
         public int DestructionPercentage { get => _destructionPercentage ?? default; set => _destructionPercentage = value; }
 
         public int Order { get => _order ?? default; set => _order = value; }
+
+        public int Duration { get => _duration ?? default; set => _duration = value; }
     }
 }
