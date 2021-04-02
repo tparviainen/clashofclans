@@ -29,6 +29,21 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
+        public async Task VerifyPlayerTokenIsInvalid()
+        {
+            // Arrange
+            var playerTag = PlayerTags.First();
+            var apiToken = "12345678";
+
+            // Act
+            var response = await _coc.Players.VerifyTokenAsync(playerTag, apiToken);
+
+            // Assert
+            Assert.IsNotNull(response);
+            Assert.AreEqual(Status.Invalid, response.Status);
+        }
+
+        [TestMethod]
         public async Task GetPlayerInformationForClanMembers()
         {
             for (int i = 0; i < _clans.Count / 4; i++)

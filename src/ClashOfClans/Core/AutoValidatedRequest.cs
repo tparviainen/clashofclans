@@ -186,5 +186,10 @@ namespace ClashOfClans.Core
             }
         }
         #endregion
+
+        /// <summary>
+        /// The POST request content or NULL for GET requests.
+        /// </summary>
+        public object? Content { get; internal set; }
     }
 }

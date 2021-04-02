@@ -16,5 +16,13 @@ namespace ClashOfClans
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Requested player data</returns>
         Task<Player> GetPlayerAsync(string playerTag);
+
+        /// <summary>
+        /// Verify player API token that can be found from the game settings.
+        /// </summary>
+        /// <param name="playerTag">Tag of the player</param>
+        /// <param name="apiToken">API token</param>
+        /// <returns></returns>
+        Task<VerifyTokenResponse> VerifyTokenAsync(string playerTag, string apiToken);
     }
 }
