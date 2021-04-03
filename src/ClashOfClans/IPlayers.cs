@@ -21,8 +21,8 @@ namespace ClashOfClans
         /// Verify player API token that can be found from the game settings.
         /// </summary>
         /// <param name="playerTag">Tag of the player</param>
-        /// <param name="apiToken">API token</param>
+        /// <param name="playerApiToken">Player API token</param>
         /// <returns></returns>
-        Task<VerifyTokenResponse> VerifyTokenAsync(string playerTag, string apiToken);
+        Task<VerifyTokenResponse> VerifyTokenAsync(string playerTag, string playerApiToken);
     }
 }
