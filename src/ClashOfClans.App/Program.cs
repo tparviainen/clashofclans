@@ -31,6 +31,7 @@ namespace ClashOfClans.App
                 // Access player specific information
                 var playersExamples = new PlayersExamples(token, playerTag);
                 await playersExamples.GetPlayerInformation();
+                await playersExamples.VerifyPlayerApiToken();
 
                 // Access league information
                 var leaguesExamples = new LeaguesExamples(token);
