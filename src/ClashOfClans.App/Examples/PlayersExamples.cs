@@ -30,5 +30,17 @@ namespace ClashOfClans.App.Examples
                 Console.WriteLine($"'{player.Name}' is a member of '{player.Clan.Name}' and has a donation ratio {d}/{dr}={(dr != 0 ? (d / (float)dr) : 0):0.00}");
             }
         }
+
+        /// <summary>
+        /// Verify player API token that can be found from the game settings
+        /// </summary>
+        public async Task VerifyPlayerApiToken()
+        {
+            var playerApiToken = "123456789";
+            var coc = new ClashOfClansClient(token);
+            var result = await coc.Players.VerifyTokenAsync(playerTag, playerApiToken);
+
+            Console.WriteLine($"Player '{result.Tag}' API token '{result.Token}' status '{result.Status}'");
+        }
     }
 }
