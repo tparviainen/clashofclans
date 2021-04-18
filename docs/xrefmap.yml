@@ -58,6 +58,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.ClashOfClansClient.Configure
   nameWithType: ClashOfClansClient.Configure
+- uid: ClashOfClans.ClashOfClansClient.GoldPass
+  name: GoldPass
+  href: api/ClashOfClans.ClashOfClansClient.html#ClashOfClans_ClashOfClansClient_GoldPass
+  commentId: P:ClashOfClans.ClashOfClansClient.GoldPass
+  fullName: ClashOfClans.ClashOfClansClient.GoldPass
+  nameWithType: ClashOfClansClient.GoldPass
+- uid: ClashOfClans.ClashOfClansClient.GoldPass*
+  name: GoldPass
+  href: api/ClashOfClans.ClashOfClansClient.html#ClashOfClans_ClashOfClansClient_GoldPass_
+  commentId: Overload:ClashOfClans.ClashOfClansClient.GoldPass
+  isSpec: "True"
+  fullName: ClashOfClans.ClashOfClansClient.GoldPass
+  nameWithType: ClashOfClansClient.GoldPass
 - uid: ClashOfClans.ClashOfClansClient.Labels
   name: Labels
   href: api/ClashOfClans.ClashOfClansClient.html#ClashOfClans_ClashOfClansClient_Labels
@@ -381,6 +394,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.IClashOfClans.Clans
   nameWithType: IClashOfClans.Clans
+- uid: ClashOfClans.IClashOfClans.GoldPass
+  name: GoldPass
+  href: api/ClashOfClans.IClashOfClans.html#ClashOfClans_IClashOfClans_GoldPass
+  commentId: P:ClashOfClans.IClashOfClans.GoldPass
+  fullName: ClashOfClans.IClashOfClans.GoldPass
+  nameWithType: IClashOfClans.GoldPass
+- uid: ClashOfClans.IClashOfClans.GoldPass*
+  name: GoldPass
+  href: api/ClashOfClans.IClashOfClans.html#ClashOfClans_IClashOfClans_GoldPass_
+  commentId: Overload:ClashOfClans.IClashOfClans.GoldPass
+  isSpec: "True"
+  fullName: ClashOfClans.IClashOfClans.GoldPass
+  nameWithType: IClashOfClans.GoldPass
 - uid: ClashOfClans.IClashOfClans.Labels
   name: Labels
   href: api/ClashOfClans.IClashOfClans.html#ClashOfClans_IClashOfClans_Labels
@@ -433,6 +459,25 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.IClashOfClans.Players
   nameWithType: IClashOfClans.Players
+- uid: ClashOfClans.IGoldPass
+  name: IGoldPass
+  href: api/ClashOfClans.IGoldPass.html
+  commentId: T:ClashOfClans.IGoldPass
+  fullName: ClashOfClans.IGoldPass
+  nameWithType: IGoldPass
+- uid: ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync
+  name: GetCurrentGoldPassSeasonAsync()
+  href: api/ClashOfClans.IGoldPass.html#ClashOfClans_IGoldPass_GetCurrentGoldPassSeasonAsync
+  commentId: M:ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync
+  fullName: ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync()
+  nameWithType: IGoldPass.GetCurrentGoldPassSeasonAsync()
+- uid: ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync*
+  name: GetCurrentGoldPassSeasonAsync
+  href: api/ClashOfClans.IGoldPass.html#ClashOfClans_IGoldPass_GetCurrentGoldPassSeasonAsync_
+  commentId: Overload:ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync
+  isSpec: "True"
+  fullName: ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync
+  nameWithType: IGoldPass.GetCurrentGoldPassSeasonAsync
 - uid: ClashOfClans.ILabels
   name: ILabels
   href: api/ClashOfClans.ILabels.html
@@ -717,6 +762,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.BadgeUrls
   nameWithType: Clan.BadgeUrls
+- uid: ClashOfClans.Models.Clan.ChatLanguage
+  name: ChatLanguage
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ChatLanguage
+  commentId: P:ClashOfClans.Models.Clan.ChatLanguage
+  fullName: ClashOfClans.Models.Clan.ChatLanguage
+  nameWithType: Clan.ChatLanguage
+- uid: ClashOfClans.Models.Clan.ChatLanguage*
+  name: ChatLanguage
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ChatLanguage_
+  commentId: Overload:ClashOfClans.Models.Clan.ChatLanguage
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.ChatLanguage
+  nameWithType: Clan.ChatLanguage
 - uid: ClashOfClans.Models.Clan.ClanLevel
   name: ClanLevel
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanLevel
@@ -834,6 +892,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.Members
   nameWithType: Clan.Members
+- uid: ClashOfClans.Models.Clan.RequiredTownhallLevel
+  name: RequiredTownhallLevel
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredTownhallLevel
+  commentId: P:ClashOfClans.Models.Clan.RequiredTownhallLevel
+  fullName: ClashOfClans.Models.Clan.RequiredTownhallLevel
+  nameWithType: Clan.RequiredTownhallLevel
+- uid: ClashOfClans.Models.Clan.RequiredTownhallLevel*
+  name: RequiredTownhallLevel
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredTownhallLevel_
+  commentId: Overload:ClashOfClans.Models.Clan.RequiredTownhallLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.RequiredTownhallLevel
+  nameWithType: Clan.RequiredTownhallLevel
 - uid: ClashOfClans.Models.Clan.RequiredTrophies
   name: RequiredTrophies
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredTrophies
@@ -847,6 +918,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.RequiredTrophies
   nameWithType: Clan.RequiredTrophies
+- uid: ClashOfClans.Models.Clan.RequiredVersusTrophies
+  name: RequiredVersusTrophies
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredVersusTrophies
+  commentId: P:ClashOfClans.Models.Clan.RequiredVersusTrophies
+  fullName: ClashOfClans.Models.Clan.RequiredVersusTrophies
+  nameWithType: Clan.RequiredVersusTrophies
+- uid: ClashOfClans.Models.Clan.RequiredVersusTrophies*
+  name: RequiredVersusTrophies
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredVersusTrophies_
+  commentId: Overload:ClashOfClans.Models.Clan.RequiredVersusTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.RequiredVersusTrophies
+  nameWithType: Clan.RequiredVersusTrophies
 - uid: ClashOfClans.Models.Clan.Type
   name: Type
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_Type
@@ -1920,6 +2004,38 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Cursors.Before
   nameWithType: Cursors.Before
+- uid: ClashOfClans.Models.GoldPassSeason
+  name: GoldPassSeason
+  href: api/ClashOfClans.Models.GoldPassSeason.html
+  commentId: T:ClashOfClans.Models.GoldPassSeason
+  fullName: ClashOfClans.Models.GoldPassSeason
+  nameWithType: GoldPassSeason
+- uid: ClashOfClans.Models.GoldPassSeason.EndTime
+  name: EndTime
+  href: api/ClashOfClans.Models.GoldPassSeason.html#ClashOfClans_Models_GoldPassSeason_EndTime
+  commentId: P:ClashOfClans.Models.GoldPassSeason.EndTime
+  fullName: ClashOfClans.Models.GoldPassSeason.EndTime
+  nameWithType: GoldPassSeason.EndTime
+- uid: ClashOfClans.Models.GoldPassSeason.EndTime*
+  name: EndTime
+  href: api/ClashOfClans.Models.GoldPassSeason.html#ClashOfClans_Models_GoldPassSeason_EndTime_
+  commentId: Overload:ClashOfClans.Models.GoldPassSeason.EndTime
+  isSpec: "True"
+  fullName: ClashOfClans.Models.GoldPassSeason.EndTime
+  nameWithType: GoldPassSeason.EndTime
+- uid: ClashOfClans.Models.GoldPassSeason.StartTime
+  name: StartTime
+  href: api/ClashOfClans.Models.GoldPassSeason.html#ClashOfClans_Models_GoldPassSeason_StartTime
+  commentId: P:ClashOfClans.Models.GoldPassSeason.StartTime
+  fullName: ClashOfClans.Models.GoldPassSeason.StartTime
+  nameWithType: GoldPassSeason.StartTime
+- uid: ClashOfClans.Models.GoldPassSeason.StartTime*
+  name: StartTime
+  href: api/ClashOfClans.Models.GoldPassSeason.html#ClashOfClans_Models_GoldPassSeason_StartTime_
+  commentId: Overload:ClashOfClans.Models.GoldPassSeason.StartTime
+  isSpec: "True"
+  fullName: ClashOfClans.Models.GoldPassSeason.StartTime
+  nameWithType: GoldPassSeason.StartTime
 - uid: ClashOfClans.Models.Identity
   name: Identity
   href: api/ClashOfClans.Models.Identity.html
@@ -2003,6 +2119,51 @@ references:
   commentId: T:ClashOfClans.Models.LabelList
   fullName: ClashOfClans.Models.LabelList
   nameWithType: LabelList
+- uid: ClashOfClans.Models.Language
+  name: Language
+  href: api/ClashOfClans.Models.Language.html
+  commentId: T:ClashOfClans.Models.Language
+  fullName: ClashOfClans.Models.Language
+  nameWithType: Language
+- uid: ClashOfClans.Models.Language.Id
+  name: Id
+  href: api/ClashOfClans.Models.Language.html#ClashOfClans_Models_Language_Id
+  commentId: P:ClashOfClans.Models.Language.Id
+  fullName: ClashOfClans.Models.Language.Id
+  nameWithType: Language.Id
+- uid: ClashOfClans.Models.Language.Id*
+  name: Id
+  href: api/ClashOfClans.Models.Language.html#ClashOfClans_Models_Language_Id_
+  commentId: Overload:ClashOfClans.Models.Language.Id
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Language.Id
+  nameWithType: Language.Id
+- uid: ClashOfClans.Models.Language.LanguageCode
+  name: LanguageCode
+  href: api/ClashOfClans.Models.Language.html#ClashOfClans_Models_Language_LanguageCode
+  commentId: P:ClashOfClans.Models.Language.LanguageCode
+  fullName: ClashOfClans.Models.Language.LanguageCode
+  nameWithType: Language.LanguageCode
+- uid: ClashOfClans.Models.Language.LanguageCode*
+  name: LanguageCode
+  href: api/ClashOfClans.Models.Language.html#ClashOfClans_Models_Language_LanguageCode_
+  commentId: Overload:ClashOfClans.Models.Language.LanguageCode
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Language.LanguageCode
+  nameWithType: Language.LanguageCode
+- uid: ClashOfClans.Models.Language.Name
+  name: Name
+  href: api/ClashOfClans.Models.Language.html#ClashOfClans_Models_Language_Name
+  commentId: P:ClashOfClans.Models.Language.Name
+  fullName: ClashOfClans.Models.Language.Name
+  nameWithType: Language.Name
+- uid: ClashOfClans.Models.Language.Name*
+  name: Name
+  href: api/ClashOfClans.Models.Language.html#ClashOfClans_Models_Language_Name_
+  commentId: Overload:ClashOfClans.Models.Language.Name
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Language.Name
+  nameWithType: Language.Name
 - uid: ClashOfClans.Models.League
   name: League
   href: api/ClashOfClans.Models.League.html
@@ -2737,6 +2898,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.PlayerItemLevel.Name
   nameWithType: PlayerItemLevel.Name
+- uid: ClashOfClans.Models.PlayerItemLevel.SuperTroopIsActive
+  name: SuperTroopIsActive
+  href: api/ClashOfClans.Models.PlayerItemLevel.html#ClashOfClans_Models_PlayerItemLevel_SuperTroopIsActive
+  commentId: P:ClashOfClans.Models.PlayerItemLevel.SuperTroopIsActive
+  fullName: ClashOfClans.Models.PlayerItemLevel.SuperTroopIsActive
+  nameWithType: PlayerItemLevel.SuperTroopIsActive
+- uid: ClashOfClans.Models.PlayerItemLevel.SuperTroopIsActive*
+  name: SuperTroopIsActive
+  href: api/ClashOfClans.Models.PlayerItemLevel.html#ClashOfClans_Models_PlayerItemLevel_SuperTroopIsActive_
+  commentId: Overload:ClashOfClans.Models.PlayerItemLevel.SuperTroopIsActive
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerItemLevel.SuperTroopIsActive
+  nameWithType: PlayerItemLevel.SuperTroopIsActive
 - uid: ClashOfClans.Models.PlayerItemLevel.Village
   name: Village
   href: api/ClashOfClans.Models.PlayerItemLevel.html#ClashOfClans_Models_PlayerItemLevel_Village

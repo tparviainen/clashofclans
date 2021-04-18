@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ClientError
+    <title>Interface IGoldPass
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ClientError
+    <meta name="title" content="Interface IGoldPass
    ">
     <meta name="generator" content="docfx 2.57.1.0">
     
@@ -68,44 +68,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ClashOfClans.Models.ClientError">
+            <article class="content wrap" id="_content" data-uid="ClashOfClans.IGoldPass">
   
   
-  <h1 id="ClashOfClans_Models_ClientError" data-uid="ClashOfClans.Models.ClientError" class="text-break">Class ClientError
+  <h1 id="ClashOfClans_IGoldPass" data-uid="ClashOfClans.IGoldPass" class="text-break">Interface IGoldPass
   </h1>
-  <div class="markdown level0 summary"><p>Error message from the endpoint</p>
+  <div class="markdown level0 summary"><p>Access information about gold pass</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">ClientError</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="ClashOfClans.Models.html">ClashOfClans.Models</a></h6>
-  <h6><strong>Assembly</strong>: ClashOfClans.Models.dll</h6>
-  <h5 id="ClashOfClans_Models_ClientError_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ClashOfClans.html">ClashOfClans</a></h6>
+  <h6><strong>Assembly</strong>: ClashOfClans.dll</h6>
+  <h5 id="ClashOfClans_IGoldPass_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public class ClientError</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGoldPass</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Models_ClientError_Message.md&amp;value=---%0Auid%3A%20ClashOfClans.Models.ClientError.Message%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IGoldPass_GetCurrentGoldPassSeasonAsync.md&amp;value=---%0Auid%3A%20ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans.Models/ClientError.cs/#L13">View Source</a>
+    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IGoldPass.cs/#L15">View Source</a>
   </span>
-  <a id="ClashOfClans_Models_ClientError_Message_" data-uid="ClashOfClans.Models.ClientError.Message*"></a>
-  <h4 id="ClashOfClans_Models_ClientError_Message" data-uid="ClashOfClans.Models.ClientError.Message">Message</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ClashOfClans_IGoldPass_GetCurrentGoldPassSeasonAsync_" data-uid="ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync*"></a>
+  <h4 id="ClashOfClans_IGoldPass_GetCurrentGoldPassSeasonAsync" data-uid="ClashOfClans.IGoldPass.GetCurrentGoldPassSeasonAsync">GetCurrentGoldPassSeasonAsync()</h4>
+  <div class="markdown level1 summary"><p>Get information about the current gold pass season</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Message { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;GoldPassSeason&gt; GetCurrentGoldPassSeasonAsync()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -115,37 +110,7 @@ public class ClientError</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Models_ClientError_Reason.md&amp;value=---%0Auid%3A%20ClashOfClans.Models.ClientError.Reason%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans.Models/ClientError.cs/#L11">View Source</a>
-  </span>
-  <a id="ClashOfClans_Models_ClientError_Reason_" data-uid="ClashOfClans.Models.ClientError.Reason*"></a>
-  <h4 id="ClashOfClans_Models_ClientError_Reason" data-uid="ClashOfClans.Models.ClientError.Reason">Reason</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Reason { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="ClashOfClans.Models.GoldPassSeason.html">GoldPassSeason</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -158,10 +123,10 @@ public class ClientError</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_Models_ClientError.md&amp;value=---%0Auid%3A%20ClashOfClans.Models.ClientError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/tparviainen/clashofclans/new/master/apiSpec/new?filename=ClashOfClans_IGoldPass.md&amp;value=---%0Auid%3A%20ClashOfClans.IGoldPass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans.Models/ClientError.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/tparviainen/clashofclans/blob/master/src/ClashOfClans/IGoldPass.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
