@@ -1,11 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClashOfClans.Models
 {
     public class GoldPassSeason
     {
-        // startTime, endTime
+        private DateTime? _startTime;
+        private DateTime? _endTime;
+
+        public DateTime StartTime { get => _startTime ?? default; set => _startTime = value; }
+
+        public DateTime EndTime { get => _endTime ?? default; set => _endTime = value; }
     }
 }
