@@ -51,6 +51,10 @@ namespace ClashOfClans.App
                 await locationsExamples.GetClanVersusRankingsForASpecificLocation();
                 await locationsExamples.GetPlayerVersusRankingsForASpecificLocation();
 
+                // Access information about gold pass
+                var goldPassExamples = new GoldPassExamples(token);
+                await goldPassExamples.GetCurrentGoldPassSeason();
+
                 // Access labels
                 var labelsExamples = new LabelsExamples(token);
                 await labelsExamples.ListClanLabels();
