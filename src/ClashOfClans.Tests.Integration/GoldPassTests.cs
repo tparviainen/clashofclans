@@ -1,7 +1,4 @@
-﻿using ClashOfClans.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Diagnostics;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Tests.Integration
@@ -12,26 +9,13 @@ namespace ClashOfClans.Tests.Integration
         [TestMethod]
         public async Task GetCurrentGoldPassSeason()
         {
-            try
-            {
-                // Arrange
+            // Arrange
 
-                // Act
-                var goldPassSeason = await _coc.GoldPass.GetCurrentGoldPassSeasonAsync();
+            // Act
+            var goldPassSeason = await _coc.GoldPass.GetCurrentGoldPassSeasonAsync();
 
-                // Assert
-                Assert.IsNotNull(goldPassSeason);
-            }
-            catch (ClashOfClansException ex)
-            {
-                Trace.WriteLine($"ClashOfClansException reason: {ex.Error.Reason}, message: {ex.Error.Message}");
-                Assert.Fail();
-            }
-            catch (Exception ex)
-            {
-                Trace.WriteLine(ex);
-                Assert.Fail();
-            }
+            // Assert
+            Assert.IsNotNull(goldPassSeason);
         }
     }
 }
