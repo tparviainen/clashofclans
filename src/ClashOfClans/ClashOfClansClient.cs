@@ -35,6 +35,7 @@ namespace ClashOfClans
             Leagues = new Leagues(gameData);
             Players = new Players(gameData);
             Labels = new Labels(gameData);
+            GoldPass = new GoldPass(gameData);
         }
 
         /// <summary>
@@ -64,5 +65,7 @@ namespace ClashOfClans
         public IPlayers Players { get; }
 
         public ILabels Labels { get; }
+
+        public IGoldPass GoldPass { get; }
     }
 }
