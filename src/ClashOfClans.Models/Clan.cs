@@ -9,6 +9,8 @@ namespace ClashOfClans.Models
         private int? _clanPoints;
         private int? _clanVersusPoints;
         private int? _requiredTrophies;
+        private int? _requiredVersusTrophies;
+        private int? _requiredTownhallLevel;
         private WarFrequency? _warFrequency;
         private int? _warWinStreak;
         private int? _warWins;
@@ -39,7 +41,13 @@ namespace ClashOfClans.Models
         /// </summary>
         public int RequiredTrophies { get => _requiredTrophies ?? default; set => _requiredTrophies = value; }
 
+        public int RequiredVersusTrophies { get => _requiredVersusTrophies ?? default; set => _requiredVersusTrophies = value; }
+
+        public int RequiredTownhallLevel { get => _requiredTownhallLevel ?? default; set => _requiredTownhallLevel = value; }
+
         public WarFrequency WarFrequency { get => _warFrequency ?? default; set => _warFrequency = value; }
+
+        public Language? ChatLanguage { get; set; }
 
         public int WarWinStreak { get => _warWinStreak ?? default; set => _warWinStreak = value; }
 

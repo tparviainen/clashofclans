@@ -13,5 +13,7 @@
         public int MaxLevel { get => _maxLevel ?? default; set => _maxLevel = value; }
 
         public Village Village { get => _village ?? default; set => _village = value; }
+
+        public bool? SuperTroopIsActive { get; set; }
     }
 }
