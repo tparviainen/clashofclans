@@ -7,7 +7,7 @@
 [![Version](https://img.shields.io/nuget/v/ClashOfClans.svg)](https://www.nuget.org/packages/ClashOfClans)
 ![Downloads](https://img.shields.io/nuget/dt/ClashOfClans.svg)
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tparviainen/clashofclans/mybinder?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tparviainen/clashofclans/master?urlpath=lab)
 
 .NET library for accessing the Supercell's Clash of Clans API.
 
