@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/master/LICENSE)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tparviainen/clashofclans/master?urlpath=lab)
 
-.NET library for accessing the Supercell's Clash of Clans API.
+.NET library for accessing Supercell's Clash of Clans API.
 
 # Info
 This repository contains a .NET Standard library for accessing Supercell's [Clash of Clans API](https://developer.clashofclans.com/). ClashOfClans library provides easy to use API, strongly typed models, takes care of API throttling and supports multiple API tokens. In order to use the functionality provided by ClashOfClans library you need an API key (token) that can be created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
