@@ -174,7 +174,7 @@ foreach (var location in locations.Where(l => l.Name.StartsWith("E")))
 
 # Example Project
 
-All the above examples can be found from the example project included in the Clash of Clans [repository](https://github.com/tparviainen/clashofclans). The source code for the project is available at [ClashOfClans.App](https://github.com/tparviainen/clashofclans/tree/master/src/ClashOfClans.App).
+All the above examples can be found from the example project included in the Clash of Clans [repository](https://github.com/tparviainen/clashofclans). The source code for the project is available at [ClashOfClans.App](https://github.com/tparviainen/clashofclans/tree/main/src/ClashOfClans.App).
 
 Clash of Clans API is fully asynchronous and if you want to use the API directly from the console application's Main method you need
 to use C# 7.1 features. More information about how to enable C# 7.1 features see 

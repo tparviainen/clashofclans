@@ -5,7 +5,7 @@ on:
     paths:
       - 'build/version.txt'
     branches:
-      - master
+      - main
 
 jobs:
   nuget:
