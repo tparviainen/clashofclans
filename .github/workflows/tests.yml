@@ -7,6 +7,7 @@ on:
       - 'src/ClashOfClans.Tests.Unit/**'
     branches:
       - main
+      - develop
   pull_request:
     paths:
       - 'src/ClashOfClans/**'

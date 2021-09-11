@@ -7,7 +7,7 @@ on:
       - 'src/ClashOfClans/**'
       - 'src/ClashOfClans.Models/**'
     branches:
-      - main
+      - develop
 
 jobs:
   docfx:
