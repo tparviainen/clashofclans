@@ -57,6 +57,8 @@
 
         public Role? Role { get; set; }
 
+        public WarPreference? WarPreference { get; set; }
+
         /// <summary>
         /// Troops donated
         /// </summary>
