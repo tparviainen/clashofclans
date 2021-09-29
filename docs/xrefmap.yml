@@ -1382,6 +1382,19 @@ references:
   commentId: T:ClashOfClans.Models.ClanWar
   fullName: ClashOfClans.Models.ClanWar
   nameWithType: ClanWar
+- uid: ClashOfClans.Models.ClanWar.AttacksPerMember
+  name: AttacksPerMember
+  href: api/ClashOfClans.Models.ClanWar.html#ClashOfClans_Models_ClanWar_AttacksPerMember
+  commentId: P:ClashOfClans.Models.ClanWar.AttacksPerMember
+  fullName: ClashOfClans.Models.ClanWar.AttacksPerMember
+  nameWithType: ClanWar.AttacksPerMember
+- uid: ClashOfClans.Models.ClanWar.AttacksPerMember*
+  name: AttacksPerMember
+  href: api/ClashOfClans.Models.ClanWar.html#ClashOfClans_Models_ClanWar_AttacksPerMember_
+  commentId: Overload:ClashOfClans.Models.ClanWar.AttacksPerMember
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanWar.AttacksPerMember
+  nameWithType: ClanWar.AttacksPerMember
 - uid: ClashOfClans.Models.ClanWar.Clan
   name: Clan
   href: api/ClashOfClans.Models.ClanWar.html#ClashOfClans_Models_ClanWar_Clan
@@ -1798,6 +1811,19 @@ references:
   commentId: T:ClashOfClans.Models.ClanWarLogEntry
   fullName: ClashOfClans.Models.ClanWarLogEntry
   nameWithType: ClanWarLogEntry
+- uid: ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember
+  name: AttacksPerMember
+  href: api/ClashOfClans.Models.ClanWarLogEntry.html#ClashOfClans_Models_ClanWarLogEntry_AttacksPerMember
+  commentId: P:ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember
+  fullName: ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember
+  nameWithType: ClanWarLogEntry.AttacksPerMember
+- uid: ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember*
+  name: AttacksPerMember
+  href: api/ClashOfClans.Models.ClanWarLogEntry.html#ClashOfClans_Models_ClanWarLogEntry_AttacksPerMember_
+  commentId: Overload:ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember
+  nameWithType: ClanWarLogEntry.AttacksPerMember
 - uid: ClashOfClans.Models.ClanWarLogEntry.Clan
   name: Clan
   href: api/ClashOfClans.Models.ClanWarLogEntry.html#ClashOfClans_Models_ClanWarLogEntry_Clan
@@ -2705,6 +2731,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.VersusTrophies
   nameWithType: Player.VersusTrophies
+- uid: ClashOfClans.Models.Player.WarPreference
+  name: WarPreference
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_WarPreference
+  commentId: P:ClashOfClans.Models.Player.WarPreference
+  fullName: ClashOfClans.Models.Player.WarPreference
+  nameWithType: Player.WarPreference
+- uid: ClashOfClans.Models.Player.WarPreference*
+  name: WarPreference
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_WarPreference_
+  commentId: Overload:ClashOfClans.Models.Player.WarPreference
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.WarPreference
+  nameWithType: Player.WarPreference
 - uid: ClashOfClans.Models.Player.WarStars
   name: WarStars
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_WarStars
@@ -3785,6 +3824,24 @@ references:
   commentId: T:ClashOfClans.Models.WarLeagueList
   fullName: ClashOfClans.Models.WarLeagueList
   nameWithType: WarLeagueList
+- uid: ClashOfClans.Models.WarPreference
+  name: WarPreference
+  href: api/ClashOfClans.Models.WarPreference.html
+  commentId: T:ClashOfClans.Models.WarPreference
+  fullName: ClashOfClans.Models.WarPreference
+  nameWithType: WarPreference
+- uid: ClashOfClans.Models.WarPreference.In
+  name: In
+  href: api/ClashOfClans.Models.WarPreference.html#ClashOfClans_Models_WarPreference_In
+  commentId: F:ClashOfClans.Models.WarPreference.In
+  fullName: ClashOfClans.Models.WarPreference.In
+  nameWithType: WarPreference.In
+- uid: ClashOfClans.Models.WarPreference.Out
+  name: Out
+  href: api/ClashOfClans.Models.WarPreference.html#ClashOfClans_Models_WarPreference_Out
+  commentId: F:ClashOfClans.Models.WarPreference.Out
+  fullName: ClashOfClans.Models.WarPreference.Out
+  nameWithType: WarPreference.Out
 - uid: ClashOfClans.Search
   name: ClashOfClans.Search
   href: api/ClashOfClans.Search.html
