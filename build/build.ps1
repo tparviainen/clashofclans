@@ -3,7 +3,7 @@
 $version = Get-PackageVersion
 $packageId = "ClashOfClans"
 $basePath = "..\src\ClashOfClans\"
-$project =  $basePath + $packageId + ".csproj"
+$project = $basePath + $packageId + ".csproj"
 $nuspec = $basePath + $packageId + ".nuspec"
 $nupkg = "$packageId.$version.nupkg"
 $configuration = "Release"
