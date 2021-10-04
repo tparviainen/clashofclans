@@ -1,5 +1,6 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
+using Microsoft.Extensions.Options;
 using System;
 
 namespace ClashOfClans
@@ -13,19 +14,35 @@ namespace ClashOfClans
         private readonly ClashOfClansOptionsInternal _options;
 
         /// <summary>
+        /// Initializes a new instance of the Clash of Clans API. This constructor gets called as part
+        /// of initialization via DI, see
+        /// <see cref="Microsoft.Extensions.DependencyInjection.ClashOfClansExtensions.AddClashOfClans(Microsoft.Extensions.DependencyInjection.IServiceCollection, Action{ClashOfClansOptionsV2})"/>
+        /// </summary>
+        public ClashOfClansClient(IOptions<ClashOfClansOptionsV2> options,
+                                  IClans clans,
+                                  ILocations locations,
+                                  ILeagues leagues,
+                                  IPlayers players,
+                                  ILabels labels,
+                                  IGoldPass goldPass)
+        {
+            _options = new ClashOfClansOptionsInternal(options.Value.Tokens);
+
+            Clans = clans;
+            Locations = locations;
+            Leagues = leagues;
+            Players = players;
+            Labels = labels;
+            GoldPass = goldPass;
+        }
+
+        /// <summary>
         /// Initializes a new instance of the Clash of Clans API
         /// </summary>
         /// <param name="tokens">Your personal API key(s)</param>
         public ClashOfClansClient(params string[] tokens)
         {
-            if (tokens.Length == 0)
-                throw new ArgumentException("At least one API token is required");
-
-            foreach (var token in tokens)
-            {
-                if (string.IsNullOrWhiteSpace(token))
-                    throw new ArgumentException("Token must not be empty");
-            }
+            TokenValidator.Validate(tokens);
 
             _options = new ClashOfClansOptionsInternal(tokens);
             var gameData = new GameData(_options);
