@@ -35,7 +35,7 @@ namespace ClashOfClans.Core
 
     public class ClashOfClansOptionsV2 : ClashOfClansOptions
     {
-        public ClashOfClansOptionsV2():base(new List<string>())
+        public ClashOfClansOptionsV2() : base(new List<string>())
         {
             Tokens = new List<string>();
         }
