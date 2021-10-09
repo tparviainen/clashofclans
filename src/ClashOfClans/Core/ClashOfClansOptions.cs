@@ -32,14 +32,4 @@ namespace ClashOfClans.Core
         /// </summary>
         public IClashOfClansLogger? Logger { get; set; }
     }
-
-    public class ClashOfClansOptionsV2 : ClashOfClansOptions
-    {
-        public ClashOfClansOptionsV2() : base(new List<string>())
-        {
-            Tokens = new List<string>();
-        }
-
-        new public List<string> Tokens { get; }
-    }
 }
