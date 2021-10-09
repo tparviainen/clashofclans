@@ -1,6 +1,5 @@
 ﻿using ClashOfClans.Api;
 using ClashOfClans.Core;
-using Microsoft.Extensions.Options;
 using System;
 
 namespace ClashOfClans
@@ -12,29 +11,6 @@ namespace ClashOfClans
     public class ClashOfClansClient : IClashOfClans
     {
         private readonly ClashOfClansOptionsInternal _options;
-
-        /// <summary>
-        /// Initializes a new instance of the Clash of Clans API. This constructor gets called as part
-        /// of initialization via DI, see
-        /// <see cref="Microsoft.Extensions.DependencyInjection.ClashOfClansExtensions.AddClashOfClans(Microsoft.Extensions.DependencyInjection.IServiceCollection, Action{ClashOfClansOptionsV2})"/>
-        /// </summary>
-        public ClashOfClansClient(IOptions<ClashOfClansOptionsV2> options,
-                                  IClans clans,
-                                  ILocations locations,
-                                  ILeagues leagues,
-                                  IPlayers players,
-                                  ILabels labels,
-                                  IGoldPass goldPass)
-        {
-            _options = new ClashOfClansOptionsInternal(options.Value.Tokens);
-
-            Clans = clans;
-            Locations = locations;
-            Leagues = leagues;
-            Players = players;
-            Labels = labels;
-            GoldPass = goldPass;
-        }
 
         /// <summary>
         /// Initializes a new instance of the Clash of Clans API
