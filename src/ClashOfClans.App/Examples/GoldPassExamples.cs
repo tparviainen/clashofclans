@@ -21,7 +21,7 @@ namespace ClashOfClans.App.Examples
             var currentGoldPassSeason = await coc.GoldPass.GetCurrentGoldPassSeasonAsync();
 
             Console.WriteLine($"Current GoldPass season started '{currentGoldPassSeason.StartTime.ToLocalTime()}'" +
-                $"and ends '{currentGoldPassSeason.EndTime.ToLocalTime()}'");
+                $" and ends '{currentGoldPassSeason.EndTime.ToLocalTime()}'");
         }
     }
 }
