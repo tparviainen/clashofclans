@@ -18,14 +18,7 @@ namespace ClashOfClans
         /// <param name="tokens">Your personal API key(s)</param>
         public ClashOfClansClient(params string[] tokens)
         {
-            if (tokens.Length == 0)
-                throw new ArgumentException("At least one API token is required");
-
-            foreach (var token in tokens)
-            {
-                if (string.IsNullOrWhiteSpace(token))
-                    throw new ArgumentException("Token must not be empty");
-            }
+            TokenValidator.Validate(tokens);
 
             _options = new ClashOfClansOptionsInternal(tokens);
             var gameData = new GameData(_options);

@@ -13,6 +13,11 @@ namespace ClashOfClans.Core
         }
 
         /// <summary>
+        /// The default name of the config section in appsettings.json file
+        /// </summary>
+        public const string ClashOfClans = "ClashOfClans";
+
+        /// <summary>
         /// Your personal API key(s) for Supercell REST API
         /// </summary>
         public IReadOnlyList<string> Tokens { get; }
