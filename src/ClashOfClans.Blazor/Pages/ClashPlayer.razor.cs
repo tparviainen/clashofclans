@@ -1,6 +1,5 @@
 ﻿using ClashOfClans.Models;
 using Microsoft.AspNetCore.Components;
-using System;
 using System.Threading.Tasks;
 
 namespace ClashOfClans.Blazor.Pages
