@@ -17,7 +17,6 @@ namespace ClashOfClans.Blazor.Pages
         protected override async Task OnParametersSetAsync()
         {
             _player = default;
-
             _player = await Players.GetPlayerAsync($"#{PlayerTag}");
         }
     }
