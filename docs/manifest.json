@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ClashOfClansClient.html",
-          "hash": "C2TsKNm/QRbXCIcoAZGnIOI0S3nynu8kFOEIkKvaLbI="
+          "hash": "qGUqmVukSf2rKKIMQa0vgdsqqfPOd7VwK4tKMXZKAXA="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,19 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.ClashOfClansOptions.html",
-          "hash": "ziUKZUGn0sDkevLPK9UI0RFQIMHQp/zDXPyw8mhxNh4="
+          "hash": "79n6lHrymBo9D82ia8tLF+0t8uY071ScK+FIfv5VTOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Core.ClashOfClansOptionsV2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Core.ClashOfClansOptionsV2.html",
+          "hash": "Xkm/YQprQsZvUvVL+CkfGizFdkVdiczjw6oVvKDdkG4="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.html",
-          "hash": "DbRnuq7Pv0WlQnylqLZI++6m4O2oTI5jfR8fqyO40mc="
+          "hash": "K1whpTKYyQ3fRGUEQtzov7y7j6VwgoknOsC4lvlZ+M0="
         }
       },
       "is_incremental": false,
@@ -1012,6 +1024,30 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html",
+          "hash": "blHEQ3Fk5N3JfVeQ7fFqRJ2qDAr3R216ZBHrNqZg8D4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html",
+          "hash": "RrVJGgXdrGIDIvXHel1yht4HG/HzPs2CqA6DbXbj6fk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -1029,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "le6bhd9oJfgfHPbIx+oFSxO4VT3+IGXrCj1B6oxnacg="
+          "hash": "K5HSlBso6IabbfFzG7pAQfC2LeoiGOsxQjU/XngGv9s="
         }
       },
       "is_incremental": false,
@@ -1137,7 +1173,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 84,
+          "total_file_count": 87,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -220,6 +220,12 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansOptions.ClashOfClansOptions
   nameWithType: ClashOfClansOptions.ClashOfClansOptions
+- uid: ClashOfClans.Core.ClashOfClansOptions.ClashOfClans
+  name: ClashOfClans
+  href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_ClashOfClans
+  commentId: F:ClashOfClans.Core.ClashOfClansOptions.ClashOfClans
+  fullName: ClashOfClans.Core.ClashOfClansOptions.ClashOfClans
+  nameWithType: ClashOfClansOptions.ClashOfClans
 - uid: ClashOfClans.Core.ClashOfClansOptions.Logger
   name: Logger
   href: api/ClashOfClans.Core.ClashOfClansOptions.html#ClashOfClans_Core_ClashOfClansOptions_Logger
@@ -259,6 +265,38 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansOptions.Tokens
   nameWithType: ClashOfClansOptions.Tokens
+- uid: ClashOfClans.Core.ClashOfClansOptionsV2
+  name: ClashOfClansOptionsV2
+  href: api/ClashOfClans.Core.ClashOfClansOptionsV2.html
+  commentId: T:ClashOfClans.Core.ClashOfClansOptionsV2
+  fullName: ClashOfClans.Core.ClashOfClansOptionsV2
+  nameWithType: ClashOfClansOptionsV2
+- uid: ClashOfClans.Core.ClashOfClansOptionsV2.#ctor
+  name: ClashOfClansOptionsV2()
+  href: api/ClashOfClans.Core.ClashOfClansOptionsV2.html#ClashOfClans_Core_ClashOfClansOptionsV2__ctor
+  commentId: M:ClashOfClans.Core.ClashOfClansOptionsV2.#ctor
+  fullName: ClashOfClans.Core.ClashOfClansOptionsV2.ClashOfClansOptionsV2()
+  nameWithType: ClashOfClansOptionsV2.ClashOfClansOptionsV2()
+- uid: ClashOfClans.Core.ClashOfClansOptionsV2.#ctor*
+  name: ClashOfClansOptionsV2
+  href: api/ClashOfClans.Core.ClashOfClansOptionsV2.html#ClashOfClans_Core_ClashOfClansOptionsV2__ctor_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptionsV2.#ctor
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptionsV2.ClashOfClansOptionsV2
+  nameWithType: ClashOfClansOptionsV2.ClashOfClansOptionsV2
+- uid: ClashOfClans.Core.ClashOfClansOptionsV2.Tokens
+  name: Tokens
+  href: api/ClashOfClans.Core.ClashOfClansOptionsV2.html#ClashOfClans_Core_ClashOfClansOptionsV2_Tokens
+  commentId: P:ClashOfClans.Core.ClashOfClansOptionsV2.Tokens
+  fullName: ClashOfClans.Core.ClashOfClansOptionsV2.Tokens
+  nameWithType: ClashOfClansOptionsV2.Tokens
+- uid: ClashOfClans.Core.ClashOfClansOptionsV2.Tokens*
+  name: Tokens
+  href: api/ClashOfClans.Core.ClashOfClansOptionsV2.html#ClashOfClans_Core_ClashOfClansOptionsV2_Tokens_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansOptionsV2.Tokens
+  isSpec: "True"
+  fullName: ClashOfClans.Core.ClashOfClansOptionsV2.Tokens
+  nameWithType: ClashOfClansOptionsV2.Tokens
 - uid: ClashOfClans.Core.IClashOfClansLogger
   name: IClashOfClansLogger
   href: api/ClashOfClans.Core.IClashOfClansLogger.html
@@ -4104,3 +4142,31 @@ references:
   fullName.vb: ClashOfClans.Search.QueryResult(Of T).Paging
   nameWithType: QueryResult<T>.Paging
   nameWithType.vb: QueryResult(Of T).Paging
+- uid: Microsoft.Extensions.DependencyInjection
+  name: Microsoft.Extensions.DependencyInjection
+  href: api/Microsoft.Extensions.DependencyInjection.html
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{ClashOfClans.Core.ClashOfClansOptionsV2})
+  name: AddClashOfClans(IServiceCollection, Action<ClashOfClansOptionsV2>)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddClashOfClans_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_ClashOfClans_Core_ClashOfClansOptionsV2__
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{ClashOfClans.Core.ClashOfClansOptionsV2})
+  name.vb: AddClashOfClans(IServiceCollection, Action(Of ClashOfClansOptionsV2))
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<ClashOfClans.Core.ClashOfClansOptionsV2>)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of ClashOfClans.Core.ClashOfClansOptionsV2))
+  nameWithType: ServiceCollectionExtensions.AddClashOfClans(IServiceCollection, Action<ClashOfClansOptionsV2>)
+  nameWithType.vb: ServiceCollectionExtensions.AddClashOfClans(IServiceCollection, Action(Of ClashOfClansOptionsV2))
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans*
+  name: AddClashOfClans
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddClashOfClans_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddClashOfClans
+  nameWithType: ServiceCollectionExtensions.AddClashOfClans
