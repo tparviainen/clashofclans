@@ -1,4 +1,5 @@
 ﻿using ClashOfClans.Core;
+using ClashOfClans.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -17,8 +18,8 @@ namespace ClashOfClans.Tests.Integration
         public DependencyInjectionTests()
         {
             _config = new ConfigurationBuilder()
-                            .AddJsonFile("AppSettings.test.json")
-                            .Build();
+                .AddJsonFile("AppSettings.test.json")
+                .Build();
 
             _tokens = _config.GetSection("api:tokens").GetChildren().Select(x => x.Value);
         }
@@ -39,7 +40,7 @@ namespace ClashOfClans.Tests.Integration
             try
             {
                 using var scope = services.CreateScope();
-                var clash = services.GetRequiredService<IClashOfClans>();
+                var clash = scope.ServiceProvider.GetRequiredService<IClashOfClans>();
                 var goldPassSeason = await clash.GoldPass.GetCurrentGoldPassSeasonAsync();
 
                 // Assert
@@ -58,7 +59,7 @@ namespace ClashOfClans.Tests.Integration
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddClashOfClans(config =>
             {
-                config.Tokens.AddRange(_tokens);
+                config.Tokens.Add(_tokens.First());
             });
 
             var services = serviceCollection.BuildServiceProvider();
@@ -67,8 +68,8 @@ namespace ClashOfClans.Tests.Integration
             try
             {
                 using var scope = services.CreateScope();
-                var locations = services.GetRequiredService<ILocations>();
-                var locationList = await locations.GetLocationsAsync();
+                var locations = scope.ServiceProvider.GetRequiredService<ILocations>();
+                var locationList = (LocationList)await locations.GetLocationsAsync();
 
                 // Assert
                 Assert.IsNotNull(locationList);
