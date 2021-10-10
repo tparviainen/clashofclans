@@ -1,0 +1,39 @@
+﻿@page "/"
+@inject IGoldPass GoldPass
+
+<h1>Hello, Clashers!</h1>
+
+<p>
+    This is an example Blazor application that shows some basic usage of the Clash of Clans NuGet library.
+    The main purpose of this application is to validate the dependency injection implementation of the library.
+</p>
+
+<p>
+    This is a WIP project that most probably evolves based on my personal interests. I might add some CWL tracking
+    or some other functionality when I see the need for those.
+</p>
+
+@if (_errorMessage != default)
+{
+    <h5>ClashOfClansException</h5>
+    <pre>@_errorMessage</pre>
+}
+
+@code {
+    private string? _errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _errorMessage = default;
+
+            // Gold pass season query to validate the API token
+            _ = await GoldPass.GetCurrentGoldPassSeasonAsync();
+        }
+        catch (ClashOfClansException ex)
+        {
+            _errorMessage = $"{ex.Error.Reason}{Environment.NewLine}{ex.Error.Message}";
+        }
+    }
+}

@@ -1,0 +1,57 @@
+﻿@page "/clans/{clanTag}"
+
+@if (_clan == default)
+{
+    <h3>Downloading ...</h3>
+}
+else
+{
+    <h1>@_clan.Name</h1>
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-1">
+                <img src="@_clan.BadgeUrls.Small" />
+            </div>
+            <div class="col-11">
+                @foreach (var row in Split(_clan.Description))
+                {
+                    <p class="mb-0">@row</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    @if (_clanMemberList != default)
+    {
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Rank</th>
+                    <th>League</th>
+                    <th>ExpLevel</th>
+                    <th>Player</th>
+                    <th>Troops donated</th>
+                    <th>Troops received</th>
+                    <th>Donation ratio</th>
+                    <th>Trophies</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var member in _clanMemberList)
+                {
+                    <tr>
+                        <td class="text-center">@(member.ClanRank).</td>
+                        <td class="text-center"><img src=@member.League.IconUrls.Small style="width:30px;height:30px;" /></td>
+                        <td class="text-center">@member.ExpLevel</td>
+                        <td class="@GetRoleDecorations(member.Role)" style="transform: rotate(0);"><a class="stretched-link" href="/player/@member.Tag.Substring(1)"></a>@member.Name</td>
+                        <td class="text-center">@member.Donations</td>
+                        <td class="text-center">@member.DonationsReceived</td>
+                        <td class="text-center">@DonationRatio(member)</td>
+                        <td class="text-center">@member.Trophies &#127942;</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}

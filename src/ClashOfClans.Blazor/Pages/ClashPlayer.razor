@@ -1,0 +1,11 @@
+﻿@page "/player/{playerTag}"
+
+@if (_player == default)
+{
+
+}
+else
+{
+    <h3>@_player.Name</h3>
+    <p class="font-monospace">@_player.Tag</p>
+}
