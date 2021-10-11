@@ -93,7 +93,7 @@ at <a href="https://github.com/tparviainen/clashofclans">https://github.com/tpar
 <p>You can also create an instance of <code>ClashOfClansClient</code> directly in your code and use the API via the created object.</p>
 <pre><code class="lang-C#">var coc = new ClashOfClansClient(&quot;[your own unique API key]&quot;);
 </code></pre>
-<p>Once you have the object created you can start using the API functionality via the created object.</p>
+<p>Once you have instantiated the object you can start using the API functionality.</p>
 <pre><code class="lang-C#">var clan = await coc.Clans.GetClanAsync(&quot;[clan tag]&quot;);
 
 Console.WriteLine($&quot;Clan '{clan.Name}' is a level {clan.ClanLevel} clan and has {clan.Members} members&quot;);
