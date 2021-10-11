@@ -49,7 +49,7 @@ You can also create an instance of `ClashOfClansClient` directly in your code an
 var coc = new ClashOfClansClient("[your own unique API key]");
 ```
 
-Once you have the object created you can start using the API functionality via the created object.
+Once you have instantiated the object you can start using the API functionality.
 
 ```C#
 var clan = await coc.Clans.GetClanAsync("[clan tag]");
