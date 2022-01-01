@@ -22,7 +22,7 @@ jobs:
         token: ${{ secrets.DOCFX_API_KEY }}
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.x'
+        dotnet-version: '6.0.x'
 
     - name: Build with dotnet
       run: dotnet build ./src/ClashOfClans/ClashOfClans.csproj
