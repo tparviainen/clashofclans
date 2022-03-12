@@ -19,7 +19,7 @@ namespace ClashOfClans.Tests.Integration
                 try
                 {
                     // Act
-                    request.ClanTag = clanTag.Substring(1);
+                    request.ClanTag = clanTag[1..];
 
                     // Assert
                     Assert.Fail();
@@ -65,7 +65,7 @@ namespace ClashOfClans.Tests.Integration
                 try
                 {
                     // Act
-                    request.PlayerTag = playerTag.Substring(1);
+                    request.PlayerTag = playerTag[1..];
 
                     // Assert
                     Assert.Fail();
