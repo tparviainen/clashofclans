@@ -92,7 +92,7 @@ namespace ClashOfClans.Tests.Unit
 
             // Assert
             Assert.AreEqual('?', queryString[0]);
-            Assert.IsTrue(queryString.Contains("&"));
+            Assert.IsTrue(queryString.Contains('&'));
             Assert.IsTrue(queryString.Contains("locationid=42"));
             Assert.IsTrue(queryString.Contains("limit=10"));
         }
