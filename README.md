@@ -28,4 +28,4 @@ ClashOfClans library provides easy to use API, strongly typed models, takes care
 
 # Disclaimer
 
-This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: [www.supercell.com/fan-content-policy](www.supercell.com/fan-content-policy).
+This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: [www.supercell.com/fan-content-policy](https://supercell.com/fan-content-policy/).
