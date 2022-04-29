@@ -10,13 +10,13 @@
 [![License](https://img.shields.io/github/license/tparviainen/clashofclans.svg)](https://github.com/tparviainen/clashofclans/blob/develop/LICENSE)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tparviainen/clashofclans/develop?urlpath=lab)
 
-.NET library for accessing Supercell's Clash of Clans API.
+.NET library for accessing Supercell's [Clash of Clans API](https://developer.clashofclans.com/).
 
 # Info
 
-This repository contains a .NET Standard library for accessing Supercell's [Clash of Clans API](https://developer.clashofclans.com/). ClashOfClans library provides easy to use API, strongly typed models, takes care of API throttling and supports multiple API tokens. In order to use the functionality provided by ClashOfClans library you need an API key (token) that can be created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
+ClashOfClans library provides easy to use API, strongly typed models, takes care of API throttling and supports multiple API tokens. In order to use the functionality provided by ClashOfClans library you need an API key (token) that can be created in Clash of Clans [developer web site](https://developer.clashofclans.com/).
 
-100% Clash of Clans API coverage, including the [Winter 2021 Update](https://clashofclans.com/blog/).
+100% Clash of Clans API coverage, including the [latest update](https://clashofclans.com/blog/).
 
 # Getting Started
 
@@ -28,4 +28,4 @@ This repository contains a .NET Standard library for accessing Supercell's [Clas
 
 # Disclaimer
 
-This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: www.supercell.com/fan-content-policy.
+This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: [www.supercell.com/fan-content-policy](www.supercell.com/fan-content-policy).
