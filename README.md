@@ -1,6 +1,6 @@
-# Clash of Clans
+![Barbarian](https://raw.githubusercontent.com/tparviainen/clashofclans/develop/docfx/images/icon.png)
 
-<img align="right" width="100px" src="https://raw.githubusercontent.com/tparviainen/clashofclans/develop/docfx/images/icon.png" />
+# Clash of Clans
 
 ![Build status](https://github.com/tparviainen/clashofclans/workflows/build/badge.svg)
 ![Docs status](https://github.com/tparviainen/clashofclans/workflows/docs/badge.svg)
