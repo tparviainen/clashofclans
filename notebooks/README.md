@@ -16,6 +16,5 @@ After the image is running the output contains the URL to open in a browser:
 
 ```
 notebooks-clashofclans-1  |     Or copy and paste one of these URLs:
-notebooks-clashofclans-1  |         http://90af265adfde:8888/?token=bc092f54d4218e10f16ad27609c60742b9a51193bb6de4cd
 notebooks-clashofclans-1  |      or http://127.0.0.1:8888/?token=bc092f54d4218e10f16ad27609c60742b9a51193bb6de4cd
 ```
