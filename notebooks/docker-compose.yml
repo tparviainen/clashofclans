@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  clashofclans:
+    build:
+      context: ..
+    ports:
+      - "8888:8888"
+    command: jupyter notebook --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888
