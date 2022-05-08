@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/src/ClashOfClans"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
+  - package-ecosystem: "nuget"
+    directory: "/src/ClashOfClans.App"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
+  - package-ecosystem: "nuget"
+    directory: "/src/ClashOfClans.Blazor"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
+  - package-ecosystem: "nuget"
+    directory: "/src/ClashOfClans.Models"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
+  - package-ecosystem: "nuget"
+    directory: "/src/ClashOfClans.Tests.Integration"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
+  - package-ecosystem: "nuget"
+    directory: "/src/ClashOfClans.Tests.Unit"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
