@@ -1,5 +1,11 @@
 version: 2
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "tparviainen"
   - package-ecosystem: "nuget"
     directory: "/src/ClashOfClans"
     schedule:
