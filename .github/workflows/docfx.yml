@@ -17,7 +17,7 @@ jobs:
     - run: git config --global user.name ${env:GITHUB_ACTOR}
     - run: git config --global user.email ${env:GITHUB_ACTOR}@users.noreply.github.com
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         token: ${{ secrets.DOCFX_API_KEY }}
     - uses: actions/setup-dotnet@v1
