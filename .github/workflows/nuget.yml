@@ -1,27 +1,22 @@
 name: nuget
 
-on:
-  push:
-    paths:
-      - 'build/version.txt'
-    branches:
-      - main
+on: workflow_dispatch
 
 jobs:
   nuget:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '6.0.x'
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: "6.0.x"
 
-    - name: Setup NuGet CLI
-      run: choco install nuget.commandline
+      - name: Setup NuGet CLI
+        run: choco install nuget.commandline
 
-    - name: Build and push to NuGet Gallery
-      working-directory: build
-      env:
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: .\build
+      - name: Build and push to NuGet Gallery
+        working-directory: build
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: .\build
