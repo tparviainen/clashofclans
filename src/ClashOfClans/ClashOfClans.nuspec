@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package >
+<package>
   <metadata>
     <id>ClashOfClans</id>
     <version>$version$</version>
@@ -13,7 +13,7 @@
     <tags>ClashOfClans Game API Supercell</tags>
     <readme>docs\README.md</readme>
     <icon>icon.png</icon>
-    <repository type="git" url="https://github.com/tparviainen/clashofclans" branch="main" commit="$commit$"/>
+    <repository type="git" url="https://github.com/tparviainen/clashofclans" branch="$branch$" commit="$commit$"/>
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
