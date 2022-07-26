@@ -5,3 +5,7 @@ function Get-CommitHash {
 function Get-PackageVersion {
     return Get-Content .\version.txt -Tail 1
 }
+
+function Get-BranchName {
+    return git branch --show-current
+}
