@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net;
-using System.Text;
+﻿using System.Text;
 
 namespace ClashOfClans.Search
 {
@@ -13,22 +11,14 @@ namespace ClashOfClans.Search
         public override string ToString()
         {
             var sb = new StringBuilder();
-            var properties = GetType().GetProperties();
 
-            foreach (var property in properties)
+            if (this is QueryClans qc)
             {
-                var pValue = property.GetValue(this);
-                if (pValue != null)
-                {
-                    var qValue = pValue.ToString()!;
-
-                    // Enumerations need to start with a lowercase character
-                    if (Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
-                        qValue = $"{char.ToLowerInvariant(qValue[0])}{qValue.Substring(1)}";
-
-                    sb.Append($"&{property.Name.ToLower()}={WebUtility.UrlEncode(qValue)}");
-                }
+                sb.Append(qc.ToQueryString());
             }
+
+            // Always an instance of Query that should be appended
+            sb.Append(this.ToQueryString());
 
             if (sb.Length != 0)
                 return $"?{sb.ToString(1, sb.Length - 1)}";

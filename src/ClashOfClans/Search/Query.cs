@@ -1,7 +1,9 @@
 ﻿using ClashOfClans.Models;
+using QueryStringGenerator;
 
 namespace ClashOfClans.Search
 {
+    [QueryString]
     public partial class Query
     {
         /// <summary>
