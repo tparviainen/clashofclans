@@ -45,6 +45,8 @@ namespace ClashOfClans.Models
 
         public int RequiredTownhallLevel { get => _requiredTownhallLevel ?? default; set => _requiredTownhallLevel = value; }
 
+        public ClanCapital? ClanCapital { get; set; }
+
         public WarFrequency WarFrequency { get => _warFrequency ?? default; set => _warFrequency = value; }
 
         public Language? ChatLanguage { get; set; }

@@ -14,6 +14,7 @@
         private int? _versusBattleWins;
         private int? _donations;
         private int? _donationsReceived;
+        private int? _clanCapitalContributions;
         private int? _versusBattleWinCount;
 
         public int TownHallLevel { get => _townHallLevel ?? default; set => _townHallLevel = value; }
@@ -68,6 +69,11 @@
         /// Troops received
         /// </summary>
         public int DonationsReceived { get => _donationsReceived ?? default; set => _donationsReceived = value; }
+
+        /// <summary>
+        /// Total capital contribution
+        /// </summary>
+        public int ClanCapitalContributions { get => _clanCapitalContributions ?? default; set => _clanCapitalContributions = value; }
 
         public PlayerClan? Clan { get; set; }
 
