@@ -813,6 +813,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.ChatLanguage
   nameWithType: Clan.ChatLanguage
+- uid: ClashOfClans.Models.Clan.ClanCapital
+  name: ClanCapital
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanCapital
+  commentId: P:ClashOfClans.Models.Clan.ClanCapital
+  fullName: ClashOfClans.Models.Clan.ClanCapital
+  nameWithType: Clan.ClanCapital
+- uid: ClashOfClans.Models.Clan.ClanCapital*
+  name: ClanCapital
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanCapital_
+  commentId: Overload:ClashOfClans.Models.Clan.ClanCapital
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.ClanCapital
+  nameWithType: Clan.ClanCapital
 - uid: ClashOfClans.Models.Clan.ClanLevel
   name: ClanLevel
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanLevel
@@ -1060,6 +1073,89 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.WarWinStreak
   nameWithType: Clan.WarWinStreak
+- uid: ClashOfClans.Models.ClanCapital
+  name: ClanCapital
+  href: api/ClashOfClans.Models.ClanCapital.html
+  commentId: T:ClashOfClans.Models.ClanCapital
+  fullName: ClashOfClans.Models.ClanCapital
+  nameWithType: ClanCapital
+- uid: ClashOfClans.Models.ClanCapital.CapitalHallLevel
+  name: CapitalHallLevel
+  href: api/ClashOfClans.Models.ClanCapital.html#ClashOfClans_Models_ClanCapital_CapitalHallLevel
+  commentId: P:ClashOfClans.Models.ClanCapital.CapitalHallLevel
+  fullName: ClashOfClans.Models.ClanCapital.CapitalHallLevel
+  nameWithType: ClanCapital.CapitalHallLevel
+- uid: ClashOfClans.Models.ClanCapital.CapitalHallLevel*
+  name: CapitalHallLevel
+  href: api/ClashOfClans.Models.ClanCapital.html#ClashOfClans_Models_ClanCapital_CapitalHallLevel_
+  commentId: Overload:ClashOfClans.Models.ClanCapital.CapitalHallLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapital.CapitalHallLevel
+  nameWithType: ClanCapital.CapitalHallLevel
+- uid: ClashOfClans.Models.ClanCapital.Districts
+  name: Districts
+  href: api/ClashOfClans.Models.ClanCapital.html#ClashOfClans_Models_ClanCapital_Districts
+  commentId: P:ClashOfClans.Models.ClanCapital.Districts
+  fullName: ClashOfClans.Models.ClanCapital.Districts
+  nameWithType: ClanCapital.Districts
+- uid: ClashOfClans.Models.ClanCapital.Districts*
+  name: Districts
+  href: api/ClashOfClans.Models.ClanCapital.html#ClashOfClans_Models_ClanCapital_Districts_
+  commentId: Overload:ClashOfClans.Models.ClanCapital.Districts
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapital.Districts
+  nameWithType: ClanCapital.Districts
+- uid: ClashOfClans.Models.ClanDistrictData
+  name: ClanDistrictData
+  href: api/ClashOfClans.Models.ClanDistrictData.html
+  commentId: T:ClashOfClans.Models.ClanDistrictData
+  fullName: ClashOfClans.Models.ClanDistrictData
+  nameWithType: ClanDistrictData
+- uid: ClashOfClans.Models.ClanDistrictData.DistrictHallLevel
+  name: DistrictHallLevel
+  href: api/ClashOfClans.Models.ClanDistrictData.html#ClashOfClans_Models_ClanDistrictData_DistrictHallLevel
+  commentId: P:ClashOfClans.Models.ClanDistrictData.DistrictHallLevel
+  fullName: ClashOfClans.Models.ClanDistrictData.DistrictHallLevel
+  nameWithType: ClanDistrictData.DistrictHallLevel
+- uid: ClashOfClans.Models.ClanDistrictData.DistrictHallLevel*
+  name: DistrictHallLevel
+  href: api/ClashOfClans.Models.ClanDistrictData.html#ClashOfClans_Models_ClanDistrictData_DistrictHallLevel_
+  commentId: Overload:ClashOfClans.Models.ClanDistrictData.DistrictHallLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanDistrictData.DistrictHallLevel
+  nameWithType: ClanDistrictData.DistrictHallLevel
+- uid: ClashOfClans.Models.ClanDistrictData.Id
+  name: Id
+  href: api/ClashOfClans.Models.ClanDistrictData.html#ClashOfClans_Models_ClanDistrictData_Id
+  commentId: P:ClashOfClans.Models.ClanDistrictData.Id
+  fullName: ClashOfClans.Models.ClanDistrictData.Id
+  nameWithType: ClanDistrictData.Id
+- uid: ClashOfClans.Models.ClanDistrictData.Id*
+  name: Id
+  href: api/ClashOfClans.Models.ClanDistrictData.html#ClashOfClans_Models_ClanDistrictData_Id_
+  commentId: Overload:ClashOfClans.Models.ClanDistrictData.Id
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanDistrictData.Id
+  nameWithType: ClanDistrictData.Id
+- uid: ClashOfClans.Models.ClanDistrictData.Name
+  name: Name
+  href: api/ClashOfClans.Models.ClanDistrictData.html#ClashOfClans_Models_ClanDistrictData_Name
+  commentId: P:ClashOfClans.Models.ClanDistrictData.Name
+  fullName: ClashOfClans.Models.ClanDistrictData.Name
+  nameWithType: ClanDistrictData.Name
+- uid: ClashOfClans.Models.ClanDistrictData.Name*
+  name: Name
+  href: api/ClashOfClans.Models.ClanDistrictData.html#ClashOfClans_Models_ClanDistrictData_Name_
+  commentId: Overload:ClashOfClans.Models.ClanDistrictData.Name
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanDistrictData.Name
+  nameWithType: ClanDistrictData.Name
+- uid: ClashOfClans.Models.ClanDistrictDataList
+  name: ClanDistrictDataList
+  href: api/ClashOfClans.Models.ClanDistrictDataList.html
+  commentId: T:ClashOfClans.Models.ClanDistrictDataList
+  fullName: ClashOfClans.Models.ClanDistrictDataList
+  nameWithType: ClanDistrictDataList
 - uid: ClashOfClans.Models.ClanList
   name: ClanList
   href: api/ClashOfClans.Models.ClanList.html
@@ -2548,6 +2644,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.Clan
   nameWithType: Player.Clan
+- uid: ClashOfClans.Models.Player.ClanCapitalContributions
+  name: ClanCapitalContributions
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_ClanCapitalContributions
+  commentId: P:ClashOfClans.Models.Player.ClanCapitalContributions
+  fullName: ClashOfClans.Models.Player.ClanCapitalContributions
+  nameWithType: Player.ClanCapitalContributions
+- uid: ClashOfClans.Models.Player.ClanCapitalContributions*
+  name: ClanCapitalContributions
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_ClanCapitalContributions_
+  commentId: Overload:ClashOfClans.Models.Player.ClanCapitalContributions
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.ClanCapitalContributions
+  nameWithType: Player.ClanCapitalContributions
 - uid: ClashOfClans.Models.Player.DefenseWins
   name: DefenseWins
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_DefenseWins
