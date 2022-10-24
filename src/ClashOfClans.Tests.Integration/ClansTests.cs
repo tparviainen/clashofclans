@@ -14,6 +14,51 @@ namespace ClashOfClans.Tests.Integration
     public class ClansTests : TestsBase
     {
         [TestMethod]
+        public async Task SearchClansWithMinAndMaxMembers()
+        {
+            // Arrange
+            var limit = 50;
+            var minMembers = 10;
+            var maxMembers = 20;
+
+            var query = new QueryClans
+            {
+                MinMembers = minMembers,
+                MaxMembers = maxMembers,
+                Limit = limit
+            };
+
+            // Act
+            var searchResult = await _coc.Clans.SearchClansAsync(query);
+
+            // Assert
+            Assert.IsTrue(searchResult.Items.Count <= limit);
+            Assert.IsTrue(searchResult.Items.All(clan => clan.Members >= minMembers));
+            Assert.IsTrue(searchResult.Items.All(clan => clan.Members <= maxMembers));
+        }
+
+        [TestMethod]
+        public async Task SearchClansWithMinClanPoints()
+        {
+            // Arrange
+            var limit = 50;
+            var minClanPoints = 50000;
+
+            var query = new QueryClans
+            {
+                MinClanPoints = minClanPoints,
+                Limit = limit
+            };
+
+            // Act
+            var searchResult = await _coc.Clans.SearchClansAsync(query);
+
+            // Assert
+            Assert.IsTrue(searchResult.Items.Count <= limit);
+            Assert.IsTrue(searchResult.Items.All(clan => clan.ClanPoints >= minClanPoints));
+        }
+
+        [TestMethod]
         public async Task SearchClansWithQueryLimitProducesMovablePagingMarkers()
         {
             // Arrange
@@ -222,6 +267,32 @@ namespace ClashOfClans.Tests.Integration
                         Trace.WriteLine(war.Dump());
                     }
                 }
+            }
+        }
+
+        [TestMethod]
+        public async Task RetrieveClansCapitalRaidSeasons()
+        {
+            // Arrange
+            var clanTags = _clans.Select(c => c.Tag).ToList();
+            var limit = 5;
+            var query = new Query
+            {
+                Limit = limit
+            };
+            var taskList = new List<Task<QueryResult<ClanCapitalRaidSeasons>>>();
+
+            // Act
+            foreach (var clanTag in _clans.Select(c => c.Tag))
+            {
+                taskList.Add(_coc.Clans.GetCapitalRaidSeasonsAsync(clanTag, query));
+            }
+
+            foreach (var capitalRaidSeasons in (await Task.WhenAll(taskList)).Select(v => (ClanCapitalRaidSeasons)v))
+            {
+                // Assert
+                Assert.IsNotNull(capitalRaidSeasons);
+                Assert.IsTrue(capitalRaidSeasons.Count <= limit);
             }
         }
     }

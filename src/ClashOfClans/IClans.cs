@@ -73,5 +73,15 @@ namespace ClashOfClans
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan war league war data</returns>
         Task<ClanWarLeagueWar> GetClanWarLeagueWarAsync(string warTag);
+
+        /// <summary>
+        /// Retrieve clan's capital raid seasons
+        /// </summary>
+        /// <param name="clanTag">Tag of the clan</param>
+        /// <param name="query">Optional query parameters</param>
+        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
+        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
+        /// <returns>Clan's capital raid seasons</returns>
+        Task<QueryResult<ClanCapitalRaidSeasons>> GetCapitalRaidSeasonsAsync(string clanTag, Query? query = default);
     }
 }
