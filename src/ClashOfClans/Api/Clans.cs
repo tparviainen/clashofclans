@@ -92,5 +92,17 @@ namespace ClashOfClans.Api
 
             return _gameData.RequestAsync<ClanWarLeagueWar>(request);
         }
+
+        public Task<QueryResult<ClanCapitalRaidSeasons>> GetCapitalRaidSeasonsAsync(string clanTag, Query? query = default)
+        {
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                ClanTag = clanTag,
+                Uri = $"/clans/{clanTag}/capitalraidseasons"
+            };
+
+            return _gameData.QueryAsync<ClanCapitalRaidSeasons>(request);
+        }
     }
 }
