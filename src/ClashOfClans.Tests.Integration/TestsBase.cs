@@ -13,7 +13,7 @@ namespace ClashOfClans.Tests.Integration
     [TestClass]
     public class TestsBase
     {
-        private readonly Random _random = new Random();
+        private readonly Random _random = new();
         protected static ClanList _clans = default!;
         protected static LeagueList _leagues = default!;
         protected static LocationList _locations = default!;

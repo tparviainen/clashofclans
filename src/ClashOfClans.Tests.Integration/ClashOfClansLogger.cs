@@ -6,7 +6,7 @@ namespace ClashOfClans.Tests.Integration
 {
     class ClashOfClansLogger : IClashOfClansLogger
     {
-        private readonly object _fileLock = new object();
+        private readonly object _fileLock = new();
         private readonly string _logFile;
 
         public ClashOfClansLogger(string logPath)
