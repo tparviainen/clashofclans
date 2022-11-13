@@ -11,6 +11,17 @@ namespace ClashOfClans.Tests.Unit
     public class ThrottleRequestsPerSecondTests
     {
         [TestMethod]
+        public void ThrowExceptionForInvalidThrottleLimit()
+        {
+            // Arrange
+
+            // Act
+
+            // Assert
+            Assert.ThrowsException<ArgumentException>(() => new ThrottleRequestsPerSecond(0));
+        }
+
+        [TestMethod]
         public async Task ThrottleIndividualApiCalls()
         {
             // Arrange
