@@ -9,6 +9,19 @@ namespace ClashOfClans.Tests.Unit
     public class QueryTests
     {
         [TestMethod]
+        public void EmptyQueryShouldReturnEmptyString()
+        {
+            // Arrange
+            var query = new Query();
+
+            // Act
+            var queryString = query.ToString();
+
+            // Assert
+            Assert.AreEqual(string.Empty, queryString);
+        }
+
+        [TestMethod]
         public void MoveToPreviousOrNextItemsIsNotPossibleWithEmptyMarkers()
         {
             // Arrange
