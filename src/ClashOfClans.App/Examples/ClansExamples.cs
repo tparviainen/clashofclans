@@ -129,5 +129,23 @@ namespace ClashOfClans.App.Examples
 
             static string Statistics(ClanWarLeagueWarClan clan) => $"{clan.Name} [{clan.Stars}\u2605/{clan.DestructionPercentage:0.00}%/{clan.Attacks}]";
         }
+
+        /// <summary>
+        /// Retrieve clan's capital raid seasons
+        /// </summary>
+        public async Task RetrieveClansCapitalRaidSeasons()
+        {
+            var query = new Query
+            {
+                Limit = 1
+            };
+            var coc = new ClashOfClansClient(token);
+            var capitalRaidSeasons = (ClanCapitalRaidSeasons)await coc.Clans.GetCapitalRaidSeasonsAsync(clanTag, query);
+
+            if (capitalRaidSeasons.SingleOrDefault() is ClanCapitalRaidSeason crs)
+            {
+                Console.WriteLine($"CapitalTotalLoot {crs.CapitalTotalLoot}, TotalAttacks {crs.TotalAttacks}");
+            }
+        }
     }
 }

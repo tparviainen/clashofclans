@@ -27,6 +27,7 @@ namespace ClashOfClans.App
                 await clansExamples.RetrieveClansClanWarLog();
                 await clansExamples.RetrieveInformationAboutClansCurrentClanWar();
                 await clansExamples.RetrieveInformationAboutClansCurrentClanWarLeagueGroup();
+                await clansExamples.RetrieveClansCapitalRaidSeasons();
 
                 // Access player specific information
                 var playersExamples = new PlayersExamples(token, playerTag);
