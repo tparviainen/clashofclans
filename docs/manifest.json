@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.IClans.html",
-          "hash": "KICuj1TwVKOiR2QgmKTtoU1gNhAlet60FdG1kNH91wQ="
+          "hash": "gzKz0zj/83BOd67X38DMXlahFswVl0td8sYe29KhW7w="
         }
       },
       "is_incremental": false,
@@ -178,6 +178,186 @@
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClanCapital.html",
           "hash": "RDXXq+JxqFyiyZdMfyRKcY67JgfYYKGmfz+N+0ZeWXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeason.html",
+          "hash": "iH+Tteultxa0VA4B4kFsLBYlparzgh33ATM/8aghdrg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttack.html",
+          "hash": "1Kf2SY97D8qgVrOAomWRqRI2oXTHAripO0bDTPZuGo4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttackList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttackList.html",
+          "hash": "2oBYq11ahEiMqj6K4AaL+hxgVEzbEhB2gkrIs46iats="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttackLogEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttackLogEntry.html",
+          "hash": "2cLvtlSXpWQkR5tmBpBar7DxvTsNVTG6kTNLagze0bo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttackLogList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttackLogList.html",
+          "hash": "ArUjA5CVdNntzNVMwC6msrVHBXCWYGftWnGP215NVjY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttacker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonAttacker.html",
+          "hash": "I69vjHVaH9uSMf4QEcgncXChV6348gNprzJ3CZIdxwM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonClanInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonClanInfo.html",
+          "hash": "w+7d97X0BGgXmOuwgbXqnj3OAXVJpRYLD+YA605UiOM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDefenseLogEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDefenseLogEntry.html",
+          "hash": "gfaW5V+f1iFn+Ea5jpJTBtY8VmeLVKB/TNTR7DQhyDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDefenseLogList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDefenseLogList.html",
+          "hash": "rsFke++RttK8/LAnh++qIhyLJBB/jlLzPGXKhtGgrME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.html",
+          "hash": "AChXXBcILEq42xM9nlFvH1xDa9wSdnzt8uvJwgGJiqY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrictList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrictList.html",
+          "hash": "j19kYWV6OXThiWM1QWyU8QOBGA8xhX4IFFdfHY0E44Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonMember.html",
+          "hash": "J0hRlEWx4DOyDNUV0YHLTTzIZCZJuA+xP/0zVT2rV0w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonMemberList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonMemberList.html",
+          "hash": "jd1nTeIyNe5MhdFgPYxLJIbjzg+4ATXkU2NdEsHM19I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasonState.html",
+          "hash": "bgAQ0S95CbZyptV3pK/WvSlQXrL1EsC5Fl5xeD8LLNU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClashOfClans.Models.ClanCapitalRaidSeasons.html",
+          "hash": "wPuVneJZvyuSI6l3ND1hBtudxi6fi6mFS+HWQI+warQ="
         }
       },
       "is_incremental": false,
@@ -993,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.html",
-          "hash": "SmiZbqsDPymAocBzE34GEvyCHvIAo1skG/Wm2fE1UKc="
+          "hash": "9qbJWBh52Kxy8rHcWyBeD/QfExE4ayp5Ht7jFemgCSU="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1281,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "5NpTRxIIRAfttCtm0uwEYF7JMvmSZqy1Z8+EKqCdyE4="
+          "hash": "TPJpBgzdO//fAx2ejFGrwlzAfCgySoOuzZvT3YAQd0k="
         }
       },
       "is_incremental": false,
@@ -1209,7 +1389,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 90,
+          "total_file_count": 105,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
