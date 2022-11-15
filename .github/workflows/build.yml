@@ -3,25 +3,25 @@ name: build
 on:
   push:
     paths:
-      - 'src/**'
+      - "src/**"
     branches:
       - main
       - develop
   pull_request:
     paths:
-      - 'src/**'
+      - "src/**"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: | 
-          3.1.x
-          6.0.x
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            6.0.x
+            7.0.x
 
-    - name: Build with dotnet
-      run: dotnet build ./src/ClashOfClans.sln
+      - name: Build with dotnet
+        run: dotnet build ./src/ClashOfClans.sln

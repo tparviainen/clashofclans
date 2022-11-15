@@ -3,26 +3,26 @@ name: tests
 on:
   push:
     paths:
-      - 'src/ClashOfClans/**'
-      - 'src/ClashOfClans.Tests.Unit/**'
+      - "src/ClashOfClans/**"
+      - "src/ClashOfClans.Tests.Unit/**"
     branches:
       - main
       - develop
   pull_request:
     paths:
-      - 'src/ClashOfClans/**'
-      - 'src/ClashOfClans.Tests.Unit/**'
+      - "src/ClashOfClans/**"
+      - "src/ClashOfClans.Tests.Unit/**"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '6.0.x'
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "7.0.x"
 
-    - name: Unit Tests
-      working-directory: src
-      run: dotnet test --filter FullyQualifiedName~ClashOfClans.Tests.Unit
+      - name: Unit Tests
+        working-directory: src
+        run: dotnet test --filter FullyQualifiedName~ClashOfClans.Tests.Unit

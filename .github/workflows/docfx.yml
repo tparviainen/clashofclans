@@ -3,9 +3,9 @@ name: docs
 on:
   push:
     paths:
-      - 'docfx/**'
-      - 'src/ClashOfClans/**'
-      - 'src/ClashOfClans.Models/**'
+      - "docfx/**"
+      - "src/ClashOfClans/**"
+      - "src/ClashOfClans.Models/**"
     branches:
       - develop
 
@@ -14,32 +14,32 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - run: git config --global user.name ${env:GITHUB_ACTOR}
-    - run: git config --global user.email ${env:GITHUB_ACTOR}@users.noreply.github.com
+      - run: git config --global user.name ${env:GITHUB_ACTOR}
+      - run: git config --global user.email ${env:GITHUB_ACTOR}@users.noreply.github.com
 
-    - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.DOCFX_API_KEY }}
-    - uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '6.0.x'
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.DOCFX_API_KEY }}
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "7.0.x"
 
-    - name: Build with dotnet
-      run: dotnet build ./src/ClashOfClans/ClashOfClans.csproj
+      - name: Build with dotnet
+        run: dotnet build ./src/ClashOfClans/ClashOfClans.csproj
 
-    - name: Setup DocFX
-      run: choco install docfx
+      - name: Setup DocFX
+        run: choco install docfx
 
-    - name: Build with DocFX
-      working-directory: docfx
-      run: |
-        Remove-Item ../docs/ -Recurse
-        docfx
+      - name: Build with DocFX
+        working-directory: docfx
+        run: |
+          Remove-Item ../docs/ -Recurse
+          docfx
 
-    - name: Stage all changes
-      run: git add -A
+      - name: Stage all changes
+        run: git add -A
 
-    - name: Update GitHub Pages
-      run: |
-        git commit -am "Update GitHub Pages"
-        git push
+      - name: Update GitHub Pages
+        run: |
+          git commit -am "Update GitHub Pages"
+          git push
