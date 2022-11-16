@@ -16,7 +16,7 @@ namespace ClashOfClans.Models
         /// </code>
         /// </example>
         /// <returns>Location data</returns>
-        public Location this[string name]
+        public Location? this[string name]
         {
             get => this.SingleOrDefault(l => l.Name == name);
         }

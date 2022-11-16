@@ -16,7 +16,6 @@ namespace ClashOfClans.Core
     internal sealed class GameData : IGameData
     {
         private readonly ApiEndpoint _endpoint;
-        private readonly MessageSerializer _serializer;
         private readonly ClashOfClansOptionsInternal _options;
         private IThrottleRequests ThrottleRequests => _options.ThrottleRequests;
 
@@ -33,15 +32,13 @@ namespace ClashOfClans.Core
         {
             _options = options;
             _endpoint = new ApiEndpoint(options.Tokens);
-            _serializer = new MessageSerializer();
         }
 
         public async Task<QueryResult<T>> QueryAsync<T>(AutoValidatedRequest request) where T : class
         {
             var deserializedData = await RequestAsync<QueryResult<T>>(request).ConfigureAwait(false);
 
-            if (request.Query != null)
-                request.Query.SetCursors(deserializedData.Paging.Cursors);
+            request.Query?.SetCursors(deserializedData.Paging.Cursors);
 
             return deserializedData;
         }
@@ -51,7 +48,7 @@ namespace ClashOfClans.Core
             Log(request, $"Uri: /{request.Uri}");
 
             var data = await GetDataAsync(request).ConfigureAwait(false);
-            var deserializedData = _serializer.Deserialize<T>(data);
+            var deserializedData = MessageSerializer.Deserialize<T>(data);
 
 #if DEBUG
             lock (_nullableTypes)
@@ -80,7 +77,7 @@ namespace ClashOfClans.Core
             watch.Restart();
             var response = request.Content == default ?
                 await _endpoint.GetMessageAsync(request.Uri).ConfigureAwait(false) :
-                await _endpoint.PostMessageAsync(request.Uri, _serializer.Serialize(request.Content)).ConfigureAwait(false);
+                await _endpoint.PostMessageAsync(request.Uri, MessageSerializer.Serialize(request.Content)).ConfigureAwait(false);
             Log(request, $"{response}, completed in {watch.ElapsedMilliseconds} ms");
 
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -91,7 +88,7 @@ namespace ClashOfClans.Core
 
             try
             {
-                var error = _serializer.Deserialize<ClientError>(content);
+                var error = MessageSerializer.Deserialize<ClientError>(content);
                 throw new ClashOfClansException(error);
             }
             catch (Exception ex) when (ex.GetType() != typeof(ClashOfClansException))

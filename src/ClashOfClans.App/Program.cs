@@ -13,7 +13,7 @@ namespace ClashOfClans.App
     /// </summary>
     static class Program
     {
-        static async Task Main(string[] args)
+        static async Task Main(string[] _)
         {
             AddConfigurationValues(out string clanTag, out string playerTag, out string token);
 
@@ -76,9 +76,12 @@ namespace ClashOfClans.App
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            token = config["api:token"];
-            clanTag = config["clanTag"];
-            playerTag = config["playerTag"];
+            token = GetConfigurationValue(config["api:token"]);
+            clanTag = GetConfigurationValue(config["clanTag"]);
+            playerTag = GetConfigurationValue(config["playerTag"]);
+
+            static string GetConfigurationValue(string? value)
+                => value ?? throw new NullReferenceException();
         }
     }
 }

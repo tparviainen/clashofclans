@@ -21,11 +21,11 @@ namespace ClashOfClans.Tests.Integration
         protected static IConfigurationRoot _config = default!;
         protected static ClashOfClansClient _coc = default!;
 
-        public static IEnumerable<string> PlayerTags { get => _config.GetSection("playerTags").GetChildren().Select(x => x.Value); }
-        public static IEnumerable<string> ClanTags { get => _config.GetSection("clanTags").GetChildren().Select(x => x.Value); }
+        public static IEnumerable<string> PlayerTags { get => _config.GetValues("playerTags"); }
+        public static IEnumerable<string> ClanTags { get => _config.GetValues("clanTags"); }
 
         [AssemblyInitialize]
-        public static async Task AssemblyInitialize(TestContext context)
+        public static async Task AssemblyInitialize(TestContext _)
         {
             try
             {
@@ -33,11 +33,10 @@ namespace ClashOfClans.Tests.Integration
                     .AddJsonFile("AppSettings.test.json")
                     .Build();
 
-                var tokens = _config.GetSection("api:tokens").GetChildren().Select(x => x.Value);
-                _coc = new ClashOfClansClient(tokens.ToArray());
+                _coc = new ClashOfClansClient(_config.GetValues("api:tokens").ToArray());
                 _coc.Configure(options =>
                 {
-                    options.Logger = new ClashOfClansLogger(_config["logPath"]);
+                    options.Logger = new ClashOfClansLogger(_config.GetValue("logPath"));
                     options.MaxRequestsPerSecond = 50;
                 });
 

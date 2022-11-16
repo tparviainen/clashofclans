@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,7 +19,7 @@ namespace ClashOfClans.Tests.Integration
                 .AddJsonFile("AppSettings.test.json")
                 .Build();
 
-            _tokens = _config.GetSection("api:tokens").GetChildren().Select(x => x.Value);
+            _tokens = _config.GetValues("api:tokens");
         }
 
         [TestMethod]

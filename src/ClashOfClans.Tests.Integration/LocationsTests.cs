@@ -59,7 +59,7 @@ namespace ClashOfClans.Tests.Integration
         public void ValidLocationNameWithWrongCaseSensitivityReturnsNull(string locationName)
         {
             // Arrange
-            var validLocation = _locations[locationName];
+            var validLocation = _locations[locationName]!;
             var invalidLocationName = validLocation.Name.ToLower();
 
             // Act

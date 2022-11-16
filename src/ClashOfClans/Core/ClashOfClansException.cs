@@ -45,7 +45,6 @@ namespace ClashOfClans.Core
             Error = (ClientError)info.GetValue(nameof(Error), typeof(ClientError))!;
         }
 
-        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);

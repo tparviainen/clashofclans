@@ -7,7 +7,7 @@ namespace ClashOfClans.Core.Serialization
 {
     internal class MessageSerializer
     {
-        public T Deserialize<T>(string data) where T : class
+        public static T Deserialize<T>(string data) where T : class
         {
             using var ms = new MemoryStream(Encoding.UTF8.GetBytes(data));
             var serializer = new JsonSerializer
@@ -23,7 +23,7 @@ namespace ClashOfClans.Core.Serialization
             return serializer.Deserialize<T>(reader)!;
         }
 
-        public string Serialize(object value)
+        public static string Serialize(object value)
         {
             var settings = new JsonSerializerSettings
             {

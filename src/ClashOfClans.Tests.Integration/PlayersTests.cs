@@ -74,7 +74,7 @@ namespace ClashOfClans.Tests.Integration
         public async Task GetPlayerInformationForLeaguePlayers()
         {
             // Arrange
-            var league = _leagues["Legend League"];
+            var league = _leagues["Legend League"]!;
             var leagueSeasonList = await _coc.Leagues.GetLeagueSeasonsAsync(league.Id);
             var season = GetRandom(leagueSeasonList.Items);
             var query = new Query
