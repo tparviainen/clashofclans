@@ -12,7 +12,7 @@ namespace ClashOfClans.Core
         public ThrottleRequestsPerSecond(int maxRequestsPerSecond, int tokens = 1)
         {
             if (maxRequestsPerSecond <= 0)
-                throw new ArgumentException(nameof(maxRequestsPerSecond));
+                throw new ArgumentException(null, nameof(maxRequestsPerSecond));
 
             _nextAllowedApiCallTime = DateTime.Now;
             _delayBetweenApiCalls = TimeSpan.TicksPerSecond / (maxRequestsPerSecond * tokens);

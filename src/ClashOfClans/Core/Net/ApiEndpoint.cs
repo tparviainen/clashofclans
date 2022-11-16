@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -37,20 +36,34 @@ namespace ClashOfClans.Core.Net
             foreach (var token in tokens)
                 _clients.Add(CreateHttpClient(token, address));
 
+#if NETSTANDARD
             // Sets the number of milliseconds after which an active ServicePoint connection is closed
-            var sp = ServicePointManager.FindServicePoint(address);
+            var sp = System.Net.ServicePointManager.FindServicePoint(address);
             sp.ConnectionLeaseTimeout = (int)TimeSpan.FromMinutes(1).TotalMilliseconds;
+#endif
         }
 
         /// <summary>
         /// HttpClient is intended to be instantiated once and re-used throughout the life of an application
         /// </summary>
-        private HttpClient CreateHttpClient(string token, Uri address)
+        private static HttpClient CreateHttpClient(string token, Uri address)
         {
+#if NETSTANDARD
             var client = new HttpClient
             {
                 BaseAddress = address
             };
+#else
+            var socketHttpHandler = new SocketsHttpHandler()
+            {
+                PooledConnectionLifetime = TimeSpan.FromMinutes(1)
+            };
+
+            var client = new HttpClient(socketHttpHandler)
+            {
+                BaseAddress = address
+            };
+#endif
 
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

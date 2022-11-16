@@ -8,7 +8,7 @@ namespace ClashOfClans.Core
     {
         public static void Validate(IEnumerable<string> tokens)
         {
-            if (tokens.Count() == 0)
+            if (!tokens.Any())
                 throw new ArgumentException("At least one API token is required");
 
             foreach (var token in tokens)

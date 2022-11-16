@@ -109,7 +109,7 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var count = 0;
-            var location = _locations[locationName];
+            var location = _locations[locationName]!;
             var query = new QueryClans
             {
                 Limit = 200,

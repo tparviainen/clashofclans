@@ -58,7 +58,7 @@ namespace ClashOfClans.Core
         internal IOrderedEnumerable<KeyValuePair<string, int>>? GetUncheckedNulls()
         {
             var keys = _nullProperties.Select(kvp => kvp.Key).Except(_checkedNullProperties);
-            if (keys.Count() == 0)
+            if (!keys.Any())
                 return default;
 
             return _nullProperties.Where(kvp => keys.Contains(kvp.Key)).OrderBy(kvp => kvp.Key);

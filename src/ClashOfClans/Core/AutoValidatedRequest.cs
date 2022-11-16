@@ -43,7 +43,7 @@ namespace ClashOfClans.Core
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Clan tag must not be empty");
 
-                if (!value.StartsWith(Constants.TagStartChar))
+                if (value?.StartsWith(Constants.TagStartChar) == false)
                     throw new ArgumentException($"Clan tags start with hash character '{Constants.TagStartChar}'");
 
                 _clanTag = value;
@@ -128,7 +128,7 @@ namespace ClashOfClans.Core
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Player tag must not be empty");
 
-                if (!value.StartsWith(Constants.TagStartChar))
+                if (value?.StartsWith(Constants.TagStartChar) == false)
                     throw new ArgumentException($"Player tags start with hash character '{Constants.TagStartChar}'");
 
                 _playerTag = value;
