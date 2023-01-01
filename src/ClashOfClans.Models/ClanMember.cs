@@ -1,4 +1,6 @@
-﻿namespace ClashOfClans.Models
+﻿using System.Collections.Generic;
+
+namespace ClashOfClans.Models
 {
     public class ClanMember : Identity
     {
@@ -28,5 +30,7 @@
         public int Donations { get => _donations ?? default; set => _donations = value; }
 
         public int DonationsReceived { get => _donationsReceived ?? default; set => _donationsReceived = value; }
+
+        public PlayerHouse PlayerHouse { get; set; } = default!;
     }
 }
