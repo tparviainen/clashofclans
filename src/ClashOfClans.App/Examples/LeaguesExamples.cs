@@ -51,7 +51,7 @@ namespace ClashOfClans.App.Examples
             var coc = new ClashOfClansClient(token);
             var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
             var legendLeague = leagues["Legend League"];
-            var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
+            var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague!.Id);
 
             Console.WriteLine($"Total amount of '{legendLeague.Name}' seasons: {leagueSeasons.Count}");
 
@@ -69,7 +69,7 @@ namespace ClashOfClans.App.Examples
             var coc = new ClashOfClansClient(token);
             var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
             var legendLeague = leagues["Legend League"];
-            var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague.Id);
+            var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague!.Id);
             var lastSeason = leagueSeasons.Last();
             var query = new Query
             {
