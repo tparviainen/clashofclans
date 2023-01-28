@@ -794,6 +794,38 @@ references:
   commentId: N:ClashOfClans.Models
   fullName: ClashOfClans.Models
   nameWithType: ClashOfClans.Models
+- uid: ClashOfClans.Models.CapitalLeague
+  name: CapitalLeague
+  href: api/ClashOfClans.Models.CapitalLeague.html
+  commentId: T:ClashOfClans.Models.CapitalLeague
+  fullName: ClashOfClans.Models.CapitalLeague
+  nameWithType: CapitalLeague
+- uid: ClashOfClans.Models.CapitalLeague.Id
+  name: Id
+  href: api/ClashOfClans.Models.CapitalLeague.html#ClashOfClans_Models_CapitalLeague_Id
+  commentId: P:ClashOfClans.Models.CapitalLeague.Id
+  fullName: ClashOfClans.Models.CapitalLeague.Id
+  nameWithType: CapitalLeague.Id
+- uid: ClashOfClans.Models.CapitalLeague.Id*
+  name: Id
+  href: api/ClashOfClans.Models.CapitalLeague.html#ClashOfClans_Models_CapitalLeague_Id_
+  commentId: Overload:ClashOfClans.Models.CapitalLeague.Id
+  isSpec: "True"
+  fullName: ClashOfClans.Models.CapitalLeague.Id
+  nameWithType: CapitalLeague.Id
+- uid: ClashOfClans.Models.CapitalLeague.Name
+  name: Name
+  href: api/ClashOfClans.Models.CapitalLeague.html#ClashOfClans_Models_CapitalLeague_Name
+  commentId: P:ClashOfClans.Models.CapitalLeague.Name
+  fullName: ClashOfClans.Models.CapitalLeague.Name
+  nameWithType: CapitalLeague.Name
+- uid: ClashOfClans.Models.CapitalLeague.Name*
+  name: Name
+  href: api/ClashOfClans.Models.CapitalLeague.html#ClashOfClans_Models_CapitalLeague_Name_
+  commentId: Overload:ClashOfClans.Models.CapitalLeague.Name
+  isSpec: "True"
+  fullName: ClashOfClans.Models.CapitalLeague.Name
+  nameWithType: CapitalLeague.Name
 - uid: ClashOfClans.Models.Clan
   name: Clan
   href: api/ClashOfClans.Models.Clan.html
@@ -813,6 +845,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.BadgeUrls
   nameWithType: Clan.BadgeUrls
+- uid: ClashOfClans.Models.Clan.CapitalLeague
+  name: CapitalLeague
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_CapitalLeague
+  commentId: P:ClashOfClans.Models.Clan.CapitalLeague
+  fullName: ClashOfClans.Models.Clan.CapitalLeague
+  nameWithType: Clan.CapitalLeague
+- uid: ClashOfClans.Models.Clan.CapitalLeague*
+  name: CapitalLeague
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_CapitalLeague_
+  commentId: Overload:ClashOfClans.Models.Clan.CapitalLeague
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.CapitalLeague
+  nameWithType: Clan.CapitalLeague
 - uid: ClashOfClans.Models.Clan.ChatLanguage
   name: ChatLanguage
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ChatLanguage
@@ -839,6 +884,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.ClanCapital
   nameWithType: Clan.ClanCapital
+- uid: ClashOfClans.Models.Clan.ClanCapitalPoints
+  name: ClanCapitalPoints
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanCapitalPoints
+  commentId: P:ClashOfClans.Models.Clan.ClanCapitalPoints
+  fullName: ClashOfClans.Models.Clan.ClanCapitalPoints
+  nameWithType: Clan.ClanCapitalPoints
+- uid: ClashOfClans.Models.Clan.ClanCapitalPoints*
+  name: ClanCapitalPoints
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanCapitalPoints_
+  commentId: Overload:ClashOfClans.Models.Clan.ClanCapitalPoints
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.ClanCapitalPoints
+  nameWithType: Clan.ClanCapitalPoints
 - uid: ClashOfClans.Models.Clan.ClanLevel
   name: ClanLevel
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanLevel
@@ -891,6 +949,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.Description
   nameWithType: Clan.Description
+- uid: ClashOfClans.Models.Clan.IsFamilyFriendly
+  name: IsFamilyFriendly
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_IsFamilyFriendly
+  commentId: P:ClashOfClans.Models.Clan.IsFamilyFriendly
+  fullName: ClashOfClans.Models.Clan.IsFamilyFriendly
+  nameWithType: Clan.IsFamilyFriendly
+- uid: ClashOfClans.Models.Clan.IsFamilyFriendly*
+  name: IsFamilyFriendly
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_IsFamilyFriendly_
+  commentId: Overload:ClashOfClans.Models.Clan.IsFamilyFriendly
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.IsFamilyFriendly
+  nameWithType: Clan.IsFamilyFriendly
 - uid: ClashOfClans.Models.Clan.IsWarLogPublic
   name: IsWarLogPublic
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_IsWarLogPublic
@@ -1312,6 +1383,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanCapitalRaidSeasonAttack.DestructionPercent
   nameWithType: ClanCapitalRaidSeasonAttack.DestructionPercent
+- uid: ClashOfClans.Models.ClanCapitalRaidSeasonAttack.Stars
+  name: Stars
+  href: api/ClashOfClans.Models.ClanCapitalRaidSeasonAttack.html#ClashOfClans_Models_ClanCapitalRaidSeasonAttack_Stars
+  commentId: P:ClashOfClans.Models.ClanCapitalRaidSeasonAttack.Stars
+  fullName: ClashOfClans.Models.ClanCapitalRaidSeasonAttack.Stars
+  nameWithType: ClanCapitalRaidSeasonAttack.Stars
+- uid: ClashOfClans.Models.ClanCapitalRaidSeasonAttack.Stars*
+  name: Stars
+  href: api/ClashOfClans.Models.ClanCapitalRaidSeasonAttack.html#ClashOfClans_Models_ClanCapitalRaidSeasonAttack_Stars_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRaidSeasonAttack.Stars
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRaidSeasonAttack.Stars
+  nameWithType: ClanCapitalRaidSeasonAttack.Stars
 - uid: ClashOfClans.Models.ClanCapitalRaidSeasonAttacker
   name: ClanCapitalRaidSeasonAttacker
   href: api/ClashOfClans.Models.ClanCapitalRaidSeasonAttacker.html
@@ -1646,6 +1730,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Name
   nameWithType: ClanCapitalRaidSeasonDistrict.Name
+- uid: ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Stars
+  name: Stars
+  href: api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.html#ClashOfClans_Models_ClanCapitalRaidSeasonDistrict_Stars
+  commentId: P:ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Stars
+  fullName: ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Stars
+  nameWithType: ClanCapitalRaidSeasonDistrict.Stars
+- uid: ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Stars*
+  name: Stars
+  href: api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.html#ClashOfClans_Models_ClanCapitalRaidSeasonDistrict_Stars_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Stars
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.Stars
+  nameWithType: ClanCapitalRaidSeasonDistrict.Stars
 - uid: ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.TotalLooted
   name: TotalLooted
   href: api/ClashOfClans.Models.ClanCapitalRaidSeasonDistrict.html#ClashOfClans_Models_ClanCapitalRaidSeasonDistrict_TotalLooted
@@ -1907,6 +2004,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanMember.League
   nameWithType: ClanMember.League
+- uid: ClashOfClans.Models.ClanMember.PlayerHouse
+  name: PlayerHouse
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_PlayerHouse
+  commentId: P:ClashOfClans.Models.ClanMember.PlayerHouse
+  fullName: ClashOfClans.Models.ClanMember.PlayerHouse
+  nameWithType: ClanMember.PlayerHouse
+- uid: ClashOfClans.Models.ClanMember.PlayerHouse*
+  name: PlayerHouse
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_PlayerHouse_
+  commentId: Overload:ClashOfClans.Models.ClanMember.PlayerHouse
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanMember.PlayerHouse
+  nameWithType: ClanMember.PlayerHouse
 - uid: ClashOfClans.Models.ClanMember.PreviousClanRank
   name: PreviousClanRank
   href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_PreviousClanRank
@@ -3435,6 +3545,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.LegendStatistics
   nameWithType: Player.LegendStatistics
+- uid: ClashOfClans.Models.Player.PlayerHouse
+  name: PlayerHouse
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_PlayerHouse
+  commentId: P:ClashOfClans.Models.Player.PlayerHouse
+  fullName: ClashOfClans.Models.Player.PlayerHouse
+  nameWithType: Player.PlayerHouse
+- uid: ClashOfClans.Models.Player.PlayerHouse*
+  name: PlayerHouse
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_PlayerHouse_
+  commentId: Overload:ClashOfClans.Models.Player.PlayerHouse
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.PlayerHouse
+  nameWithType: Player.PlayerHouse
 - uid: ClashOfClans.Models.Player.Role
   name: Role
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_Role
@@ -3713,6 +3836,93 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.PlayerClan.ClanLevel
   nameWithType: PlayerClan.ClanLevel
+- uid: ClashOfClans.Models.PlayerHouse
+  name: PlayerHouse
+  href: api/ClashOfClans.Models.PlayerHouse.html
+  commentId: T:ClashOfClans.Models.PlayerHouse
+  fullName: ClashOfClans.Models.PlayerHouse
+  nameWithType: PlayerHouse
+- uid: ClashOfClans.Models.PlayerHouse.Elements
+  name: Elements
+  href: api/ClashOfClans.Models.PlayerHouse.html#ClashOfClans_Models_PlayerHouse_Elements
+  commentId: P:ClashOfClans.Models.PlayerHouse.Elements
+  fullName: ClashOfClans.Models.PlayerHouse.Elements
+  nameWithType: PlayerHouse.Elements
+- uid: ClashOfClans.Models.PlayerHouse.Elements*
+  name: Elements
+  href: api/ClashOfClans.Models.PlayerHouse.html#ClashOfClans_Models_PlayerHouse_Elements_
+  commentId: Overload:ClashOfClans.Models.PlayerHouse.Elements
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerHouse.Elements
+  nameWithType: PlayerHouse.Elements
+- uid: ClashOfClans.Models.PlayerHouseElement
+  name: PlayerHouseElement
+  href: api/ClashOfClans.Models.PlayerHouseElement.html
+  commentId: T:ClashOfClans.Models.PlayerHouseElement
+  fullName: ClashOfClans.Models.PlayerHouseElement
+  nameWithType: PlayerHouseElement
+- uid: ClashOfClans.Models.PlayerHouseElement.Id
+  name: Id
+  href: api/ClashOfClans.Models.PlayerHouseElement.html#ClashOfClans_Models_PlayerHouseElement_Id
+  commentId: P:ClashOfClans.Models.PlayerHouseElement.Id
+  fullName: ClashOfClans.Models.PlayerHouseElement.Id
+  nameWithType: PlayerHouseElement.Id
+- uid: ClashOfClans.Models.PlayerHouseElement.Id*
+  name: Id
+  href: api/ClashOfClans.Models.PlayerHouseElement.html#ClashOfClans_Models_PlayerHouseElement_Id_
+  commentId: Overload:ClashOfClans.Models.PlayerHouseElement.Id
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerHouseElement.Id
+  nameWithType: PlayerHouseElement.Id
+- uid: ClashOfClans.Models.PlayerHouseElement.Type
+  name: Type
+  href: api/ClashOfClans.Models.PlayerHouseElement.html#ClashOfClans_Models_PlayerHouseElement_Type
+  commentId: P:ClashOfClans.Models.PlayerHouseElement.Type
+  fullName: ClashOfClans.Models.PlayerHouseElement.Type
+  nameWithType: PlayerHouseElement.Type
+- uid: ClashOfClans.Models.PlayerHouseElement.Type*
+  name: Type
+  href: api/ClashOfClans.Models.PlayerHouseElement.html#ClashOfClans_Models_PlayerHouseElement_Type_
+  commentId: Overload:ClashOfClans.Models.PlayerHouseElement.Type
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerHouseElement.Type
+  nameWithType: PlayerHouseElement.Type
+- uid: ClashOfClans.Models.PlayerHouseElementList
+  name: PlayerHouseElementList
+  href: api/ClashOfClans.Models.PlayerHouseElementList.html
+  commentId: T:ClashOfClans.Models.PlayerHouseElementList
+  fullName: ClashOfClans.Models.PlayerHouseElementList
+  nameWithType: PlayerHouseElementList
+- uid: ClashOfClans.Models.PlayerHouseElementType
+  name: PlayerHouseElementType
+  href: api/ClashOfClans.Models.PlayerHouseElementType.html
+  commentId: T:ClashOfClans.Models.PlayerHouseElementType
+  fullName: ClashOfClans.Models.PlayerHouseElementType
+  nameWithType: PlayerHouseElementType
+- uid: ClashOfClans.Models.PlayerHouseElementType.Decoration
+  name: Decoration
+  href: api/ClashOfClans.Models.PlayerHouseElementType.html#ClashOfClans_Models_PlayerHouseElementType_Decoration
+  commentId: F:ClashOfClans.Models.PlayerHouseElementType.Decoration
+  fullName: ClashOfClans.Models.PlayerHouseElementType.Decoration
+  nameWithType: PlayerHouseElementType.Decoration
+- uid: ClashOfClans.Models.PlayerHouseElementType.Ground
+  name: Ground
+  href: api/ClashOfClans.Models.PlayerHouseElementType.html#ClashOfClans_Models_PlayerHouseElementType_Ground
+  commentId: F:ClashOfClans.Models.PlayerHouseElementType.Ground
+  fullName: ClashOfClans.Models.PlayerHouseElementType.Ground
+  nameWithType: PlayerHouseElementType.Ground
+- uid: ClashOfClans.Models.PlayerHouseElementType.Roof
+  name: Roof
+  href: api/ClashOfClans.Models.PlayerHouseElementType.html#ClashOfClans_Models_PlayerHouseElementType_Roof
+  commentId: F:ClashOfClans.Models.PlayerHouseElementType.Roof
+  fullName: ClashOfClans.Models.PlayerHouseElementType.Roof
+  nameWithType: PlayerHouseElementType.Roof
+- uid: ClashOfClans.Models.PlayerHouseElementType.Walls
+  name: Walls
+  href: api/ClashOfClans.Models.PlayerHouseElementType.html#ClashOfClans_Models_PlayerHouseElementType_Walls
+  commentId: F:ClashOfClans.Models.PlayerHouseElementType.Walls
+  fullName: ClashOfClans.Models.PlayerHouseElementType.Walls
+  nameWithType: PlayerHouseElementType.Walls
 - uid: ClashOfClans.Models.PlayerItemLevel
   name: PlayerItemLevel
   href: api/ClashOfClans.Models.PlayerItemLevel.html
