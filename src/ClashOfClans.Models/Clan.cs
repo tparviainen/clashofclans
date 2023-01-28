@@ -8,6 +8,7 @@ namespace ClashOfClans.Models
         private int? _clanLevel;
         private int? _clanPoints;
         private int? _clanVersusPoints;
+        private int? _clanCapitalPoints;
         private int? _requiredTrophies;
         private int? _requiredVersusTrophies;
         private int? _requiredTownhallLevel;
@@ -15,6 +16,7 @@ namespace ClashOfClans.Models
         private int? _warWinStreak;
         private int? _warWins;
         private bool? _isWarLogPublic;
+        private bool? _isFamilyFriendly;
         private int? _members;
 
         public string? Description { get; set; }
@@ -35,6 +37,8 @@ namespace ClashOfClans.Models
         public int ClanPoints { get => _clanPoints ?? default; set => _clanPoints = value; }
 
         public int ClanVersusPoints { get => _clanVersusPoints ?? default; set => _clanVersusPoints = value; }
+
+        public int ClanCapitalPoints { get => _clanCapitalPoints ?? default; set => _clanCapitalPoints = value; }
 
         /// <summary>
         /// Minimum trophies to join
@@ -58,9 +62,13 @@ namespace ClashOfClans.Models
         /// </summary>
         public int WarWins { get => _warWins ?? default; set => _warWins = value; }
 
+        public bool IsFamilyFriendly { get => _isFamilyFriendly ?? default; set => _isFamilyFriendly = value; }
+
         public bool IsWarLogPublic { get => _isWarLogPublic ?? default; set => _isWarLogPublic = value; }
 
         public WarLeague WarLeague { get; set; } = default!;
+
+        public CapitalLeague CapitalLeague { get; set; } = default!;
 
         public int Members { get => _members ?? default; set => _members = value; }
 

@@ -95,5 +95,7 @@
         /// Labels to describe player's play style
         /// </summary>
         public LabelList Labels { get; set; } = default!;
+
+        public PlayerHouse? PlayerHouse { get; set; }
     }
 }

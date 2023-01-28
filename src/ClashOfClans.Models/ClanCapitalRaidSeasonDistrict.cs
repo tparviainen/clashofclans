@@ -3,12 +3,15 @@
     public class ClanCapitalRaidSeasonDistrict
     {
         private int? _id;
+        private int? _stars;
         private int? _districtHallLevel;
         private int? _destructionPercent;
         private int? _attackCount;
         private int? _totalLooted;
 
         public int Id { get => _id ?? default; set => _id = value; }
+
+        public int Stars { get => _stars ?? default; set => _stars = value; }
 
         public string Name { get; set; } = default!;
 
