@@ -31,6 +31,6 @@ namespace ClashOfClans.Models
 
         public int DonationsReceived { get => _donationsReceived ?? default; set => _donationsReceived = value; }
 
-        public PlayerHouse PlayerHouse { get; set; } = default!;
+        public PlayerHouse? PlayerHouse { get; set; }
     }
 }

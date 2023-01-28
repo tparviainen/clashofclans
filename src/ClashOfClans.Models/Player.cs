@@ -96,6 +96,6 @@
         /// </summary>
         public LabelList Labels { get; set; } = default!;
 
-        public PlayerHouse PlayerHouse { get; set; } = default!;
+        public PlayerHouse? PlayerHouse { get; set; }
     }
 }
