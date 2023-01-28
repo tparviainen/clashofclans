@@ -173,5 +173,14 @@ namespace ClashOfClans.Tests.Integration
 
             return sb.ToString();
         }
+
+        public static string Dump(this Player player)
+        {
+            var sb = new StringBuilder();
+
+            sb.Append($"{player.Tag}/{player.Name}, TH {player.TownHallLevel}, trophies {player.Trophies}");
+
+            return sb.ToString();
+        }
     }
 }

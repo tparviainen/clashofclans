@@ -92,6 +92,7 @@ namespace ClashOfClans.Tests.Integration
 
                     // Assert
                     Assert.IsNotNull(player);
+                    Trace.WriteLine(player.Dump());
                 }
                 catch (ClashOfClansException)
                 {
