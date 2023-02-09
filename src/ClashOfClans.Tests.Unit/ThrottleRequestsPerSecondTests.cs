@@ -47,7 +47,13 @@ namespace ClashOfClans.Tests.Unit
             }
 
             // Assert
-            Assert.IsTrue(loopCount <= maxRequestsPerSecond, $"Loopcount: {loopCount}");
+            if ((stopWatch.ElapsedMilliseconds - totalTime.TotalMilliseconds) is var extraMilliseconds && extraMilliseconds > 0)
+            {
+                // Test execution took longer than totalTime, need to adjust maxRequestsPerSecond accordingly
+                maxRequestsPerSecond += (int)extraMilliseconds / (1000 / maxRequestsPerSecond);
+            }
+
+            Assert.IsTrue(loopCount <= maxRequestsPerSecond, $"Loopcount: {loopCount}, time: {stopWatch.ElapsedMilliseconds}ms");
         }
 
         [TestMethod]
