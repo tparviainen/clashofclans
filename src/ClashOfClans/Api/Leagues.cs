@@ -93,5 +93,16 @@ namespace ClashOfClans.Api
 
             return _gameData.QueryAsync<CapitalLeagueList>(request);
         }
+
+        public Task<CapitalLeague> GetCapitalLeagueAsync(int? leagueId)
+        {
+            var request = new AutoValidatedRequest
+            {
+                LeagueId = leagueId,
+                Uri = $"/capitalleagues/{leagueId}"
+            };
+
+            return _gameData.RequestAsync<CapitalLeague>(request);
+        }
     }
 }
