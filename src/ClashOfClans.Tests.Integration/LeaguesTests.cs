@@ -95,7 +95,7 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public async Task GetCapitalLeagues()
+        public async Task ListCapitalLeagues()
         {
             // Arrange
             var leagues = _coc.Leagues;
