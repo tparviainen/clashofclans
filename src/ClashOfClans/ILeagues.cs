@@ -65,5 +65,23 @@ namespace ClashOfClans
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Requested war league</returns>
         Task<WarLeague> GetWarLeagueAsync(int? leagueId);
+
+        /// <summary>
+        /// List capital leagues
+        /// </summary>
+        /// <param name="query">Optional query parameters</param>
+        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
+        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
+        /// <returns>Capital league list</returns>
+        Task<QueryResult<CapitalLeagueList>> GetCapitalLeaguesAsync(Query? query = default);
+
+        /// <summary>
+        /// Get capital league information
+        /// </summary>
+        /// <param name="leagueId">Identifier of the league</param>
+        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
+        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
+        /// <returns>Requested capital league</returns>
+        Task<CapitalLeague> GetCapitalLeagueAsync(int? leagueId);
     }
 }

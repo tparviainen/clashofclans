@@ -83,5 +83,17 @@ namespace ClashOfClans.Api
 
             return _gameData.QueryAsync<PlayerVersusRankingList>(request);
         }
+
+        public Task<QueryResult<ClanCapitalRankingList>> GetClanCapitalRankingAsync(int? locationId, Query? query = default)
+        {
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/capitals"
+            };
+
+            return _gameData.QueryAsync<ClanCapitalRankingList>(request);
+        }
     }
 }

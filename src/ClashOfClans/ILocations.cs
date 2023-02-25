@@ -66,5 +66,15 @@ namespace ClashOfClans
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Player versus ranking list</returns>
         Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default);
+
+        /// <summary>
+        /// Get capital rankings for a specific location
+        /// </summary>
+        /// <param name="locationId">Identifier of the location to retrieve</param>
+        /// <param name="query">Optional query parameters</param>
+        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
+        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
+        /// <returns>Clan capital ranking list</returns>
+        Task<QueryResult<ClanCapitalRankingList>> GetClanCapitalRankingAsync(int? locationId, Query? query = default);
     }
 }

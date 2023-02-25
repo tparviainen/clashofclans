@@ -93,5 +93,32 @@ namespace ClashOfClans.Tests.Integration
             // Assert
             Assert.IsNotNull(warLeague);
         }
+
+        [TestMethod]
+        public async Task ListCapitalLeagues()
+        {
+            // Arrange
+            var leagues = _coc.Leagues;
+
+            // Act
+            var capitalLeagueList = (CapitalLeagueList)await leagues.GetCapitalLeaguesAsync();
+
+            // Assert
+            Assert.IsNotNull(capitalLeagueList);
+        }
+
+        [TestMethod]
+        public async Task GetCapitalLeagueInformation()
+        {
+            // Arrange
+            var leagues = _coc.Leagues;
+            var capitalLeagueId = GetRandom(_capitalLeagues).Id;
+
+            // Act
+            var capitalLeague = await leagues.GetCapitalLeagueAsync(capitalLeagueId);
+
+            // Assert
+            Assert.IsNotNull(capitalLeague);
+        }
     }
 }
