@@ -86,6 +86,148 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/develop/apiSpec/new?filename=ClashOfClans_ILeagues_GetCapitalLeagueAsync_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/develop/src/ClashOfClans/ILeagues.cs/#L85">View Source</a>
+  </span>
+  <a id="ClashOfClans_ILeagues_GetCapitalLeagueAsync_" data-uid="ClashOfClans.ILeagues.GetCapitalLeagueAsync*"></a>
+  <h4 id="ClashOfClans_ILeagues_GetCapitalLeagueAsync_System_Nullable_System_Int32__" data-uid="ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable{System.Int32})">GetCapitalLeagueAsync(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get capital league information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;CapitalLeague&gt; GetCapitalLeagueAsync(int? leagueId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">leagueId</span></td>
+        <td><p>Identifier of the league</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="ClashOfClans.Models.CapitalLeague.html">CapitalLeague</a>&gt;</td>
+        <td><p>Requested capital league</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tparviainen/clashofclans/new/develop/apiSpec/new?filename=ClashOfClans_ILeagues_GetCapitalLeaguesAsync_ClashOfClans_Search_Query_.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetCapitalLeaguesAsync(ClashOfClans.Search.Query)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tparviainen/clashofclans/blob/develop/src/ClashOfClans/ILeagues.cs/#L76">View Source</a>
+  </span>
+  <a id="ClashOfClans_ILeagues_GetCapitalLeaguesAsync_" data-uid="ClashOfClans.ILeagues.GetCapitalLeaguesAsync*"></a>
+  <h4 id="ClashOfClans_ILeagues_GetCapitalLeaguesAsync_ClashOfClans_Search_Query_" data-uid="ClashOfClans.ILeagues.GetCapitalLeaguesAsync(ClashOfClans.Search.Query)">GetCapitalLeaguesAsync(Query)</h4>
+  <div class="markdown level1 summary"><p>List capital leagues</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;QueryResult&lt;CapitalLeagueList&gt;&gt; GetCapitalLeaguesAsync(Query query = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Search.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Optional query parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="ClashOfClans.Search.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="ClashOfClans.Models.CapitalLeagueList.html">CapitalLeagueList</a>&gt;&gt;</td>
+        <td><p>Capital league list</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ClashOfClans.Core.ClashOfClansException.html">ClashOfClansException</a></td>
+        <td><p>Communication error with the backend API</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Argument is invalid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/tparviainen/clashofclans/new/develop/apiSpec/new?filename=ClashOfClans_ILeagues_GetLeagueAsync_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ClashOfClans.ILeagues.GetLeagueAsync(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">

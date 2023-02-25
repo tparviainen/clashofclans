@@ -567,6 +567,35 @@ references:
   commentId: T:ClashOfClans.ILeagues
   fullName: ClashOfClans.ILeagues
   nameWithType: ILeagues
+- uid: ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable{System.Int32})
+  name: GetCapitalLeagueAsync(Nullable<Int32>)
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetCapitalLeagueAsync_System_Nullable_System_Int32__
+  commentId: M:ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable{System.Int32})
+  name.vb: GetCapitalLeagueAsync(Nullable(Of Int32))
+  fullName: ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable<System.Int32>)
+  fullName.vb: ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable(Of System.Int32))
+  nameWithType: ILeagues.GetCapitalLeagueAsync(Nullable<Int32>)
+  nameWithType.vb: ILeagues.GetCapitalLeagueAsync(Nullable(Of Int32))
+- uid: ClashOfClans.ILeagues.GetCapitalLeagueAsync*
+  name: GetCapitalLeagueAsync
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetCapitalLeagueAsync_
+  commentId: Overload:ClashOfClans.ILeagues.GetCapitalLeagueAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILeagues.GetCapitalLeagueAsync
+  nameWithType: ILeagues.GetCapitalLeagueAsync
+- uid: ClashOfClans.ILeagues.GetCapitalLeaguesAsync(ClashOfClans.Search.Query)
+  name: GetCapitalLeaguesAsync(Query)
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetCapitalLeaguesAsync_ClashOfClans_Search_Query_
+  commentId: M:ClashOfClans.ILeagues.GetCapitalLeaguesAsync(ClashOfClans.Search.Query)
+  fullName: ClashOfClans.ILeagues.GetCapitalLeaguesAsync(ClashOfClans.Search.Query)
+  nameWithType: ILeagues.GetCapitalLeaguesAsync(Query)
+- uid: ClashOfClans.ILeagues.GetCapitalLeaguesAsync*
+  name: GetCapitalLeaguesAsync
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetCapitalLeaguesAsync_
+  commentId: Overload:ClashOfClans.ILeagues.GetCapitalLeaguesAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILeagues.GetCapitalLeaguesAsync
+  nameWithType: ILeagues.GetCapitalLeaguesAsync
 - uid: ClashOfClans.ILeagues.GetLeagueAsync(System.Nullable{System.Int32})
   name: GetLeagueAsync(Nullable<Int32>)
   href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetLeagueAsync_System_Nullable_System_Int32__
@@ -663,6 +692,22 @@ references:
   commentId: T:ClashOfClans.ILocations
   fullName: ClashOfClans.ILocations
   nameWithType: ILocations
+- uid: ClashOfClans.ILocations.GetClanCapitalRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
+  name: GetClanCapitalRankingAsync(Nullable<Int32>, Query)
+  href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetClanCapitalRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_
+  commentId: M:ClashOfClans.ILocations.GetClanCapitalRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
+  name.vb: GetClanCapitalRankingAsync(Nullable(Of Int32), Query)
+  fullName: ClashOfClans.ILocations.GetClanCapitalRankingAsync(System.Nullable<System.Int32>, ClashOfClans.Search.Query)
+  fullName.vb: ClashOfClans.ILocations.GetClanCapitalRankingAsync(System.Nullable(Of System.Int32), ClashOfClans.Search.Query)
+  nameWithType: ILocations.GetClanCapitalRankingAsync(Nullable<Int32>, Query)
+  nameWithType.vb: ILocations.GetClanCapitalRankingAsync(Nullable(Of Int32), Query)
+- uid: ClashOfClans.ILocations.GetClanCapitalRankingAsync*
+  name: GetClanCapitalRankingAsync
+  href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetClanCapitalRankingAsync_
+  commentId: Overload:ClashOfClans.ILocations.GetClanCapitalRankingAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILocations.GetClanCapitalRankingAsync
+  nameWithType: ILocations.GetClanCapitalRankingAsync
 - uid: ClashOfClans.ILocations.GetClanRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
   name: GetClanRankingAsync(Nullable<Int32>, Query)
   href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetClanRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_
@@ -826,6 +871,12 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.CapitalLeague.Name
   nameWithType: CapitalLeague.Name
+- uid: ClashOfClans.Models.CapitalLeagueList
+  name: CapitalLeagueList
+  href: api/ClashOfClans.Models.CapitalLeagueList.html
+  commentId: T:ClashOfClans.Models.CapitalLeagueList
+  fullName: ClashOfClans.Models.CapitalLeagueList
+  nameWithType: CapitalLeagueList
 - uid: ClashOfClans.Models.Clan
   name: Clan
   href: api/ClashOfClans.Models.Clan.html
@@ -1876,6 +1927,109 @@ references:
   commentId: F:ClashOfClans.Models.ClanCapitalRaidSeasonState.Ongoing
   fullName: ClashOfClans.Models.ClanCapitalRaidSeasonState.Ongoing
   nameWithType: ClanCapitalRaidSeasonState.Ongoing
+- uid: ClashOfClans.Models.ClanCapitalRanking
+  name: ClanCapitalRanking
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html
+  commentId: T:ClashOfClans.Models.ClanCapitalRanking
+  fullName: ClashOfClans.Models.ClanCapitalRanking
+  nameWithType: ClanCapitalRanking
+- uid: ClashOfClans.Models.ClanCapitalRanking.BadgeUrls
+  name: BadgeUrls
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_BadgeUrls
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.BadgeUrls
+  fullName: ClashOfClans.Models.ClanCapitalRanking.BadgeUrls
+  nameWithType: ClanCapitalRanking.BadgeUrls
+- uid: ClashOfClans.Models.ClanCapitalRanking.BadgeUrls*
+  name: BadgeUrls
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_BadgeUrls_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.BadgeUrls
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.BadgeUrls
+  nameWithType: ClanCapitalRanking.BadgeUrls
+- uid: ClashOfClans.Models.ClanCapitalRanking.ClanCapitalPoints
+  name: ClanCapitalPoints
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_ClanCapitalPoints
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.ClanCapitalPoints
+  fullName: ClashOfClans.Models.ClanCapitalRanking.ClanCapitalPoints
+  nameWithType: ClanCapitalRanking.ClanCapitalPoints
+- uid: ClashOfClans.Models.ClanCapitalRanking.ClanCapitalPoints*
+  name: ClanCapitalPoints
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_ClanCapitalPoints_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.ClanCapitalPoints
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.ClanCapitalPoints
+  nameWithType: ClanCapitalRanking.ClanCapitalPoints
+- uid: ClashOfClans.Models.ClanCapitalRanking.ClanLevel
+  name: ClanLevel
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_ClanLevel
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.ClanLevel
+  fullName: ClashOfClans.Models.ClanCapitalRanking.ClanLevel
+  nameWithType: ClanCapitalRanking.ClanLevel
+- uid: ClashOfClans.Models.ClanCapitalRanking.ClanLevel*
+  name: ClanLevel
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_ClanLevel_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.ClanLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.ClanLevel
+  nameWithType: ClanCapitalRanking.ClanLevel
+- uid: ClashOfClans.Models.ClanCapitalRanking.Location
+  name: Location
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_Location
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.Location
+  fullName: ClashOfClans.Models.ClanCapitalRanking.Location
+  nameWithType: ClanCapitalRanking.Location
+- uid: ClashOfClans.Models.ClanCapitalRanking.Location*
+  name: Location
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_Location_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.Location
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.Location
+  nameWithType: ClanCapitalRanking.Location
+- uid: ClashOfClans.Models.ClanCapitalRanking.Members
+  name: Members
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_Members
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.Members
+  fullName: ClashOfClans.Models.ClanCapitalRanking.Members
+  nameWithType: ClanCapitalRanking.Members
+- uid: ClashOfClans.Models.ClanCapitalRanking.Members*
+  name: Members
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_Members_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.Members
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.Members
+  nameWithType: ClanCapitalRanking.Members
+- uid: ClashOfClans.Models.ClanCapitalRanking.PreviousRank
+  name: PreviousRank
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_PreviousRank
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.PreviousRank
+  fullName: ClashOfClans.Models.ClanCapitalRanking.PreviousRank
+  nameWithType: ClanCapitalRanking.PreviousRank
+- uid: ClashOfClans.Models.ClanCapitalRanking.PreviousRank*
+  name: PreviousRank
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_PreviousRank_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.PreviousRank
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.PreviousRank
+  nameWithType: ClanCapitalRanking.PreviousRank
+- uid: ClashOfClans.Models.ClanCapitalRanking.Rank
+  name: Rank
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_Rank
+  commentId: P:ClashOfClans.Models.ClanCapitalRanking.Rank
+  fullName: ClashOfClans.Models.ClanCapitalRanking.Rank
+  nameWithType: ClanCapitalRanking.Rank
+- uid: ClashOfClans.Models.ClanCapitalRanking.Rank*
+  name: Rank
+  href: api/ClashOfClans.Models.ClanCapitalRanking.html#ClashOfClans_Models_ClanCapitalRanking_Rank_
+  commentId: Overload:ClashOfClans.Models.ClanCapitalRanking.Rank
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanCapitalRanking.Rank
+  nameWithType: ClanCapitalRanking.Rank
+- uid: ClashOfClans.Models.ClanCapitalRankingList
+  name: ClanCapitalRankingList
+  href: api/ClashOfClans.Models.ClanCapitalRankingList.html
+  commentId: T:ClashOfClans.Models.ClanCapitalRankingList
+  fullName: ClashOfClans.Models.ClanCapitalRankingList
+  nameWithType: ClanCapitalRankingList
 - uid: ClashOfClans.Models.ClanDistrictData
   name: ClanDistrictData
   href: api/ClashOfClans.Models.ClanDistrictData.html
