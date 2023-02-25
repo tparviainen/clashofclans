@@ -154,5 +154,23 @@ namespace ClashOfClans.Tests.Integration
             Assert.IsNotNull(playerVersusRankingList);
             Assert.IsTrue(playerVersusRankingList.Count <= ItemLimit, $"Id {location.Id}");
         }
+
+        [TestMethod]
+        public async Task GetCapitalRankingsForASpecificLocation()
+        {
+            // Arrange
+            var location = GetRandom(_locations, l => l.IsCountry);
+            var query = new Query
+            {
+                Limit = ItemLimit
+            };
+
+            // Act
+            var clanCapitalRankingList = (ClanCapitalRankingList)await _coc.Locations.GetClanCapitalRankingAsync(location.Id, query);
+
+            // Assert
+            Assert.IsNotNull(clanCapitalRankingList);
+            Assert.IsTrue(clanCapitalRankingList.Count <= ItemLimit, $"Id {location.Id}");
+        }
     }
 }
