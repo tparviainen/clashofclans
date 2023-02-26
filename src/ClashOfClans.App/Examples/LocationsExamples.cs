@@ -117,5 +117,22 @@ namespace ClashOfClans.App.Examples
                 Console.WriteLine($"Rank {player.Rank}, {player.VersusTrophies} \uD83C\uDFC6, player {player.Name}");
             }
         }
+
+        /// <summary>
+        /// Get capital rankings for a specific location
+        /// </summary>
+        public async Task GetCapitalRankingsForASpecificLocation()
+        {
+            var coc = new ClashOfClansClient(token);
+            var locations = (LocationList)await coc.Locations.GetLocationsAsync();
+            var location = locations["Finland"];
+
+            var clanCapitalRankingList = (ClanCapitalRankingList)await coc.Locations.GetClanCapitalRankingAsync(location!.Id);
+
+            foreach (var clan in clanCapitalRankingList)
+            {
+                Console.WriteLine($"Rank {clan.Rank}, {clan.ClanCapitalPoints} \uD83C\uDFC6, clan {clan.Name}");
+            }
+        }
     }
 }

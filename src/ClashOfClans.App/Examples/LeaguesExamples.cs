@@ -111,5 +111,33 @@ namespace ClashOfClans.App.Examples
 
             Console.WriteLine($"Id: {warLeague.Id} = {warLeague.Name}");
         }
+
+        /// <summary>
+        /// List capital leagues
+        /// </summary>
+        public async Task ListCapitalLeagues()
+        {
+            var coc = new ClashOfClansClient(token);
+            var capitalLeagues = (CapitalLeagueList)await coc.Leagues.GetCapitalLeaguesAsync();
+
+            Console.WriteLine($"Total amount of capital leagues: {capitalLeagues.Count}");
+
+            foreach (var capitalLeague in capitalLeagues)
+            {
+                Console.WriteLine($"Id: {capitalLeague.Id}, Name: {capitalLeague.Name}");
+            }
+        }
+
+        /// <summary>
+        /// Get capital league information
+        /// </summary>
+        public async Task GetCapitalLeagueInformation()
+        {
+            var capitalLeagueId = 85000015; // Master League I
+            var coc = new ClashOfClansClient(token);
+            var capitalLeague = await coc.Leagues.GetCapitalLeagueAsync(capitalLeagueId);
+
+            Console.WriteLine($"Id: {capitalLeague.Id} = {capitalLeague.Name}");
+        }
     }
 }

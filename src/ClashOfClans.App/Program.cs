@@ -42,6 +42,8 @@ namespace ClashOfClans.App
                 await leaguesExamples.GetLeagueSeasonRankings();
                 await leaguesExamples.ListWarLeagues();
                 await leaguesExamples.GetWarLeagueInformation();
+                await leaguesExamples.ListCapitalLeagues();
+                await leaguesExamples.GetCapitalLeagueInformation();
 
                 // Access global and local rankings
                 var locationsExamples = new LocationsExamples(token);
@@ -51,6 +53,7 @@ namespace ClashOfClans.App
                 await locationsExamples.GetPlayerRankingsForASpecificLocation();
                 await locationsExamples.GetClanVersusRankingsForASpecificLocation();
                 await locationsExamples.GetPlayerVersusRankingsForASpecificLocation();
+                await locationsExamples.GetCapitalRankingsForASpecificLocation();
 
                 // Access information about gold pass
                 var goldPassExamples = new GoldPassExamples(token);
@@ -64,6 +67,7 @@ namespace ClashOfClans.App
             catch (ClashOfClansException ex)
             {
                 Console.WriteLine($"Exception: {ex.Error.Reason}, {ex.Error.Message}");
+                Console.WriteLine($"StackTrace:{Environment.NewLine + ex.StackTrace}");
             }
         }
 
