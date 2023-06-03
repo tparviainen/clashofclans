@@ -7,6 +7,7 @@ namespace ClashOfClans.Models
         private Role? _role;
         private int? _expLevel;
         private int? _trophies;
+        private int? _builderBaseTrophies;
         private int? _versusTrophies;
         private int? _clanRank;
         private int? _previousClanRank;
@@ -21,6 +22,8 @@ namespace ClashOfClans.Models
 
         public int Trophies { get => _trophies ?? default; set => _trophies = value; }
 
+        public int BuilderBaseTrophies { get => _builderBaseTrophies ?? default; set => _builderBaseTrophies = value; }
+
         public int VersusTrophies { get => _versusTrophies ?? default; set => _versusTrophies = value; }
 
         public int ClanRank { get => _clanRank ?? default; set => _clanRank = value; }
@@ -32,5 +35,7 @@ namespace ClashOfClans.Models
         public int DonationsReceived { get => _donationsReceived ?? default; set => _donationsReceived = value; }
 
         public PlayerHouse? PlayerHouse { get; set; }
+
+        public BuilderBaseLeague? BuilderBaseLeague { get; set; }
     }
 }

@@ -15,5 +15,9 @@
         public LegendLeagueTournamentSeasonResult CurrentSeason { get; set; } = default!;
 
         public LegendLeagueTournamentSeasonResult? PreviousSeason { get; set; }
+
+        public LegendLeagueTournamentSeasonResult? PreviousBuilderBaseSeason { get; set; }
+
+        public LegendLeagueTournamentSeasonResult? BestBuilderBaseSeason { get; set; }
     }
 }
