@@ -85,7 +85,8 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var leagues = _coc.Leagues;
-            var warLeagueId = GetRandom(_warLeagues).Id;
+            var warLeagues = (WarLeagueList)await _coc.Leagues.GetWarLeaguesAsync();
+            var warLeagueId = GetRandom(warLeagues).Id;
 
             // Act
             var warLeague = await leagues.GetWarLeagueAsync(warLeagueId);
@@ -112,13 +113,42 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var leagues = _coc.Leagues;
-            var capitalLeagueId = GetRandom(_capitalLeagues).Id;
+            var capitalLeagues = (CapitalLeagueList)await _coc.Leagues.GetCapitalLeaguesAsync();
+            var capitalLeagueId = GetRandom(capitalLeagues).Id;
 
             // Act
             var capitalLeague = await leagues.GetCapitalLeagueAsync(capitalLeagueId);
 
             // Assert
             Assert.IsNotNull(capitalLeague);
+        }
+
+        [TestMethod]
+        public async Task ListBuilderBaseLeagues()
+        {
+            // Arrange
+            var leagues = _coc.Leagues;
+
+            // Act
+            var builderBaseLeagueList = (BuilderBaseLeagueList)await leagues.GetBuilderBaseLeaguesAsync();
+
+            // Assert
+            Assert.IsNotNull(builderBaseLeagueList);
+        }
+
+        [TestMethod]
+        public async Task GetBuilderBaseLeagueInformation()
+        {
+            // Arrange
+            var leagues = _coc.Leagues;
+            var builderBaseLeagues = (BuilderBaseLeagueList)await leagues.GetBuilderBaseLeaguesAsync();
+            var builderBaseLeagueId = GetRandom(builderBaseLeagues).Id;
+
+            // Act
+            var builderBaseLeague = await leagues.GetBuilderBaseLeagueAsync(builderBaseLeagueId);
+
+            // Assert
+            Assert.IsNotNull(builderBaseLeague);
         }
     }
 }

@@ -104,5 +104,27 @@ namespace ClashOfClans.Api
 
             return _gameData.RequestAsync<CapitalLeague>(request);
         }
+
+        public Task<QueryResult<BuilderBaseLeagueList>> GetBuilderBaseLeaguesAsync(Query? query = default)
+        {
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                Uri = $"/builderbaseleagues"
+            };
+
+            return _gameData.QueryAsync<BuilderBaseLeagueList>(request);
+        }
+
+        public Task<BuilderBaseLeague> GetBuilderBaseLeagueAsync(int? leagueId)
+        {
+            var request = new AutoValidatedRequest
+            {
+                LeagueId = leagueId,
+                Uri = $"/builderbaseleagues/{leagueId}"
+            };
+
+            return _gameData.RequestAsync<BuilderBaseLeague>(request);
+        }
     }
 }

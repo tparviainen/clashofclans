@@ -95,5 +95,29 @@ namespace ClashOfClans.Api
 
             return _gameData.QueryAsync<ClanCapitalRankingList>(request);
         }
+
+        public Task<QueryResult<PlayerBuilderBaseRankingList>> GetPlayerBuilderBaseRankingAsync(int? locationId, Query? query = default)
+        {
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/players-versus"
+            };
+
+            return _gameData.QueryAsync<PlayerBuilderBaseRankingList>(request);
+        }
+
+        public Task<QueryResult<ClanBuilderBaseRankingList>> GetClanBuilderBaseRankingAsync(int? locationId, Query? query = default)
+        {
+            var request = new AutoValidatedRequest
+            {
+                Query = query,
+                LocationId = locationId,
+                Uri = $"/locations/{locationId}/rankings/clans-builder-base"
+            };
+
+            return _gameData.QueryAsync<ClanBuilderBaseRankingList>(request);
+        }
     }
 }
