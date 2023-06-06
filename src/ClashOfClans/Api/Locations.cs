@@ -102,7 +102,7 @@ namespace ClashOfClans.Api
             {
                 Query = query,
                 LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/players-versus"
+                Uri = $"/locations/{locationId}/rankings/players-builder-base"
             };
 
             return _gameData.QueryAsync<PlayerBuilderBaseRankingList>(request);

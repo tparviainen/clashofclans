@@ -56,7 +56,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan ranking list</returns>
-        [Obsolete("This route is deprecated and will be removed in the future.")]
+        [Obsolete("This route is deprecated and will be removed in the future. Call GetClanBuilderBaseRankingAsync instead.")]
         Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query? query = default);
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Player versus ranking list</returns>
-        [Obsolete("This route is deprecated and will be removed in the future.")]
+        [Obsolete("This route is deprecated and will be removed in the future. Call GetPlayerBuilderBaseRankingAsync instead.")]
         Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default);
 
         /// <summary>
