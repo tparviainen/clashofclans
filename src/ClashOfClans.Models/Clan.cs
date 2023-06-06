@@ -7,6 +7,7 @@ namespace ClashOfClans.Models
         private Type? _type;
         private int? _clanLevel;
         private int? _clanPoints;
+        private int? _clanBuilderBasePoints;
         private int? _clanVersusPoints;
         private int? _clanCapitalPoints;
         private int? _requiredTrophies;
@@ -15,6 +16,7 @@ namespace ClashOfClans.Models
         private WarFrequency? _warFrequency;
         private int? _warWinStreak;
         private int? _warWins;
+        private int? _requiredBuilderBaseTrophies;
         private bool? _isWarLogPublic;
         private bool? _isFamilyFriendly;
         private int? _members;
@@ -35,6 +37,8 @@ namespace ClashOfClans.Models
         public int ClanLevel { get => _clanLevel ?? default; set => _clanLevel = value; }
 
         public int ClanPoints { get => _clanPoints ?? default; set => _clanPoints = value; }
+
+        public int ClanBuilderBasePoints { get => _clanBuilderBasePoints ?? default; set => _clanBuilderBasePoints = value; }
 
         public int ClanVersusPoints { get => _clanVersusPoints ?? default; set => _clanVersusPoints = value; }
 
@@ -61,6 +65,8 @@ namespace ClashOfClans.Models
         /// Wars won
         /// </summary>
         public int WarWins { get => _warWins ?? default; set => _warWins = value; }
+
+        public int RequiredBuilderBaseTrophies { get => _requiredBuilderBaseTrophies ?? default; set => _requiredBuilderBaseTrophies = value; }
 
         public bool IsFamilyFriendly { get => _isFamilyFriendly ?? default; set => _isFamilyFriendly = value; }
 

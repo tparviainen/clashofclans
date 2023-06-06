@@ -7,6 +7,7 @@
         private int? _rank;
         private int? _previousRank;
         private int? _clanVersusPoints;
+        private int? _clanBuilderBasePoints;
 
         public Location Location { get; set; } = default!;
 
@@ -23,5 +24,7 @@
         public int PreviousRank { get => _previousRank ?? default; set => _previousRank = value; }
 
         public int ClanVersusPoints { get => _clanVersusPoints ?? default; set => _clanVersusPoints = value; }
+
+        public int ClanBuilderBasePoints { get => _clanBuilderBasePoints ?? default; set => _clanBuilderBasePoints = value; }
     }
 }

@@ -14,6 +14,8 @@
         private int? _versusBattleWins;
         private int? _donations;
         private int? _donationsReceived;
+        private int? _builderBaseTrophies;
+        private int? _bestBuilderBaseTrophies;
         private int? _clanCapitalContributions;
         private int? _versusBattleWinCount;
 
@@ -70,6 +72,10 @@
         /// </summary>
         public int DonationsReceived { get => _donationsReceived ?? default; set => _donationsReceived = value; }
 
+        public int BuilderBaseTrophies { get => _builderBaseTrophies ?? default; set => _builderBaseTrophies = value; }
+
+        public int BestBuilderBaseTrophies { get => _bestBuilderBaseTrophies ?? default; set => _bestBuilderBaseTrophies = value; }
+
         /// <summary>
         /// Total capital contribution
         /// </summary>
@@ -97,5 +103,7 @@
         public LabelList Labels { get; set; } = default!;
 
         public PlayerHouse? PlayerHouse { get; set; }
+
+        public BuilderBaseLeague? BuilderBaseLeague { get; set; }
     }
 }

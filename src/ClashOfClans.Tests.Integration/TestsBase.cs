@@ -17,8 +17,6 @@ namespace ClashOfClans.Tests.Integration
         protected static ClanList _clans = default!;
         protected static LeagueList _leagues = default!;
         protected static LocationList _locations = default!;
-        protected static WarLeagueList _warLeagues = default!;
-        protected static CapitalLeagueList _capitalLeagues = default!;
         protected static IConfigurationRoot _config = default!;
         protected static ClashOfClansClient _coc = default!;
 
@@ -51,8 +49,6 @@ namespace ClashOfClans.Tests.Integration
                 _clans = (ClanList)await _coc.Clans.SearchClansAsync(query);
                 _leagues = (LeagueList)await _coc.Leagues.GetLeaguesAsync();
                 _locations = (LocationList)await _coc.Locations.GetLocationsAsync();
-                _warLeagues = (WarLeagueList)await _coc.Leagues.GetWarLeaguesAsync();
-                _capitalLeagues = (CapitalLeagueList)await _coc.Leagues.GetCapitalLeaguesAsync();
             }
             catch (ClashOfClansException ex)
             {
