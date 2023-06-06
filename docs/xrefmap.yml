@@ -567,6 +567,35 @@ references:
   commentId: T:ClashOfClans.ILeagues
   fullName: ClashOfClans.ILeagues
   nameWithType: ILeagues
+- uid: ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync(System.Nullable{System.Int32})
+  name: GetBuilderBaseLeagueAsync(Nullable<Int32>)
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetBuilderBaseLeagueAsync_System_Nullable_System_Int32__
+  commentId: M:ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync(System.Nullable{System.Int32})
+  name.vb: GetBuilderBaseLeagueAsync(Nullable(Of Int32))
+  fullName: ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync(System.Nullable<System.Int32>)
+  fullName.vb: ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync(System.Nullable(Of System.Int32))
+  nameWithType: ILeagues.GetBuilderBaseLeagueAsync(Nullable<Int32>)
+  nameWithType.vb: ILeagues.GetBuilderBaseLeagueAsync(Nullable(Of Int32))
+- uid: ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync*
+  name: GetBuilderBaseLeagueAsync
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetBuilderBaseLeagueAsync_
+  commentId: Overload:ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILeagues.GetBuilderBaseLeagueAsync
+  nameWithType: ILeagues.GetBuilderBaseLeagueAsync
+- uid: ClashOfClans.ILeagues.GetBuilderBaseLeaguesAsync(ClashOfClans.Search.Query)
+  name: GetBuilderBaseLeaguesAsync(Query)
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetBuilderBaseLeaguesAsync_ClashOfClans_Search_Query_
+  commentId: M:ClashOfClans.ILeagues.GetBuilderBaseLeaguesAsync(ClashOfClans.Search.Query)
+  fullName: ClashOfClans.ILeagues.GetBuilderBaseLeaguesAsync(ClashOfClans.Search.Query)
+  nameWithType: ILeagues.GetBuilderBaseLeaguesAsync(Query)
+- uid: ClashOfClans.ILeagues.GetBuilderBaseLeaguesAsync*
+  name: GetBuilderBaseLeaguesAsync
+  href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetBuilderBaseLeaguesAsync_
+  commentId: Overload:ClashOfClans.ILeagues.GetBuilderBaseLeaguesAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILeagues.GetBuilderBaseLeaguesAsync
+  nameWithType: ILeagues.GetBuilderBaseLeaguesAsync
 - uid: ClashOfClans.ILeagues.GetCapitalLeagueAsync(System.Nullable{System.Int32})
   name: GetCapitalLeagueAsync(Nullable<Int32>)
   href: api/ClashOfClans.ILeagues.html#ClashOfClans_ILeagues_GetCapitalLeagueAsync_System_Nullable_System_Int32__
@@ -692,6 +721,22 @@ references:
   commentId: T:ClashOfClans.ILocations
   fullName: ClashOfClans.ILocations
   nameWithType: ILocations
+- uid: ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
+  name: GetClanBuilderBaseRankingAsync(Nullable<Int32>, Query)
+  href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetClanBuilderBaseRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_
+  commentId: M:ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
+  name.vb: GetClanBuilderBaseRankingAsync(Nullable(Of Int32), Query)
+  fullName: ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync(System.Nullable<System.Int32>, ClashOfClans.Search.Query)
+  fullName.vb: ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync(System.Nullable(Of System.Int32), ClashOfClans.Search.Query)
+  nameWithType: ILocations.GetClanBuilderBaseRankingAsync(Nullable<Int32>, Query)
+  nameWithType.vb: ILocations.GetClanBuilderBaseRankingAsync(Nullable(Of Int32), Query)
+- uid: ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync*
+  name: GetClanBuilderBaseRankingAsync
+  href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetClanBuilderBaseRankingAsync_
+  commentId: Overload:ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILocations.GetClanBuilderBaseRankingAsync
+  nameWithType: ILocations.GetClanBuilderBaseRankingAsync
 - uid: ClashOfClans.ILocations.GetClanCapitalRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
   name: GetClanCapitalRankingAsync(Nullable<Int32>, Query)
   href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetClanCapitalRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_
@@ -769,6 +814,22 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.ILocations.GetLocationsAsync
   nameWithType: ILocations.GetLocationsAsync
+- uid: ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
+  name: GetPlayerBuilderBaseRankingAsync(Nullable<Int32>, Query)
+  href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetPlayerBuilderBaseRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_
+  commentId: M:ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
+  name.vb: GetPlayerBuilderBaseRankingAsync(Nullable(Of Int32), Query)
+  fullName: ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync(System.Nullable<System.Int32>, ClashOfClans.Search.Query)
+  fullName.vb: ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync(System.Nullable(Of System.Int32), ClashOfClans.Search.Query)
+  nameWithType: ILocations.GetPlayerBuilderBaseRankingAsync(Nullable<Int32>, Query)
+  nameWithType.vb: ILocations.GetPlayerBuilderBaseRankingAsync(Nullable(Of Int32), Query)
+- uid: ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync*
+  name: GetPlayerBuilderBaseRankingAsync
+  href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetPlayerBuilderBaseRankingAsync_
+  commentId: Overload:ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync
+  isSpec: "True"
+  fullName: ClashOfClans.ILocations.GetPlayerBuilderBaseRankingAsync
+  nameWithType: ILocations.GetPlayerBuilderBaseRankingAsync
 - uid: ClashOfClans.ILocations.GetPlayerRankingAsync(System.Nullable{System.Int32},ClashOfClans.Search.Query)
   name: GetPlayerRankingAsync(Nullable<Int32>, Query)
   href: api/ClashOfClans.ILocations.html#ClashOfClans_ILocations_GetPlayerRankingAsync_System_Nullable_System_Int32__ClashOfClans_Search_Query_
@@ -839,6 +900,44 @@ references:
   commentId: N:ClashOfClans.Models
   fullName: ClashOfClans.Models
   nameWithType: ClashOfClans.Models
+- uid: ClashOfClans.Models.BuilderBaseLeague
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.BuilderBaseLeague.html
+  commentId: T:ClashOfClans.Models.BuilderBaseLeague
+  fullName: ClashOfClans.Models.BuilderBaseLeague
+  nameWithType: BuilderBaseLeague
+- uid: ClashOfClans.Models.BuilderBaseLeague.Id
+  name: Id
+  href: api/ClashOfClans.Models.BuilderBaseLeague.html#ClashOfClans_Models_BuilderBaseLeague_Id
+  commentId: P:ClashOfClans.Models.BuilderBaseLeague.Id
+  fullName: ClashOfClans.Models.BuilderBaseLeague.Id
+  nameWithType: BuilderBaseLeague.Id
+- uid: ClashOfClans.Models.BuilderBaseLeague.Id*
+  name: Id
+  href: api/ClashOfClans.Models.BuilderBaseLeague.html#ClashOfClans_Models_BuilderBaseLeague_Id_
+  commentId: Overload:ClashOfClans.Models.BuilderBaseLeague.Id
+  isSpec: "True"
+  fullName: ClashOfClans.Models.BuilderBaseLeague.Id
+  nameWithType: BuilderBaseLeague.Id
+- uid: ClashOfClans.Models.BuilderBaseLeague.Name
+  name: Name
+  href: api/ClashOfClans.Models.BuilderBaseLeague.html#ClashOfClans_Models_BuilderBaseLeague_Name
+  commentId: P:ClashOfClans.Models.BuilderBaseLeague.Name
+  fullName: ClashOfClans.Models.BuilderBaseLeague.Name
+  nameWithType: BuilderBaseLeague.Name
+- uid: ClashOfClans.Models.BuilderBaseLeague.Name*
+  name: Name
+  href: api/ClashOfClans.Models.BuilderBaseLeague.html#ClashOfClans_Models_BuilderBaseLeague_Name_
+  commentId: Overload:ClashOfClans.Models.BuilderBaseLeague.Name
+  isSpec: "True"
+  fullName: ClashOfClans.Models.BuilderBaseLeague.Name
+  nameWithType: BuilderBaseLeague.Name
+- uid: ClashOfClans.Models.BuilderBaseLeagueList
+  name: BuilderBaseLeagueList
+  href: api/ClashOfClans.Models.BuilderBaseLeagueList.html
+  commentId: T:ClashOfClans.Models.BuilderBaseLeagueList
+  fullName: ClashOfClans.Models.BuilderBaseLeagueList
+  nameWithType: BuilderBaseLeagueList
 - uid: ClashOfClans.Models.CapitalLeague
   name: CapitalLeague
   href: api/ClashOfClans.Models.CapitalLeague.html
@@ -922,6 +1021,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.ChatLanguage
   nameWithType: Clan.ChatLanguage
+- uid: ClashOfClans.Models.Clan.ClanBuilderBasePoints
+  name: ClanBuilderBasePoints
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanBuilderBasePoints
+  commentId: P:ClashOfClans.Models.Clan.ClanBuilderBasePoints
+  fullName: ClashOfClans.Models.Clan.ClanBuilderBasePoints
+  nameWithType: Clan.ClanBuilderBasePoints
+- uid: ClashOfClans.Models.Clan.ClanBuilderBasePoints*
+  name: ClanBuilderBasePoints
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanBuilderBasePoints_
+  commentId: Overload:ClashOfClans.Models.Clan.ClanBuilderBasePoints
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.ClanBuilderBasePoints
+  nameWithType: Clan.ClanBuilderBasePoints
 - uid: ClashOfClans.Models.Clan.ClanCapital
   name: ClanCapital
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanCapital
@@ -1078,6 +1190,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.Members
   nameWithType: Clan.Members
+- uid: ClashOfClans.Models.Clan.RequiredBuilderBaseTrophies
+  name: RequiredBuilderBaseTrophies
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredBuilderBaseTrophies
+  commentId: P:ClashOfClans.Models.Clan.RequiredBuilderBaseTrophies
+  fullName: ClashOfClans.Models.Clan.RequiredBuilderBaseTrophies
+  nameWithType: Clan.RequiredBuilderBaseTrophies
+- uid: ClashOfClans.Models.Clan.RequiredBuilderBaseTrophies*
+  name: RequiredBuilderBaseTrophies
+  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredBuilderBaseTrophies_
+  commentId: Overload:ClashOfClans.Models.Clan.RequiredBuilderBaseTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Clan.RequiredBuilderBaseTrophies
+  nameWithType: Clan.RequiredBuilderBaseTrophies
 - uid: ClashOfClans.Models.Clan.RequiredTownhallLevel
   name: RequiredTownhallLevel
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredTownhallLevel
@@ -1208,6 +1333,122 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.WarWinStreak
   nameWithType: Clan.WarWinStreak
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking
+  name: ClanBuilderBaseRanking
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html
+  commentId: T:ClashOfClans.Models.ClanBuilderBaseRanking
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking
+  nameWithType: ClanBuilderBaseRanking
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.BadgeUrls
+  name: BadgeUrls
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_BadgeUrls
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.BadgeUrls
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.BadgeUrls
+  nameWithType: ClanBuilderBaseRanking.BadgeUrls
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.BadgeUrls*
+  name: BadgeUrls
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_BadgeUrls_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.BadgeUrls
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.BadgeUrls
+  nameWithType: ClanBuilderBaseRanking.BadgeUrls
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanBuilderBasePoints
+  name: ClanBuilderBasePoints
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanBuilderBasePoints
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.ClanBuilderBasePoints
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanBuilderBasePoints
+  nameWithType: ClanBuilderBaseRanking.ClanBuilderBasePoints
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanBuilderBasePoints*
+  name: ClanBuilderBasePoints
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanBuilderBasePoints_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.ClanBuilderBasePoints
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanBuilderBasePoints
+  nameWithType: ClanBuilderBaseRanking.ClanBuilderBasePoints
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel
+  name: ClanLevel
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanLevel
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel
+  nameWithType: ClanBuilderBaseRanking.ClanLevel
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel*
+  name: ClanLevel
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanLevel_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel
+  nameWithType: ClanBuilderBaseRanking.ClanLevel
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
+  name: ClanVersusPoints
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanVersusPoints
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
+  nameWithType: ClanBuilderBaseRanking.ClanVersusPoints
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints*
+  name: ClanVersusPoints
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanVersusPoints_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
+  nameWithType: ClanBuilderBaseRanking.ClanVersusPoints
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.Location
+  name: Location
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Location
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.Location
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.Location
+  nameWithType: ClanBuilderBaseRanking.Location
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.Location*
+  name: Location
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Location_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.Location
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.Location
+  nameWithType: ClanBuilderBaseRanking.Location
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.Members
+  name: Members
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Members
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.Members
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.Members
+  nameWithType: ClanBuilderBaseRanking.Members
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.Members*
+  name: Members
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Members_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.Members
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.Members
+  nameWithType: ClanBuilderBaseRanking.Members
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.PreviousRank
+  name: PreviousRank
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_PreviousRank
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.PreviousRank
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.PreviousRank
+  nameWithType: ClanBuilderBaseRanking.PreviousRank
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.PreviousRank*
+  name: PreviousRank
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_PreviousRank_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.PreviousRank
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.PreviousRank
+  nameWithType: ClanBuilderBaseRanking.PreviousRank
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.Rank
+  name: Rank
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Rank
+  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.Rank
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.Rank
+  nameWithType: ClanBuilderBaseRanking.Rank
+- uid: ClashOfClans.Models.ClanBuilderBaseRanking.Rank*
+  name: Rank
+  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Rank_
+  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.Rank
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.Rank
+  nameWithType: ClanBuilderBaseRanking.Rank
+- uid: ClashOfClans.Models.ClanBuilderBaseRankingList
+  name: ClanBuilderBaseRankingList
+  href: api/ClashOfClans.Models.ClanBuilderBaseRankingList.html
+  commentId: T:ClashOfClans.Models.ClanBuilderBaseRankingList
+  fullName: ClashOfClans.Models.ClanBuilderBaseRankingList
+  nameWithType: ClanBuilderBaseRankingList
 - uid: ClashOfClans.Models.ClanCapital
   name: ClanCapital
   href: api/ClashOfClans.Models.ClanCapital.html
@@ -2093,6 +2334,32 @@ references:
   commentId: T:ClashOfClans.Models.ClanMember
   fullName: ClashOfClans.Models.ClanMember
   nameWithType: ClanMember
+- uid: ClashOfClans.Models.ClanMember.BuilderBaseLeague
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_BuilderBaseLeague
+  commentId: P:ClashOfClans.Models.ClanMember.BuilderBaseLeague
+  fullName: ClashOfClans.Models.ClanMember.BuilderBaseLeague
+  nameWithType: ClanMember.BuilderBaseLeague
+- uid: ClashOfClans.Models.ClanMember.BuilderBaseLeague*
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_BuilderBaseLeague_
+  commentId: Overload:ClashOfClans.Models.ClanMember.BuilderBaseLeague
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanMember.BuilderBaseLeague
+  nameWithType: ClanMember.BuilderBaseLeague
+- uid: ClashOfClans.Models.ClanMember.BuilderBaseTrophies
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_BuilderBaseTrophies
+  commentId: P:ClashOfClans.Models.ClanMember.BuilderBaseTrophies
+  fullName: ClashOfClans.Models.ClanMember.BuilderBaseTrophies
+  nameWithType: ClanMember.BuilderBaseTrophies
+- uid: ClashOfClans.Models.ClanMember.BuilderBaseTrophies*
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_BuilderBaseTrophies_
+  commentId: Overload:ClashOfClans.Models.ClanMember.BuilderBaseTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanMember.BuilderBaseTrophies
+  nameWithType: ClanMember.BuilderBaseTrophies
 - uid: ClashOfClans.Models.ClanMember.ClanRank
   name: ClanRank
   href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_ClanRank
@@ -2351,6 +2618,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanVersusRanking.BadgeUrls
   nameWithType: ClanVersusRanking.BadgeUrls
+- uid: ClashOfClans.Models.ClanVersusRanking.ClanBuilderBasePoints
+  name: ClanBuilderBasePoints
+  href: api/ClashOfClans.Models.ClanVersusRanking.html#ClashOfClans_Models_ClanVersusRanking_ClanBuilderBasePoints
+  commentId: P:ClashOfClans.Models.ClanVersusRanking.ClanBuilderBasePoints
+  fullName: ClashOfClans.Models.ClanVersusRanking.ClanBuilderBasePoints
+  nameWithType: ClanVersusRanking.ClanBuilderBasePoints
+- uid: ClashOfClans.Models.ClanVersusRanking.ClanBuilderBasePoints*
+  name: ClanBuilderBasePoints
+  href: api/ClashOfClans.Models.ClanVersusRanking.html#ClashOfClans_Models_ClanVersusRanking_ClanBuilderBasePoints_
+  commentId: Overload:ClashOfClans.Models.ClanVersusRanking.ClanBuilderBasePoints
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanVersusRanking.ClanBuilderBasePoints
+  nameWithType: ClanVersusRanking.ClanBuilderBasePoints
 - uid: ClashOfClans.Models.ClanVersusRanking.ClanLevel
   name: ClanLevel
   href: api/ClashOfClans.Models.ClanVersusRanking.html#ClashOfClans_Models_ClanVersusRanking_ClanLevel
@@ -3530,6 +3810,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.AttackWins
   nameWithType: Player.AttackWins
+- uid: ClashOfClans.Models.Player.BestBuilderBaseTrophies
+  name: BestBuilderBaseTrophies
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BestBuilderBaseTrophies
+  commentId: P:ClashOfClans.Models.Player.BestBuilderBaseTrophies
+  fullName: ClashOfClans.Models.Player.BestBuilderBaseTrophies
+  nameWithType: Player.BestBuilderBaseTrophies
+- uid: ClashOfClans.Models.Player.BestBuilderBaseTrophies*
+  name: BestBuilderBaseTrophies
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BestBuilderBaseTrophies_
+  commentId: Overload:ClashOfClans.Models.Player.BestBuilderBaseTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.BestBuilderBaseTrophies
+  nameWithType: Player.BestBuilderBaseTrophies
 - uid: ClashOfClans.Models.Player.BestTrophies
   name: BestTrophies
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BestTrophies
@@ -3556,6 +3849,32 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.BestVersusTrophies
   nameWithType: Player.BestVersusTrophies
+- uid: ClashOfClans.Models.Player.BuilderBaseLeague
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BuilderBaseLeague
+  commentId: P:ClashOfClans.Models.Player.BuilderBaseLeague
+  fullName: ClashOfClans.Models.Player.BuilderBaseLeague
+  nameWithType: Player.BuilderBaseLeague
+- uid: ClashOfClans.Models.Player.BuilderBaseLeague*
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BuilderBaseLeague_
+  commentId: Overload:ClashOfClans.Models.Player.BuilderBaseLeague
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.BuilderBaseLeague
+  nameWithType: Player.BuilderBaseLeague
+- uid: ClashOfClans.Models.Player.BuilderBaseTrophies
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BuilderBaseTrophies
+  commentId: P:ClashOfClans.Models.Player.BuilderBaseTrophies
+  fullName: ClashOfClans.Models.Player.BuilderBaseTrophies
+  nameWithType: Player.BuilderBaseTrophies
+- uid: ClashOfClans.Models.Player.BuilderBaseTrophies*
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BuilderBaseTrophies_
+  commentId: Overload:ClashOfClans.Models.Player.BuilderBaseTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.BuilderBaseTrophies
+  nameWithType: Player.BuilderBaseTrophies
 - uid: ClashOfClans.Models.Player.BuilderHallLevel
   name: BuilderHallLevel
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BuilderHallLevel
@@ -3958,6 +4277,122 @@ references:
   commentId: T:ClashOfClans.Models.PlayerAchievementProgressList
   fullName: ClashOfClans.Models.PlayerAchievementProgressList
   nameWithType: PlayerAchievementProgressList
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking
+  name: PlayerBuilderBaseRanking
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html
+  commentId: T:ClashOfClans.Models.PlayerBuilderBaseRanking
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking
+  nameWithType: PlayerBuilderBaseRanking
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseLeague
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_BuilderBaseLeague
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseLeague
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseLeague
+  nameWithType: PlayerBuilderBaseRanking.BuilderBaseLeague
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseLeague*
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_BuilderBaseLeague_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseLeague
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseLeague
+  nameWithType: PlayerBuilderBaseRanking.BuilderBaseLeague
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseTrophies
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_BuilderBaseTrophies
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseTrophies
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseTrophies
+  nameWithType: PlayerBuilderBaseRanking.BuilderBaseTrophies
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseTrophies*
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_BuilderBaseTrophies_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.BuilderBaseTrophies
+  nameWithType: PlayerBuilderBaseRanking.BuilderBaseTrophies
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.Clan
+  name: Clan
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_Clan
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.Clan
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.Clan
+  nameWithType: PlayerBuilderBaseRanking.Clan
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.Clan*
+  name: Clan
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_Clan_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.Clan
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.Clan
+  nameWithType: PlayerBuilderBaseRanking.Clan
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.ExpLevel
+  name: ExpLevel
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_ExpLevel
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.ExpLevel
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.ExpLevel
+  nameWithType: PlayerBuilderBaseRanking.ExpLevel
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.ExpLevel*
+  name: ExpLevel
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_ExpLevel_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.ExpLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.ExpLevel
+  nameWithType: PlayerBuilderBaseRanking.ExpLevel
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.PreviousRank
+  name: PreviousRank
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_PreviousRank
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.PreviousRank
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.PreviousRank
+  nameWithType: PlayerBuilderBaseRanking.PreviousRank
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.PreviousRank*
+  name: PreviousRank
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_PreviousRank_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.PreviousRank
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.PreviousRank
+  nameWithType: PlayerBuilderBaseRanking.PreviousRank
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.Rank
+  name: Rank
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_Rank
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.Rank
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.Rank
+  nameWithType: PlayerBuilderBaseRanking.Rank
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.Rank*
+  name: Rank
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_Rank_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.Rank
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.Rank
+  nameWithType: PlayerBuilderBaseRanking.Rank
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
+  name: VersusBattleWins
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusBattleWins
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
+  nameWithType: PlayerBuilderBaseRanking.VersusBattleWins
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins*
+  name: VersusBattleWins
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusBattleWins_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
+  nameWithType: PlayerBuilderBaseRanking.VersusBattleWins
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
+  name: VersusTrophies
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusTrophies
+  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
+  nameWithType: PlayerBuilderBaseRanking.VersusTrophies
+- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies*
+  name: VersusTrophies
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusTrophies_
+  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
+  nameWithType: PlayerBuilderBaseRanking.VersusTrophies
+- uid: ClashOfClans.Models.PlayerBuilderBaseRankingList
+  name: PlayerBuilderBaseRankingList
+  href: api/ClashOfClans.Models.PlayerBuilderBaseRankingList.html
+  commentId: T:ClashOfClans.Models.PlayerBuilderBaseRankingList
+  fullName: ClashOfClans.Models.PlayerBuilderBaseRankingList
+  nameWithType: PlayerBuilderBaseRankingList
 - uid: ClashOfClans.Models.PlayerClan
   name: PlayerClan
   href: api/ClashOfClans.Models.PlayerClan.html
@@ -4160,6 +4595,19 @@ references:
   commentId: T:ClashOfClans.Models.PlayerLegendStatistics
   fullName: ClashOfClans.Models.PlayerLegendStatistics
   nameWithType: PlayerLegendStatistics
+- uid: ClashOfClans.Models.PlayerLegendStatistics.BestBuilderBaseSeason
+  name: BestBuilderBaseSeason
+  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_BestBuilderBaseSeason
+  commentId: P:ClashOfClans.Models.PlayerLegendStatistics.BestBuilderBaseSeason
+  fullName: ClashOfClans.Models.PlayerLegendStatistics.BestBuilderBaseSeason
+  nameWithType: PlayerLegendStatistics.BestBuilderBaseSeason
+- uid: ClashOfClans.Models.PlayerLegendStatistics.BestBuilderBaseSeason*
+  name: BestBuilderBaseSeason
+  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_BestBuilderBaseSeason_
+  commentId: Overload:ClashOfClans.Models.PlayerLegendStatistics.BestBuilderBaseSeason
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerLegendStatistics.BestBuilderBaseSeason
+  nameWithType: PlayerLegendStatistics.BestBuilderBaseSeason
 - uid: ClashOfClans.Models.PlayerLegendStatistics.BestSeason
   name: BestSeason
   href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_BestSeason
@@ -4212,6 +4660,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.PlayerLegendStatistics.LegendTrophies
   nameWithType: PlayerLegendStatistics.LegendTrophies
+- uid: ClashOfClans.Models.PlayerLegendStatistics.PreviousBuilderBaseSeason
+  name: PreviousBuilderBaseSeason
+  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_PreviousBuilderBaseSeason
+  commentId: P:ClashOfClans.Models.PlayerLegendStatistics.PreviousBuilderBaseSeason
+  fullName: ClashOfClans.Models.PlayerLegendStatistics.PreviousBuilderBaseSeason
+  nameWithType: PlayerLegendStatistics.PreviousBuilderBaseSeason
+- uid: ClashOfClans.Models.PlayerLegendStatistics.PreviousBuilderBaseSeason*
+  name: PreviousBuilderBaseSeason
+  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_PreviousBuilderBaseSeason_
+  commentId: Overload:ClashOfClans.Models.PlayerLegendStatistics.PreviousBuilderBaseSeason
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerLegendStatistics.PreviousBuilderBaseSeason
+  nameWithType: PlayerLegendStatistics.PreviousBuilderBaseSeason
 - uid: ClashOfClans.Models.PlayerLegendStatistics.PreviousSeason
   name: PreviousSeason
   href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_PreviousSeason
@@ -4379,6 +4840,32 @@ references:
   commentId: T:ClashOfClans.Models.PlayerVersusRanking
   fullName: ClashOfClans.Models.PlayerVersusRanking
   nameWithType: PlayerVersusRanking
+- uid: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseLeague
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.PlayerVersusRanking.html#ClashOfClans_Models_PlayerVersusRanking_BuilderBaseLeague
+  commentId: P:ClashOfClans.Models.PlayerVersusRanking.BuilderBaseLeague
+  fullName: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseLeague
+  nameWithType: PlayerVersusRanking.BuilderBaseLeague
+- uid: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseLeague*
+  name: BuilderBaseLeague
+  href: api/ClashOfClans.Models.PlayerVersusRanking.html#ClashOfClans_Models_PlayerVersusRanking_BuilderBaseLeague_
+  commentId: Overload:ClashOfClans.Models.PlayerVersusRanking.BuilderBaseLeague
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseLeague
+  nameWithType: PlayerVersusRanking.BuilderBaseLeague
+- uid: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseTrophies
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.PlayerVersusRanking.html#ClashOfClans_Models_PlayerVersusRanking_BuilderBaseTrophies
+  commentId: P:ClashOfClans.Models.PlayerVersusRanking.BuilderBaseTrophies
+  fullName: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseTrophies
+  nameWithType: PlayerVersusRanking.BuilderBaseTrophies
+- uid: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseTrophies*
+  name: BuilderBaseTrophies
+  href: api/ClashOfClans.Models.PlayerVersusRanking.html#ClashOfClans_Models_PlayerVersusRanking_BuilderBaseTrophies_
+  commentId: Overload:ClashOfClans.Models.PlayerVersusRanking.BuilderBaseTrophies
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerVersusRanking.BuilderBaseTrophies
+  nameWithType: PlayerVersusRanking.BuilderBaseTrophies
 - uid: ClashOfClans.Models.PlayerVersusRanking.Clan
   name: Clan
   href: api/ClashOfClans.Models.PlayerVersusRanking.html#ClashOfClans_Models_PlayerVersusRanking_Clan
