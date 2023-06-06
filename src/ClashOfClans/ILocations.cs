@@ -1,6 +1,7 @@
 ﻿using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System.Threading.Tasks;
+using System;
 
 namespace ClashOfClans
 {
@@ -55,6 +56,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Clan ranking list</returns>
+        [Obsolete("This route is deprecated and will be removed in the future.")]
         Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query? query = default);
 
         /// <summary>
@@ -65,6 +67,7 @@ namespace ClashOfClans
         /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
         /// <exception cref="System.ArgumentException">Argument is invalid</exception>
         /// <returns>Player versus ranking list</returns>
+        [Obsolete("This route is deprecated and will be removed in the future.")]
         Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default);
 
         /// <summary>
