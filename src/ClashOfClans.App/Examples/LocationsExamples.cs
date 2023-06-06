@@ -84,35 +84,35 @@ namespace ClashOfClans.App.Examples
         }
 
         /// <summary>
-        /// Get clan versus rankings for a specific location
+        /// Get clan Builder Base rankings for a specific location
         /// </summary>
-        public async Task GetClanVersusRankingsForASpecificLocation()
+        public async Task GetClanBuilderBaseRankingsForASpecificLocation()
         {
             var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
-            Console.WriteLine($"Clan versus rankings for {location!.Name}");
-            var clanVersusRankings = (ClanVersusRankingList)await coc.Locations.GetClanVersusRankingAsync(location.Id);
+            Console.WriteLine($"Clan builder base rankings for {location!.Name}");
+            var clanBuilderBaseRankings = (ClanBuilderBaseRankingList)await coc.Locations.GetClanBuilderBaseRankingAsync(location.Id);
 
-            foreach (var clan in clanVersusRankings)
+            foreach (var clan in clanBuilderBaseRankings)
             {
                 Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}, {clan.ClanVersusPoints} \uD83C\uDFC6");
             }
         }
 
         /// <summary>
-        /// Get player versus rankings for a specific location
+        /// Get player Builder Base rankings for a specific location
         /// </summary>
-        public async Task GetPlayerVersusRankingsForASpecificLocation()
+        public async Task GetPlayerBuilderBaseRankingsForASpecificLocation()
         {
             var coc = new ClashOfClansClient(token);
             var locations = (LocationList)await coc.Locations.GetLocationsAsync();
             var location = locations["Finland"];
 
-            var playerVersusRankings = (PlayerVersusRankingList)await coc.Locations.GetPlayerVersusRankingAsync(location!.Id);
+            var playerBuilderBaseRankings = (PlayerBuilderBaseRankingList)await coc.Locations.GetPlayerBuilderBaseRankingAsync(location!.Id);
 
-            foreach (var player in playerVersusRankings)
+            foreach (var player in playerBuilderBaseRankings)
             {
                 Console.WriteLine($"Rank {player.Rank}, {player.VersusTrophies} \uD83C\uDFC6, player {player.Name}");
             }

@@ -139,5 +139,33 @@ namespace ClashOfClans.App.Examples
 
             Console.WriteLine($"Id: {capitalLeague.Id} = {capitalLeague.Name}");
         }
+
+        /// <summary>
+        /// Get Builder Base league information
+        /// </summary>
+        public async Task GetBuilderBaseLeagueInformation()
+        {
+            var builderBaseLeagueId = 44000010; // Stone League V
+            var coc = new ClashOfClansClient(token);
+            var builderBaseLeague = await coc.Leagues.GetBuilderBaseLeagueAsync(builderBaseLeagueId);
+
+            Console.WriteLine($"Id: {builderBaseLeague.Id} = {builderBaseLeague.Name}");
+        }
+
+        /// <summary>
+        /// List Builder Base leagues
+        /// </summary>
+        public async Task ListBuilderBaseLeagues()
+        {
+            var coc = new ClashOfClansClient(token);
+            var builderBaseLeagues = (BuilderBaseLeagueList)await coc.Leagues.GetBuilderBaseLeaguesAsync();
+
+            Console.WriteLine($"Total amount of builder base leagues: {builderBaseLeagues.Count}");
+
+            foreach (var builderBaseLeague in builderBaseLeagues)
+            {
+                Console.WriteLine($"Id: {builderBaseLeague.Id}, Name: {builderBaseLeague.Name}");
+            }
+        }
     }
 }

@@ -21,12 +21,12 @@ namespace ClashOfClans.App
             {
                 // Access clan specific information
                 var clansExamples = new ClansExamples(token, clanTag);
+                await clansExamples.RetrieveInformationAboutClansCurrentClanWarLeagueGroup();
+                await clansExamples.RetrieveClansClanWarLog();
                 await clansExamples.SearchClans();
+                await clansExamples.RetrieveInformationAboutClansCurrentClanWar();
                 await clansExamples.GetClanInformation();
                 await clansExamples.ListClanMembers();
-                await clansExamples.RetrieveClansClanWarLog();
-                await clansExamples.RetrieveInformationAboutClansCurrentClanWar();
-                await clansExamples.RetrieveInformationAboutClansCurrentClanWarLeagueGroup();
                 await clansExamples.RetrieveClansCapitalRaidSeasons();
 
                 // Access player specific information
@@ -36,24 +36,26 @@ namespace ClashOfClans.App
 
                 // Access league information
                 var leaguesExamples = new LeaguesExamples(token);
+                await leaguesExamples.ListCapitalLeagues();
                 await leaguesExamples.ListLeagues();
+                await leaguesExamples.GetLeagueSeasonRankings();
+                await leaguesExamples.GetCapitalLeagueInformation();
+                await leaguesExamples.GetBuilderBaseLeagueInformation();
+                await leaguesExamples.ListBuilderBaseLeagues();
                 await leaguesExamples.GetLeagueInformation();
                 await leaguesExamples.GetLeagueSeasons();
-                await leaguesExamples.GetLeagueSeasonRankings();
-                await leaguesExamples.ListWarLeagues();
                 await leaguesExamples.GetWarLeagueInformation();
-                await leaguesExamples.ListCapitalLeagues();
-                await leaguesExamples.GetCapitalLeagueInformation();
+                await leaguesExamples.ListWarLeagues();
 
                 // Access global and local rankings
                 var locationsExamples = new LocationsExamples(token);
-                await locationsExamples.ListLocations();
-                await locationsExamples.GetLocationInformation();
                 await locationsExamples.GetClanRankingsForASpecificLocation();
                 await locationsExamples.GetPlayerRankingsForASpecificLocation();
-                await locationsExamples.GetClanVersusRankingsForASpecificLocation();
-                await locationsExamples.GetPlayerVersusRankingsForASpecificLocation();
+                await locationsExamples.GetPlayerBuilderBaseRankingsForASpecificLocation();
+                await locationsExamples.GetClanBuilderBaseRankingsForASpecificLocation();
+                await locationsExamples.ListLocations();
                 await locationsExamples.GetCapitalRankingsForASpecificLocation();
+                await locationsExamples.GetLocationInformation();
 
                 // Access information about gold pass
                 var goldPassExamples = new GoldPassExamples(token);
@@ -61,8 +63,8 @@ namespace ClashOfClans.App
 
                 // Access labels
                 var labelsExamples = new LabelsExamples(token);
-                await labelsExamples.ListClanLabels();
                 await labelsExamples.ListPlayerLabels();
+                await labelsExamples.ListClanLabels();
             }
             catch (ClashOfClansException ex)
             {
