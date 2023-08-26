@@ -5216,6 +5216,12 @@ references:
   commentId: F:ClashOfClans.Models.Village.BuilderBase
   fullName: ClashOfClans.Models.Village.BuilderBase
   nameWithType: Village.BuilderBase
+- uid: ClashOfClans.Models.Village.ClanCapital
+  name: ClanCapital
+  href: api/ClashOfClans.Models.Village.html#ClashOfClans_Models_Village_ClanCapital
+  commentId: F:ClashOfClans.Models.Village.ClanCapital
+  fullName: ClashOfClans.Models.Village.ClanCapital
+  nameWithType: Village.ClanCapital
 - uid: ClashOfClans.Models.Village.Home
   name: Home
   href: api/ClashOfClans.Models.Village.html#ClashOfClans_Models_Village_Home
