@@ -3,6 +3,7 @@
     public enum Village
     {
         Home,
-        BuilderBase
+        BuilderBase,
+        ClanCapital
     }
 }
