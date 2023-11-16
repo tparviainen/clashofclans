@@ -2,9 +2,9 @@
 
 $version = Get-PackageVersion
 $packageId = "ClashOfClans"
-$basePath = "..\src\ClashOfClans\"
-$project = $basePath + $packageId + ".csproj"
-$nuspec = $basePath + $packageId + ".nuspec"
+$basePath = Join-Path ".." "src" "ClashOfClans"
+$project = Join-Path $basePath "$packageId.csproj"
+$nuspec = Join-Path $basePath "$packageId.nuspec"
 $nupkg = "$packageId.$version.nupkg"
 $configuration = "Release"
 $commit = Get-CommitHash
