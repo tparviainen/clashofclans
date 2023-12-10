@@ -6,6 +6,7 @@ namespace ClashOfClans.Models
     {
         private Role? _role;
         private int? _expLevel;
+        private int? _townHallLevel;
         private int? _trophies;
         private int? _builderBaseTrophies;
         private int? _versusTrophies;
@@ -15,6 +16,8 @@ namespace ClashOfClans.Models
         private int? _donationsReceived;
 
         public Role Role { get => _role ?? default; set => _role = value; }
+
+        public int TownHallLevel { get => _townHallLevel ?? default; set => _townHallLevel = value; }
 
         public int ExpLevel { get => _expLevel ?? default; set => _expLevel = value; }
 
