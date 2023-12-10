@@ -4,168 +4,167 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.App.Examples
+namespace ClashOfClans.App.Examples;
+
+public class LeaguesExamples
 {
-    public class LeaguesExamples
+    private readonly string _token;
+
+    public LeaguesExamples(string token)
     {
-        private readonly string token;
+        _token = token;
+    }
 
-        public LeaguesExamples(string token)
+    /// <summary>
+    /// List leagues
+    /// </summary>
+    public async Task ListLeagues()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
+
+        Console.WriteLine($"Total amount of leagues: {leagues.Count}");
+
+        foreach (var league in leagues)
         {
-            this.token = token;
+            Console.WriteLine($"Id: {league.Id}, Name: {league.Name}");
         }
+    }
 
-        /// <summary>
-        /// List leagues
-        /// </summary>
-        public async Task ListLeagues()
+    /// <summary>
+    /// Get league information
+    /// </summary>
+    public async Task GetLeagueInformation()
+    {
+        var leagueId = 29000022; // Legend League identifier
+        var coc = new ClashOfClansClient(_token);
+        var league = await coc.Leagues.GetLeagueAsync(leagueId);
+
+        Console.WriteLine($"Id: {league.Id} = {league.Name}");
+    }
+
+    /// <summary>
+    /// Get league seasons. Note that league season information is available only for Legend League.
+    /// </summary>
+    public async Task GetLeagueSeasons()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
+        var legendLeague = leagues["Legend League"];
+        var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague!.Id);
+
+        Console.WriteLine($"Total amount of '{legendLeague.Name}' seasons: {leagueSeasons.Count}");
+
+        foreach (var season in leagueSeasons)
         {
-            var coc = new ClashOfClansClient(token);
-            var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
-
-            Console.WriteLine($"Total amount of leagues: {leagues.Count}");
-
-            foreach (var league in leagues)
-            {
-                Console.WriteLine($"Id: {league.Id}, Name: {league.Name}");
-            }
+            Console.WriteLine($"{season.Id}");
         }
+    }
 
-        /// <summary>
-        /// Get league information
-        /// </summary>
-        public async Task GetLeagueInformation()
+    /// <summary>
+    /// Get league season rankings. Note that league season information is available only for Legend League.
+    /// </summary>
+    public async Task GetLeagueSeasonRankings()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
+        var legendLeague = leagues["Legend League"];
+        var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague!.Id);
+        var lastSeason = leagueSeasons.Last();
+        var query = new Query
         {
-            var leagueId = 29000022; // Legend League identifier
-            var coc = new ClashOfClansClient(token);
-            var league = await coc.Leagues.GetLeagueAsync(leagueId);
+            Limit = 100
+        };
 
-            Console.WriteLine($"Id: {league.Id} = {league.Name}");
+        var playerRankings = (PlayerRankingList)await coc.Leagues.GetLeagueSeasonRankingsAsync(legendLeague.Id, lastSeason.Id, query);
+
+        foreach (var player in playerRankings)
+        {
+            Console.WriteLine($"{player.Rank}. {player.Name}, {player.Trophies} \uD83C\uDFC6, attacks won {player.AttackWins}, defenses won {player.DefenseWins}");
         }
+    }
 
-        /// <summary>
-        /// Get league seasons. Note that league season information is available only for Legend League.
-        /// </summary>
-        public async Task GetLeagueSeasons()
+    /// <summary>
+    /// List war leagues
+    /// </summary>
+    public async Task ListWarLeagues()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var warLeagues = (WarLeagueList)await coc.Leagues.GetWarLeaguesAsync();
+
+        Console.WriteLine($"Total amount of war leagues: {warLeagues.Count}");
+
+        foreach (var warLeague in warLeagues)
         {
-            var coc = new ClashOfClansClient(token);
-            var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
-            var legendLeague = leagues["Legend League"];
-            var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague!.Id);
-
-            Console.WriteLine($"Total amount of '{legendLeague.Name}' seasons: {leagueSeasons.Count}");
-
-            foreach (var season in leagueSeasons)
-            {
-                Console.WriteLine($"{season.Id}");
-            }
+            Console.WriteLine($"Id: {warLeague.Id}, Name: {warLeague.Name}");
         }
+    }
 
-        /// <summary>
-        /// Get league season rankings. Note that league season information is available only for Legend League.
-        /// </summary>
-        public async Task GetLeagueSeasonRankings()
+    /// <summary>
+    /// Get war league information
+    /// </summary>
+    public async Task GetWarLeagueInformation()
+    {
+        var warLeagueId = 48000000; // Unranked
+        var coc = new ClashOfClansClient(_token);
+        var warLeague = await coc.Leagues.GetWarLeagueAsync(warLeagueId);
+
+        Console.WriteLine($"Id: {warLeague.Id} = {warLeague.Name}");
+    }
+
+    /// <summary>
+    /// List capital leagues
+    /// </summary>
+    public async Task ListCapitalLeagues()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var capitalLeagues = (CapitalLeagueList)await coc.Leagues.GetCapitalLeaguesAsync();
+
+        Console.WriteLine($"Total amount of capital leagues: {capitalLeagues.Count}");
+
+        foreach (var capitalLeague in capitalLeagues)
         {
-            var coc = new ClashOfClansClient(token);
-            var leagues = (LeagueList)await coc.Leagues.GetLeaguesAsync();
-            var legendLeague = leagues["Legend League"];
-            var leagueSeasons = (LeagueSeasonList)await coc.Leagues.GetLeagueSeasonsAsync(legendLeague!.Id);
-            var lastSeason = leagueSeasons.Last();
-            var query = new Query
-            {
-                Limit = 100
-            };
-
-            var playerRankings = (PlayerRankingList)await coc.Leagues.GetLeagueSeasonRankingsAsync(legendLeague.Id, lastSeason.Id, query);
-
-            foreach (var player in playerRankings)
-            {
-                Console.WriteLine($"{player.Rank}. {player.Name}, {player.Trophies} \uD83C\uDFC6, attacks won {player.AttackWins}, defenses won {player.DefenseWins}");
-            }
+            Console.WriteLine($"Id: {capitalLeague.Id}, Name: {capitalLeague.Name}");
         }
+    }
 
-        /// <summary>
-        /// List war leagues
-        /// </summary>
-        public async Task ListWarLeagues()
+    /// <summary>
+    /// Get capital league information
+    /// </summary>
+    public async Task GetCapitalLeagueInformation()
+    {
+        var capitalLeagueId = 85000015; // Master League I
+        var coc = new ClashOfClansClient(_token);
+        var capitalLeague = await coc.Leagues.GetCapitalLeagueAsync(capitalLeagueId);
+
+        Console.WriteLine($"Id: {capitalLeague.Id} = {capitalLeague.Name}");
+    }
+
+    /// <summary>
+    /// Get Builder Base league information
+    /// </summary>
+    public async Task GetBuilderBaseLeagueInformation()
+    {
+        var builderBaseLeagueId = 44000010; // Stone League V
+        var coc = new ClashOfClansClient(_token);
+        var builderBaseLeague = await coc.Leagues.GetBuilderBaseLeagueAsync(builderBaseLeagueId);
+
+        Console.WriteLine($"Id: {builderBaseLeague.Id} = {builderBaseLeague.Name}");
+    }
+
+    /// <summary>
+    /// List Builder Base leagues
+    /// </summary>
+    public async Task ListBuilderBaseLeagues()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var builderBaseLeagues = (BuilderBaseLeagueList)await coc.Leagues.GetBuilderBaseLeaguesAsync();
+
+        Console.WriteLine($"Total amount of builder base leagues: {builderBaseLeagues.Count}");
+
+        foreach (var builderBaseLeague in builderBaseLeagues)
         {
-            var coc = new ClashOfClansClient(token);
-            var warLeagues = (WarLeagueList)await coc.Leagues.GetWarLeaguesAsync();
-
-            Console.WriteLine($"Total amount of war leagues: {warLeagues.Count}");
-
-            foreach (var warLeague in warLeagues)
-            {
-                Console.WriteLine($"Id: {warLeague.Id}, Name: {warLeague.Name}");
-            }
-        }
-
-        /// <summary>
-        /// Get war league information
-        /// </summary>
-        public async Task GetWarLeagueInformation()
-        {
-            var warLeagueId = 48000000; // Unranked
-            var coc = new ClashOfClansClient(token);
-            var warLeague = await coc.Leagues.GetWarLeagueAsync(warLeagueId);
-
-            Console.WriteLine($"Id: {warLeague.Id} = {warLeague.Name}");
-        }
-
-        /// <summary>
-        /// List capital leagues
-        /// </summary>
-        public async Task ListCapitalLeagues()
-        {
-            var coc = new ClashOfClansClient(token);
-            var capitalLeagues = (CapitalLeagueList)await coc.Leagues.GetCapitalLeaguesAsync();
-
-            Console.WriteLine($"Total amount of capital leagues: {capitalLeagues.Count}");
-
-            foreach (var capitalLeague in capitalLeagues)
-            {
-                Console.WriteLine($"Id: {capitalLeague.Id}, Name: {capitalLeague.Name}");
-            }
-        }
-
-        /// <summary>
-        /// Get capital league information
-        /// </summary>
-        public async Task GetCapitalLeagueInformation()
-        {
-            var capitalLeagueId = 85000015; // Master League I
-            var coc = new ClashOfClansClient(token);
-            var capitalLeague = await coc.Leagues.GetCapitalLeagueAsync(capitalLeagueId);
-
-            Console.WriteLine($"Id: {capitalLeague.Id} = {capitalLeague.Name}");
-        }
-
-        /// <summary>
-        /// Get Builder Base league information
-        /// </summary>
-        public async Task GetBuilderBaseLeagueInformation()
-        {
-            var builderBaseLeagueId = 44000010; // Stone League V
-            var coc = new ClashOfClansClient(token);
-            var builderBaseLeague = await coc.Leagues.GetBuilderBaseLeagueAsync(builderBaseLeagueId);
-
-            Console.WriteLine($"Id: {builderBaseLeague.Id} = {builderBaseLeague.Name}");
-        }
-
-        /// <summary>
-        /// List Builder Base leagues
-        /// </summary>
-        public async Task ListBuilderBaseLeagues()
-        {
-            var coc = new ClashOfClansClient(token);
-            var builderBaseLeagues = (BuilderBaseLeagueList)await coc.Leagues.GetBuilderBaseLeaguesAsync();
-
-            Console.WriteLine($"Total amount of builder base leagues: {builderBaseLeagues.Count}");
-
-            foreach (var builderBaseLeague in builderBaseLeagues)
-            {
-                Console.WriteLine($"Id: {builderBaseLeague.Id}, Name: {builderBaseLeague.Name}");
-            }
+            Console.WriteLine($"Id: {builderBaseLeague.Id}, Name: {builderBaseLeague.Name}");
         }
     }
 }

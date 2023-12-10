@@ -2,43 +2,42 @@
 using System;
 using System.Threading.Tasks;
 
-namespace ClashOfClans.App.Examples
+namespace ClashOfClans.App.Examples;
+
+public class LabelsExamples
 {
-    public class LabelsExamples
+    private readonly string _token;
+
+    public LabelsExamples(string token)
     {
-        private readonly string token;
+        _token = token;
+    }
 
-        public LabelsExamples(string token)
+    /// <summary>
+    /// List clan labels
+    /// </summary>
+    public async Task ListClanLabels()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var labels = (LabelList)await coc.Labels.GetClanLabelsAsync();
+
+        foreach (var label in labels)
         {
-            this.token = token;
+            Console.WriteLine($"Id: {label.Id}, Name: {label.Name}");
         }
+    }
 
-        /// <summary>
-        /// List clan labels
-        /// </summary>
-        public async Task ListClanLabels()
+    /// <summary>
+    /// List player labels
+    /// </summary>
+    public async Task ListPlayerLabels()
+    {
+        var coc = new ClashOfClansClient(_token);
+        var labels = (LabelList)await coc.Labels.GetPlayerLabelsAsync();
+
+        foreach (var label in labels)
         {
-            var coc = new ClashOfClansClient(token);
-            var labels = (LabelList)await coc.Labels.GetClanLabelsAsync();
-
-            foreach (var label in labels)
-            {
-                Console.WriteLine($"Id: {label.Id}, Name: {label.Name}");
-            }
-        }
-
-        /// <summary>
-        /// List player labels
-        /// </summary>
-        public async Task ListPlayerLabels()
-        {
-            var coc = new ClashOfClansClient(token);
-            var labels = (LabelList)await coc.Labels.GetPlayerLabelsAsync();
-
-            foreach (var label in labels)
-            {
-                Console.WriteLine($"Id: {label.Id}, Name: {label.Name}");
-            }
+            Console.WriteLine($"Id: {label.Id}, Name: {label.Name}");
         }
     }
 }
