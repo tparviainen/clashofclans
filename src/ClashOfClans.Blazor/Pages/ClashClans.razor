@@ -28,6 +28,7 @@ else
                 <tr>
                     <th>Rank</th>
                     <th>League</th>
+                    <th>Town Hall</th>
                     <th>ExpLevel</th>
                     <th>Player</th>
                     <th>Troops donated</th>
@@ -43,8 +44,10 @@ else
                     <tr>
                         <td class="text-center">@(member.ClanRank).</td>
                         <td class="text-center"><img src=@member.League.IconUrls.Small style="width:30px;height:30px;" /></td>
+                        <td class="text-center">@member.TownHallLevel</td>
                         <td class="text-center">@member.ExpLevel</td>
-                        <td class="@GetRoleDecorations(member.Role)" style="transform: rotate(0);"><a class="stretched-link" href="/player/@member.Tag.Substring(1)"></a>@member.Name</td>
+                        <td class="@GetRoleDecorations(member.Role)" style="transform: rotate(0);"><a class="stretched-link"
+                                href="/player/@member.Tag.Substring(1)"></a>@member.Name</td>
                         <td class="text-center">@member.Donations</td>
                         <td class="text-center">@member.DonationsReceived</td>
                         <td class="text-center">@DonationRatio(member)</td>
