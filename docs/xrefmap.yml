@@ -2464,6 +2464,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanMember.Role
   nameWithType: ClanMember.Role
+- uid: ClashOfClans.Models.ClanMember.TownHallLevel
+  name: TownHallLevel
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_TownHallLevel
+  commentId: P:ClashOfClans.Models.ClanMember.TownHallLevel
+  fullName: ClashOfClans.Models.ClanMember.TownHallLevel
+  nameWithType: ClanMember.TownHallLevel
+- uid: ClashOfClans.Models.ClanMember.TownHallLevel*
+  name: TownHallLevel
+  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_TownHallLevel_
+  commentId: Overload:ClashOfClans.Models.ClanMember.TownHallLevel
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanMember.TownHallLevel
+  nameWithType: ClanMember.TownHallLevel
 - uid: ClashOfClans.Models.ClanMember.Trophies
   name: Trophies
   href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_Trophies
