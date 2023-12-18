@@ -15,5 +15,7 @@
         public Village Village { get => _village ?? default; set => _village = value; }
 
         public bool? SuperTroopIsActive { get; set; }
+
+        public PlayerItemLevelList Equipment { get; set; } = default!;
     }
 }
