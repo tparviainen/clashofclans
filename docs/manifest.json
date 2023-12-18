@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.ILocations.html",
-          "hash": "ERL9HXOJ0SSqALnT4uVB8vQ6lzBZlb1tvFJkqNKhPfM="
+          "hash": "35A6YLlZGTft0P5Z5DJhYLIhSMXbUnk9MpGNWwuFVFc="
         }
       },
       "is_incremental": false,
@@ -545,30 +545,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ClashOfClans.Models.ClanVersusRanking.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ClashOfClans.Models.ClanVersusRanking.html",
-          "hash": "rf/IoROoHBuanV+cpUk0rkccbrLoDKnKxlUvlNj2QSk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ClashOfClans.Models.ClanVersusRankingList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ClashOfClans.Models.ClanVersusRankingList.html",
-          "hash": "bGe0NDT8jYRz5h2nx9Op4o8TxmTZXe2Km8MHFzoIhOQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ClashOfClans.Models.ClanWar.yml",
       "output": {
         ".html": {
@@ -801,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.Identity.html",
-          "hash": "QDjnipXH5wgktBM175cL1lWSDWI+W6mfcSs4CscpKvw="
+          "hash": "kKrBmiPT7k+DFEIFY2BvF/vtVPtdhCykKN+pS47PRXs="
         }
       },
       "is_incremental": false,
@@ -1133,30 +1109,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ClashOfClans.Models.PlayerVersusRanking.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ClashOfClans.Models.PlayerVersusRanking.html",
-          "hash": "eeIjKH8K2ST64ADEMRKl+THi8qt+FZswE0Zj8yKq5Ok="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ClashOfClans.Models.PlayerVersusRankingList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ClashOfClans.Models.PlayerVersusRankingList.html",
-          "hash": "fEbkGARSKgowjTkFl2eCvXusTyJbBieQfYa7/eQokrY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ClashOfClans.Models.Result.yml",
       "output": {
         ".html": {
@@ -1341,7 +1293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.html",
-          "hash": "NYy3ZTlDuCLs3HpAECwoO+pJjCz2/gYa9FZI8GUXO3s="
+          "hash": "OXBfafR6BC7OPo++8Mj6vNTJZ43KcgVtxTaolY3J4WM="
         }
       },
       "is_incremental": false,
@@ -1449,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "EEoXYFe9eOzAyq4YE3VJjSaxPrQb8jcl+Jqv/9Vp0no="
+          "hash": "l0ssONn8ckTqnWrUek/6QbmfdTmZaEEnzf7Ry3Hwr4M="
         }
       },
       "is_incremental": false,
@@ -1557,7 +1509,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 119,
+          "total_file_count": 115,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
