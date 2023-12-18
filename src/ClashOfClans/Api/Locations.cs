@@ -60,30 +60,6 @@ namespace ClashOfClans.Api
             return _gameData.QueryAsync<PlayerRankingList>(request);
         }
 
-        public Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query? query = default)
-        {
-            var request = new AutoValidatedRequest
-            {
-                Query = query,
-                LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/clans-versus"
-            };
-
-            return _gameData.QueryAsync<ClanVersusRankingList>(request);
-        }
-
-        public Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default)
-        {
-            var request = new AutoValidatedRequest
-            {
-                Query = query,
-                LocationId = locationId,
-                Uri = $"/locations/{locationId}/rankings/players-versus"
-            };
-
-            return _gameData.QueryAsync<PlayerVersusRankingList>(request);
-        }
-
         public Task<QueryResult<ClanCapitalRankingList>> GetClanCapitalRankingAsync(int? locationId, Query? query = default)
         {
             var request = new AutoValidatedRequest
