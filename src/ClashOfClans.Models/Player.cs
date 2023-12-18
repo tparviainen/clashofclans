@@ -95,6 +95,8 @@
 
         public PlayerItemLevelList Heroes { get; set; } = default!;
 
+        public PlayerItemLevelList HeroEquipment { get; set; } = default!;
+
         public PlayerItemLevelList Spells { get; set; } = default!;
 
         /// <summary>
