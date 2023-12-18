@@ -49,28 +49,6 @@ namespace ClashOfClans
         Task<QueryResult<PlayerRankingList>> GetPlayerRankingAsync(int? locationId, Query? query = default);
 
         /// <summary>
-        /// Get clan versus rankings for a specific location
-        /// </summary>
-        /// <param name="locationId">Identifier of the location to retrieve</param>
-        /// <param name="query">Optional query parameters</param>
-        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
-        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
-        /// <returns>Clan ranking list</returns>
-        [Obsolete("This route is deprecated and will be removed in the future. Call GetClanBuilderBaseRankingAsync instead.")]
-        Task<QueryResult<ClanVersusRankingList>> GetClanVersusRankingAsync(int? locationId, Query? query = default);
-
-        /// <summary>
-        /// Get player versus rankings for a specific location
-        /// </summary>
-        /// <param name="locationId">Identifier of the location to retrieve</param>
-        /// <param name="query">Optional query parameters</param>
-        /// <exception cref="Core.ClashOfClansException">Communication error with the backend API</exception>
-        /// <exception cref="System.ArgumentException">Argument is invalid</exception>
-        /// <returns>Player versus ranking list</returns>
-        [Obsolete("This route is deprecated and will be removed in the future. Call GetPlayerBuilderBaseRankingAsync instead.")]
-        Task<QueryResult<PlayerVersusRankingList>> GetPlayerVersusRankingAsync(int? locationId, Query? query = default);
-
-        /// <summary>
         /// Get capital rankings for a specific location
         /// </summary>
         /// <param name="locationId">Identifier of the location to retrieve</param>

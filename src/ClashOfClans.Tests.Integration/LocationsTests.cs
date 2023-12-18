@@ -120,42 +120,6 @@ namespace ClashOfClans.Tests.Integration
         }
 
         [TestMethod]
-        public async Task GetClanVersusRankingsForASpecificLocation()
-        {
-            // Arrange
-            var location = GetRandom(_locations, l => l.IsCountry);
-            var query = new Query
-            {
-                Limit = ItemLimit
-            };
-
-            // Act
-            var clanRankingList = (ClanVersusRankingList)await _coc.Locations.GetClanVersusRankingAsync(location.Id, query);
-
-            // Assert
-            Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Count, $"Id {location.Id}");
-        }
-
-        [TestMethod]
-        public async Task GetPlayerVersusRankingsForASpecificLocation()
-        {
-            // Arrange
-            var location = GetRandom(_locations, l => l.IsCountry);
-            var query = new Query
-            {
-                Limit = ItemLimit
-            };
-
-            // Act
-            var playerVersusRankingList = (PlayerVersusRankingList)await _coc.Locations.GetPlayerVersusRankingAsync(location.Id, query);
-
-            // Assert
-            Assert.IsNotNull(playerVersusRankingList);
-            Assert.IsTrue(playerVersusRankingList.Count <= ItemLimit, $"Id {location.Id}");
-        }
-
-        [TestMethod]
         public async Task GetCapitalRankingsForASpecificLocation()
         {
             // Arrange
