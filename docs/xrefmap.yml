@@ -3979,6 +3979,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.ExpLevel
   nameWithType: Player.ExpLevel
+- uid: ClashOfClans.Models.Player.HeroEquipment
+  name: HeroEquipment
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_HeroEquipment
+  commentId: P:ClashOfClans.Models.Player.HeroEquipment
+  fullName: ClashOfClans.Models.Player.HeroEquipment
+  nameWithType: Player.HeroEquipment
+- uid: ClashOfClans.Models.Player.HeroEquipment*
+  name: HeroEquipment
+  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_HeroEquipment_
+  commentId: Overload:ClashOfClans.Models.Player.HeroEquipment
+  isSpec: "True"
+  fullName: ClashOfClans.Models.Player.HeroEquipment
+  nameWithType: Player.HeroEquipment
 - uid: ClashOfClans.Models.Player.Heroes
   name: Heroes
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_Heroes
@@ -4531,6 +4544,19 @@ references:
   commentId: T:ClashOfClans.Models.PlayerItemLevel
   fullName: ClashOfClans.Models.PlayerItemLevel
   nameWithType: PlayerItemLevel
+- uid: ClashOfClans.Models.PlayerItemLevel.Equipment
+  name: Equipment
+  href: api/ClashOfClans.Models.PlayerItemLevel.html#ClashOfClans_Models_PlayerItemLevel_Equipment
+  commentId: P:ClashOfClans.Models.PlayerItemLevel.Equipment
+  fullName: ClashOfClans.Models.PlayerItemLevel.Equipment
+  nameWithType: PlayerItemLevel.Equipment
+- uid: ClashOfClans.Models.PlayerItemLevel.Equipment*
+  name: Equipment
+  href: api/ClashOfClans.Models.PlayerItemLevel.html#ClashOfClans_Models_PlayerItemLevel_Equipment_
+  commentId: Overload:ClashOfClans.Models.PlayerItemLevel.Equipment
+  isSpec: "True"
+  fullName: ClashOfClans.Models.PlayerItemLevel.Equipment
+  nameWithType: PlayerItemLevel.Equipment
 - uid: ClashOfClans.Models.PlayerItemLevel.Level
   name: Level
   href: api/ClashOfClans.Models.PlayerItemLevel.html#ClashOfClans_Models_PlayerItemLevel_Level
