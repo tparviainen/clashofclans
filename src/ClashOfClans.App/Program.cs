@@ -61,8 +61,7 @@ try
 }
 catch (ClashOfClansException ex)
 {
-    Console.WriteLine($"Exception: {ex.Error.Reason}, {ex.Error.Message}");
-    Console.WriteLine($"StackTrace:{Environment.NewLine + ex.StackTrace}");
+    Console.WriteLine(ex);
 }
 
 /// <summary>
