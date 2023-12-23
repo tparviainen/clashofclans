@@ -55,7 +55,7 @@ namespace ClashOfClans.Tests.Unit
             {
                 TokenValidator.Validate(tokens);
             }
-            catch (Exception)
+            catch (ArgumentException)
             {
                 // Assert
                 Assert.Fail("No exception expected!");

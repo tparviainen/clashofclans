@@ -5,14 +5,14 @@ using System.Linq;
 
 namespace ClashOfClans.Models
 {
-    internal class NullableTypes
+    internal sealed class NullableTypes
     {
         public Role? NullableRole { get; set; }
         public Player? NullablePlayer { get; set; }
         public int? NullableTrophies { get; set; }
     }
 
-    internal class NonnullableTypes
+    internal sealed class NonnullableTypes
     {
         private Role? _nonnullableRole;
         private int? _nonnullableTrophies;
