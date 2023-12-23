@@ -1,14 +1,11 @@
 ﻿using ClashOfClans.Models;
 using System;
-using System.Runtime.Serialization;
-using System.Security.Permissions;
 
 namespace ClashOfClans.Core
 {
     /// <summary>
     /// Represents errors that occur when communicating with the official Clash of Clans API
     /// </summary>
-    [Serializable]
     public class ClashOfClansException : Exception
     {
         /// <summary>
@@ -39,16 +36,6 @@ namespace ClashOfClans.Core
             Error = error;
         }
 
-        protected ClashOfClansException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-            Error = (ClientError)info.GetValue(nameof(Error), typeof(ClientError))!;
-        }
-
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            base.GetObjectData(info, context);
-            info.AddValue(nameof(Error), Error);
-        }
+        public override string Message => Error.ToString();
     }
 }
