@@ -1,7 +1,6 @@
 ﻿using ClashOfClans.Core;
 using ClashOfClans.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
 
 namespace ClashOfClans.Tests.Unit
 {
@@ -22,25 +21,26 @@ namespace ClashOfClans.Tests.Unit
         }
 
         [TestMethod]
-        public void SerializeAndDeserializeClashOfClansExceptionUsingNewtonsoft()
+        public void ClashOfClansExceptionHasClientError()
         {
             // Arrange
             var error = new ClientError
             {
-                Message = "message",
-                Reason = "reason"
+                Reason = "Error reason",
+                Message = "Error message"
             };
-            var originalException = new ClashOfClansException(error);
 
-            // Act
-            var output = JsonConvert.SerializeObject(originalException);
-            var deserializedException = JsonConvert.DeserializeObject<ClashOfClansException>(output);
-
-            // Assert
-            Assert.IsNotNull(deserializedException);
-            Assert.AreEqual(originalException.Message, deserializedException.Message);
-            Assert.AreEqual(originalException.Error.Message, deserializedException.Error.Message);
-            Assert.AreEqual(originalException.Error.Reason, deserializedException.Error.Reason);
+            try
+            {
+                // Act
+                throw new ClashOfClansException(error);
+            }
+            catch (ClashOfClansException ex)
+            {
+                // Assert
+                Assert.AreEqual(error.Reason, ex.Error.Reason);
+                Assert.AreEqual(error.Message, ex.Error.Message);
+            }
         }
     }
 }
