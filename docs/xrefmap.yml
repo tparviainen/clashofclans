@@ -147,12 +147,6 @@ references:
   commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(ClashOfClans.Models.ClientError)
   fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(ClashOfClans.Models.ClientError)
   nameWithType: ClashOfClansException.ClashOfClansException(ClientError)
-- uid: ClashOfClans.Core.ClashOfClansException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: ClashOfClansException(SerializationInfo, StreamingContext)
-  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:ClashOfClans.Core.ClashOfClansException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: ClashOfClans.Core.ClashOfClansException.ClashOfClansException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: ClashOfClansException.ClashOfClansException(SerializationInfo, StreamingContext)
 - uid: ClashOfClans.Core.ClashOfClansException.#ctor(System.String)
   name: ClashOfClansException(String)
   href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException__ctor_System_String_
@@ -185,19 +179,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.ClashOfClansException.Error
   nameWithType: ClashOfClansException.Error
-- uid: ClashOfClans.Core.ClashOfClansException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: GetObjectData(SerializationInfo, StreamingContext)
-  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:ClashOfClans.Core.ClashOfClansException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: ClashOfClans.Core.ClashOfClansException.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: ClashOfClansException.GetObjectData(SerializationInfo, StreamingContext)
-- uid: ClashOfClans.Core.ClashOfClansException.GetObjectData*
-  name: GetObjectData
-  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException_GetObjectData_
-  commentId: Overload:ClashOfClans.Core.ClashOfClansException.GetObjectData
+- uid: ClashOfClans.Core.ClashOfClansException.Message
+  name: Message
+  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException_Message
+  commentId: P:ClashOfClans.Core.ClashOfClansException.Message
+  fullName: ClashOfClans.Core.ClashOfClansException.Message
+  nameWithType: ClashOfClansException.Message
+- uid: ClashOfClans.Core.ClashOfClansException.Message*
+  name: Message
+  href: api/ClashOfClans.Core.ClashOfClansException.html#ClashOfClans_Core_ClashOfClansException_Message_
+  commentId: Overload:ClashOfClans.Core.ClashOfClansException.Message
   isSpec: "True"
-  fullName: ClashOfClans.Core.ClashOfClansException.GetObjectData
-  nameWithType: ClashOfClansException.GetObjectData
+  fullName: ClashOfClans.Core.ClashOfClansException.Message
+  nameWithType: ClashOfClansException.Message
 - uid: ClashOfClans.Core.ClashOfClansOptions
   name: ClashOfClansOptions
   href: api/ClashOfClans.Core.ClashOfClansOptions.html
@@ -3202,6 +3196,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClientError.Reason
   nameWithType: ClientError.Reason
+- uid: ClashOfClans.Models.ClientError.ToString
+  name: ToString()
+  href: api/ClashOfClans.Models.ClientError.html#ClashOfClans_Models_ClientError_ToString
+  commentId: M:ClashOfClans.Models.ClientError.ToString
+  fullName: ClashOfClans.Models.ClientError.ToString()
+  nameWithType: ClientError.ToString()
+- uid: ClashOfClans.Models.ClientError.ToString*
+  name: ToString
+  href: api/ClashOfClans.Models.ClientError.html#ClashOfClans_Models_ClientError_ToString_
+  commentId: Overload:ClashOfClans.Models.ClientError.ToString
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClientError.ToString
+  nameWithType: ClientError.ToString
 - uid: ClashOfClans.Models.Cursors
   name: Cursors
   href: api/ClashOfClans.Models.Cursors.html

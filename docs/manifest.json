@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Core.ClashOfClansException.html",
-          "hash": "LCYE/ZfTqxlrrSspOAL0k4fwL8ZC5NSg555OLoKeqrw="
+          "hash": "BGyW3JFzKT+lXcI0lRFzzEINB73Y7mzs+g1fpj1lS94="
         }
       },
       "is_incremental": false,
@@ -741,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ClashOfClans.Models.ClientError.html",
-          "hash": "CCJzTKRcQVRgzPQCJojPvN1mSeOiH/GwJ2ytUFfYljY="
+          "hash": "cVzOFmWFE7LX+ed3FOB9SjKo9/Xglt4ZL/f8Es+kTRQ="
         }
       },
       "is_incremental": false,
