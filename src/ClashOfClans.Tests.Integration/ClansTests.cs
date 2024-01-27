@@ -228,7 +228,13 @@ namespace ClashOfClans.Tests.Integration
         {
             // Arrange
             var taskList = new List<Task<ClanWarLeagueGroup>>();
-            var clanTags = _clans.Where(c => c.IsWarLogPublic).Select(c => c.Tag).ToList();
+            var location = GetRandom(_locations, l => l.IsCountry);
+            var clans = (ClanList)await _coc.Clans.SearchClansAsync(new QueryClans
+            {
+                LocationId = location.Id,
+                MinMembers = 15
+            });
+            var clanTags = clans.Where(c => c.IsWarLogPublic).Select(c => c.Tag).ToList();
             clanTags.AddRange(ClanTags);
 
             // Act
