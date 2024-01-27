@@ -8,10 +8,8 @@ namespace ClashOfClans.Models
         private int? _clanLevel;
         private int? _clanPoints;
         private int? _clanBuilderBasePoints;
-        private int? _clanVersusPoints;
         private int? _clanCapitalPoints;
         private int? _requiredTrophies;
-        private int? _requiredVersusTrophies;
         private int? _requiredTownhallLevel;
         private WarFrequency? _warFrequency;
         private int? _warWinStreak;
@@ -40,16 +38,12 @@ namespace ClashOfClans.Models
 
         public int ClanBuilderBasePoints { get => _clanBuilderBasePoints ?? default; set => _clanBuilderBasePoints = value; }
 
-        public int ClanVersusPoints { get => _clanVersusPoints ?? default; set => _clanVersusPoints = value; }
-
         public int ClanCapitalPoints { get => _clanCapitalPoints ?? default; set => _clanCapitalPoints = value; }
 
         /// <summary>
         /// Minimum trophies to join
         /// </summary>
         public int RequiredTrophies { get => _requiredTrophies ?? default; set => _requiredTrophies = value; }
-
-        public int RequiredVersusTrophies { get => _requiredVersusTrophies ?? default; set => _requiredVersusTrophies = value; }
 
         public int RequiredTownhallLevel { get => _requiredTownhallLevel ?? default; set => _requiredTownhallLevel = value; }
 

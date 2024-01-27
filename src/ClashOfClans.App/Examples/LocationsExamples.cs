@@ -97,7 +97,7 @@ public class LocationsExamples
 
         foreach (var clan in clanBuilderBaseRankings)
         {
-            Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}, {clan.ClanVersusPoints} \uD83C\uDFC6");
+            Console.WriteLine($"{clan.Rank}. {clan.Name}, clan level {clan.ClanLevel}, {clan.ClanBuilderBasePoints} \uD83C\uDFC6");
         }
     }
 
@@ -114,7 +114,7 @@ public class LocationsExamples
 
         foreach (var player in playerBuilderBaseRankings)
         {
-            Console.WriteLine($"Rank {player.Rank}, {player.VersusTrophies} \uD83C\uDFC6, player {player.Name}");
+            Console.WriteLine($"Rank {player.Rank}, {player.BuilderBaseTrophies} \uD83C\uDFC6, player {player.Name}");
         }
     }
 

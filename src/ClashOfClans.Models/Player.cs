@@ -9,15 +9,11 @@
         private int? _warStars;
         private int? _attackWins;
         private int? _defenseWins;
-        private int? _versusTrophies;
-        private int? _bestVersusTrophies;
-        private int? _versusBattleWins;
         private int? _donations;
         private int? _donationsReceived;
         private int? _builderBaseTrophies;
         private int? _bestBuilderBaseTrophies;
         private int? _clanCapitalContributions;
-        private int? _versusBattleWinCount;
 
         public int TownHallLevel { get => _townHallLevel ?? default; set => _townHallLevel = value; }
 
@@ -49,15 +45,6 @@
 
         public int? BuilderHallLevel { get; set; }
 
-        public int VersusTrophies { get => _versusTrophies ?? default; set => _versusTrophies = value; }
-
-        /// <summary>
-        /// All time best
-        /// </summary>
-        public int BestVersusTrophies { get => _bestVersusTrophies ?? default; set => _bestVersusTrophies = value; }
-
-        public int VersusBattleWins { get => _versusBattleWins ?? default; set => _versusBattleWins = value; }
-
         public Role? Role { get; set; }
 
         public WarPreference? WarPreference { get; set; }
@@ -88,8 +75,6 @@
         public PlayerLegendStatistics? LegendStatistics { get; set; }
 
         public PlayerAchievementProgressList Achievements { get; set; } = default!;
-
-        public int VersusBattleWinCount { get => _versusBattleWinCount ?? default; set => _versusBattleWinCount = value; }
 
         public PlayerItemLevelList Troops { get; set; } = default!;
 

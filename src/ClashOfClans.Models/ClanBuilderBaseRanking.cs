@@ -7,7 +7,6 @@ namespace ClashOfClans.Models
         private int? _rank;
         private int? _previousRank;
         private int? _clanBuilderBasePoints;
-        private int? _clanVersusPoints;
 
         public Location? Location { get; set; }
 
@@ -20,8 +19,6 @@ namespace ClashOfClans.Models
         public int PreviousRank { get => _previousRank ?? default; set => _previousRank = value; }
 
         public int ClanBuilderBasePoints { get => _clanBuilderBasePoints ?? default; set => _clanBuilderBasePoints = value; }
-
-        public int ClanVersusPoints { get => _clanVersusPoints ?? default; set => _clanVersusPoints = value; }
 
         public UrlContainer BadgeUrls { get; set; } = default!;
     }

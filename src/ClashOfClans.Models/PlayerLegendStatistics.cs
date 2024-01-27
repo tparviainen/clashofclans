@@ -6,10 +6,6 @@
 
         public int LegendTrophies { get => _legendTrophies ?? default; set => _legendTrophies = value; }
 
-        public LegendLeagueTournamentSeasonResult? BestVersusSeason { get; set; }
-
-        public LegendLeagueTournamentSeasonResult? PreviousVersusSeason { get; set; }
-
         public LegendLeagueTournamentSeasonResult? BestSeason { get; set; }
 
         public LegendLeagueTournamentSeasonResult CurrentSeason { get; set; } = default!;
