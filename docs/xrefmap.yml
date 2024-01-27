@@ -1048,19 +1048,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.ClanPoints
   nameWithType: Clan.ClanPoints
-- uid: ClashOfClans.Models.Clan.ClanVersusPoints
-  name: ClanVersusPoints
-  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanVersusPoints
-  commentId: P:ClashOfClans.Models.Clan.ClanVersusPoints
-  fullName: ClashOfClans.Models.Clan.ClanVersusPoints
-  nameWithType: Clan.ClanVersusPoints
-- uid: ClashOfClans.Models.Clan.ClanVersusPoints*
-  name: ClanVersusPoints
-  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_ClanVersusPoints_
-  commentId: Overload:ClashOfClans.Models.Clan.ClanVersusPoints
-  isSpec: "True"
-  fullName: ClashOfClans.Models.Clan.ClanVersusPoints
-  nameWithType: Clan.ClanVersusPoints
 - uid: ClashOfClans.Models.Clan.Description
   name: Description
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_Description
@@ -1191,19 +1178,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Clan.RequiredTrophies
   nameWithType: Clan.RequiredTrophies
-- uid: ClashOfClans.Models.Clan.RequiredVersusTrophies
-  name: RequiredVersusTrophies
-  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredVersusTrophies
-  commentId: P:ClashOfClans.Models.Clan.RequiredVersusTrophies
-  fullName: ClashOfClans.Models.Clan.RequiredVersusTrophies
-  nameWithType: Clan.RequiredVersusTrophies
-- uid: ClashOfClans.Models.Clan.RequiredVersusTrophies*
-  name: RequiredVersusTrophies
-  href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_RequiredVersusTrophies_
-  commentId: Overload:ClashOfClans.Models.Clan.RequiredVersusTrophies
-  isSpec: "True"
-  fullName: ClashOfClans.Models.Clan.RequiredVersusTrophies
-  nameWithType: Clan.RequiredVersusTrophies
 - uid: ClashOfClans.Models.Clan.Type
   name: Type
   href: api/ClashOfClans.Models.Clan.html#ClashOfClans_Models_Clan_Type
@@ -1340,19 +1314,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanLevel
   nameWithType: ClanBuilderBaseRanking.ClanLevel
-- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
-  name: ClanVersusPoints
-  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanVersusPoints
-  commentId: P:ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
-  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
-  nameWithType: ClanBuilderBaseRanking.ClanVersusPoints
-- uid: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints*
-  name: ClanVersusPoints
-  href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_ClanVersusPoints_
-  commentId: Overload:ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanBuilderBaseRanking.ClanVersusPoints
-  nameWithType: ClanBuilderBaseRanking.ClanVersusPoints
 - uid: ClashOfClans.Models.ClanBuilderBaseRanking.Location
   name: Location
   href: api/ClashOfClans.Models.ClanBuilderBaseRanking.html#ClashOfClans_Models_ClanBuilderBaseRanking_Location
@@ -2452,19 +2413,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanMember.Trophies
   nameWithType: ClanMember.Trophies
-- uid: ClashOfClans.Models.ClanMember.VersusTrophies
-  name: VersusTrophies
-  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_VersusTrophies
-  commentId: P:ClashOfClans.Models.ClanMember.VersusTrophies
-  fullName: ClashOfClans.Models.ClanMember.VersusTrophies
-  nameWithType: ClanMember.VersusTrophies
-- uid: ClashOfClans.Models.ClanMember.VersusTrophies*
-  name: VersusTrophies
-  href: api/ClashOfClans.Models.ClanMember.html#ClashOfClans_Models_ClanMember_VersusTrophies_
-  commentId: Overload:ClashOfClans.Models.ClanMember.VersusTrophies
-  isSpec: "True"
-  fullName: ClashOfClans.Models.ClanMember.VersusTrophies
-  nameWithType: ClanMember.VersusTrophies
 - uid: ClashOfClans.Models.ClanMemberList
   name: ClanMemberList
   href: api/ClashOfClans.Models.ClanMemberList.html
@@ -3695,19 +3643,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.BestTrophies
   nameWithType: Player.BestTrophies
-- uid: ClashOfClans.Models.Player.BestVersusTrophies
-  name: BestVersusTrophies
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BestVersusTrophies
-  commentId: P:ClashOfClans.Models.Player.BestVersusTrophies
-  fullName: ClashOfClans.Models.Player.BestVersusTrophies
-  nameWithType: Player.BestVersusTrophies
-- uid: ClashOfClans.Models.Player.BestVersusTrophies*
-  name: BestVersusTrophies
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BestVersusTrophies_
-  commentId: Overload:ClashOfClans.Models.Player.BestVersusTrophies
-  isSpec: "True"
-  fullName: ClashOfClans.Models.Player.BestVersusTrophies
-  nameWithType: Player.BestVersusTrophies
 - uid: ClashOfClans.Models.Player.BuilderBaseLeague
   name: BuilderBaseLeague
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_BuilderBaseLeague
@@ -3981,45 +3916,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.Player.Trophies
   nameWithType: Player.Trophies
-- uid: ClashOfClans.Models.Player.VersusBattleWinCount
-  name: VersusBattleWinCount
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_VersusBattleWinCount
-  commentId: P:ClashOfClans.Models.Player.VersusBattleWinCount
-  fullName: ClashOfClans.Models.Player.VersusBattleWinCount
-  nameWithType: Player.VersusBattleWinCount
-- uid: ClashOfClans.Models.Player.VersusBattleWinCount*
-  name: VersusBattleWinCount
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_VersusBattleWinCount_
-  commentId: Overload:ClashOfClans.Models.Player.VersusBattleWinCount
-  isSpec: "True"
-  fullName: ClashOfClans.Models.Player.VersusBattleWinCount
-  nameWithType: Player.VersusBattleWinCount
-- uid: ClashOfClans.Models.Player.VersusBattleWins
-  name: VersusBattleWins
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_VersusBattleWins
-  commentId: P:ClashOfClans.Models.Player.VersusBattleWins
-  fullName: ClashOfClans.Models.Player.VersusBattleWins
-  nameWithType: Player.VersusBattleWins
-- uid: ClashOfClans.Models.Player.VersusBattleWins*
-  name: VersusBattleWins
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_VersusBattleWins_
-  commentId: Overload:ClashOfClans.Models.Player.VersusBattleWins
-  isSpec: "True"
-  fullName: ClashOfClans.Models.Player.VersusBattleWins
-  nameWithType: Player.VersusBattleWins
-- uid: ClashOfClans.Models.Player.VersusTrophies
-  name: VersusTrophies
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_VersusTrophies
-  commentId: P:ClashOfClans.Models.Player.VersusTrophies
-  fullName: ClashOfClans.Models.Player.VersusTrophies
-  nameWithType: Player.VersusTrophies
-- uid: ClashOfClans.Models.Player.VersusTrophies*
-  name: VersusTrophies
-  href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_VersusTrophies_
-  commentId: Overload:ClashOfClans.Models.Player.VersusTrophies
-  isSpec: "True"
-  fullName: ClashOfClans.Models.Player.VersusTrophies
-  nameWithType: Player.VersusTrophies
 - uid: ClashOfClans.Models.Player.WarPreference
   name: WarPreference
   href: api/ClashOfClans.Models.Player.html#ClashOfClans_Models_Player_WarPreference
@@ -4233,32 +4129,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.Rank
   nameWithType: PlayerBuilderBaseRanking.Rank
-- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
-  name: VersusBattleWins
-  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusBattleWins
-  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
-  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
-  nameWithType: PlayerBuilderBaseRanking.VersusBattleWins
-- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins*
-  name: VersusBattleWins
-  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusBattleWins_
-  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
-  isSpec: "True"
-  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusBattleWins
-  nameWithType: PlayerBuilderBaseRanking.VersusBattleWins
-- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
-  name: VersusTrophies
-  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusTrophies
-  commentId: P:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
-  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
-  nameWithType: PlayerBuilderBaseRanking.VersusTrophies
-- uid: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies*
-  name: VersusTrophies
-  href: api/ClashOfClans.Models.PlayerBuilderBaseRanking.html#ClashOfClans_Models_PlayerBuilderBaseRanking_VersusTrophies_
-  commentId: Overload:ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
-  isSpec: "True"
-  fullName: ClashOfClans.Models.PlayerBuilderBaseRanking.VersusTrophies
-  nameWithType: PlayerBuilderBaseRanking.VersusTrophies
 - uid: ClashOfClans.Models.PlayerBuilderBaseRankingList
   name: PlayerBuilderBaseRankingList
   href: api/ClashOfClans.Models.PlayerBuilderBaseRankingList.html
@@ -4506,19 +4376,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.PlayerLegendStatistics.BestSeason
   nameWithType: PlayerLegendStatistics.BestSeason
-- uid: ClashOfClans.Models.PlayerLegendStatistics.BestVersusSeason
-  name: BestVersusSeason
-  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_BestVersusSeason
-  commentId: P:ClashOfClans.Models.PlayerLegendStatistics.BestVersusSeason
-  fullName: ClashOfClans.Models.PlayerLegendStatistics.BestVersusSeason
-  nameWithType: PlayerLegendStatistics.BestVersusSeason
-- uid: ClashOfClans.Models.PlayerLegendStatistics.BestVersusSeason*
-  name: BestVersusSeason
-  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_BestVersusSeason_
-  commentId: Overload:ClashOfClans.Models.PlayerLegendStatistics.BestVersusSeason
-  isSpec: "True"
-  fullName: ClashOfClans.Models.PlayerLegendStatistics.BestVersusSeason
-  nameWithType: PlayerLegendStatistics.BestVersusSeason
 - uid: ClashOfClans.Models.PlayerLegendStatistics.CurrentSeason
   name: CurrentSeason
   href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_CurrentSeason
@@ -4571,19 +4428,6 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.PlayerLegendStatistics.PreviousSeason
   nameWithType: PlayerLegendStatistics.PreviousSeason
-- uid: ClashOfClans.Models.PlayerLegendStatistics.PreviousVersusSeason
-  name: PreviousVersusSeason
-  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_PreviousVersusSeason
-  commentId: P:ClashOfClans.Models.PlayerLegendStatistics.PreviousVersusSeason
-  fullName: ClashOfClans.Models.PlayerLegendStatistics.PreviousVersusSeason
-  nameWithType: PlayerLegendStatistics.PreviousVersusSeason
-- uid: ClashOfClans.Models.PlayerLegendStatistics.PreviousVersusSeason*
-  name: PreviousVersusSeason
-  href: api/ClashOfClans.Models.PlayerLegendStatistics.html#ClashOfClans_Models_PlayerLegendStatistics_PreviousVersusSeason_
-  commentId: Overload:ClashOfClans.Models.PlayerLegendStatistics.PreviousVersusSeason
-  isSpec: "True"
-  fullName: ClashOfClans.Models.PlayerLegendStatistics.PreviousVersusSeason
-  nameWithType: PlayerLegendStatistics.PreviousVersusSeason
 - uid: ClashOfClans.Models.PlayerRanking
   name: PlayerRanking
   href: api/ClashOfClans.Models.PlayerRanking.html
