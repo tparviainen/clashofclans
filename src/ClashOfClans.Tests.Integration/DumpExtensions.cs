@@ -116,12 +116,13 @@ namespace ClashOfClans.Tests.Integration
         private static string Dump(string players, IOrderedEnumerable<ClanWarMember> members)
         {
             var sb = new StringBuilder();
+            var membersArray = members.ToArray();
 
-            if (members.Any())
+            if (membersArray.Length != 0)
             {
                 sb.Append(players);
                 sb.Append(Environment.NewLine);
-                foreach (var member in members)
+                foreach (var member in membersArray)
                 {
                     sb.Append(member.Dump());
                     sb.Append(Environment.NewLine);

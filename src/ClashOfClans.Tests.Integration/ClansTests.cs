@@ -187,7 +187,7 @@ namespace ClashOfClans.Tests.Integration
             }
 
             // Assert
-            Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
+            Assert.IsTrue(taskList.Count != 0, "Test data does not contain a clan with public war log!");
 
             foreach (ClanWarLog warLog in (await Task.WhenAll(taskList)).Select(v => (ClanWarLog)v))
             {
@@ -214,7 +214,7 @@ namespace ClashOfClans.Tests.Integration
             clanTags.ForEach(clanTag => taskList.Add(_coc.Clans.GetCurrentWarAsync(clanTag)));
 
             // Assert
-            Assert.IsTrue(taskList.Any(), "Test data does not contain a clan with public war log!");
+            Assert.IsTrue(taskList.Count != 0, "Test data does not contain a clan with public war log!");
 
             foreach (var currentWar in await Task.WhenAll(taskList))
             {
