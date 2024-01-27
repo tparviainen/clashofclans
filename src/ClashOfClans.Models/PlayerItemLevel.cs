@@ -16,6 +16,6 @@
 
         public bool? SuperTroopIsActive { get; set; }
 
-        public PlayerItemLevelList Equipment { get; set; } = default!;
+        public PlayerItemLevelList? Equipment { get; set; }
     }
 }
