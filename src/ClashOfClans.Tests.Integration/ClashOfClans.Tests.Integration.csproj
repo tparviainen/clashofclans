@@ -23,4 +23,8 @@
     </None>
   </ItemGroup>
 
+  <PropertyGroup>
+    <RunSettingsFilePath>$(MSBuildProjectDirectory)\.runsettings</RunSettingsFilePath>
+  </PropertyGroup>
+
 </Project>
