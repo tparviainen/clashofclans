@@ -27,4 +27,14 @@
     <RunSettingsFilePath>$(MSBuildProjectDirectory)\.runsettings</RunSettingsFilePath>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <CurrentYear>$([System.DateTime]::Now.Year)</CurrentYear>
+    <CurrentMonth>$([System.String]::Format('{0:00}', $([System.DateTime]::Now.Month)))</CurrentMonth>
+    <CurrentDay>$([System.String]::Format('{0:00}', $([System.DateTime]::Now.Day)))</CurrentDay>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="$(OutputPath)\logs\$(CurrentYear)$(CurrentMonth)$(CurrentDay)-CoC.log" Link="Logs\Latest.log" />
+  </ItemGroup>
+
 </Project>
