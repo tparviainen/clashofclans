@@ -258,7 +258,7 @@ namespace ClashOfClans.Tests.Integration
                 Assert.IsNotNull(leagueGroup);
                 Trace.WriteLine(leagueGroup.Dump());
 
-                foreach (var round in leagueGroup.Rounds)
+                foreach (var round in leagueGroup.Rounds ?? [])
                 {
                     var warRequests = new List<Task<ClanWarLeagueWar>>();
                     foreach (var warTag in round.WarTags.Where(wt => wt != Constants.InvalidWarTag))
