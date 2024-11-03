@@ -57,7 +57,7 @@ namespace ClashOfClans.Tests.Integration
             var season = GetRandom(leagueSeasonList.Items);
             var query = new Query
             {
-                Limit = 5
+                Limit = 100
             };
 
             // Act
