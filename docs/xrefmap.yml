@@ -862,6 +862,24 @@ references:
   commentId: N:ClashOfClans.Models
   fullName: ClashOfClans.Models
   nameWithType: ClashOfClans.Models
+- uid: ClashOfClans.Models.BattleModifier
+  name: BattleModifier
+  href: api/ClashOfClans.Models.BattleModifier.html
+  commentId: T:ClashOfClans.Models.BattleModifier
+  fullName: ClashOfClans.Models.BattleModifier
+  nameWithType: BattleModifier
+- uid: ClashOfClans.Models.BattleModifier.HardMode
+  name: HardMode
+  href: api/ClashOfClans.Models.BattleModifier.html#ClashOfClans_Models_BattleModifier_HardMode
+  commentId: F:ClashOfClans.Models.BattleModifier.HardMode
+  fullName: ClashOfClans.Models.BattleModifier.HardMode
+  nameWithType: BattleModifier.HardMode
+- uid: ClashOfClans.Models.BattleModifier.None
+  name: None
+  href: api/ClashOfClans.Models.BattleModifier.html#ClashOfClans_Models_BattleModifier_None
+  commentId: F:ClashOfClans.Models.BattleModifier.None
+  fullName: ClashOfClans.Models.BattleModifier.None
+  nameWithType: BattleModifier.None
 - uid: ClashOfClans.Models.BuilderBaseLeague
   name: BuilderBaseLeague
   href: api/ClashOfClans.Models.BuilderBaseLeague.html
@@ -2541,6 +2559,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanWar.AttacksPerMember
   nameWithType: ClanWar.AttacksPerMember
+- uid: ClashOfClans.Models.ClanWar.BattleModifier
+  name: BattleModifier
+  href: api/ClashOfClans.Models.ClanWar.html#ClashOfClans_Models_ClanWar_BattleModifier
+  commentId: P:ClashOfClans.Models.ClanWar.BattleModifier
+  fullName: ClashOfClans.Models.ClanWar.BattleModifier
+  nameWithType: ClanWar.BattleModifier
+- uid: ClashOfClans.Models.ClanWar.BattleModifier*
+  name: BattleModifier
+  href: api/ClashOfClans.Models.ClanWar.html#ClashOfClans_Models_ClanWar_BattleModifier_
+  commentId: Overload:ClashOfClans.Models.ClanWar.BattleModifier
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanWar.BattleModifier
+  nameWithType: ClanWar.BattleModifier
 - uid: ClashOfClans.Models.ClanWar.Clan
   name: Clan
   href: api/ClashOfClans.Models.ClanWar.html#ClashOfClans_Models_ClanWar_Clan
@@ -2970,6 +3001,19 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Models.ClanWarLogEntry.AttacksPerMember
   nameWithType: ClanWarLogEntry.AttacksPerMember
+- uid: ClashOfClans.Models.ClanWarLogEntry.BattleModifier
+  name: BattleModifier
+  href: api/ClashOfClans.Models.ClanWarLogEntry.html#ClashOfClans_Models_ClanWarLogEntry_BattleModifier
+  commentId: P:ClashOfClans.Models.ClanWarLogEntry.BattleModifier
+  fullName: ClashOfClans.Models.ClanWarLogEntry.BattleModifier
+  nameWithType: ClanWarLogEntry.BattleModifier
+- uid: ClashOfClans.Models.ClanWarLogEntry.BattleModifier*
+  name: BattleModifier
+  href: api/ClashOfClans.Models.ClanWarLogEntry.html#ClashOfClans_Models_ClanWarLogEntry_BattleModifier_
+  commentId: Overload:ClashOfClans.Models.ClanWarLogEntry.BattleModifier
+  isSpec: "True"
+  fullName: ClashOfClans.Models.ClanWarLogEntry.BattleModifier
+  nameWithType: ClanWarLogEntry.BattleModifier
 - uid: ClashOfClans.Models.ClanWarLogEntry.Clan
   name: Clan
   href: api/ClashOfClans.Models.ClanWarLogEntry.html#ClashOfClans_Models_ClanWarLogEntry_Clan
