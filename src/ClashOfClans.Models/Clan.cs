@@ -11,7 +11,6 @@ namespace ClashOfClans.Models
         private int? _clanCapitalPoints;
         private int? _requiredTrophies;
         private int? _requiredTownhallLevel;
-        private WarFrequency? _warFrequency;
         private int? _warWinStreak;
         private int? _warWins;
         private int? _requiredBuilderBaseTrophies;
@@ -49,7 +48,7 @@ namespace ClashOfClans.Models
 
         public ClanCapital? ClanCapital { get; set; }
 
-        public WarFrequency WarFrequency { get => _warFrequency ?? default; set => _warFrequency = value; }
+        public WarFrequency? WarFrequency { get; set; }
 
         public Language? ChatLanguage { get; set; }
 
