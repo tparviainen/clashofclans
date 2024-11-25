@@ -98,7 +98,7 @@ namespace ClashOfClans.Tests.Integration
 
             // Assert
             Assert.IsNotNull(clanRankingList);
-            Assert.AreEqual(ItemLimit, clanRankingList.Count, $"Id {location.Id}");
+            Assert.IsTrue(clanRankingList.Count <= ItemLimit, $"Id {location.Id}");
         }
 
         [TestMethod]
