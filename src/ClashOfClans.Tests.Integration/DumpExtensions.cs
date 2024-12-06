@@ -53,9 +53,9 @@ namespace ClashOfClans.Tests.Integration
             return sb.ToString();
         }
 
-        public static string PSE(DateTime p, DateTime s, DateTime e)
+        public static string PSE(DateTime? p, DateTime? s, DateTime? e)
         {
-            return $"P: {p.ToLocalTime()}, S: {s.ToLocalTime()}, E: {e.ToLocalTime()}";
+            return $"P: {p?.ToLocalTime()}, S: {s?.ToLocalTime()}, E: {e?.ToLocalTime()}";
         }
 
         public static string Dump(this ClanWarLeagueWar war)

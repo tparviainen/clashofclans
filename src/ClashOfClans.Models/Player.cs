@@ -2,46 +2,33 @@
 {
     public class Player : Identity
     {
-        private int? _townHallLevel;
-        private int? _expLevel;
-        private int? _trophies;
-        private int? _bestTrophies;
-        private int? _warStars;
-        private int? _attackWins;
-        private int? _defenseWins;
-        private int? _donations;
-        private int? _donationsReceived;
-        private int? _builderBaseTrophies;
-        private int? _bestBuilderBaseTrophies;
-        private int? _clanCapitalContributions;
-
-        public int TownHallLevel { get => _townHallLevel ?? default; set => _townHallLevel = value; }
+        public int TownHallLevel { get; set; }
 
         public int? TownHallWeaponLevel { get; set; }
 
-        public int ExpLevel { get => _expLevel ?? default; set => _expLevel = value; }
+        public int ExpLevel { get; set; }
 
-        public int Trophies { get => _trophies ?? default; set => _trophies = value; }
+        public int Trophies { get; set; }
 
         /// <summary>
         /// All time best
         /// </summary>
-        public int BestTrophies { get => _bestTrophies ?? default; set => _bestTrophies = value; }
+        public int BestTrophies { get; set; }
 
         /// <summary>
         /// War stars won
         /// </summary>
-        public int WarStars { get => _warStars ?? default; set => _warStars = value; }
+        public int WarStars { get; set; }
 
         /// <summary>
         /// Attacks won
         /// </summary>
-        public int AttackWins { get => _attackWins ?? default; set => _attackWins = value; }
+        public int AttackWins { get; set; }
 
         /// <summary>
         /// Defenses won
         /// </summary>
-        public int DefenseWins { get => _defenseWins ?? default; set => _defenseWins = value; }
+        public int DefenseWins { get; set; }
 
         public int? BuilderHallLevel { get; set; }
 
@@ -52,21 +39,21 @@
         /// <summary>
         /// Troops donated
         /// </summary>
-        public int Donations { get => _donations ?? default; set => _donations = value; }
+        public int Donations { get; set; }
 
         /// <summary>
         /// Troops received
         /// </summary>
-        public int DonationsReceived { get => _donationsReceived ?? default; set => _donationsReceived = value; }
+        public int DonationsReceived { get; set; }
 
-        public int BuilderBaseTrophies { get => _builderBaseTrophies ?? default; set => _builderBaseTrophies = value; }
+        public int BuilderBaseTrophies { get; set; }
 
-        public int BestBuilderBaseTrophies { get => _bestBuilderBaseTrophies ?? default; set => _bestBuilderBaseTrophies = value; }
+        public int BestBuilderBaseTrophies { get; set; }
 
         /// <summary>
         /// Total capital contribution
         /// </summary>
-        public int ClanCapitalContributions { get => _clanCapitalContributions ?? default; set => _clanCapitalContributions = value; }
+        public int ClanCapitalContributions { get; set; }
 
         public PlayerClan? Clan { get; set; }
 

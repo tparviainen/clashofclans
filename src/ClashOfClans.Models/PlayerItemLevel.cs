@@ -2,17 +2,13 @@
 {
     public class PlayerItemLevel
     {
-        private int? _level;
-        private int? _maxLevel;
-        private Village? _village;
-
         public string Name { get; set; } = default!;
 
-        public int Level { get => _level ?? default; set => _level = value; }
+        public int Level { get; set; }
 
-        public int MaxLevel { get => _maxLevel ?? default; set => _maxLevel = value; }
+        public int MaxLevel { get; set; }
 
-        public Village Village { get => _village ?? default; set => _village = value; }
+        public Village Village { get; set; }
 
         public bool? SuperTroopIsActive { get; set; }
 

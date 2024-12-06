@@ -13,7 +13,7 @@ namespace ClashOfClans.Tests.Integration
     [TestClass]
     public class TestsBase
     {
-        private readonly Random _random = new();
+        private static readonly Random _random = new();
         protected static ClanList _clans = default!;
         protected static LeagueList _leagues = default!;
         protected static LocationList _locations = default!;
@@ -41,9 +41,9 @@ namespace ClashOfClans.Tests.Integration
 
                 var query = new QueryClans
                 {
-                    MinMembers = 40,
-                    MinClanLevel = 10,
-                    Limit = 50
+                    MinMembers = _random.Next(30, 50),
+                    MinClanLevel = _random.Next(1, 20),
+                    Limit = _random.Next(50, 100)
                 };
 
                 _clans = (ClanList)await _coc.Clans.SearchClansAsync(query);
@@ -60,7 +60,7 @@ namespace ClashOfClans.Tests.Integration
         /// <summary>
         /// Returns a random element from the given list
         /// </summary>
-        protected T GetRandom<T>(IList<T> list, Func<T, bool>? predicate = default) where T : class
+        protected static T GetRandom<T>(IList<T> list, Func<T, bool>? predicate = default) where T : class
         {
             if (predicate != null)
                 list = list.Where(predicate).ToList();
