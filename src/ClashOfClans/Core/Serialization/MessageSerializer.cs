@@ -30,28 +30,23 @@ namespace ClashOfClans.Core.Serialization
 #if DEBUG
             foreach (var property in trackedPropertyIdentifiers)
             {
-                var hashCode = property.Split('.')[0];
-                var typeName = property.Split('.')[1];
-                var propertyName = property.Split('.')[2];
+                var parts = property.Split('.');
+                var (hashCode, typeName, propertyName) = (parts[0], parts[1], parts[2]);
 
                 var fullyQualifiedName = $"ClashOfClans.Models.{typeName}, {typeof(Models.Player).Assembly.FullName}";
                 var type = Type.GetType(fullyQualifiedName);
-                if (type is null)
+                if (!(type is null))
                 {
-                    continue;
-                }
-
-                foreach (var propertyInfo in type.GetProperties())
-                {
-                    var nameWithoutHashCode = $"{type.Name}.{propertyInfo.Name}";
-                    var nameWithHashCode = $"{hashCode}.{nameWithoutHashCode}";
-
-                    if (trackedPropertyIdentifiers.Contains(nameWithHashCode))
+                    foreach (var propertyInfo in type.GetProperties())
                     {
-                        continue;
-                    }
+                        var nameWithoutHashCode = $"{type.Name}.{propertyInfo.Name}";
+                        var nameWithHashCode = $"{hashCode}.{nameWithoutHashCode}";
 
-                    uninitializedProperties.Add(nameWithoutHashCode);
+                        if (!trackedPropertyIdentifiers.Contains(nameWithHashCode))
+                        {
+                            uninitializedProperties.Add(nameWithoutHashCode);
+                        }
+                    }
                 }
             }
 #endif
