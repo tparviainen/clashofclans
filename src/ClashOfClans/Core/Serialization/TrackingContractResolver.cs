@@ -7,12 +7,12 @@ namespace ClashOfClans.Core.Serialization
 {
     public class TrackingContractResolver : DefaultContractResolver
     {
-        private readonly HashSet<string> _initialisedProperties;
+        private readonly HashSet<string> _trackedPropertyIdentifiers;
 
-        public TrackingContractResolver(out HashSet<string> initialisedProperties)
+        public TrackingContractResolver(out HashSet<string> trackedPropertyIdentifiers)
         {
-            initialisedProperties = new HashSet<string>();
-            _initialisedProperties = initialisedProperties;
+            trackedPropertyIdentifiers = new HashSet<string>();
+            _trackedPropertyIdentifiers = trackedPropertyIdentifiers;
         }
 
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
@@ -22,7 +22,7 @@ namespace ClashOfClans.Core.Serialization
             if (property.Writable)
             {
                 var originalValueProvider = property.ValueProvider;
-                property.ValueProvider = new TrackingValueProvider(_initialisedProperties, originalValueProvider, property.PropertyName);
+                property.ValueProvider = new TrackingValueProvider(_trackedPropertyIdentifiers, originalValueProvider, property.PropertyName);
             }
 
             return property;
@@ -30,13 +30,13 @@ namespace ClashOfClans.Core.Serialization
 
         private class TrackingValueProvider : IValueProvider
         {
-            private readonly HashSet<string> _initialisedProperties;
+            private readonly HashSet<string> _trackedPropertyIdentifiers;
             private readonly IValueProvider? _innerProvider;
             private readonly string? _propertyName;
 
-            public TrackingValueProvider(HashSet<string> initialisedProperties, IValueProvider? innerProvider, string? propertyName)
+            public TrackingValueProvider(HashSet<string> trackedPropertyIdentifiers, IValueProvider? innerProvider, string? propertyName)
             {
-                _initialisedProperties = initialisedProperties;
+                _trackedPropertyIdentifiers = trackedPropertyIdentifiers;
                 _innerProvider = innerProvider;
                 _propertyName = propertyName;
             }
@@ -48,15 +48,7 @@ namespace ClashOfClans.Core.Serialization
 
             public void SetValue(object target, object? value)
             {
-                if (value is null)
-                {
-                    _initialisedProperties.Add($"{target.GetHashCode()}.{target.GetType().Name}.{_propertyName}.null");
-                }
-                else
-                {
-                    _initialisedProperties.Add($"{target.GetHashCode()}.{target.GetType().Name}.{_propertyName}");
-                }
-
+                _trackedPropertyIdentifiers.Add($"{target.GetHashCode()}.{target.GetType().Name}.{_propertyName}");
                 _innerProvider?.SetValue(target, value);
             }
         }

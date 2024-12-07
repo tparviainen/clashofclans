@@ -3,7 +3,6 @@ using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace ClashOfClans.Core.Serialization
@@ -17,7 +16,7 @@ namespace ClashOfClans.Core.Serialization
             {
 #if DEBUG
                 MissingMemberHandling = MissingMemberHandling.Error,
-                ContractResolver = new TrackingContractResolver(out var initialisedProperties),
+                ContractResolver = new TrackingContractResolver(out var trackedPropertyIdentifiers),
 #endif
                 NullValueHandling = NullValueHandling.Ignore,
                 DateFormatString = "yyyyMMddTHHmmss.fffK"
@@ -27,14 +26,9 @@ namespace ClashOfClans.Core.Serialization
             var reader = new JsonTextReader(sr);
             var result = serializer.Deserialize<T>(reader)!;
 
+            uninitializedProperties = new HashSet<string>();
 #if DEBUG
-            uninitializedProperties = new HashSet<string>(initialisedProperties.Where(x => x.EndsWith(".null")).Select(p =>
-            {
-                var parts = p.Split('.');
-                return $"{parts[1]}.{parts[2]}.{parts[3]}";
-            }));
-
-            foreach (var property in initialisedProperties.Where(x => !x.EndsWith(".null")))
+            foreach (var property in trackedPropertyIdentifiers)
             {
                 var hashCode = property.Split('.')[0];
                 var typeName = property.Split('.')[1];
@@ -52,7 +46,7 @@ namespace ClashOfClans.Core.Serialization
                     var nameWithoutHashCode = $"{type.Name}.{propertyInfo.Name}";
                     var nameWithHashCode = $"{hashCode}.{nameWithoutHashCode}";
 
-                    if (initialisedProperties.Contains(nameWithHashCode))
+                    if (trackedPropertyIdentifiers.Contains(nameWithHashCode))
                     {
                         continue;
                     }
@@ -60,8 +54,6 @@ namespace ClashOfClans.Core.Serialization
                     uninitializedProperties.Add(nameWithoutHashCode);
                 }
             }
-#else
-            uninitializedProperties = new HashSet<string>();
 #endif
 
             return result;

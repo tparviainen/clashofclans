@@ -42,7 +42,7 @@ namespace ClashOfClans.Tests.Integration
                 var query = new QueryClans
                 {
                     MinMembers = _random.Next(30, 50),
-                    MinClanLevel = _random.Next(1, 20),
+                    MinClanLevel = _random.Next(2, 20),
                     Limit = _random.Next(50, 100)
                 };
 
