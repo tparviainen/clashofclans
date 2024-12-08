@@ -2,14 +2,11 @@
 {
     public class Location
     {
-        private int? _id;
-        private bool? _isCountry;
-
-        public int Id { get => _id ?? default; set => _id = value; }
+        public int Id { get; set; }
 
         public string Name { get; set; } = default!;
 
-        public bool IsCountry { get => _isCountry ?? default; set => _isCountry = value; }
+        public bool IsCountry { get; set; }
 
         public string? CountryCode { get; set; }
     }

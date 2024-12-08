@@ -1,9 +1,9 @@
 ﻿using ClashOfClans.Core.Net;
 using ClashOfClans.Core.Serialization;
-using ClashOfClans.Extensions;
 using ClashOfClans.Models;
 using ClashOfClans.Search;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,7 +20,8 @@ namespace ClashOfClans.Core
         private IThrottleRequests ThrottleRequests => _options.ThrottleRequests;
 
 #if DEBUG
-        private readonly NullableTypes _nullableTypes = new NullableTypes();
+        private static readonly object _lock = new object();
+        private static readonly HashSet<string> _uninitializedProperties = new HashSet<string>();
 #endif
 
         /// <summary>
@@ -48,19 +49,17 @@ namespace ClashOfClans.Core
             Log(request, $"Uri: /{request.Uri}");
 
             var data = await GetDataAsync(request).ConfigureAwait(false);
-            var deserializedData = MessageSerializer.Deserialize<T>(data);
+            var deserializedData = MessageSerializer.Deserialize<T>(data, out var uninitializedProperties);
 
 #if DEBUG
-            lock (_nullableTypes)
+            lock (_lock)
             {
-                var nullProperties = deserializedData.GetNullMembers();
-                _nullableTypes.Add(nullProperties);
-                var nullableTypes = _nullableTypes.GetUncheckedNulls();
-                if (nullableTypes != default)
+                var count = _uninitializedProperties.Count;
+                _uninitializedProperties.UnionWith(uninitializedProperties);
+
+                if (count != _uninitializedProperties.Count)
                 {
-                    var today = DateTime.Now.ToShortDateString();
-                    var properties = string.Join(Environment.NewLine, nullableTypes.Select(kvp => $"{kvp.Key}, {today}, total {kvp.Value}"));
-                    Log(request, $"Aggregate list of null properties:{Environment.NewLine + properties}");
+                    Log(request, $"Aggregate list of null properties: {string.Join($",", _uninitializedProperties.OrderBy(x => x))}");
                 }
             }
 #endif
@@ -88,7 +87,7 @@ namespace ClashOfClans.Core
 
             try
             {
-                var error = MessageSerializer.Deserialize<ClientError>(content);
+                var error = MessageSerializer.Deserialize<ClientError>(content, out _);
                 throw new ClashOfClansException(error);
             }
             catch (Exception ex) when (ex.GetType() != typeof(ClashOfClansException))

@@ -4,7 +4,7 @@
     {
         public int? AttacksPerMember { get; set; }
 
-        public BattleModifier BattleModifier { get; set; }
+        public BattleModifier? BattleModifier { get; set; }
 
         public WarClan Clan { get; set; } = default!;
 
