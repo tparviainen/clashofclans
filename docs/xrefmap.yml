@@ -310,6 +310,47 @@ references:
   isSpec: "True"
   fullName: ClashOfClans.Core.IClashOfClansLogger.Log
   nameWithType: IClashOfClansLogger.Log
+- uid: ClashOfClans.Core.Serialization
+  name: ClashOfClans.Core.Serialization
+  href: api/ClashOfClans.Core.Serialization.html
+  commentId: N:ClashOfClans.Core.Serialization
+  fullName: ClashOfClans.Core.Serialization
+  nameWithType: ClashOfClans.Core.Serialization
+- uid: ClashOfClans.Core.Serialization.TrackingContractResolver
+  name: TrackingContractResolver
+  href: api/ClashOfClans.Core.Serialization.TrackingContractResolver.html
+  commentId: T:ClashOfClans.Core.Serialization.TrackingContractResolver
+  fullName: ClashOfClans.Core.Serialization.TrackingContractResolver
+  nameWithType: TrackingContractResolver
+- uid: ClashOfClans.Core.Serialization.TrackingContractResolver.#ctor(System.Collections.Generic.HashSet{System.String}@)
+  name: TrackingContractResolver(out HashSet<String>)
+  href: api/ClashOfClans.Core.Serialization.TrackingContractResolver.html#ClashOfClans_Core_Serialization_TrackingContractResolver__ctor_System_Collections_Generic_HashSet_System_String___
+  commentId: M:ClashOfClans.Core.Serialization.TrackingContractResolver.#ctor(System.Collections.Generic.HashSet{System.String}@)
+  name.vb: TrackingContractResolver(ByRef HashSet(Of String))
+  fullName: ClashOfClans.Core.Serialization.TrackingContractResolver.TrackingContractResolver(out System.Collections.Generic.HashSet<System.String>)
+  fullName.vb: ClashOfClans.Core.Serialization.TrackingContractResolver.TrackingContractResolver(ByRef System.Collections.Generic.HashSet(Of System.String))
+  nameWithType: TrackingContractResolver.TrackingContractResolver(out HashSet<String>)
+  nameWithType.vb: TrackingContractResolver.TrackingContractResolver(ByRef HashSet(Of String))
+- uid: ClashOfClans.Core.Serialization.TrackingContractResolver.#ctor*
+  name: TrackingContractResolver
+  href: api/ClashOfClans.Core.Serialization.TrackingContractResolver.html#ClashOfClans_Core_Serialization_TrackingContractResolver__ctor_
+  commentId: Overload:ClashOfClans.Core.Serialization.TrackingContractResolver.#ctor
+  isSpec: "True"
+  fullName: ClashOfClans.Core.Serialization.TrackingContractResolver.TrackingContractResolver
+  nameWithType: TrackingContractResolver.TrackingContractResolver
+- uid: ClashOfClans.Core.Serialization.TrackingContractResolver.CreateProperty(System.Reflection.MemberInfo,Newtonsoft.Json.MemberSerialization)
+  name: CreateProperty(MemberInfo, MemberSerialization)
+  href: api/ClashOfClans.Core.Serialization.TrackingContractResolver.html#ClashOfClans_Core_Serialization_TrackingContractResolver_CreateProperty_System_Reflection_MemberInfo_Newtonsoft_Json_MemberSerialization_
+  commentId: M:ClashOfClans.Core.Serialization.TrackingContractResolver.CreateProperty(System.Reflection.MemberInfo,Newtonsoft.Json.MemberSerialization)
+  fullName: ClashOfClans.Core.Serialization.TrackingContractResolver.CreateProperty(System.Reflection.MemberInfo, Newtonsoft.Json.MemberSerialization)
+  nameWithType: TrackingContractResolver.CreateProperty(MemberInfo, MemberSerialization)
+- uid: ClashOfClans.Core.Serialization.TrackingContractResolver.CreateProperty*
+  name: CreateProperty
+  href: api/ClashOfClans.Core.Serialization.TrackingContractResolver.html#ClashOfClans_Core_Serialization_TrackingContractResolver_CreateProperty_
+  commentId: Overload:ClashOfClans.Core.Serialization.TrackingContractResolver.CreateProperty
+  isSpec: "True"
+  fullName: ClashOfClans.Core.Serialization.TrackingContractResolver.CreateProperty
+  nameWithType: TrackingContractResolver.CreateProperty
 - uid: ClashOfClans.IClans
   name: IClans
   href: api/ClashOfClans.IClans.html
