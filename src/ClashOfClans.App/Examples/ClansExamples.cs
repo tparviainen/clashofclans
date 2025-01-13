@@ -109,7 +109,7 @@ public class ClansExamples
         Console.WriteLine($"Season: {clanWarLeagueGroup.Season}, State: {clanWarLeagueGroup.State}");
 
         // Retrieve information about individual clan war league (CWL) war
-        for (int i = 0; i < clanWarLeagueGroup.Rounds.Count; i++)
+        for (int i = 0; i < clanWarLeagueGroup.Rounds?.Count; i++)
         {
             var round = clanWarLeagueGroup.Rounds[i];
             Console.WriteLine($"Round {i + 1}.");
@@ -123,7 +123,7 @@ public class ClansExamples
             var clanWarLeagueWars = await Task.WhenAll(clanWarLeagueRequests);
             foreach (var clanWarLeagueWar in clanWarLeagueWars)
             {
-                Console.WriteLine($" {clanWarLeagueWar.StartTime.ToLocalTime()}: {Statistics(clanWarLeagueWar.Clan)} vs {Statistics(clanWarLeagueWar.Opponent)}");
+                Console.WriteLine($" {clanWarLeagueWar.StartTime?.ToLocalTime()}: {Statistics(clanWarLeagueWar.Clan)} vs {Statistics(clanWarLeagueWar.Opponent)}");
             }
         }
 
